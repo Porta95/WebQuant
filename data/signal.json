@@ -1,0 +1,20 @@
+{
+  "weights": {"SPY": 0.0, "QQQ": 0.42, "BTC-USD": 0.28, "ETH-USD": 0.12, "GLD": 0.18},
+  "phases": {
+    "SPY":     {"phase": "OK",       "dist": 4.2,  "risk": 4.1,  "price": 578.40},
+    "QQQ":     {"phase": "EARLY",    "dist": 1.8,  "risk": 1.8,  "price": 487.12},
+    "BTC-USD": {"phase": "OK",       "dist": 5.1,  "risk": 4.9,  "price": 87340.0},
+    "ETH-USD": {"phase": "EXTENDED", "dist": 11.3, "risk": 10.2, "price": 3240.0},
+    "GLD":     {"phase": "EARLY",    "dist": 2.0,  "risk": 2.0,  "price": 238.50}
+  },
+  "active":       {"SPY": true, "QQQ": true, "BTC-USD": true, "ETH-USD": true, "GLD": true},
+  "dominant":     "QQQ",
+  "buffett":      {"value": 147.0, "phase": "CARO", "mult": 0.7, "yoy": 12.3},
+  "volatilities": {"SPY": 0.18, "QQQ": 0.22, "BTC-USD": 0.95, "ETH-USD": 0.88, "GLD": 0.14},
+  "signal_date":  "2026-03-01",
+  "generated_at": "2026-03-01T12:00:00",
+  "cash_pct":     0.0,
+  "quality":      "ALTA",
+  "tickers":      ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"],
+  "_note":        "Datos de ejemplo. Se actualizan automáticamente vía GitHub Actions cada día hábil."
+}

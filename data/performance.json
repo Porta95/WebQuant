@@ -1,0 +1,12 @@
+{
+  "metrics": {
+    "cagr": 18.4, "cagr_bench": 11.2, "sharpe": 1.84,
+    "sortino": 2.1, "max_drawdown": -18.3, "volatility": 22.4,
+    "win_rate": 63.0, "total_return": 94.2, "final_value": 194.2, "years": 3.8
+  },
+  "equity_curve": [],
+  "weekly_returns": [],
+  "drawdown_series": [],
+  "generated_at": "2026-03-01T12:00:00",
+  "_note": "Datos de ejemplo. Se actualizan vía GitHub Actions."
+}

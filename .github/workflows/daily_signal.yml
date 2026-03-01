@@ -1,0 +1,48 @@
+name: Daily Rotational Signal
+
+on:
+  schedule:
+    # Todos los días a las 12:00 UTC (9am EST)
+    - cron: "0 12 * * 1-5"   # lunes a viernes
+  workflow_dispatch:           # ejecución manual desde GitHub
+
+jobs:
+  send-signal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger daily signal via API
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "${{ secrets.API_BASE_URL }}/api/signal/telegram" \
+            -H "Content-Type: application/json" \
+            -d '{}')
+
+          echo "HTTP status: $RESPONSE"
+
+          if [ "$RESPONSE" != "200" ]; then
+            echo "Error: API respondió con status $RESPONSE"
+            exit 1
+          fi
+
+          echo "✅ Señal enviada correctamente"
+
+      # Fallback: si el API no está disponible, corre el script directo
+      - name: Fallback - Run signal script directly
+        if: failure()
+        uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        if: failure()
+        with:
+          python-version: "3.11"
+
+      - name: Install deps (fallback)
+        if: failure()
+        run: pip install yfinance pandas numpy requests
+
+      - name: Run signal (fallback)
+        if: failure()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python rotational_signal.py

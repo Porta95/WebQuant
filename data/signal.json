@@ -1,20 +1,73 @@
 {
-  "weights": {"SPY": 0.0, "QQQ": 0.42, "BTC-USD": 0.28, "ETH-USD": 0.12, "GLD": 0.18},
-  "phases": {
-    "SPY":     {"phase": "OK",       "dist": 4.2,  "risk": 4.1,  "price": 578.40},
-    "QQQ":     {"phase": "EARLY",    "dist": 1.8,  "risk": 1.8,  "price": 487.12},
-    "BTC-USD": {"phase": "OK",       "dist": 5.1,  "risk": 4.9,  "price": 87340.0},
-    "ETH-USD": {"phase": "EXTENDED", "dist": 11.3, "risk": 10.2, "price": 3240.0},
-    "GLD":     {"phase": "EARLY",    "dist": 2.0,  "risk": 2.0,  "price": 238.50}
+  "weights": {
+    "SPY": 0.0,
+    "QQQ": 0.0,
+    "BTC-USD": 0.0,
+    "ETH-USD": 0.0,
+    "GLD": 1.0
   },
-  "active":       {"SPY": true, "QQQ": true, "BTC-USD": true, "ETH-USD": true, "GLD": true},
-  "dominant":     "QQQ",
-  "buffett":      {"value": 147.0, "phase": "CARO", "mult": 0.7, "yoy": 12.3},
-  "volatilities": {"SPY": 0.18, "QQQ": 0.22, "BTC-USD": 0.95, "ETH-USD": 0.88, "GLD": 0.14},
-  "signal_date":  "2026-03-01",
-  "generated_at": "2026-03-01T12:00:00",
-  "cash_pct":     0.0,
-  "quality":      "ALTA",
-  "tickers":      ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"],
-  "_note":        "Datos de ejemplo. Se actualizan automáticamente vía GitHub Actions cada día hábil."
+  "phases": {
+    "SPY": {
+      "phase": "BROKEN",
+      "dist": -0.42,
+      "risk": 0.42,
+      "price": 685.99
+    },
+    "QQQ": {
+      "phase": "BROKEN",
+      "dist": -1.16,
+      "risk": 1.17,
+      "price": 607.29
+    },
+    "BTC-USD": {
+      "phase": "BROKEN",
+      "dist": -15.54,
+      "risk": 18.4,
+      "price": 65636.45
+    },
+    "ETH-USD": {
+      "phase": "BROKEN",
+      "dist": -21.23,
+      "risk": 26.95,
+      "price": 1927.48
+    },
+    "GLD": {
+      "phase": "OK",
+      "dist": 6.37,
+      "risk": 5.99,
+      "price": 483.75
+    }
+  },
+  "active": {
+    "SPY": false,
+    "QQQ": false,
+    "BTC-USD": false,
+    "ETH-USD": false,
+    "GLD": true
+  },
+  "dominant": "GLD",
+  "buffett": {
+    "value": 213.0,
+    "phase": "CARO",
+    "mult": 0.7,
+    "yoy": 17.7
+  },
+  "volatilities": {
+    "SPY": 0.0873,
+    "QQQ": 0.1226,
+    "BTC-USD": 0.4623,
+    "ETH-USD": 0.6311,
+    "GLD": 0.3017
+  },
+  "signal_date": "2026-03-01",
+  "generated_at": "2026-03-01T21:42:43.402701",
+  "cash_pct": 0.0,
+  "quality": "BAJA",
+  "tickers": [
+    "SPY",
+    "QQQ",
+    "BTC-USD",
+    "ETH-USD",
+    "GLD"
+  ]
 }

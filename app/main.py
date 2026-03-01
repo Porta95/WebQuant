@@ -17,7 +17,7 @@ Estructura de endpoints:
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .routers import signal, backtest, debug
+from .routers import signal, backtest, debug, debug
 
 app = FastAPI(
     title="Quant Rotational API",
@@ -40,6 +40,7 @@ app.add_middleware(
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(signal.router)
 app.include_router(backtest.router)
+app.include_router(debug.router)
 app.include_router(debug.router)
 
 

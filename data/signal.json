@@ -21,15 +21,15 @@
     },
     "BTC-USD": {
       "phase": "BROKEN",
-      "dist": -15.35,
-      "risk": 18.14,
-      "price": 65780.39
+      "dist": -15.29,
+      "risk": 18.05,
+      "price": 65833.88
     },
     "ETH-USD": {
       "phase": "BROKEN",
-      "dist": -20.7,
-      "risk": 26.1,
-      "price": 1940.63
+      "dist": -20.69,
+      "risk": 26.09,
+      "price": 1940.79
     },
     "GLD": {
       "phase": "OK",
@@ -55,12 +55,12 @@
   "volatilities": {
     "SPY": 0.0873,
     "QQQ": 0.1226,
-    "BTC-USD": 0.4621,
+    "BTC-USD": 0.462,
     "ETH-USD": 0.6307,
     "GLD": 0.3017
   },
-  "signal_date": "2026-03-01",
-  "generated_at": "2026-03-01T23:43:12.838795",
+  "signal_date": "2026-03-02",
+  "generated_at": "2026-03-02T00:05:28.360770",
   "cash_pct": 0.0,
   "quality": "BAJA",
   "tickers": [

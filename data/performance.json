@@ -477,7 +477,7 @@
     },
     {
       "date": "2023-12-24",
-      "strategy": 83.26,
+      "strategy": 83.25,
       "benchmark": 112.02
     },
     {
@@ -1039,16 +1039,6 @@
       "date": "2026-02-15",
       "strategy": 172.56,
       "benchmark": 166.5
-    },
-    {
-      "date": "2026-02-22",
-      "strategy": 178.13,
-      "benchmark": 165.67
-    },
-    {
-      "date": "2026-03-01",
-      "strategy": 178.13,
-      "benchmark": 165.67
     }
   ],
   "weekly_returns": [
@@ -1259,9 +1249,7 @@
     -2.849,
     -0.011,
     1.572,
-    1.297,
-    3.229,
-    0.0
+    1.297
   ],
   "drawdown_series": [
     0.0,
@@ -1359,7 +1347,7 @@
     -22.34,
     -22.19,
     -20.27,
-    -20.58,
+    -20.59,
     -21.07,
     -20.59,
     -19.83,
@@ -1471,21 +1459,19 @@
     -3.01,
     -3.02,
     -1.5,
-    -0.22,
-    0.0,
-    0.0
+    -0.22
   ],
   "metrics": {
-    "cagr": 15.37,
-    "cagr_bench": 13.31,
-    "sharpe": 0.54,
-    "sortino": 0.5,
+    "cagr": 14.61,
+    "cagr_bench": 13.59,
+    "sharpe": 0.5,
+    "sortino": 0.46,
     "max_drawdown": -39.48,
-    "volatility": 19.3,
+    "volatility": 19.33,
     "win_rate": 45.7,
-    "total_return": 78.13,
-    "final_value": 178.13,
+    "total_return": 72.56,
+    "final_value": 172.56,
     "years": 4.0
   },
-  "generated_at": "2026-03-01T23:43:13.503268"
+  "generated_at": "2026-03-02T00:05:28.942715"
 }

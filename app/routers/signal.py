@@ -21,7 +21,7 @@ def read_json(filename: str) -> dict:
     return json.loads(path.read_text())
 
 
-@router.get("/")
+@router.get("")
 async def get_signal():
     """Retorna la señal rotacional más reciente."""
     return read_json("signal.json")

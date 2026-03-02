@@ -8,6 +8,8 @@ from pathlib import Path
 from fastapi import APIRouter, HTTPException
 from ..services.telegram import send_signal_to_telegram, send_telegram
 from ..models.schemas import TelegramRequest, TelegramResponse
+from ..routers.portfolio import load_port
+from ..core import compute_signal
 
 router = APIRouter(prefix="/api/signal", tags=["signal"])
 
@@ -23,8 +25,19 @@ def read_json(filename: str) -> dict:
 
 @router.get("")
 async def get_signal():
-    """Retorna la señal rotacional más reciente."""
-    return read_json("signal.json")
+    """Retorna señal calculada usando cartera del usuario."""
+    port = load_port()
+
+    tickers = (
+        port.get("crypto", []) +
+        port.get("equities", []) +
+        port.get("commodities", [])
+    )
+
+    if not tickers:
+        raise HTTPException(400, "Portfolio vacío")
+
+    return compute_signal(tickers)
 
 
 @router.get("/history")

@@ -9,7 +9,7 @@ from fastapi import APIRouter, HTTPException
 from ..services.telegram import send_signal_to_telegram, send_telegram
 from ..models.schemas import TelegramRequest, TelegramResponse
 from ..routers.portfolio import load_port
-from ..core import compute_signal
+from app.core import compute_signal
 from ..services.portfolio import load_portfolio
 
 router = APIRouter(prefix="/api/signal", tags=["signal"])

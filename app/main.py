@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
-from .routers import signal, backtest, debug
+from .routers import signal, backtest, debug, portfolio
 
 app = FastAPI(
     title="Quant Rotational API",
@@ -21,6 +21,7 @@ app.add_middleware(
 app.include_router(signal.router)
 app.include_router(backtest.router)
 app.include_router(debug.router)
+app.include_router(portfolio.router)
 
 @app.get("/", tags=["health"])
 async def root():
@@ -33,3 +34,5 @@ async def root():
 @app.get("/health", tags=["health"])
 async def health():
     return {"status": "healthy"}
+
+

@@ -10,6 +10,7 @@ import yfinance as yf
 from pathlib import Path
 from fastapi import APIRouter, HTTPException
 from ..models.schemas import AnalyzerRequest
+from app.services.yahoo import download_prices
 
 router = APIRouter(prefix="/api/backtest", tags=["backtest"])
 
@@ -73,31 +74,7 @@ async def analyze(body: AnalyzerRequest):
     all_t = list(set(current + [ticker]))
 
     try:
-        raw = yf.download(
-            all_t,
-            start="2020-01-01",
-            auto_adjust=True,
-            progress=False,
-            threads=False,
-            group_by="ticker",
-        )
-
-        if raw is None or len(raw) == 0:
-            raise ValueError("Yahoo vacío")
-
-        if isinstance(raw.columns, pd.MultiIndex):
-            data = pd.DataFrame({
-                t: raw[t]["Close"]
-                for t in all_t
-                if t in raw.columns.levels[0] and "Close" in raw[t]
-            })
-        else:
-            if "Close" not in raw:
-                raise ValueError("Sin Close")
-            data = raw["Close"].to_frame(name=all_t[0])
-
-        data = data.dropna(how="all").ffill()
-
+        data = download_prices(all_t, start="2020-01-01")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Yahoo error: {e}")
 

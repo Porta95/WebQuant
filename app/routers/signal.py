@@ -74,3 +74,28 @@ async def send_to_telegram(body: TelegramRequest):
             return TelegramResponse(ok=False, error=result.get("description", "Error desconocido"))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+from app.core import compute_signal
+from pathlib import Path
+import json
+
+PORTFOLIO_FILE = DATA_DIR / "portfolio.json"
+
+
+def read_portfolio_tickers():
+    if not PORTFOLIO_FILE.exists():
+        return ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"]
+
+    p = json.loads(PORTFOLIO_FILE.read_text())
+    return list(set(
+        p.get("crypto", []) +
+        p.get("equities", []) +
+        p.get("commodities", [])
+    ))
+
+
+@router.get("/compute")
+async def compute_dynamic_signal():
+    tickers = read_portfolio_tickers()
+    sig = compute_signal(tickers)
+    return sig

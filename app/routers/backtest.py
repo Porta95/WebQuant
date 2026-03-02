@@ -66,53 +66,52 @@ async def stress_test(scenario_key: str):
         "equity_curve":      filtered,
     }
 
-
 @router.post("/analyze")
 async def analyze(body: AnalyzerRequest):
-    """Analiza un activo candidato. Este endpoint SÍ descarga datos (GitHub Actions no lo bloquea)."""
     ticker = body.ticker.strip().upper()
     current = body.current_tickers or ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"]
-    all_t   = list(set(current + [ticker]))
+    all_t = list(set(current + [ticker]))
 
-   try:
-    raw = yf.download(
-        all_t,
-        start="2020-01-01",
-        auto_adjust=True,
-        progress=False,
-        threads=False,
-        group_by="ticker",
-    )
+    try:
+        raw = yf.download(
+            all_t,
+            start="2020-01-01",
+            auto_adjust=True,
+            progress=False,
+            threads=False,
+            group_by="ticker",
+        )
 
-    if raw is None or len(raw) == 0:
-        raise ValueError("Yahoo vacío")
+        if raw is None or len(raw) == 0:
+            raise ValueError("Yahoo vacío")
 
-    if isinstance(raw.columns, pd.MultiIndex):
-        data = pd.DataFrame({
-            t: raw[t]["Close"]
-            for t in all_t
-            if t in raw.columns.levels[0] and "Close" in raw[t]
-        })
-    else:
-        if "Close" not in raw:
-            raise ValueError("Sin Close")
-        data = raw["Close"].to_frame(name=all_t[0])
+        if isinstance(raw.columns, pd.MultiIndex):
+            data = pd.DataFrame({
+                t: raw[t]["Close"]
+                for t in all_t
+                if t in raw.columns.levels[0] and "Close" in raw[t]
+            })
+        else:
+            if "Close" not in raw:
+                raise ValueError("Sin Close")
+            data = raw["Close"].to_frame(name=all_t[0])
 
-    data = data.dropna(how="all").ffill()
+        data = data.dropna(how="all").ffill()
 
-except Exception as e:
-    raise HTTPException(status_code=500, detail=f"Yahoo error: {e}")
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Yahoo error: {e}")
+
     if ticker not in data.columns:
         raise HTTPException(status_code=404, detail=f"Ticker '{ticker}' no encontrado")
 
     rets = data.pct_change().dropna()
-    cr   = rets[ticker]
+    cr = rets[ticker]
 
     annual_ret = float(cr.mean() * 252)
     annual_vol = float(cr.std() * np.sqrt(252))
-    sharpe     = (annual_ret - 0.05) / annual_vol if annual_vol > 0 else 0
+    sharpe = (annual_ret - 0.05) / annual_vol if annual_vol > 0 else 0
 
-    peak   = data[ticker].cummax()
+    peak = data[ticker].cummax()
     max_dd = float(((data[ticker] - peak) / peak).min())
 
     corrs = {t: round(float(rets[ticker].corr(rets[t])), 3)
@@ -120,46 +119,48 @@ except Exception as e:
     avg_corr = float(np.mean(list(corrs.values()))) if corrs else 0
 
     port_before = rets[[t for t in current if t in rets.columns]].mean(axis=1)
-    port_after  = port_before * 0.95 + cr * 0.05
+    port_after = port_before * 0.95 + cr * 0.05
 
-    def sharpe_s(s): return float((s.mean()*252 - 0.05) / (s.std()*np.sqrt(252))) if s.std() > 0 else 0
+    def sharpe_s(s):
+        return float((s.mean()*252 - 0.05) / (s.std()*np.sqrt(252))) if s.std() > 0 else 0
 
     sb = sharpe_s(port_before)
     sa = sharpe_s(port_after)
 
-    # Score
     score = 50
     score += min(sharpe * 12, 20)
     score -= avg_corr * 15
     score += 5 if max_dd > -0.20 else 0 if max_dd > -0.40 else -5 if max_dd > -0.60 else -12
     score += (sa - sb) * 100
-    score  = max(0, min(100, int(score)))
+    score = max(0, min(100, int(score)))
 
     verdict = "INCLUDE" if score >= 70 else "WATCH" if score >= 45 else "DISCARD"
 
-    sleeve = "crypto" if "USD" in ticker or any(c in ticker for c in ["BTC","ETH","SOL","BNB"]) \
-        else "commodity" if any(c in ticker for c in ["GLD","SLV","IAU"]) \
-        else "bonds" if any(c in ticker for c in ["TLT","IEF","BND"]) \
+    sleeve = (
+        "crypto" if "USD" in ticker or any(c in ticker for c in ["BTC","ETH","SOL","BNB"])
+        else "commodity" if any(c in ticker for c in ["GLD","SLV","IAU"])
+        else "bonds" if any(c in ticker for c in ["TLT","IEF","BND"])
         else "equity"
+    )
 
     return {
-        "ticker":   ticker,
-        "verdict":  verdict,
-        "score":    score,
+        "ticker": ticker,
+        "verdict": verdict,
+        "score": score,
         "metrics": {
-            "sharpe":     round(sharpe, 2),
-            "max_dd":     round(max_dd * 100, 2),
+            "sharpe": round(sharpe, 2),
+            "max_dd": round(max_dd * 100, 2),
             "annual_vol": round(annual_vol * 100, 2),
             "annual_ret": round(annual_ret * 100, 2),
-            "avg_corr":   round(avg_corr, 3),
+            "avg_corr": round(avg_corr, 3),
         },
         "correlations": corrs,
         "portfolio_impact": {
             "sharpe_before": round(sb, 2),
-            "sharpe_after":  round(sa, 2),
-            "vol_before":    round(float(port_before.std()*np.sqrt(252)*100), 2),
-            "vol_after":     round(float(port_after.std()*np.sqrt(252)*100), 2),
-            "delta_sharpe":  round(sa - sb, 3),
+            "sharpe_after": round(sa, 2),
+            "vol_before": round(float(port_before.std()*np.sqrt(252)*100), 2),
+            "vol_after": round(float(port_after.std()*np.sqrt(252)*100), 2),
+            "delta_sharpe": round(sa - sb, 3),
         },
         "suggested_sleeve": sleeve,
     }

@@ -10,6 +10,7 @@ from ..services.telegram import send_signal_to_telegram, send_telegram
 from ..models.schemas import TelegramRequest, TelegramResponse
 from ..routers.portfolio import load_port
 from ..core import compute_signal
+from ..services.portfolio import load_portfolio
 
 router = APIRouter(prefix="/api/signal", tags=["signal"])
 
@@ -38,6 +39,24 @@ async def get_signal():
         raise HTTPException(400, "Portfolio vacío")
 
     return compute_signal(tickers)
+
+@router.get("/compute")
+async def compute_live_signal():
+    """
+    Señal dinámica basada en la cartera del usuario.
+    """
+    try:
+        portfolio = load_portfolio()
+        tickers = [a["ticker"] for a in portfolio.get("assets", []) if a.get("enabled")]
+
+        if not tickers:
+            tickers = None  # usa DEFAULT_TICKERS
+
+        signal = compute_signal(tickers)
+        return signal
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Signal compute error: {e}")
 
 
 @router.get("/history")

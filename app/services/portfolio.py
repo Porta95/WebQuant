@@ -1,10 +1,11 @@
 import json
 from pathlib import Path
 
-DATA_DIR = Path(__file__).parent.parent.parent / "data"
+BASE_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = BASE_DIR / "data"
 PORTFOLIO_FILE = DATA_DIR / "portfolio.json"
 
-DEFAULT = {
+DEFAULT_PORTFOLIO = {
     "assets": [
         {"ticker": "BTC-USD", "enabled": True},
         {"ticker": "ETH-USD", "enabled": True},
@@ -15,9 +16,9 @@ DEFAULT = {
 }
 
 def load_portfolio():
-    if not PORTFOLIO_FILE.exists():
-        return DEFAULT
-    return json.loads(PORTFOLIO_FILE.read_text())
-
-def save_portfolio(data: dict):
-    PORTFOLIO_FILE.write_text(json.dumps(data, indent=2))
+    try:
+        if PORTFOLIO_FILE.exists():
+            return json.loads(PORTFOLIO_FILE.read_text())
+    except Exception:
+        pass
+    return DEFAULT_PORTFOLIO

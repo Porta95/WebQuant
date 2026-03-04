@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
-from routers import signal, backtest, debug, portfolio
+from .routers import signal, backtest, debug, portfolio
 
 app = FastAPI(
     title="Quant Rotational API",

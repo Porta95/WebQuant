@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026-03-04",
+    "dominant": "GLD",
+    "weights": {
+      "BTC-USD": 0.0,
+      "ETH-USD": 0.0,
+      "SPY": 0.0,
+      "QQQ": 0.0,
+      "GLD": 1.0
+    },
+    "quality": "BAJA",
+    "buffett": {
+      "value": 213.0,
+      "phase": "CARO",
+      "mult": 0.7,
+      "yoy": 17.7
+    }
+  },
+  {
     "date": "2026-03-02",
     "dominant": "GLD",
     "weights": {

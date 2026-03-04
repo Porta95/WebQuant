@@ -5,26 +5,20 @@ const API_URL =
 // ================= SIGNAL =================
 
 export async function getSignal() {
-  const res = await fetch(`${API_URL}/api/signal`, {
-    next: { revalidate: 300 },
-  });
-  if (!res.ok) throw new Error("Error fetching signal");
+  const res = await fetch(`${API_URL}/api/signal`, { cache: 'no-store' });
+  if (!res.ok) throw new Error('Error fetching signal');
   return res.json();
 }
 
 export async function getHistory() {
-  const res = await fetch(`${API_URL}/api/signal/history`, {
-    next: { revalidate: 300 },
-  });
-  if (!res.ok) throw new Error("Error fetching history");
+  const res = await fetch(`${API_URL}/api/signal/history`, { cache: 'no-store' });
+  if (!res.ok) throw new Error('Error fetching history');
   return res.json();
 }
 
 export async function getPerformance() {
-  const res = await fetch(`${API_URL}/api/signal/performance`, {
-    next: { revalidate: 300 },
-  });
-  if (!res.ok) throw new Error("Error fetching performance");
+  const res = await fetch(`${API_URL}/api/signal/performance`, { cache: 'no-store' });
+  if (!res.ok) throw new Error('Error fetching performance');
   return res.json();
 }
 

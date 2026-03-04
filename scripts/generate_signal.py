@@ -15,18 +15,36 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 # ── Config ───────────────────────────────────────────────────────────────────
-TICKERS  = ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"]
 WINDOW   = 50
 DATA_DIR = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
-SLEEVE_MAP = {
-    "SPY": "equity", "QQQ": "equity",
-    "BTC-USD": "crypto", "ETH-USD": "crypto",
-    "GLD": "commodity",
-}
-CRYPTO_SPLIT = {"BTC-USD": 0.70, "ETH-USD": 0.30}
+# Leer portfolio.json si existe, sino usar defaults
+def load_portfolio_config():
+    port_path = DATA_DIR / "portfolio.json"
+    if port_path.exists():
+        try:
+            p = json.loads(port_path.read_text())
+            crypto     = p.get("crypto", ["BTC-USD", "ETH-USD"])
+            equities   = p.get("equities", ["SPY", "QQQ"])
+            commodities = p.get("commodities", ["GLD"])
+            tickers = crypto + equities + commodities
+            sleeve_map = {}
+            for t in crypto:      sleeve_map[t] = "crypto"
+            for t in equities:    sleeve_map[t] = "equity"
+            for t in commodities: sleeve_map[t] = "commodity"
+            return tickers, sleeve_map, crypto
+        except Exception as e:
+            print(f"  [portfolio] error leyendo config: {e}")
+    # defaults
+    return (
+        ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"],
+        {"SPY": "equity", "QQQ": "equity", "BTC-USD": "crypto", "ETH-USD": "crypto", "GLD": "commodity"},
+        ["BTC-USD", "ETH-USD"],
+    )
 
+TICKERS, SLEEVE_MAP, CRYPTO_TICKERS = load_portfolio_config()
+CRYPTO_SPLIT = {t: 1/len(CRYPTO_TICKERS) for t in CRYPTO_TICKERS} if CRYPTO_TICKERS else {}
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 def download_prices(tickers, start="2018-01-01"):

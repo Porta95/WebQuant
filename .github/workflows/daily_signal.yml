@@ -36,3 +36,9 @@ jobs:
           git add data/
           git diff --staged --quiet || git commit -m "data: senal diaria $(date +'%Y-%m-%d')"
           git push origin main
+
+
+      - name: Trigger Railway redeploy
+        run: |
+          curl -X POST "${{ secrets.RAILWAY_DEPLOY_HOOK }}"
+

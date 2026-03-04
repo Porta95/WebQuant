@@ -38,7 +38,3 @@ jobs:
           git push origin main
 
 
-      - name: Trigger Railway redeploy
-        run: |
-          curl -X POST "${{ secrets.RAILWAY_DEPLOY_HOOK }}"
-

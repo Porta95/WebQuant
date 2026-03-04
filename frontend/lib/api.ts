@@ -6,7 +6,7 @@ const API_URL =
 
 export async function getSignal() {
   const res = await fetch(`${API_URL}/api/signal`, {
-    next: { revalidate: 3600 },
+    next: { revalidate: 300 },
   });
   if (!res.ok) throw new Error("Error fetching signal");
   return res.json();
@@ -14,7 +14,7 @@ export async function getSignal() {
 
 export async function getHistory() {
   const res = await fetch(`${API_URL}/api/signal/history`, {
-    next: { revalidate: 3600 },
+    next: { revalidate: 300 },
   });
   if (!res.ok) throw new Error("Error fetching history");
   return res.json();
@@ -22,7 +22,7 @@ export async function getHistory() {
 
 export async function getPerformance() {
   const res = await fetch(`${API_URL}/api/signal/performance`, {
-    next: { revalidate: 3600 },
+    next: { revalidate: 300 },
   });
   if (!res.ok) throw new Error("Error fetching performance");
   return res.json();

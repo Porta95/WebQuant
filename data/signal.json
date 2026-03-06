@@ -9,33 +9,33 @@
   "phases": {
     "BTC-USD": {
       "phase": "BROKEN",
-      "dist": -4.53,
-      "risk": 4.74,
-      "price": 72437.23
+      "dist": -8.13,
+      "risk": 8.85,
+      "price": 69190.12
     },
     "ETH-USD": {
       "phase": "BROKEN",
-      "dist": -10.12,
-      "risk": 11.25,
-      "price": 2116.26
+      "dist": -13.14,
+      "risk": 15.12,
+      "price": 2021.85
     },
     "SPY": {
-      "phase": "NO_DATA",
-      "dist": 0.0,
-      "risk": 0.0,
-      "price": NaN
+      "phase": "BROKEN",
+      "dist": -0.95,
+      "risk": 0.96,
+      "price": 681.31
     },
     "QQQ": {
       "phase": "BROKEN",
-      "dist": -0.48,
-      "risk": 0.49,
-      "price": 610.05
+      "dist": -0.63,
+      "risk": 0.63,
+      "price": 608.91
     },
     "GLD": {
       "phase": "EARLY",
-      "dist": 2.47,
-      "risk": 2.41,
-      "price": 470.43
+      "dist": 1.37,
+      "risk": 1.35,
+      "price": 466.13
     }
   },
   "active": {
@@ -53,14 +53,14 @@
     "yoy": 17.7
   },
   "volatilities": {
-    "BTC-USD": 0.467,
-    "ETH-USD": 0.6244,
-    "SPY": NaN,
-    "QQQ": 0.1256,
-    "GLD": 0.3122
+    "BTC-USD": 0.47,
+    "ETH-USD": 0.6263,
+    "SPY": 0.0896,
+    "QQQ": 0.1257,
+    "GLD": 0.313
   },
-  "signal_date": "2026-03-05",
-  "generated_at": "2026-03-05T14:35:24.683085",
+  "signal_date": "2026-03-06",
+  "generated_at": "2026-03-06T14:07:33.824363",
   "cash_pct": 0.0,
   "quality": "BAJA",
   "tickers": [

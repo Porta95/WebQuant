@@ -1,9 +1,5 @@
 {
-  "assets": [
-    {"ticker": "BTC-USD", "enabled": true},
-    {"ticker": "ETH-USD", "enabled": true},
-    {"ticker": "QQQ", "enabled": true},
-    {"ticker": "SPY", "enabled": true},
-    {"ticker": "GLD", "enabled": true}
-  ]
+  "crypto": ["BTC-USD", "ETH-USD"],
+  "equities": ["SPY", "QQQ"],
+  "commodities": ["GLD"]
 }

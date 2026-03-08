@@ -2,19 +2,23 @@ name: Daily Signal Generator
 
 on:
   schedule:
-    - cron: "0 12 * * 1-5"
-  workflow_dispatch:
+    - cron: "0 12 * * 1-5"   # Lunes a viernes a las 12:00 UTC
+  workflow_dispatch:           # Permite correrlo manualmente
 
 jobs:
   generate-signal:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
+          # FIX: fetch completo para evitar problemas con el push posterior
+          fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -23,19 +27,23 @@ jobs:
 
       - name: Generate signal and save JSON
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_TOKEN:   ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/generate_signal.py
 
       - name: Commit signal data
         run: |
-          set -x
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f data/
-          git reset --soft HEAD
-          git fetch origin main
-          git reset --mixed origin/main
-          git add data/
-          git diff --staged --quiet || git commit -m "data: senal diaria $(date +'%Y-%m-%d')"
+
+          # FIX: pull con rebase antes de commitear para no pisar cambios del usuario
+          # (portfolio.json puede haber sido actualizado entre el checkout y ahora)
+          git pull --rebase origin main
+
+          # Solo agregar los archivos de data generados (no portfolio.json)
+          git add data/signal.json data/performance.json data/history.json
+
+          # Commitear solo si hay cambios reales
+          git diff --staged --quiet || git commit -m "data: señal diaria $(date +'%Y-%m-%d')"
+
           git push origin main

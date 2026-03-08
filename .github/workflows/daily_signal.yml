@@ -2,23 +2,19 @@ name: Daily Signal Generator
 
 on:
   schedule:
-    - cron: "0 12 * * 1-5"   # Lunes a viernes a las 12:00 UTC
-  workflow_dispatch:           # Permite correrlo manualmente
+    - cron: "0 12 * * 1-5"
+  workflow_dispatch:
 
 jobs:
   generate-signal:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GH_PAT }}
-          # FIX: fetch completo para evitar problemas con el push posterior
-          fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 

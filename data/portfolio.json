@@ -1,5 +1,16 @@
 {
-  "crypto": ["BTC-USD", "ETH-USD"],
-  "equities": ["SPY", "QQQ"],
-  "commodities": ["GLD"]
+  "crypto": [
+    "BTC-USD",
+    "ETH-USD"
+  ],
+  "equities": [
+    "SPY",
+    "QQQ",
+    "NVDIA",
+    "KO",
+    "V"
+  ],
+  "commodities": [
+    "GLD"
+  ]
 }

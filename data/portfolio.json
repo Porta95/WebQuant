@@ -5,7 +5,8 @@
   ],
   "equities": [
     "SPY",
-    "QQQ"
+    "QQQ",
+    "TSM"
   ],
   "commodities": [
     "GLD"

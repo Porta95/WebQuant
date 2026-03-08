@@ -36,14 +36,18 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # FIX: pull con rebase antes de commitear para no pisar cambios del usuario
-          # (portfolio.json puede haber sido actualizado entre el checkout y ahora)
-          git pull --rebase origin main
-
-          # Solo agregar los archivos de data generados (no portfolio.json)
+          # Stagear los archivos generados ANTES del rebase
           git add data/signal.json data/performance.json data/history.json
 
-          # Commitear solo si hay cambios reales
+          # Guardar cambios temporalmente, pull, y reaplicar
+          git stash
+
+          git pull --rebase origin main
+
+          git stash pop
+
+          # Commitear si hay cambios
+          git diff --staged --quiet && git add data/signal.json data/performance.json data/history.json
           git diff --staged --quiet || git commit -m "data: señal diaria $(date +'%Y-%m-%d')"
 
           git push origin main

@@ -1,18 +1,17 @@
 [
   {
     "date": "2026-03-08",
-    "dominant": "KO",
+    "dominant": "GLD",
     "weights": {
       "SPY": 0.0,
       "QQQ": 0.0,
-      "NVDIA": 0.0,
-      "KO": 0.6107,
       "V": 0.0,
+      "TSM": 0.0,
       "BTC-USD": 0.0,
       "ETH-USD": 0.0,
-      "GLD": 0.3893
+      "GLD": 1.0
     },
-    "quality": "MEDIA",
+    "quality": "BAJA",
     "buffett": {
       "value": 213.0,
       "phase": "CARO",
@@ -22,9 +21,8 @@
     "tickers": [
       "SPY",
       "QQQ",
-      "NVDIA",
-      "KO",
       "V",
+      "TSM",
       "BTC-USD",
       "ETH-USD",
       "GLD"

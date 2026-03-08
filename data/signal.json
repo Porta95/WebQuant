@@ -2,12 +2,11 @@
   "weights": {
     "SPY": 0.0,
     "QQQ": 0.0,
-    "NVDIA": 0.0,
-    "KO": 0.6107,
     "V": 0.0,
+    "TSM": 0.0,
     "BTC-USD": 0.0,
     "ETH-USD": 0.0,
-    "GLD": 0.3893
+    "GLD": 1.0
   },
   "phases": {
     "SPY": {
@@ -22,35 +21,29 @@
       "risk": 2.06,
       "price": 599.75
     },
-    "NVDIA": {
-      "phase": "NO_DATA",
-      "dist": 0.0,
-      "risk": 0.0,
-      "price": NaN
-    },
-    "KO": {
-      "phase": "EARLY",
-      "dist": 0.1,
-      "risk": 0.1,
-      "price": 77.04
-    },
     "V": {
       "phase": "BROKEN",
       "dist": -1.59,
       "risk": 1.62,
       "price": 317.36
     },
+    "TSM": {
+      "phase": "BROKEN",
+      "dist": -3.81,
+      "risk": 3.96,
+      "price": 338.89
+    },
     "BTC-USD": {
       "phase": "BROKEN",
-      "dist": -10.1,
-      "risk": 11.23,
-      "price": 67178.55
+      "dist": -10.07,
+      "risk": 11.19,
+      "price": 67201.74
     },
     "ETH-USD": {
       "phase": "BROKEN",
-      "dist": -14.47,
-      "risk": 16.92,
-      "price": 1967.26
+      "dist": -14.39,
+      "risk": 16.81,
+      "price": 1969.23
     },
     "GLD": {
       "phase": "EARLY",
@@ -62,14 +55,13 @@
   "active": {
     "SPY": false,
     "QQQ": false,
-    "NVDIA": false,
-    "KO": true,
     "V": false,
+    "TSM": false,
     "BTC-USD": false,
     "ETH-USD": false,
     "GLD": true
   },
-  "dominant": "KO",
+  "dominant": "GLD",
   "buffett": {
     "value": 213.0,
     "phase": "CARO",
@@ -79,23 +71,21 @@
   "volatilities": {
     "SPY": 0.0922,
     "QQQ": 0.1281,
-    "NVDIA": 0.2,
-    "KO": 0.14,
     "V": 0.2081,
+    "TSM": 0.3005,
     "BTC-USD": 0.4722,
     "ETH-USD": 0.6289,
     "GLD": 0.3138
   },
   "signal_date": "2026-03-08",
-  "generated_at": "2026-03-08T00:57:20.188126",
+  "generated_at": "2026-03-08T01:01:07.788768",
   "cash_pct": 0.0,
-  "quality": "MEDIA",
+  "quality": "BAJA",
   "tickers": [
     "SPY",
     "QQQ",
-    "NVDIA",
-    "KO",
     "V",
+    "TSM",
     "BTC-USD",
     "ETH-USD",
     "GLD"

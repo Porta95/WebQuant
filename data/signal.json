@@ -1,24 +1,15 @@
 {
   "weights": {
-    "BTC-USD": 0.0,
-    "ETH-USD": 0.0,
     "SPY": 0.0,
     "QQQ": 0.0,
-    "GLD": 1.0
+    "NVDIA": 0.0,
+    "KO": 0.6107,
+    "V": 0.0,
+    "BTC-USD": 0.0,
+    "ETH-USD": 0.0,
+    "GLD": 0.3893
   },
   "phases": {
-    "BTC-USD": {
-      "phase": "BROKEN",
-      "dist": -9.9,
-      "risk": 10.99,
-      "price": 67326.26
-    },
-    "ETH-USD": {
-      "phase": "BROKEN",
-      "dist": -14.33,
-      "risk": 16.72,
-      "price": 1970.75
-    },
     "SPY": {
       "phase": "BROKEN",
       "dist": -2.17,
@@ -31,6 +22,36 @@
       "risk": 2.06,
       "price": 599.75
     },
+    "NVDIA": {
+      "phase": "NO_DATA",
+      "dist": 0.0,
+      "risk": 0.0,
+      "price": NaN
+    },
+    "KO": {
+      "phase": "EARLY",
+      "dist": 0.1,
+      "risk": 0.1,
+      "price": 77.04
+    },
+    "V": {
+      "phase": "BROKEN",
+      "dist": -1.59,
+      "risk": 1.62,
+      "price": 317.36
+    },
+    "BTC-USD": {
+      "phase": "BROKEN",
+      "dist": -10.1,
+      "risk": 11.23,
+      "price": 67178.55
+    },
+    "ETH-USD": {
+      "phase": "BROKEN",
+      "dist": -14.47,
+      "risk": 16.92,
+      "price": 1967.26
+    },
     "GLD": {
       "phase": "EARLY",
       "dist": 2.7,
@@ -39,13 +60,16 @@
     }
   },
   "active": {
-    "BTC-USD": false,
-    "ETH-USD": false,
     "SPY": false,
     "QQQ": false,
+    "NVDIA": false,
+    "KO": true,
+    "V": false,
+    "BTC-USD": false,
+    "ETH-USD": false,
     "GLD": true
   },
-  "dominant": "GLD",
+  "dominant": "KO",
   "buffett": {
     "value": 213.0,
     "phase": "CARO",
@@ -53,21 +77,27 @@
     "yoy": 17.7
   },
   "volatilities": {
-    "BTC-USD": 0.4721,
-    "ETH-USD": 0.6289,
     "SPY": 0.0922,
     "QQQ": 0.1281,
+    "NVDIA": 0.2,
+    "KO": 0.14,
+    "V": 0.2081,
+    "BTC-USD": 0.4722,
+    "ETH-USD": 0.6289,
     "GLD": 0.3138
   },
-  "signal_date": "2026-03-07",
-  "generated_at": "2026-03-07T23:49:19.297124",
+  "signal_date": "2026-03-08",
+  "generated_at": "2026-03-08T00:57:20.188126",
   "cash_pct": 0.0,
-  "quality": "BAJA",
+  "quality": "MEDIA",
   "tickers": [
-    "BTC-USD",
-    "ETH-USD",
     "SPY",
     "QQQ",
+    "NVDIA",
+    "KO",
+    "V",
+    "BTC-USD",
+    "ETH-USD",
     "GLD"
   ]
 }

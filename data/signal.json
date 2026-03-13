@@ -6,50 +6,50 @@
     "TSM": 0.0,
     "BTC-USD": 0.0,
     "ETH-USD": 0.0,
-    "GLD": 1.0
+    "GLD": 0.0
   },
   "phases": {
     "SPY": {
       "phase": "BROKEN",
-      "dist": -2.17,
-      "risk": 2.22,
-      "price": 672.38
+      "dist": -3.37,
+      "risk": 3.49,
+      "price": 662.29
     },
     "QQQ": {
       "phase": "BROKEN",
-      "dist": -2.02,
-      "risk": 2.06,
-      "price": 599.75
+      "dist": -2.71,
+      "risk": 2.78,
+      "price": 593.72
     },
     "V": {
       "phase": "BROKEN",
-      "dist": -1.59,
-      "risk": 1.62,
-      "price": 317.36
+      "dist": -4.24,
+      "risk": 4.43,
+      "price": 307.14
     },
     "TSM": {
       "phase": "BROKEN",
-      "dist": -3.81,
-      "risk": 3.96,
-      "price": 338.89
+      "dist": -4.28,
+      "risk": 4.47,
+      "price": 338.31
     },
     "BTC-USD": {
       "phase": "BROKEN",
-      "dist": -9.93,
-      "risk": 11.02,
-      "price": 67307.12
+      "dist": -1.14,
+      "risk": 1.16,
+      "price": 71257.92
     },
     "ETH-USD": {
       "phase": "BROKEN",
-      "dist": -14.32,
-      "risk": 16.71,
-      "price": 1970.91
+      "dist": -3.04,
+      "risk": 3.14,
+      "price": 2105.32
     },
     "GLD": {
-      "phase": "EARLY",
-      "dist": 2.7,
-      "risk": 2.63,
-      "price": 473.51
+      "phase": "BROKEN",
+      "dist": -1.04,
+      "risk": 1.05,
+      "price": 460.84
     }
   },
   "active": {
@@ -59,27 +59,27 @@
     "TSM": false,
     "BTC-USD": false,
     "ETH-USD": false,
-    "GLD": true
+    "GLD": false
   },
-  "dominant": "GLD",
+  "dominant": "DEFENSIVO",
   "buffett": {
-    "value": 213.0,
+    "value": 213.3,
     "phase": "CARO",
     "mult": 0.7,
-    "yoy": 17.7
+    "yoy": 18.0
   },
   "volatilities": {
-    "SPY": 0.0922,
-    "QQQ": 0.1281,
-    "V": 0.2081,
-    "TSM": 0.3005,
-    "BTC-USD": 0.4721,
-    "ETH-USD": 0.6289,
-    "GLD": 0.3138
+    "SPY": 0.0947,
+    "QQQ": 0.1294,
+    "V": 0.1813,
+    "TSM": 0.3041,
+    "BTC-USD": 0.4766,
+    "ETH-USD": 0.6175,
+    "GLD": 0.317
   },
-  "signal_date": "2026-03-08",
-  "generated_at": "2026-03-08T01:20:24.113450",
-  "cash_pct": 0.0,
+  "signal_date": "2026-03-13",
+  "generated_at": "2026-03-13T21:40:50.748401",
+  "cash_pct": 1.0,
   "quality": "BAJA",
   "tickers": [
     "SPY",

@@ -80,18 +80,11 @@ export default function Dashboard() {
     </div>
   );
 
-<<<<<<< HEAD
-  const weights = signal.weights || {};
-  const phases  = signal.phases  || {};
-  const buffett = signal.buffett || {};
-  const metrics = perf?.metrics  || {};
-=======
   const weights = signal.weights  || {};
   const phases  = signal.phases   || {};
   const buffett = signal.buffett  || {};
   const momenta = signal.momenta  || {};
   const metrics = perf?.metrics   || {};
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
   const curve   = perf?.equity_curve || [];
 
   const qualityColor = signal.quality === 'ALTA'  ? 'text-green-400' :
@@ -179,29 +172,6 @@ export default function Dashboard() {
             Fases de mercado
           </div>
           <div className="space-y-1.5">
-<<<<<<< HEAD
-            {Object.entries(phases).map(([ticker, info]: [string, any]) => (
-              <div key={ticker}
-                className="flex items-center justify-between py-1.5 px-2.5 sm:py-2 sm:px-3 bg-zinc-800/50 rounded-lg">
-                <div className="min-w-0 flex-1">
-                  <div className="font-mono text-xs font-bold text-zinc-200">
-                    {ticker.replace('-USD', '')}
-                  </div>
-                  <div className="font-mono text-[10px] text-zinc-500">
-                    ${info.price?.toLocaleString()}
-                  </div>
-                </div>
-                <div className="flex items-center gap-1.5 sm:gap-2 flex-shrink-0">
-                  <span className="font-mono text-[10px] sm:text-xs text-zinc-500 hidden sm:block">
-                    {info.dist >= 0 ? '+' : ''}{info.dist?.toFixed(1)}%
-                  </span>
-                  <span className={`font-mono text-[10px] sm:text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded border ${PHASE_COLORS[info.phase] || PHASE_COLORS.NO_DATA}`}>
-                    {info.phase}
-                  </span>
-                </div>
-              </div>
-            ))}
-=======
             {Object.entries(phases).map(([ticker, info]: [string, any]) => {
               const mom    = momenta[ticker];
               const momPct = mom != null ? (mom * 100).toFixed(0) : null;
@@ -234,7 +204,6 @@ export default function Dashboard() {
                 </div>
               );
             })}
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
           </div>
         </div>
 

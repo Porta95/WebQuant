@@ -1,15 +1,4 @@
 """
-<<<<<<< HEAD
-generate_signal.py — Corre en GitHub Actions.
-Descarga datos, calcula señal completa y guarda JSON en data/.
-Railway solo lee esos archivos — sin depender de Yahoo Finance en runtime.
-
-Fixes v2:
-- compute_recent_performance: elimina el hardcode ew *= 0.85, usa mult Buffett real.
-- load_portfolio_config: más robusto, soporta tanto estructura nueva como legacy.
-- build_position: vectorizado con NumPy (igual que core.py optimizado).
-- Performance genera datos desde 2020 para tener más historial.
-=======
 generate_signal.py — Corre en GitHub Actions (script autocontenido).
 Descarga datos, calcula señal completa v3.1 y guarda JSON en data/.
 Railway solo lee esos archivos — sin depender de Yahoo Finance en runtime.
@@ -29,7 +18,6 @@ Mejoras v3.1:
 - Sleeve "reits" (VNQ) con baja correlación a equity
 - Salida anticipada: EXTENDED + momentum 1 mes < -4%
 - Factor de valor (52-week range): activos baratos reciben sobrepeso
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 """
 
 import json
@@ -43,20 +31,8 @@ from datetime import datetime
 from pathlib import Path
 
 # ── Config ───────────────────────────────────────────────────────────────────
-<<<<<<< HEAD
-WINDOW   = 50
-DATA_DIR = Path(__file__).parent.parent / "data"
-DATA_DIR.mkdir(exist_ok=True)
-
-
-def load_portfolio_config():
-    """
-    Lee portfolio.json y retorna (tickers, sleeve_map, crypto_tickers).
-    Soporta la estructura del router: {crypto: [], equities: [], commodities: []}.
-    Si el archivo no existe o está corrupto, usa defaults.
-=======
-WINDOW       = 50
-DATA_DIR     = Path(__file__).parent.parent / "data"
+WINDOW             = 50
+DATA_DIR           = Path(__file__).parent.parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 TRANSACTION_COST   = 0.001   # 10 bps por rotación
@@ -68,26 +44,12 @@ def load_portfolio_config():
     Lee portfolio.json y retorna (tickers, sleeve_map, crypto_tickers, bonds_tickers).
     Soporta los sleeves: equities, reits, crypto, commodities, bonds, merval.
     Si el archivo no existe o está corrupto, usa defaults con todos los sleeves.
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     """
     port_path = DATA_DIR / "portfolio.json"
     if port_path.exists():
         try:
             p = json.loads(port_path.read_text())
 
-<<<<<<< HEAD
-            # Estructura estándar del router/portfolio.py
-            if all(k in p for k in ["crypto", "equities", "commodities"]):
-                crypto      = [t.upper() for t in p.get("crypto", []) if t]
-                equities    = [t.upper() for t in p.get("equities", []) if t]
-                commodities = [t.upper() for t in p.get("commodities", []) if t]
-
-                # Garantizar que haya al menos un equity como benchmark
-                if "SPY" not in equities and "QQQ" not in equities:
-                    equities = ["SPY"] + equities
-
-                tickers    = equities + crypto + commodities
-=======
             if any(k in p for k in ["crypto", "equities", "commodities", "bonds", "merval", "reits"]):
                 crypto      = [t.upper() for t in p.get("crypto", [])      if t]
                 equities    = [t.upper() for t in p.get("equities", [])    if t]
@@ -101,41 +63,20 @@ def load_portfolio_config():
                     equities = ["SPY"] + equities
 
                 tickers    = equities + reits + crypto + commodities + bonds + merval
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
                 sleeve_map = {}
                 for t in crypto:      sleeve_map[t] = "crypto"
                 for t in equities:    sleeve_map[t] = "equity"
                 for t in commodities: sleeve_map[t] = "commodity"
-<<<<<<< HEAD
-
-                print(f"  [portfolio] cargado: {tickers}")
-                return tickers, sleeve_map, crypto
-=======
                 for t in bonds:       sleeve_map[t] = "bonds"
                 for t in merval:      sleeve_map[t] = "merval"
                 for t in reits:       sleeve_map[t] = "reits"
 
                 print(f"  [portfolio] cargado: {tickers}")
                 return tickers, sleeve_map, crypto, bonds
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
         except Exception as e:
             print(f"  [portfolio] error leyendo config: {e}")
 
-<<<<<<< HEAD
-    # Defaults seguros
-    print("  [portfolio] usando defaults")
-    default_tickers    = ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"]
-    default_sleeve_map = {
-        "SPY": "equity", "QQQ": "equity",
-        "BTC-USD": "crypto", "ETH-USD": "crypto",
-        "GLD": "commodity",
-    }
-    return default_tickers, default_sleeve_map, ["BTC-USD", "ETH-USD"]
-
-
-TICKERS, SLEEVE_MAP, CRYPTO_TICKERS = load_portfolio_config()
-=======
     # Defaults seguros con todos los sleeves
     print("  [portfolio] usando defaults v3.1")
     default_tickers = [
@@ -159,7 +100,6 @@ TICKERS, SLEEVE_MAP, CRYPTO_TICKERS = load_portfolio_config()
 
 
 TICKERS, SLEEVE_MAP, CRYPTO_TICKERS, BOND_TICKERS = load_portfolio_config()
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 CRYPTO_SPLIT = (
     {t: 1 / len(CRYPTO_TICKERS) for t in CRYPTO_TICKERS}
     if CRYPTO_TICKERS else {}
@@ -168,11 +108,7 @@ CRYPTO_SPLIT = (
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def download_prices(tickers, start="2018-01-01"):
-<<<<<<< HEAD
-    print(f"  Descargando {tickers} desde {start}...")
-=======
     print(f"  Descargando {len(tickers)} tickers desde {start}...")
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     raw  = yf.download(tickers, start=start, auto_adjust=True, progress=False)
     data = raw["Close"] if isinstance(raw.columns, pd.MultiIndex) else raw
     data = data.dropna(how="all").ffill()
@@ -180,17 +116,6 @@ def download_prices(tickers, start="2018-01-01"):
     return data
 
 
-<<<<<<< HEAD
-def trend_phase(price, ma):
-    if pd.isna(price) or pd.isna(ma):
-        return "NO_DATA", 0.0, 0.0
-    dist = (price - ma) / ma if ma != 0 else 0.0
-    risk = abs(price - ma) / price if price > 0 else 0.0
-    if price < ma:    return "BROKEN",   dist, risk
-    elif dist < 0.03: return "EARLY",    dist, risk
-    elif dist < 0.07: return "OK",       dist, risk
-    else:             return "EXTENDED", dist, risk
-=======
 def add_indicators(data, tickers):
     """Agrega MA50, HIGH50, MA20 y ATR20 para cada ticker."""
     for t in tickers:
@@ -221,17 +146,12 @@ def trend_phase_adaptive(price, ma50, atr20=0.0):
         if dist < 0.03:   return "EARLY",    dist, risk
         elif dist < 0.07: return "OK",       dist, risk
         else:             return "EXTENDED", dist, risk
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
 
 def phase_size(ph):
     return {"EARLY": 1.0, "OK": 0.7, "EXTENDED": 0.4}.get(ph, 0.0)
 
 
-<<<<<<< HEAD
-def build_position(entry, exit_):
-    """Vectorizado con NumPy — igual que core.py optimizado."""
-=======
 def buffett_multiplier_continuous(ratio):
     """Interpolación lineal suave: ratio 80→1.30, ratio 180→0.40."""
     if ratio is None or pd.isna(ratio):
@@ -243,7 +163,6 @@ def buffett_multiplier_continuous(ratio):
 
 def build_position(entry, exit_):
     """Vectorizado con NumPy."""
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     ent   = entry.to_numpy(dtype=bool)
     ext   = exit_.to_numpy(dtype=bool)
     n     = len(ent)
@@ -259,11 +178,7 @@ def build_position(entry, exit_):
 def annual_vol(prices, window=90):
     r = prices.pct_change().dropna()
     if len(r) == 0:
-<<<<<<< HEAD
-        return 0.20  # fallback razonable
-=======
         return 0.20
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     tail = r.tail(window) if len(r) >= window else r
     return float(tail.std() * np.sqrt(252))
 
@@ -274,8 +189,6 @@ def vol_adjusted_size(base, vol, target=0.20):
     return min(base * (target / vol), 1.5)
 
 
-<<<<<<< HEAD
-=======
 def compute_momentum_12_1(data, ticker, slow=252, skip=21):
     """Momentum 12-1 meses: retorno de 12 meses excluyendo el último mes."""
     if ticker not in data.columns or len(data) < slow:
@@ -334,7 +247,6 @@ def allocate_sleeve(assets, sleeve_weight, sizes, active, vols, momenta, splits=
     return result
 
 
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 def get_buffett():
     try:
         wil    = yf.download("^W5000", start="1990-01-01", auto_adjust=True, progress=False)["Close"]
@@ -348,11 +260,6 @@ def get_buffett():
         b   = (df["WILL"] / df["GDP"]) * 100
         val = float(b.iloc[-1])
         yoy = float(b.iloc[-1] - b.iloc[-252]) if len(b) > 252 else None
-<<<<<<< HEAD
-        ph  = "BARATO" if val < 90 else "JUSTO" if val < 120 else "CARO"
-        mt  = 1.2 if val < 90 else 1.0 if val < 120 else 0.7
-        return {"value": round(val, 1), "phase": ph, "mult": mt, "yoy": round(yoy, 1) if yoy else None}
-=======
         mult = buffett_multiplier_continuous(val)
 
         if val < 90:    ph = "BARATO"
@@ -362,85 +269,11 @@ def get_buffett():
 
         return {"value": round(val, 1), "phase": ph, "mult": round(mult, 3),
                 "yoy": round(yoy, 1) if yoy else None}
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     except Exception as e:
         print(f"  [buffett] error: {e}")
         return {"value": None, "phase": "N/A", "mult": 1.0, "yoy": None}
 
 
-<<<<<<< HEAD
-def compute_weights_at(row, positions, loc, tickers, sleeve_map, crypto_split, vols, buffett_mult):
-    """
-    Calcula pesos en un momento dado del histórico.
-    Usa el multiplicador Buffett real — sin hardcode.
-    """
-    sizes, active = {}, {}
-    for t in tickers:
-        if t not in row.index:
-            continue
-        ma_col = f"{t}_MA{WINDOW}"
-        if ma_col not in row.index:
-            continue
-        ph, _, _  = trend_phase(float(row[t]), float(row[ma_col]))
-        sizes[t]  = phase_size(ph)
-        active[t] = bool(positions[t].iloc[loc])
-
-    crypto_a    = [t for t in tickers if sleeve_map.get(t) == "crypto"]
-    equity_a    = [t for t in tickers if sleeve_map.get(t) == "equity"]
-    commodity_a = [t for t in tickers if sleeve_map.get(t) == "commodity"]
-
-    def sleeve_s(assets):
-        s = [sizes[a] for a in assets if active.get(a)]
-        return max(s) if s else 0.0
-
-    cs = sleeve_s(crypto_a)
-    es = sleeve_s(equity_a)
-    gs = sleeve_s(commodity_a)
-    ts = cs + es + gs
-
-    weights = {t: 0.0 for t in tickers}
-    if ts == 0:
-        return weights
-
-    cw = cs / ts
-    ew = es / ts * buffett_mult   # FIX: mult real, no hardcode 0.85
-    gw = gs / ts
-    t2 = cw + ew + gw
-    if t2 > 0:
-        cw /= t2; ew /= t2; gw /= t2
-
-    for t in crypto_a:
-        if active.get(t):
-            split      = crypto_split.get(t, 1.0 / max(len(crypto_a), 1))
-            weights[t] = round(vol_adjusted_size(cw * split, vols.get(t, 0.20)), 4)
-
-    for t in sorted(equity_a, key=lambda x: 0 if x == "QQQ" else 1):
-        if active.get(t):
-            weights[t] = round(vol_adjusted_size(ew, vols.get(t, 0.15)), 4)
-            break
-
-    for t in commodity_a:
-        if active.get(t):
-            weights[t] = round(vol_adjusted_size(gw, vols.get(t, 0.10)), 4)
-            break
-
-    tw = sum(weights.values())
-    if tw > 0:
-        weights = {t: round(w / tw, 4) for t, w in weights.items()}
-    return weights
-
-
-# ── Signal ────────────────────────────────────────────────────────────────────
-
-def compute_signal():
-    data = download_prices(TICKERS)
-
-    for t in TICKERS:
-        if t in data.columns:
-            data[f"{t}_MA{WINDOW}"]   = data[t].rolling(WINDOW, min_periods=20).mean()
-            data[f"{t}_HIGH{WINDOW}"] = data[t].rolling(WINDOW, min_periods=20).max()
-
-=======
 # ── Signal ────────────────────────────────────────────────────────────────────
 
 def compute_signal():
@@ -449,19 +282,10 @@ def compute_signal():
     data = add_indicators(data, TICKERS)
 
     # Dual timeframe + salida anticipada (EXTENDED + momentum 1 mes < -4%)
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     positions = {}
     for t in TICKERS:
         if t not in data.columns:
             continue
-<<<<<<< HEAD
-        entry       = data[t] > data[f"{t}_HIGH{WINDOW}"].shift(1)
-        exit_       = data[t] < data[f"{t}_MA{WINDOW}"]
-        positions[t] = build_position(entry, exit_)
-
-    latest = data.iloc[-1]
-    phases, sizes, active, vols = {}, {}, {}, {}
-=======
         ma20_col = f"{t}_MA20"
         if ma20_col in data.columns:
             entry = (
@@ -479,85 +303,20 @@ def compute_signal():
 
     latest = data.iloc[-1]
     phases, sizes, active, vols, momenta, values = {}, {}, {}, {}, {}, {}
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
     for t in TICKERS:
         if t not in data.columns:
             continue
-<<<<<<< HEAD
-        ph, dist, risk = trend_phase(float(latest[t]), float(latest[f"{t}_MA{WINDOW}"]))
-=======
         atr_col = f"{t}_ATR20"
         atr20   = float(latest[atr_col]) if atr_col in latest.index and not pd.isna(latest[atr_col]) else 0.0
 
         ph, dist, risk = trend_phase_adaptive(float(latest[t]), float(latest[f"{t}_MA{WINDOW}"]), atr20)
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         phases[t] = {
             "phase": ph,
             "dist":  round(dist * 100, 2),
             "risk":  round(risk * 100, 2),
             "price": round(float(latest[t]), 2),
         }
-<<<<<<< HEAD
-        sizes[t]  = phase_size(ph)
-        active[t] = bool(positions[t].iloc[-1])
-        vols[t]   = round(annual_vol(data[t]), 4)
-
-    crypto_a    = [t for t in TICKERS if SLEEVE_MAP.get(t) == "crypto"]
-    equity_a    = [t for t in TICKERS if SLEEVE_MAP.get(t) == "equity"]
-    commodity_a = [t for t in TICKERS if SLEEVE_MAP.get(t) == "commodity"]
-
-    def sleeve_s(assets):
-        s = [sizes[a] for a in assets if active.get(a)]
-        return max(s) if s else 0.0
-
-    cs = sleeve_s(crypto_a)
-    es = sleeve_s(equity_a)
-    gs = sleeve_s(commodity_a)
-    total_s = cs + es + gs
-
-    weights  = {t: 0.0 for t in TICKERS}
-    dominant = "DEFENSIVO"
-    buffett  = get_buffett()
-
-    if total_s > 0:
-        bm = buffett["mult"]
-        cw = cs / total_s
-        ew = es / total_s
-        gw = gs / total_s
-        ew *= bm
-        t2 = cw + ew + gw
-        if t2 > 0:
-            cw /= t2; ew /= t2; gw /= t2
-
-        for t in crypto_a:
-            if active.get(t):
-                split      = CRYPTO_SPLIT.get(t, 1.0 / max(len(crypto_a), 1))
-                weights[t] = round(vol_adjusted_size(cw * split, vols[t]), 4)
-
-        for t in sorted(equity_a, key=lambda x: 0 if x == "QQQ" else 1):
-            if active.get(t):
-                weights[t] = round(vol_adjusted_size(ew, vols[t]), 4)
-                dominant = t
-                break
-
-        for t in commodity_a:
-            if active.get(t):
-                weights[t] = round(vol_adjusted_size(gw, vols[t]), 4)
-                if dominant == "DEFENSIVO":
-                    dominant = t
-
-        tw = sum(weights.values())
-        if tw > 0:
-            weights = {t: round(w / tw, 4) for t, w in weights.items()}
-
-        if cs > es and cs > gs and dominant == "DEFENSIVO":
-            dominant = "CRYPTO"
-
-    cash_pct = round(max(1.0 - sum(weights.values()), 0.0), 4)
-    hq = sum(1 for t in TICKERS if active.get(t) and phases.get(t, {}).get("phase") in ("EARLY", "OK"))
-    quality = "ALTA" if hq >= 3 else "MEDIA" if hq >= 2 else "BAJA"
-=======
         sizes[t]   = phase_size(ph)
         active[t]  = bool(positions[t].iloc[-1])
         vols[t]    = round(annual_vol(data[t]), 4)
@@ -633,7 +392,6 @@ def compute_signal():
         if active.get(t) and phases.get(t, {}).get("phase") in ("EARLY", "OK")
     )
     quality = "ALTA" if quality_score >= 0.5 else "MEDIA" if quality_score >= 0.25 else "BAJA"
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
     return {
         "weights":      weights,
@@ -642,11 +400,8 @@ def compute_signal():
         "dominant":     dominant,
         "buffett":      buffett,
         "volatilities": vols,
-<<<<<<< HEAD
-=======
         "momenta":      momenta,
         "values":       values,
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         "signal_date":  str(data.index[-1].date()),
         "generated_at": datetime.utcnow().isoformat(),
         "cash_pct":     cash_pct,
@@ -659,18 +414,6 @@ def compute_signal():
 
 def compute_recent_performance():
     """
-<<<<<<< HEAD
-    Backtest desde 2020 con los tickers del portfolio actual.
-    FIX: usa multiplicador Buffett real (calculado una sola vez).
-    """
-    print("  Calculando performance...")
-    data = download_prices(TICKERS, start="2020-01-01")
-
-    for t in TICKERS:
-        if t in data.columns:
-            data[f"{t}_MA{WINDOW}"]   = data[t].rolling(WINDOW, min_periods=20).mean()
-            data[f"{t}_HIGH{WINDOW}"] = data[t].rolling(WINDOW, min_periods=20).max()
-=======
     Backtest desde 2020 con todas las mejoras v3:
     - Fases ATR-adaptativas
     - Multi-asset por sleeve con momentum
@@ -681,27 +424,11 @@ def compute_recent_performance():
     print("  Calculando performance v3...")
     data = download_prices(TICKERS, start="2020-01-01")
     data = add_indicators(data, TICKERS)
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
     positions = {}
     for t in TICKERS:
         if t not in data.columns:
             continue
-<<<<<<< HEAD
-        entry       = data[t] > data[f"{t}_HIGH{WINDOW}"].shift(1)
-        exit_       = data[t] < data[f"{t}_MA{WINDOW}"]
-        positions[t] = build_position(entry, exit_)
-
-    # Calcular vols por ticker (una sola vez)
-    vols = {t: annual_vol(data[t]) for t in TICKERS if t in data.columns}
-
-    # Obtener mult Buffett una sola vez para todo el backtest
-    buffett      = get_buffett()
-    buffett_mult = buffett.get("mult", 1.0)
-
-    # Pre-calcular retornos diarios
-    daily_rets  = data.pct_change().fillna(0)
-=======
         ma20_col = f"{t}_MA20"
         if ma20_col in data.columns:
             entry = (
@@ -720,15 +447,11 @@ def compute_recent_performance():
     buffett      = get_buffett()
     buffett_mult = buffett.get("mult", 1.0)
 
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     rebal_dates = data.resample("W").last().index
     rebal_dates = rebal_dates[rebal_dates >= data.index[WINDOW + 5]]
 
     spy_col = "SPY" if "SPY" in data.columns else data.columns[0]
     sv, bv  = 100.0, 100.0
-<<<<<<< HEAD
-    curve, weekly = [], []
-=======
     peak_v  = 100.0
     curve, weekly = [], []
     prev_weights: dict = {t: 0.0 for t in TICKERS}
@@ -743,7 +466,6 @@ def compute_recent_performance():
     trading_sleeves = [s for s in sleeves if s != "bonds"]
 
     daily_rets = data.pct_change().fillna(0)
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
     for i, date in enumerate(rebal_dates):
         if date not in data.index:
@@ -751,10 +473,6 @@ def compute_recent_performance():
         loc = data.index.get_loc(date)
         row = data.iloc[loc]
 
-<<<<<<< HEAD
-        # Pesos con mult Buffett real
-        w = compute_weights_at(row, positions, loc, TICKERS, SLEEVE_MAP, CRYPTO_SPLIT, vols, buffett_mult)
-=======
         # Calcular fases y posiciones en esta fecha
         loc_sizes  = {}
         loc_active = {}
@@ -827,21 +545,13 @@ def compute_recent_performance():
         # Costos de transacción
         total_rotation   = sum(abs(w.get(t, 0) - prev_weights.get(t, 0)) for t in set(list(w) + list(prev_weights)))
         transaction_drag = total_rotation * TRANSACTION_COST
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
         nd = rebal_dates[i + 1] if i + 1 < len(rebal_dates) else data.index[-1]
         if nd not in data.index:
             continue
-<<<<<<< HEAD
-
-        next_loc = data.index.get_loc(nd)
-
-        # Retorno compuesto del período (vectorizado)
-=======
         next_loc = data.index.get_loc(nd)
 
         # Retorno del período
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         pr = 0.0
         for t, wt in w.items():
             if wt == 0 or t not in daily_rets.columns:
@@ -849,31 +559,22 @@ def compute_recent_performance():
             ticker_rets = daily_rets[t].iloc[loc + 1: next_loc + 1].values
             if len(ticker_rets) > 0:
                 pr += wt * float(np.prod(1 + ticker_rets) - 1)
-<<<<<<< HEAD
-=======
         pr -= transaction_drag
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
         spy_rets = daily_rets[spy_col].iloc[loc + 1: next_loc + 1].values
         br       = float(np.prod(1 + spy_rets) - 1) if len(spy_rets) > 0 else 0.0
 
         sv *= (1 + pr)
         bv *= (1 + br)
-<<<<<<< HEAD
-=======
         peak_v = max(peak_v, sv)
 
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         weekly.append(round(pr * 100, 3))
         curve.append({
             "date":      str(date.date()),
             "strategy":  round(sv, 2),
             "benchmark": round(bv, 2),
         })
-<<<<<<< HEAD
-=======
         prev_weights = dict(w)
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
     if not curve:
         return {"error": "Datos insuficientes"}
@@ -889,13 +590,8 @@ def compute_recent_performance():
     sortino   = (cagr - 0.05) / sortino_v if sortino_v > 0 else 0
     win_rate  = float(np.sum(rets > 0) / len(rets)) if len(rets) > 0 else 0
     vals      = np.array([p["strategy"] for p in curve])
-<<<<<<< HEAD
-    peak      = np.maximum.accumulate(vals)
-    dd        = ((vals - peak) / peak * 100).tolist()
-=======
     peak_arr  = np.maximum.accumulate(vals)
     dd        = ((vals - peak_arr) / peak_arr * 100).tolist()
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     max_dd    = float(np.min(dd)) if dd else 0
     b_total   = bv / 100 - 1
     b_cagr    = (1 + b_total) ** (1 / max(years, 0.1)) - 1
@@ -930,28 +626,6 @@ def send_telegram(signal):
         print("  [telegram] vars no configuradas, saltando...")
         return
 
-<<<<<<< HEAD
-    w  = signal["weights"]
-    ph = signal["phases"]
-    bf = signal["buffett"]
-    q  = signal["quality"]
-    qe = {"ALTA": "🟢", "MEDIA": "🟡", "BAJA": "🔴"}.get(q, "⚪")
-    pe = {"EARLY": "🌱", "OK": "✅", "EXTENDED": "⚠️", "BROKEN": "❌"}
-
-    alloc = "\n".join(
-        f"  {t:12s} {p:.0%}"
-        for t, p in sorted(w.items(), key=lambda x: -x[1]) if p > 0
-    )
-    phases_txt = "\n".join(
-        f"  {pe.get(v['phase'], '⚪')} {t:12s} {v['phase']} ({v['dist']:+.1f}%)"
-        for t, v in ph.items()
-    )
-    buff_txt = f"{bf['value']:.0f}% → {bf['phase']} (×{bf['mult']})" if bf.get("value") else "N/A"
-
-    msg = f"""📊 *QUANT ROTATIONAL — SEÑAL DIARIA*
-📅 `{signal['signal_date']}`
-{qe} Calidad: *{q}*
-=======
     w   = signal["weights"]
     ph  = signal["phases"]
     bf  = signal["buffett"]
@@ -972,33 +646,22 @@ def send_telegram(signal):
     buff_txt = f"{buff_val:.0f}% → {bf['phase']} (×{bf['mult']:.2f})" if buff_val else "N/A"
     cash_txt = f"{signal['cash_pct']:.0%}"
 
-    msg = f"""📊 *QUANT ROTATIONAL v3 — SEÑAL DIARIA*
+    msg = f"""📊 *QUANT ROTACIONAL v3 — SEÑAL DIARIA*
 📅 `{signal['signal_date']}`
 {qe} Calidad: *{q}* | 💵 Cash: `{cash_txt}`
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 
 🎯 *DOMINANTE: {signal['dominant']}*
 
 📦 *ASIGNACIÓN:*
 ```
-<<<<<<< HEAD
-{alloc}
-```
-📈 *FASES:*
-=======
 {alloc if alloc else "  100% CASH / SAFE HAVEN"}
 ```
 📈 *FASES (ATR-adaptativas):*
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 ```
 {phases_txt}
 ```
 🌍 Buffett: `{buff_txt}`
-<<<<<<< HEAD
-_Quant Rotational v2_"""
-=======
-_Quant Rotational v3 — Multi-asset · Momentum · Safe Haven_"""
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
+_Quant Rotacional v3 — Multi-asset · Momentum · Safe Haven_"""
 
     try:
         r = requests.post(
@@ -1014,28 +677,6 @@ _Quant Rotational v3 — Multi-asset · Momentum · Safe Haven_"""
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-<<<<<<< HEAD
-    print("=" * 55)
-    print(f"Generando señal: {datetime.utcnow().isoformat()}")
-    print(f"Tickers activos: {TICKERS}")
-    print("=" * 55)
-
-    print("\n1. Calculando señal rotacional...")
-    signal = compute_signal()
-    print(f"   Dominante: {signal['dominant']}")
-    print(f"   Calidad:   {signal['quality']}")
-    print(f"   Pesos:     {signal['weights']}")
-    (DATA_DIR / "signal.json").write_text(json.dumps(signal, indent=2, default=str))
-    print(f"   ✅ signal.json guardado")
-
-    print("\n2. Calculando performance...")
-    try:
-        perf = compute_recent_performance()
-        if "error" not in perf:
-            print(f"   CAGR: {perf['metrics']['cagr']}% | Sharpe: {perf['metrics']['sharpe']}")
-            (DATA_DIR / "performance.json").write_text(json.dumps(perf, indent=2, default=str))
-            print(f"   ✅ performance.json guardado")
-=======
     print("=" * 60)
     print(f"Generando señal v3: {datetime.utcnow().isoformat()}")
     print(f"Tickers activos: {TICKERS}")
@@ -1060,7 +701,6 @@ if __name__ == "__main__":
             print(f"   CAGR: {m['cagr']}% | Bench: {m['cagr_bench']}% | Sharpe: {m['sharpe']} | MaxDD: {m['max_drawdown']}%")
             (DATA_DIR / "performance.json").write_text(json.dumps(perf, indent=2, default=str))
             print("   ✅ performance.json guardado")
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         else:
             print(f"   ⚠️  {perf['error']}")
     except Exception as e:
@@ -1075,10 +715,7 @@ if __name__ == "__main__":
         "weights":  signal["weights"],
         "quality":  signal["quality"],
         "buffett":  signal["buffett"],
-<<<<<<< HEAD
-=======
         "momenta":  signal.get("momenta", {}),
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         "tickers":  signal["tickers"],
     }
     history = [h for h in history if h.get("date") != signal["signal_date"]]

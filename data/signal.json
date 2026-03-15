@@ -46,15 +46,15 @@
     },
     "BTC-USD": {
       "phase": "BROKEN",
-      "dist": -0.39,
-      "risk": 0.39,
-      "price": 71435.76
+      "dist": -0.4,
+      "risk": 0.4,
+      "price": 71429.09
     },
     "ETH-USD": {
       "phase": "BROKEN",
-      "dist": -2.4,
-      "risk": 2.45,
-      "price": 2102.5
+      "dist": -2.46,
+      "risk": 2.52,
+      "price": 2101.09
     },
     "GLD": {
       "phase": "BROKEN",
@@ -142,8 +142,8 @@
     "XLE": 0.0,
     "XLV": 0.3221,
     "VNQ": 0.4148,
-    "BTC-USD": 0.8592,
-    "ETH-USD": 0.9067,
+    "BTC-USD": 0.8594,
+    "ETH-USD": 0.9072,
     "GLD": 0.1799,
     "IEF": 0.3458,
     "BIL": 0.0,
@@ -151,7 +151,7 @@
     "YPFD.BA": 0.1519
   },
   "signal_date": "2026-03-15",
-  "generated_at": "2026-03-15T02:55:58.372798",
+  "generated_at": "2026-03-15T03:01:37.697684",
   "cash_pct": 0.0,
   "quality": "BAJA",
   "tickers": [

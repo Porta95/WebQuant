@@ -1,8 +1,22 @@
 {
+<<<<<<< HEAD
+=======
+  "equities": [
+    "SPY",
+    "QQQ",
+    "XLE",
+    "XLK",
+    "XLV"
+  ],
+  "reits": [
+    "VNQ"
+  ],
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
   "crypto": [
     "BTC-USD",
     "ETH-USD"
   ],
+<<<<<<< HEAD
   "equities": [
     "SPY",
     "QQQ",
@@ -13,3 +27,21 @@
     "GLD"
   ]
 }
+=======
+  "commodities": [
+    "GLD",
+    "SLV"
+  ],
+  "bonds": [
+    "IEF",
+    "BIL"
+  ],
+  "merval": [
+    "GGAL.BA",
+    "BMA.BA",
+    "YPFD.BA",
+    "ALUA.BA",
+    "PAMP.BA"
+  ]
+}
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)

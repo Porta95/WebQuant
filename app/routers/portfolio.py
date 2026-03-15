@@ -23,9 +23,18 @@ GITHUB_API   = "https://api.github.com"
 FILE_PATH    = "data/portfolio.json"
 
 DEFAULT_PORTFOLIO = {
+<<<<<<< HEAD
     "crypto":      ["BTC-USD", "ETH-USD"],
     "equities":    ["SPY", "QQQ"],
     "commodities": ["GLD"],
+=======
+    "equities":    ["SPY", "QQQ", "XLE", "XLK", "XLV"],
+    "reits":       ["VNQ"],
+    "crypto":      ["BTC-USD", "ETH-USD"],
+    "commodities": ["GLD", "SLV"],
+    "bonds":       ["IEF", "BIL"],
+    "merval":      ["GGAL.BA", "BMA.BA", "YPFD.BA", "ALUA.BA", "PAMP.BA"],
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
 }
 
 
@@ -103,11 +112,22 @@ def _put_file(content: dict, sha: str, message: str = "portfolio: actualizar car
 
 
 def _clean_portfolio(p: dict) -> dict:
+<<<<<<< HEAD
     """Normaliza y valida la estructura del portfolio."""
     cleaned = {
         "crypto":      [t.upper().strip() for t in p.get("crypto", [])      if t],
         "equities":    [t.upper().strip() for t in p.get("equities", [])    if t],
         "commodities": [t.upper().strip() for t in p.get("commodities", []) if t],
+=======
+    """Normaliza y valida la estructura del portfolio (soporta todos los sleeves v3)."""
+    cleaned = {
+        "equities":    [t.upper().strip() for t in p.get("equities", [])    if t],
+        "reits":       [t.upper().strip() for t in p.get("reits", [])       if t],
+        "crypto":      [t.upper().strip() for t in p.get("crypto", [])      if t],
+        "commodities": [t.upper().strip() for t in p.get("commodities", []) if t],
+        "bonds":       [t.upper().strip() for t in p.get("bonds", [])       if t],
+        "merval":      [t.upper().strip() for t in p.get("merval", [])      if t],
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
     }
 
     # Garantizar al menos SPY como equity para el benchmark del backtest
@@ -175,16 +195,38 @@ async def portfolio_status():
 
     try:
         content, sha = _get_file()
+<<<<<<< HEAD
+=======
+        all_tickers = (
+            content.get("equities", []) +
+            content.get("reits", []) +
+            content.get("crypto", []) +
+            content.get("commodities", []) +
+            content.get("bonds", []) +
+            content.get("merval", [])
+        )
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         return {
             "ok":      True,
             "repo":    repo,
             "file":    FILE_PATH,
             "sha":     sha[:8] if sha else "nuevo",
+<<<<<<< HEAD
             "tickers": (
                 content.get("crypto", []) +
                 content.get("equities", []) +
                 content.get("commodities", [])
             ),
+=======
+            "tickers": all_tickers,
+            "sleeves": {
+                "equities":    content.get("equities", []),
+                "crypto":      content.get("crypto", []),
+                "commodities": content.get("commodities", []),
+                "bonds":       content.get("bonds", []),
+                "merval":      content.get("merval", []),
+            },
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
         }
     except HTTPException as e:
         return {"ok": False, "error": e.detail}

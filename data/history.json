@@ -1,5 +1,58 @@
 [
   {
+    "date": "2026-03-15",
+    "dominant": "XLE",
+    "weights": {
+      "SPY": 0.0,
+      "QQQ": 0.0,
+      "XLE": 1.0,
+      "XLV": 0.0,
+      "VNQ": 0.0,
+      "BTC-USD": 0.0,
+      "ETH-USD": 0.0,
+      "GLD": 0.0,
+      "IEF": 0.0,
+      "BIL": 0.0,
+      "GGAL.BA": 0.0,
+      "YPFD.BA": 0.0
+    },
+    "quality": "BAJA",
+    "buffett": {
+      "value": 213.3,
+      "phase": "MUY_CARO",
+      "mult": 0.4,
+      "yoy": 18.0
+    },
+    "momenta": {
+      "SPY": 0.1088,
+      "QQQ": 0.0972,
+      "XLE": 0.2828,
+      "XLV": 0.1676,
+      "VNQ": 0.0738,
+      "BTC-USD": -0.3806,
+      "ETH-USD": -0.2386,
+      "GLD": 0.5258,
+      "IEF": 0.0476,
+      "BIL": 0.0247,
+      "GGAL.BA": 0.1788,
+      "YPFD.BA": 0.3915
+    },
+    "tickers": [
+      "SPY",
+      "QQQ",
+      "XLE",
+      "XLV",
+      "VNQ",
+      "BTC-USD",
+      "ETH-USD",
+      "GLD",
+      "IEF",
+      "BIL",
+      "GGAL.BA",
+      "YPFD.BA"
+    ]
+  },
+  {
     "date": "2026-03-13",
     "dominant": "DEFENSIVO",
     "weights": {

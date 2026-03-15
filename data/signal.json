@@ -2,7 +2,7 @@
   "weights": {
     "SPY": 0.0,
     "QQQ": 0.0,
-    "XLE": 1.0,
+    "XLE": 0.4327,
     "XLV": 0.0,
     "VNQ": 0.0,
     "BTC-USD": 0.0,
@@ -46,15 +46,15 @@
     },
     "BTC-USD": {
       "phase": "BROKEN",
-      "dist": -0.4,
-      "risk": 0.4,
-      "price": 71429.09
+      "dist": -0.35,
+      "risk": 0.35,
+      "price": 71465.86
     },
     "ETH-USD": {
       "phase": "BROKEN",
-      "dist": -2.46,
-      "risk": 2.52,
-      "price": 2101.09
+      "dist": -2.34,
+      "risk": 2.39,
+      "price": 2103.74
     },
     "GLD": {
       "phase": "BROKEN",
@@ -142,8 +142,8 @@
     "XLE": 0.0,
     "XLV": 0.3221,
     "VNQ": 0.4148,
-    "BTC-USD": 0.8594,
-    "ETH-USD": 0.9072,
+    "BTC-USD": 0.8588,
+    "ETH-USD": 0.9063,
     "GLD": 0.1799,
     "IEF": 0.3458,
     "BIL": 0.0,
@@ -151,8 +151,8 @@
     "YPFD.BA": 0.1519
   },
   "signal_date": "2026-03-15",
-  "generated_at": "2026-03-15T03:01:37.697684",
-  "cash_pct": 0.0,
+  "generated_at": "2026-03-15T03:16:33.512248",
+  "cash_pct": 0.5673,
   "quality": "BAJA",
   "tickers": [
     "SPY",

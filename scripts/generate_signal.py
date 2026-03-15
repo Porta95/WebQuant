@@ -350,8 +350,9 @@ def compute_signal():
         for s in ("equity", "merval"):
             if s in base_sw:
                 base_sw[s] *= bm
+        # FIX: solo normalizar si > 1.0 para que Buffett cree cash real
         total_sw = sum(base_sw.values())
-        if total_sw > 0:
+        if total_sw > 1.0:
             base_sw = {s: w / total_sw for s, w in base_sw.items()}
 
         for sleeve_name in trading_sleeves:
@@ -375,8 +376,9 @@ def compute_signal():
             active[bond_assets[0]] = True
         weights.update(bond_alloc)
 
+    # NO normalizar a 100% — la diferencia con 1.0 es cash (efecto Buffett real)
     total_w = sum(weights.values())
-    if total_w > 0:
+    if total_w > 1.0:
         weights = {t: round(w / total_w, 4) for t, w in weights.items()}
 
     if weights:
@@ -502,8 +504,9 @@ def compute_recent_performance():
             for s in ("equity", "merval"):
                 if s in base_sw:
                     base_sw[s] *= buffett_mult
+            # FIX: solo normalizar si > 1.0 para que Buffett cree cash real
             total_sw = sum(base_sw.values())
-            if total_sw > 0:
+            if total_sw > 1.0:
                 base_sw = {s: wt / total_sw for s, wt in base_sw.items()}
 
             for sleeve_name in trading_sleeves:
@@ -528,8 +531,9 @@ def compute_recent_performance():
                 loc_active[bond_assets[0]] = True
             w.update(bond_alloc)
 
+        # NO normalizar a 100% — la diferencia con 1.0 es cash (efecto Buffett real)
         tw = sum(w.values())
-        if tw > 0:
+        if tw > 1.0:
             w = {t: wt / tw for t, wt in w.items()}
 
         # Circuit breaker

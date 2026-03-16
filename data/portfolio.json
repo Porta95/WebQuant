@@ -1,9 +1,47 @@
 {
-  "assets": [
-    {"ticker": "BTC-USD", "enabled": true},
-    {"ticker": "ETH-USD", "enabled": true},
-    {"ticker": "QQQ", "enabled": true},
-    {"ticker": "SPY", "enabled": true},
-    {"ticker": "GLD", "enabled": true}
+<<<<<<< HEAD
+=======
+  "equities": [
+    "SPY",
+    "QQQ",
+    "XLE",
+    "XLK",
+    "XLV"
+  ],
+  "reits": [
+    "VNQ"
+  ],
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
+  "crypto": [
+    "BTC-USD",
+    "ETH-USD"
+  ],
+<<<<<<< HEAD
+  "equities": [
+    "SPY",
+    "QQQ",
+    "TSM",
+    "MORI.BA"
+  ],
+  "commodities": [
+    "GLD"
   ]
 }
+=======
+  "commodities": [
+    "GLD",
+    "SLV"
+  ],
+  "bonds": [
+    "IEF",
+    "BIL"
+  ],
+  "merval": [
+    "GGAL.BA",
+    "BMA.BA",
+    "YPFD.BA",
+    "ALUA.BA",
+    "PAMP.BA"
+  ]
+}
+>>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)

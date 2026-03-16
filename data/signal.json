@@ -2,72 +2,170 @@
   "weights": {
     "SPY": 0.0,
     "QQQ": 0.0,
+    "XLE": 0.4343,
+    "XLV": 0.0,
+    "VNQ": 0.0,
     "BTC-USD": 0.0,
     "ETH-USD": 0.0,
-    "GLD": 1.0
+    "GLD": 0.0,
+    "IEF": 0.0,
+    "BIL": 0.0,
+    "GGAL.BA": 0.0,
+    "YPFD.BA": 0.0
   },
   "phases": {
     "SPY": {
       "phase": "BROKEN",
-      "dist": -0.42,
-      "risk": 0.42,
-      "price": 685.99
+      "dist": -3.22,
+      "risk": 3.33,
+      "price": 662.29
     },
     "QQQ": {
       "phase": "BROKEN",
-      "dist": -1.16,
-      "risk": 1.17,
-      "price": 607.29
+      "dist": -2.52,
+      "risk": 2.59,
+      "price": 593.72
+    },
+    "XLE": {
+      "phase": "EXTENDED",
+      "dist": 6.32,
+      "risk": 5.94,
+      "price": 57.7
+    },
+    "XLV": {
+      "phase": "BROKEN",
+      "dist": -3.87,
+      "risk": 4.02,
+      "price": 149.79
+    },
+    "VNQ": {
+      "phase": "BROKEN",
+      "dist": -1.12,
+      "risk": 1.13,
+      "price": 92.16
     },
     "BTC-USD": {
-      "phase": "BROKEN",
-      "dist": -15.29,
-      "risk": 18.05,
-      "price": 65833.88
+      "phase": "OK",
+      "dist": 1.66,
+      "risk": 1.63,
+      "price": 72563.62
     },
     "ETH-USD": {
-      "phase": "BROKEN",
-      "dist": -20.69,
-      "risk": 26.09,
-      "price": 1940.79
+      "phase": "OK",
+      "dist": 1.87,
+      "risk": 1.84,
+      "price": 2178.58
     },
     "GLD": {
+      "phase": "BROKEN",
+      "dist": -1.06,
+      "risk": 1.07,
+      "price": 460.84
+    },
+    "IEF": {
+      "phase": "BROKEN",
+      "dist": -0.74,
+      "risk": 0.75,
+      "price": 95.59
+    },
+    "BIL": {
+      "phase": "EXTENDED",
+      "dist": 0.24,
+      "risk": 0.24,
+      "price": 91.51
+    },
+    "GGAL.BA": {
+      "phase": "BROKEN",
+      "dist": -14.18,
+      "risk": 16.52,
+      "price": 6060.0
+    },
+    "YPFD.BA": {
       "phase": "OK",
-      "dist": 6.37,
-      "risk": 5.99,
-      "price": 483.75
+      "dist": 1.36,
+      "risk": 1.35,
+      "price": 56200.0
     }
   },
   "active": {
     "SPY": false,
     "QQQ": false,
+    "XLE": true,
+    "XLV": false,
+    "VNQ": false,
     "BTC-USD": false,
     "ETH-USD": false,
-    "GLD": true
+    "GLD": false,
+    "IEF": false,
+    "BIL": true,
+    "GGAL.BA": false,
+    "YPFD.BA": false
   },
-  "dominant": "GLD",
+  "dominant": "XLE",
   "buffett": {
-    "value": 213.0,
-    "phase": "CARO",
-    "mult": 0.7,
-    "yoy": 17.7
+    "value": 213.3,
+    "phase": "MUY_CARO",
+    "mult": 0.4,
+    "yoy": 18.0
   },
   "volatilities": {
-    "SPY": 0.0873,
-    "QQQ": 0.1226,
-    "BTC-USD": 0.462,
-    "ETH-USD": 0.6307,
-    "GLD": 0.3017
+    "SPY": 0.0947,
+    "QQQ": 0.1291,
+    "XLE": 0.1842,
+    "XLV": 0.1129,
+    "VNQ": 0.0971,
+    "BTC-USD": 0.4753,
+    "ETH-USD": 0.6188,
+    "GLD": 0.317,
+    "IEF": 0.0332,
+    "BIL": 0.0019,
+    "GGAL.BA": 0.3671,
+    "YPFD.BA": 0.3032
   },
-  "signal_date": "2026-03-02",
-  "generated_at": "2026-03-02T00:05:28.360770",
-  "cash_pct": 0.0,
+  "momenta": {
+    "SPY": 0.1057,
+    "QQQ": 0.0921,
+    "XLE": 0.3017,
+    "XLV": 0.1904,
+    "VNQ": 0.0831,
+    "BTC-USD": -0.4034,
+    "ETH-USD": -0.2704,
+    "GLD": 0.5658,
+    "IEF": 0.0547,
+    "BIL": 0.0246,
+    "GGAL.BA": 0.1527,
+    "YPFD.BA": 0.3762
+  },
+  "values": {
+    "SPY": 0.4219,
+    "QQQ": 0.4893,
+    "XLE": 0.0,
+    "XLV": 0.3221,
+    "VNQ": 0.4148,
+    "BTC-USD": 0.8411,
+    "ETH-USD": 0.8814,
+    "GLD": 0.1799,
+    "IEF": 0.3458,
+    "BIL": 0.0,
+    "GGAL.BA": 0.5966,
+    "YPFD.BA": 0.153
+  },
+  "signal_date": "2026-03-16",
+  "generated_at": "2026-03-16T02:24:14.088212",
+  "cash_pct": 0.5657,
   "quality": "BAJA",
   "tickers": [
     "SPY",
     "QQQ",
+    "XLE",
+    "XLV",
+    "VNQ",
     "BTC-USD",
     "ETH-USD",
-    "GLD"
+    "GLD",
+    "IEF",
+    "BIL",
+    "GGAL.BA",
+    "YPFD.BA"
   ]
 }

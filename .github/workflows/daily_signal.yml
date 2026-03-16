@@ -21,9 +21,12 @@ jobs:
       - name: Install dependencies
         run: pip install yfinance pandas numpy requests
 
+      - name: Pull latest portfolio
+        run: git pull origin main
+
       - name: Generate signal and save JSON
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_TOKEN:   ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/generate_signal.py
 
@@ -31,8 +34,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin main
-          git checkout main
-          git add data/
-          git diff --staged --quiet || git commit -m "data: senal diaria $(date +'%Y-%m-%d')"
+          git add data/signal.json data/performance.json data/history.json
+          git commit -m "data: senal diaria $(date +'%Y-%m-%d')" || echo "nothing to commit"
           git push origin main

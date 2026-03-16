@@ -1,11 +1,13 @@
 """
-risk.py — Institutional risk management.
+risk.py — Institutional risk management v4.
 
-Provides:
-  - Portfolio-level volatility targeting (scales exposure when vol > target)
-  - Equal Risk Contribution (risk parity) across sleeves
-  - Concentration limits per asset
-  - Trailing stop management helpers
+v4 additions over v3:
+  - drawdown_derisking_multiplier(): dynamic de-risking based on current
+    portfolio drawdown from high-water mark.  Reduces exposure linearly as
+    drawdown approaches a threshold, providing tail-risk protection.
+  - portfolio_drawdown(): helper to compute current drawdown from equity curve.
+  - All other functions unchanged (vol_scale_weights, apply_concentration_limits,
+    equal_risk_contribution, full_risk_parity).
 """
 
 import numpy as np
@@ -21,6 +23,70 @@ MAX_SLEEVE        = 0.55   # No sleeve > 55% of portfolio (before regime cap)
 ASSET_VOL_TARGET  = 0.20   # Individual asset vol target (for intra-sleeve sizing)
 TRAILING_STOP_PCT = 0.15   # 15% trailing stop from high-water mark
 
+# Drawdown de-risking parameters
+DD_DERISKING_THRESHOLD = 0.10   # Start reducing exposure at 10% drawdown
+DD_DERISKING_FLOOR     = 0.10   # Max drawdown that triggers floor (20%)
+DD_MINIMUM_MULTIPLIER  = 0.40   # Never go below 40% of normal exposure
+
+
+# ── Drawdown De-Risking ────────────────────────────────────────────────────────
+
+def portfolio_drawdown(equity_curve: np.ndarray) -> float:
+    """
+    Compute current drawdown from peak for an equity curve array.
+
+    Returns:
+        Current drawdown as a negative float (e.g. -0.12 = 12% drawdown)
+    """
+    if len(equity_curve) < 2:
+        return 0.0
+    peak = np.maximum.accumulate(equity_curve)
+    return float((equity_curve[-1] - peak[-1]) / peak[-1])
+
+
+def drawdown_derisking_multiplier(
+    equity_curve: np.ndarray,
+    dd_threshold: float = DD_DERISKING_THRESHOLD,
+    dd_floor:     float = DD_DERISKING_FLOOR,
+    min_mult:     float = DD_MINIMUM_MULTIPLIER,
+) -> float:
+    """
+    Dynamic de-risking multiplier based on current portfolio drawdown.
+
+    Provides automatic tail-risk protection by linearly reducing exposure
+    as drawdown deepens from dd_threshold toward dd_floor:
+
+      - drawdown = 0%:              multiplier = 1.0  (no change)
+      - drawdown = dd_threshold:    multiplier = 1.0  (no change)
+      - drawdown = dd_floor:        multiplier = min_mult (maximum reduction)
+      - drawdown > dd_floor:        multiplier = min_mult (capped)
+
+    Args:
+        equity_curve: Array of portfolio values (must be ≥ 2 elements)
+        dd_threshold: Drawdown level where de-risking begins (default 10%)
+        dd_floor:     Drawdown level for maximum de-risking (default 20%)
+        min_mult:     Minimum multiplier at max de-risking (default 40%)
+
+    Returns:
+        Multiplier in [min_mult, 1.0]
+    """
+    if len(equity_curve) < 2:
+        return 1.0
+
+    current_dd = portfolio_drawdown(equity_curve)  # negative number
+
+    if current_dd >= -dd_threshold:
+        return 1.0  # no de-risking needed
+
+    # How far into the de-risking zone are we?
+    dd_excess = abs(current_dd) - dd_threshold
+    dd_range  = max(dd_floor - dd_threshold, 1e-6)
+    fraction  = min(dd_excess / dd_range, 1.0)
+
+    # Linear interpolation from 1.0 to min_mult
+    multiplier = 1.0 - fraction * (1.0 - min_mult)
+    return float(max(multiplier, min_mult))
+
 
 # ── Portfolio Volatility ───────────────────────────────────────────────────────
 
@@ -29,12 +95,12 @@ def portfolio_volatility(weights: dict, returns_df: pd.DataFrame, lookback: int 
     Estimate annualised portfolio volatility using historical covariance.
 
     Args:
-        weights:    {ticker: weight} (need not sum to 1; only invested portion)
-        returns_df: DataFrame of daily or period returns for all tickers
-        lookback:   Number of periods for covariance estimation
+        weights:    {ticker: weight}
+        returns_df: DataFrame of period returns
+        lookback:   Periods for covariance estimation
 
     Returns:
-        Annualised portfolio volatility (float, e.g. 0.14 = 14%)
+        Annualised portfolio volatility (float)
     """
     tickers = [t for t in weights if t in returns_df.columns and weights.get(t, 0) > 0]
     if not tickers:
@@ -46,7 +112,6 @@ def portfolio_volatility(weights: dict, returns_df: pd.DataFrame, lookback: int 
     if len(rets) < 10:
         return 0.0
 
-    # Annualisation factor: detect period from index freq if possible
     freq = _infer_periods_per_year(returns_df)
     cov  = rets.tail(lookback).cov() * freq
 
@@ -81,8 +146,7 @@ def vol_scale_weights(
     Scale portfolio weights so that realised portfolio vol ≈ target_vol.
 
     When portfolio vol exceeds the target, weights are scaled down uniformly
-    and the remainder goes to cash.  When vol is below target, weights are
-    kept as-is (no leveraging up beyond max_leverage).
+    and the remainder goes to cash.  Never leverages above max_leverage.
 
     Returns:
         scaled_weights: dict of adjusted weights
@@ -136,22 +200,14 @@ def apply_concentration_limits(
 
 def equal_risk_contribution(sleeve_vols: dict, sleeve_names: list) -> dict:
     """
-    Compute sleeve weights using simplified Equal Risk Contribution.
+    Compute sleeve weights using simplified Equal Risk Contribution (inv-vol).
 
-    Assumes zero inter-sleeve correlation (appropriate approximation when
-    sleeves are equity / bonds / crypto / commodity — materially different
-    risk factors).  Under this assumption:
-
-        w_i ∝ 1 / σ_i
-
-    giving each sleeve equal expected risk contribution.
-
-    Args:
-        sleeve_vols:  {sleeve_name: annualised_vol}  — active sleeves only
-        sleeve_names: ordered list of all sleeve names
+    Assumes zero inter-sleeve correlation (appropriate approximation for
+    equity / bonds / crypto / commodity sleeves with materially different
+    risk factors).
 
     Returns:
-        {sleeve: weight}  — sums to 1 across active sleeves; 0 for inactive
+        {sleeve: weight}  — sums to 1 across active sleeves
     """
     active = {s: v for s, v in sleeve_vols.items() if s in sleeve_names and v > 0}
     if not active:
@@ -179,15 +235,6 @@ def full_risk_parity(
     portfolio variance:  w_i * (Σw)_i = w_j * (Σw)_j  ∀ i, j.
 
     Falls back to inverse-vol weighting if covariance is singular.
-
-    Args:
-        weights_raw: Initial guess (active assets only; others set to 0)
-        returns_df:  Return DataFrame for covariance estimation
-        max_iter:    Maximum Newton iterations
-        tol:         Convergence tolerance
-
-    Returns:
-        Normalised weight dict {ticker: weight}
     """
     active  = [t for t, w in weights_raw.items() if w > 0 and t in returns_df.columns]
     if len(active) < 2:
@@ -202,20 +249,18 @@ def full_risk_parity(
     cov  = rets.cov().values * freq
     n    = len(active)
 
-    # Newton / gradient-descent iterations
     w = np.ones(n) / n
     try:
         for _ in range(max_iter):
-            cov_w = cov @ w
+            cov_w    = cov @ w
             port_var = float(w @ cov_w)
             if port_var <= 0:
                 break
-            risk_contrib = w * cov_w / port_var       # each asset's risk share
-            target = np.ones(n) / n                    # equal contribution
+            risk_contrib = w * cov_w / port_var
+            target = np.ones(n) / n
             grad   = risk_contrib - target
             if np.max(np.abs(grad)) < tol:
                 break
-            # Gradient step with learning rate
             w = w - 0.5 * grad
             w = np.clip(w, 1e-6, None)
             w /= w.sum()

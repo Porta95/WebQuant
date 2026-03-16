@@ -1,17 +1,19 @@
 """
-backtest.py — Institutional backtest engine v3.
+backtest.py — Institutional backtest engine v4.
 
-Improvements over v2:
-  - Historical Buffett multiplier computed at each rebalance date (no hardcoded 0.85)
-  - Realistic friction costs: 0.10% commission + 0.05% slippage per dollar turned
-  - Regime filter applied historically (SPY MA200 + VIX)
-  - Portfolio-level vol targeting via risk.py
-  - Full institutional metrics suite via metrics.py
-  - Walk-forward validation (train N years / test M years rolling)
-  - Monte Carlo bootstrap (resample historical returns)
-  - Parameter sensitivity analysis (Donchian window robustness)
-  - Stress scenarios with proper warmup (2y before scenario start)
-  - Multiple benchmark comparison: SPY / 60-40 / Equal Weight
+v4 improvements over v3:
+  - Default start "2003-01-01": includes GFC 2008 (critical stress test)
+  - Default rebalance_freq "M": monthly reduces turnover drag vs weekly
+  - Data downloaded once and shared across walk-forward and sensitivity
+    windows (eliminates 5× redundant network calls in sensitivity analysis)
+  - Cross-sectional momentum scores computed at each rebalance date
+  - EWMA volatility used for asset-level vol estimation (more responsive)
+  - 4th benchmark: SPY 10-month MA timing (institutional trend-following index)
+  - avg_turnover reported in metrics output
+  - Regime summary statistics added to output
+  - run_walk_forward() and run_sensitivity_analysis() accept pre-downloaded
+    data to avoid re-downloading; callers can pass data/vix from run_backtest()
+  - Drawdown de-risking integrated into weight computation
 """
 
 import numpy as np
@@ -20,12 +22,13 @@ from typing import Optional
 
 from .core import (
     download_prices, download_vix, add_indicators, compute_positions,
-    trend_phase, annual_volatility, get_buffett_historical,
+    trend_phase, annual_volatility, ewma_volatility, get_buffett_historical,
     buffett_mult_at, compute_sleeve_weights, build_dynamic_sleeves,
+    compute_momentum_scores,
     SLEEVES, DEFAULT_TICKERS, SLEEVE_MAP, CRYPTO_SPLIT,
     DONCHIAN_WINDOW, MA_EXIT_WINDOW, VOL_TARGET, PHASE_SIZE,
 )
-from .regime import compute_regime_series
+from .regime import compute_regime_series, regime_summary
 from .metrics import compute_all_metrics
 
 # ── Friction Costs ────────────────────────────────────────────────────────────
@@ -48,38 +51,49 @@ STRESS_SCENARIOS: dict[str, dict] = {
 
 def run_backtest(
     tickers: Optional[list[str]] = None,
-    start: str = "2010-01-01",
+    start: str = "2003-01-01",
     initial_capital: float = 10_000,
-    rebalance_freq: str = "W",
+    rebalance_freq: str = "M",
     include_costs: bool = True,
     don_window: int = DONCHIAN_WINDOW,
     ma_window: int = MA_EXIT_WINDOW,
     vol_target: float = VOL_TARGET,
+    pre_data: Optional[pd.DataFrame] = None,
+    pre_vix: Optional[pd.Series] = None,
 ) -> dict:
     """
     Institutional backtest with historical Buffett, friction costs,
-    regime filter, portfolio vol targeting, and full metrics suite.
+    regime filter (smoothed), portfolio vol targeting, cross-sectional
+    momentum, drawdown de-risking, and full metrics suite.
 
     Args:
-        tickers:        Asset universe (default: 9-asset institutional universe)
-        start:          Backtest start date (YYYY-MM-DD)
+        tickers:         Asset universe (default: 9-asset institutional universe)
+        start:           Backtest start date (YYYY-MM-DD). Default 2003 includes GFC.
         initial_capital: Starting portfolio value
-        rebalance_freq: 'W' (weekly) or 'M' (monthly)
-        include_costs:  Apply commission + slippage
-        don_window:     Donchian entry window
-        ma_window:      MA exit window
-        vol_target:     Portfolio annual vol target
+        rebalance_freq:  'M' (monthly, default) or 'W' (weekly)
+        include_costs:   Apply commission + slippage
+        don_window:      Donchian entry window
+        ma_window:       MA exit window
+        vol_target:      Portfolio annual vol target
+        pre_data:        Pre-downloaded price DataFrame (avoids re-download)
+        pre_vix:         Pre-downloaded VIX Series (avoids re-download)
 
     Returns:
         equity_curve, metrics (full institutional), weekly_returns,
-        drawdown_series, dates, regimes, turnover_series
+        drawdown_series, dates, regimes, turnover_series, regime_stats
     """
     tickers = tickers or DEFAULT_TICKERS
     dyn_sleeves = build_dynamic_sleeves(tickers)
 
-    # ── Download ───────────────────────────────────────────────────────────────
-    data       = download_prices(tickers, start=start)
-    vix_series = download_vix(start=start)
+    # ── Download (or reuse pre-downloaded data) ───────────────────────────────
+    data       = pre_data if pre_data is not None else download_prices(tickers, start=start)
+    vix_series = pre_vix  if pre_vix  is not None else download_vix(start=start)
+
+    # Filter to requested start date when using pre-downloaded data
+    if pre_data is not None and start:
+        data = data[data.index >= pd.Timestamp(start)]
+    if pre_vix is not None and start:
+        vix_series = vix_series[vix_series.index >= pd.Timestamp(start)]
 
     # Align VIX to price calendar
     vix_al = vix_series.reindex(data.index).ffill().fillna(20.0)
@@ -90,7 +104,7 @@ def run_backtest(
     # Pre-compute historical Buffett series (single network call)
     buffett_hist = get_buffett_historical()
 
-    # Pre-compute regime series
+    # Pre-compute regime series (v4: with persistence smoothing)
     if "SPY" in data.columns:
         regime_df = compute_regime_series(data["SPY"], vix_al)
     else:
@@ -102,12 +116,16 @@ def run_backtest(
     # ── Benchmarks ────────────────────────────────────────────────────────────
     spy = data["SPY"] if "SPY" in data.columns else data.iloc[:, 0]
 
-    # 60/40 benchmark: 60% SPY + 40% TLT (if available)
+    # 60/40 benchmark: 60% SPY + 40% TLT
     has_tlt = "TLT" in data.columns
     tlt     = data["TLT"] if has_tlt else None
 
-    # Equal-weight benchmark across available non-crypto tickers
+    # Equal-weight benchmark
     ew_tickers = [t for t in ["SPY", "QQQ", "IWM", "TLT", "IEF", "GLD"] if t in data.columns]
+
+    # 4th benchmark: SPY 10-month MA timing strategy (simple trend-following index)
+    # Long SPY when SPY > 10M MA; else cash.  Standard institutional trend benchmark.
+    spy_ma10m = spy.rolling(210, min_periods=100).mean()  # ≈ 10 months of trading days
 
     # ── Rebalance Dates ────────────────────────────────────────────────────────
     warmup      = max(don_window, 200) + 10
@@ -118,15 +136,17 @@ def run_backtest(
         return {"error": "Insufficient data for backtest (check start date / warmup)"}
 
     # ── Simulation Loop ────────────────────────────────────────────────────────
-    strat_val   = initial_capital
-    bench_val   = initial_capital     # SPY
-    bench60_val = initial_capital     # 60/40
-    bench_ew_val = initial_capital    # Equal weight
+    strat_val    = initial_capital
+    bench_val    = initial_capital     # SPY
+    bench60_val  = initial_capital     # 60/40
+    bench_ew_val = initial_capital     # Equal weight
+    bench_ma_val = initial_capital     # SPY 10M MA timing
 
     strat_curve: list[dict] = []
     strat_rets:  list[float] = []
     bench_rets:  list[float] = []
     turnover_series: list[float] = []
+    equity_vals: list[float] = [initial_capital]
 
     prev_weights: dict[str, float] = {t: 0.0 for t in tickers}
 
@@ -140,9 +160,16 @@ def run_backtest(
         hist_start = max(0, loc - 126)
         hist_rets  = data[tickers].iloc[hist_start:loc].pct_change().dropna()
 
+        # Cross-sectional momentum at this rebalance date (v4)
+        mom_data = data.iloc[:loc + 1]
+        momentum_scores = compute_momentum_scores(mom_data, tickers)
+
         # Regime and Buffett at this date
         regime_max  = float(regime_df["max_exposure"].iloc[loc])
         bm          = buffett_mult_at(buffett_hist, date)
+
+        # Drawdown de-risking: pass equity curve up to this point
+        equity_arr = np.array(equity_vals)
 
         # Per-asset state at this date
         asset_active: dict[str, bool]  = {}
@@ -159,9 +186,10 @@ def run_backtest(
             )
             asset_sizes[t]  = PHASE_SIZE.get(ph, 0.0)
             asset_active[t] = bool(positions[t].iloc[loc])
-            asset_vols[t]   = annual_volatility(data[t].iloc[max(0, loc - 90):loc])
+            # v4: EWMA vol for more responsive estimates
+            asset_vols[t]   = ewma_volatility(data[t].iloc[max(0, loc - 90):loc])
 
-        # Compute institutional weights
+        # Compute institutional weights (v4: with momentum + dd de-risking)
         weights, _cash_pct, _meta = compute_sleeve_weights(
             active=asset_active,
             sizes=asset_sizes,
@@ -171,6 +199,8 @@ def run_backtest(
             returns_df=hist_rets,
             tickers=tickers,
             dynamic_sleeves=dyn_sleeves,
+            momentum_scores=momentum_scores,
+            equity_curve=equity_arr,
         )
 
         # ── Friction costs ─────────────────────────────────────────────────────
@@ -221,23 +251,33 @@ def run_backtest(
             if p0 > 0:
                 ew_ret += (1.0 / len(ew_tickers)) * (p1 / p0 - 1.0)
 
+        # ── SPY 10M MA timing benchmark ────────────────────────────────────────
+        spy_ma_val = spy_ma10m.get(date, np.nan)
+        if not pd.isna(spy_ma_val) and s0 > float(spy_ma_val):
+            bench_ma_ret = bench_ret   # long SPY when above MA
+        else:
+            bench_ma_ret = 0.0         # cash when below MA
+
         # ── Accumulate ────────────────────────────────────────────────────────
         strat_val    *= (1.0 + period_ret)
         bench_val    *= (1.0 + bench_ret)
         bench60_val  *= (1.0 + bench60_ret)
         bench_ew_val *= (1.0 + ew_ret)
+        bench_ma_val *= (1.0 + bench_ma_ret)
 
+        equity_vals.append(strat_val)
         strat_rets.append(period_ret)
         bench_rets.append(bench_ret)
 
         strat_curve.append({
-            "date":       str(date.date()),
-            "strategy":   round(strat_val, 2),
-            "benchmark":  round(bench_val, 2),
-            "bench_60_40": round(bench60_val, 2),
-            "bench_ew":   round(bench_ew_val, 2),
-            "regime":     str(regime_df["regime"].iloc[loc]),
-            "weights":    {t: round(w, 3) for t, w in weights.items() if w > 0.001},
+            "date":           str(date.date()),
+            "strategy":       round(strat_val, 2),
+            "benchmark":      round(bench_val, 2),
+            "bench_60_40":    round(bench60_val, 2),
+            "bench_ew":       round(bench_ew_val, 2),
+            "bench_spy_ma":   round(bench_ma_val, 2),
+            "regime":         str(regime_df["regime"].iloc[loc]),
+            "weights":        {t: round(w, 3) for t, w in weights.items() if w > 0.001},
         })
 
     if not strat_curve:
@@ -249,13 +289,18 @@ def run_backtest(
     bench_arr = np.array(bench_rets)
 
     metrics = compute_all_metrics(
-        rets_arr, bench_arr, periods_per_year, initial_capital=initial_capital
+        rets_arr, bench_arr, periods_per_year,
+        initial_capital=initial_capital,
+        turnover_series=turnover_series,
     )
 
     # Drawdown series
-    values   = np.array([p["strategy"] for p in strat_curve])
-    peak     = np.maximum.accumulate(values)
+    values    = np.array([p["strategy"] for p in strat_curve])
+    peak      = np.maximum.accumulate(values)
     dd_series = ((values - peak) / peak * 100).tolist()
+
+    # Regime statistics
+    reg_stats = regime_summary(regime_df)
 
     return {
         "equity_curve":    strat_curve,
@@ -264,6 +309,7 @@ def run_backtest(
         "drawdown_series": [round(d, 2) for d in dd_series],
         "dates":           [p["date"] for p in strat_curve],
         "turnover_series": turnover_series,
+        "regime_stats":    reg_stats,
         "config": {
             "don_window":    don_window,
             "ma_window":     ma_window,
@@ -271,6 +317,7 @@ def run_backtest(
             "include_costs": include_costs,
             "rebalance":     rebalance_freq,
             "universe":      tickers,
+            "start":         start,
         },
     }
 
@@ -282,7 +329,7 @@ def run_stress_test(scenario_key: str, tickers: Optional[list[str]] = None) -> d
     Run the strategy through a specific historical stress episode.
 
     Uses a 2-year warmup before the scenario start to ensure indicators
-    and positions are properly initialised (fixes the warm-up bias in v2).
+    and positions are properly initialised.
     """
     sc = STRESS_SCENARIOS.get(scenario_key)
     if not sc:
@@ -291,7 +338,6 @@ def run_stress_test(scenario_key: str, tickers: Optional[list[str]] = None) -> d
 
     tickers = tickers or DEFAULT_TICKERS
 
-    # 2-year warmup before scenario start
     warmup_start = pd.Timestamp(sc["start"]) - pd.DateOffset(years=2)
     result = run_backtest(tickers, start=str(warmup_start.date()))
 
@@ -307,20 +353,19 @@ def run_stress_test(scenario_key: str, tickers: Optional[list[str]] = None) -> d
     strat_ret = filtered[-1]["strategy"] / filtered[0]["strategy"] - 1.0
     bench_ret = filtered[-1]["benchmark"] / filtered[0]["benchmark"] - 1.0
 
-    # Max drawdown within the scenario window
     vals      = [p["strategy"] for p in filtered]
     peak_sc   = np.maximum.accumulate(vals)
     dd_sc     = ((np.array(vals) - peak_sc) / peak_sc).tolist()
     max_dd_sc = float(np.min(dd_sc))
 
     return {
-        "scenario":          sc["name"],
-        "period":            f"{sc['start']} / {sc['end']}",
-        "strategy_return":   round(strat_ret * 100, 2),
-        "benchmark_return":  round(bench_ret * 100, 2),
-        "outperformance":    round((strat_ret - bench_ret) * 100, 2),
-        "scenario_max_dd":   round(max_dd_sc * 100, 2),
-        "equity_curve":      filtered,
+        "scenario":         sc["name"],
+        "period":           f"{sc['start']} / {sc['end']}",
+        "strategy_return":  round(strat_ret * 100, 2),
+        "benchmark_return": round(bench_ret * 100, 2),
+        "outperformance":   round((strat_ret - bench_ret) * 100, 2),
+        "scenario_max_dd":  round(max_dd_sc * 100, 2),
+        "equity_curve":     filtered,
     }
 
 
@@ -328,24 +373,30 @@ def run_stress_test(scenario_key: str, tickers: Optional[list[str]] = None) -> d
 
 def run_walk_forward(
     tickers: Optional[list[str]] = None,
-    start: str = "2007-01-01",
+    start: str = "2003-01-01",
     train_years: int = 3,
     test_years: int = 1,
+    pre_data: Optional[pd.DataFrame] = None,
+    pre_vix: Optional[pd.Series] = None,
 ) -> dict:
     """
-    Walk-forward validation: expanding or rolling train window, fixed test window.
+    Walk-forward validation: expanding train window, fixed test window.
 
-    Evaluates whether strategy performance holds out-of-sample across multiple
-    non-overlapping test periods.
+    v4: accepts pre_data/pre_vix to avoid redundant downloads when called
+    after run_backtest().
 
-    Returns:
-        windows:  list of {period, cagr, sharpe, max_drawdown}
-        summary:  aggregate statistics with consistency metrics
+    Evaluates whether strategy performance holds out-of-sample across
+    multiple non-overlapping test periods.
     """
     tickers = tickers or DEFAULT_TICKERS
 
-    # Need enough history
-    data = download_prices(tickers, start=start)
+    # Download data once if not provided
+    if pre_data is None:
+        pre_data = download_prices(tickers, start=start)
+    if pre_vix is None:
+        pre_vix = download_vix(start=start)
+
+    data = pre_data[pre_data.index >= pd.Timestamp(start)]
     total_years = (data.index[-1] - data.index[0]).days / 365.25
 
     if total_years < train_years + test_years:
@@ -355,7 +406,6 @@ def run_walk_forward(
     start_dt = data.index[0]
     end_dt   = data.index[-1]
 
-    # Build test windows (expanding train, rolling test)
     test_start = start_dt + pd.DateOffset(years=train_years)
     windows = []
     while test_start + pd.DateOffset(years=test_years) <= end_dt:
@@ -370,9 +420,12 @@ def run_walk_forward(
 
     results = []
     for w in windows:
+        # Pass pre-downloaded data to avoid redundant downloads
         result = run_backtest(
             tickers=tickers,
             start=str(w["train_start"].date()),
+            pre_data=pre_data,
+            pre_vix=pre_vix,
         )
         if "error" in result:
             continue
@@ -385,7 +438,6 @@ def run_walk_forward(
         if len(test_curve) < 4:
             continue
 
-        # Compute metrics for test period only
         rets_test  = []
         bench_test = []
         for j in range(1, len(test_curve)):
@@ -398,7 +450,7 @@ def run_walk_forward(
             continue
 
         test_m = compute_all_metrics(
-            np.array(rets_test), np.array(bench_test), periods_per_year=52
+            np.array(rets_test), np.array(bench_test), periods_per_year=12
         )
         results.append({
             "period":       f"{w['test_start'].date()} → {w['test_end'].date()}",
@@ -407,6 +459,7 @@ def run_walk_forward(
             "sortino":      test_m.get("sortino", 0),
             "max_drawdown": test_m.get("max_drawdown", 0),
             "calmar":       test_m.get("calmar", 0),
+            "sterling":     test_m.get("sterling", 0),
         })
 
     if not results:
@@ -417,8 +470,8 @@ def run_walk_forward(
     dds     = [r["max_drawdown"] for r in results]
 
     return {
-        "windows":     results,
-        "n_windows":   len(results),
+        "windows":   results,
+        "n_windows": len(results),
         "summary": {
             "avg_cagr":          round(float(np.mean(cagrs)), 2),
             "std_cagr":          round(float(np.std(cagrs)), 2),
@@ -441,14 +494,11 @@ def run_monte_carlo(
     rf_annual: float = 0.04,
 ) -> dict:
     """
-    Bootstrap Monte Carlo simulation.
+    Block Bootstrap Monte Carlo simulation.
 
     Resamples historical return blocks (block size 4 weeks) to preserve
     serial correlation structure, then estimates distribution of 5-year
     CAGR, max drawdown, and Sharpe across n_simulations paths.
-
-    Block resampling is more robust than IID resampling for financial
-    time series with autocorrelation and volatility clustering.
     """
     rets = np.array(weekly_returns, dtype=float)
     n    = len(rets)
@@ -462,11 +512,11 @@ def run_monte_carlo(
     sim_cagrs   = []
     sim_maxdds  = []
     sim_sharpes = []
+    sim_sterlings = []
 
-    rng = np.random.default_rng(42)   # reproducible seed
+    rng = np.random.default_rng(42)
 
     for _ in range(n_simulations):
-        # Draw blocks with replacement
         starts   = rng.integers(0, n - block_size, size=n_blocks)
         sampled  = np.concatenate([rets[s:s + block_size] for s in starts])[:n_periods]
 
@@ -478,11 +528,19 @@ def run_monte_carlo(
         sharpe   = float((cagr - rf_annual) / vol) if vol > 0 else 0.0
 
         peak     = np.maximum.accumulate(equity)
-        max_dd   = float(((equity - peak) / peak).min())
+        dd_ser   = (equity - peak) / peak
+        max_dd   = float(dd_ser.min())
+
+        # Sterling: use avg annual max dd approximation
+        ann_size = 52
+        ann_dds  = [abs(float(dd_ser[j:j+ann_size].min())) for j in range(0, n_periods-ann_size, ann_size//2)]
+        avg_ann_dd = float(np.mean(ann_dds)) if ann_dds else abs(max_dd)
+        sterling = float(cagr / avg_ann_dd) if avg_ann_dd > 0 else 0.0
 
         sim_cagrs.append(cagr * 100)
         sim_maxdds.append(max_dd * 100)
         sim_sharpes.append(sharpe)
+        sim_sterlings.append(sterling)
 
     def pct(arr, q):
         return round(float(np.percentile(arr, q)), 2)
@@ -492,9 +550,10 @@ def run_monte_carlo(
         "n_periods_weeks":      n_periods,
         "horizon_years":        round(n_periods / 52.0, 1),
         "prob_positive_cagr":   round(float(np.mean([c > 0 for c in sim_cagrs])) * 100, 1),
+        "prob_dd_gt_20":        round(float(np.mean([d < -20 for d in sim_maxdds])) * 100, 1),
         "prob_dd_gt_30":        round(float(np.mean([d < -30 for d in sim_maxdds])) * 100, 1),
         "cagr": {
-            "p5": pct(sim_cagrs, 5), "p25": pct(sim_cagrs, 25),
+            "p5":  pct(sim_cagrs, 5),  "p25": pct(sim_cagrs, 25),
             "p50": pct(sim_cagrs, 50), "p75": pct(sim_cagrs, 75),
             "p95": pct(sim_cagrs, 95),
         },
@@ -508,6 +567,11 @@ def run_monte_carlo(
             "p50": pct(sim_sharpes, 50),
             "p95": pct(sim_sharpes, 95),
         },
+        "sterling": {
+            "p5":  pct(sim_sterlings, 5),
+            "p50": pct(sim_sterlings, 50),
+            "p95": pct(sim_sterlings, 95),
+        },
     }
 
 
@@ -515,15 +579,23 @@ def run_monte_carlo(
 
 def run_sensitivity_analysis(
     tickers: Optional[list[str]] = None,
-    start: str = "2010-01-01",
+    start: str = "2003-01-01",
+    pre_data: Optional[pd.DataFrame] = None,
+    pre_vix: Optional[pd.Series] = None,
 ) -> dict:
     """
     Test strategy robustness across a range of Donchian window values.
 
-    A truly robust strategy should show consistent (not optimal) performance
-    across the parameter space — not a single peak with cliffs on each side.
+    v4: accepts pre-downloaded data so all 5 runs share a single download.
     """
     tickers = tickers or DEFAULT_TICKERS
+
+    # Download once and share across all parameter runs
+    if pre_data is None:
+        pre_data = download_prices(tickers, start=start)
+    if pre_vix is None:
+        pre_vix = download_vix(start=start)
+
     results = {}
 
     for don_w in [50, 75, 100, 150, 200]:
@@ -532,15 +604,18 @@ def run_sensitivity_analysis(
                 tickers=tickers,
                 start=start,
                 don_window=don_w,
+                pre_data=pre_data,
+                pre_vix=pre_vix,
             )
             if "metrics" in res:
-                m   = res["metrics"]
+                m = res["metrics"]
                 results[str(don_w)] = {
                     "donchian_window": don_w,
                     "cagr":           m.get("cagr", 0),
                     "sharpe":         m.get("sharpe", 0),
                     "sortino":        m.get("sortino", 0),
                     "calmar":         m.get("calmar", 0),
+                    "sterling":       m.get("sterling", 0),
                     "max_drawdown":   m.get("max_drawdown", 0),
                     "volatility":     m.get("volatility", 0),
                 }
@@ -552,7 +627,6 @@ def run_sensitivity_analysis(
     robustness_score = None
     if len(sharpes) >= 3:
         cv = float(np.std(sharpes) / np.mean(sharpes)) if np.mean(sharpes) != 0 else 999
-        # Lower CV = more robust; score 100 = perfect consistency
         robustness_score = round(max(0, 100 - cv * 100), 1)
 
     return {
@@ -579,7 +653,7 @@ def analyze_candidate(ticker: str, current_tickers: Optional[list[str]] = None) 
     all_tickers     = list(set(current_tickers + [ticker]))
 
     try:
-        data = download_prices(all_tickers, start="2010-01-01")
+        data = download_prices(all_tickers, start="2003-01-01")
     except Exception as e:
         return {"error": str(e)}
 
@@ -589,19 +663,16 @@ def analyze_candidate(ticker: str, current_tickers: Optional[list[str]] = None) 
     rets = data.pct_change().dropna()
     cr   = rets[ticker]
 
-    # Standalone metrics
     ann_ret = float(cr.mean() * 252)
     ann_vol = float(cr.std() * np.sqrt(252))
     sharpe  = float((ann_ret - 0.04) / ann_vol) if ann_vol > 0 else 0.0
     peak    = data[ticker].cummax()
     max_dd  = float(((data[ticker] - peak) / peak).min())
 
-    # Correlations with current portfolio assets
     corrs    = {t: round(float(rets[ticker].corr(rets[t])), 3)
                 for t in current_tickers if t in rets.columns}
     avg_corr = float(np.mean(list(corrs.values()))) if corrs else 0.0
 
-    # Portfolio Sharpe impact (5% allocation to candidate)
     current_cols  = [t for t in current_tickers if t in rets.columns]
     port_before   = rets[current_cols].mean(axis=1)
     port_after    = port_before * 0.95 + cr * 0.05
@@ -614,7 +685,6 @@ def analyze_candidate(ticker: str, current_tickers: Optional[list[str]] = None) 
     sharpe_before = _sharpe(port_before)
     sharpe_after  = _sharpe(port_after)
 
-    # Sleeve detection
     t = ticker.upper()
     sleeve = (
         "crypto"    if "USD" in t or any(c in t for c in ["BTC","ETH","SOL","BNB","ADA"])
@@ -623,7 +693,6 @@ def analyze_candidate(ticker: str, current_tickers: Optional[list[str]] = None) 
         else "equity"
     )
 
-    # Scoring
     score = 50
     score += min(sharpe * 12, 20)
     score -= avg_corr * 15

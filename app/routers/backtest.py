@@ -1,143 +1,122 @@
 """
-backtest.py — Lee performance y permite análisis de candidatos.
+backtest.py (router) — Performance data, stress tests, walk-forward,
+Monte Carlo, sensitivity analysis, and candidate asset evaluation.
+
+Pre-computed data (GitHub Actions) is served from data/*.json.
+On-demand endpoints compute results live when called interactively.
 """
 
 import json
-import requests
-import numpy as np
-import pandas as pd
-import yfinance as yf
 from pathlib import Path
 from fastapi import APIRouter, HTTPException
+
 from ..models.schemas import AnalyzerRequest
-from app.services.yahoo import download_prices
+from ..services.backtest import (
+    run_stress_test,
+    run_walk_forward,
+    run_monte_carlo,
+    run_sensitivity_analysis,
+    analyze_candidate,
+    STRESS_SCENARIOS,
+)
 
-router = APIRouter(prefix="/api/backtest", tags=["backtest"])
+router   = APIRouter(prefix="/api/backtest", tags=["backtest"])
+DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 
-DATA_DIR = Path(__file__).parent.parent.parent / "data"
 
-STRESS_SCENARIOS = {
-    "covid_2020":  {"name": "COVID Crash",      "start": "2020-02-19", "end": "2020-03-23"},
-    "ftx_2022":    {"name": "FTX Collapse",      "start": "2022-11-01", "end": "2022-11-30"},
-    "rates_2022":  {"name": "Rate Hike Cycle",   "start": "2022-01-01", "end": "2022-12-31"},
-    "crypto_2018": {"name": "Crypto Bear 2018",  "start": "2018-01-01", "end": "2018-12-31"},
-}
+def _read_json(filename: str) -> dict:
+    path = DATA_DIR / filename
+    if not path.exists():
+        raise HTTPException(
+            status_code=503,
+            detail=f"Data not available ({filename}). Run the GitHub Actions workflow first.",
+        )
+    return json.loads(path.read_text())
 
 
 @router.get("/performance")
 async def get_performance():
-    path = DATA_DIR / "performance.json"
-    if not path.exists():
-        raise HTTPException(status_code=503, detail="Datos no disponibles. Corré el workflow primero.")
-    return json.loads(path.read_text())
+    """Return pre-computed backtest metrics and equity curve."""
+    return _read_json("performance.json")
 
 
 @router.get("/scenarios")
 async def list_scenarios():
-    return [{"key": k, "name": v["name"], "start": v["start"], "end": v["end"]}
-            for k, v in STRESS_SCENARIOS.items()]
+    """List available stress test scenarios."""
+    return [
+        {"key": k, "name": v["name"], "start": v["start"], "end": v["end"]}
+        for k, v in STRESS_SCENARIOS.items()
+    ]
 
 
 @router.get("/stress/{scenario_key}")
 async def stress_test(scenario_key: str):
-    sc = STRESS_SCENARIOS.get(scenario_key)
-    if not sc:
-        raise HTTPException(status_code=404, detail=f"Escenario '{scenario_key}' no encontrado")
+    """
+    Run strategy through a historical stress episode with proper 2-year warmup.
+    Fixes warm-up bias present in v2 (which started backtest at scenario start).
+    """
+    result = run_stress_test(scenario_key)
+    if "error" in result:
+        raise HTTPException(status_code=404, detail=result["error"])
+    return result
 
-    path = DATA_DIR / "performance.json"
-    if not path.exists():
-        raise HTTPException(status_code=503, detail="Datos no disponibles")
 
-    perf  = json.loads(path.read_text())
-    curve = perf.get("equity_curve", [])
-    filtered = [p for p in curve if sc["start"] <= p["date"] <= sc["end"]]
+@router.get("/walk-forward")
+async def walk_forward(
+    start:       str = "2007-01-01",
+    train_years: int = 3,
+    test_years:  int = 1,
+):
+    """
+    Walk-forward validation: expanding train window, rolling 1-year test.
+    Returns per-window out-of-sample statistics and consistency summary.
+    """
+    result = run_walk_forward(start=start, train_years=train_years, test_years=test_years)
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+    return result
 
-    if len(filtered) < 2:
-        return {"scenario": sc["name"], "period": f"{sc['start']} / {sc['end']}", "error": "Sin datos suficientes para este período"}
 
-    strat_ret = filtered[-1]["strategy"] / filtered[0]["strategy"] - 1
-    bench_ret = filtered[-1]["benchmark"] / filtered[0]["benchmark"] - 1
+@router.get("/monte-carlo")
+async def monte_carlo(n_simulations: int = 2000, horizon_years: int = 5):
+    """
+    Bootstrap Monte Carlo using pre-computed historical weekly returns.
+    Returns percentile distributions for CAGR, max drawdown, and Sharpe.
+    """
+    perf_data      = _read_json("performance.json")
+    weekly_returns = perf_data.get("weekly_returns", [])
+    if not weekly_returns:
+        raise HTTPException(status_code=503, detail="No weekly returns in performance.json")
 
-    return {
-        "scenario":          sc["name"],
-        "period":            f"{sc['start']} / {sc['end']}",
-        "strategy_return":   round(strat_ret * 100, 2),
-        "benchmark_return":  round(bench_ret * 100, 2),
-        "outperformance":    round((strat_ret - bench_ret) * 100, 2),
-        "equity_curve":      filtered,
-    }
+    result = run_monte_carlo(
+        weekly_returns=[r / 100 for r in weekly_returns],
+        n_simulations=n_simulations,
+        n_periods=horizon_years * 52,
+    )
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+    return result
+
+
+@router.get("/sensitivity")
+async def sensitivity_analysis(start: str = "2010-01-01"):
+    """
+    Test Sharpe robustness across Donchian windows [50, 75, 100, 150, 200].
+    A robust strategy shows flat performance; a peak indicates overfitting.
+    """
+    return run_sensitivity_analysis(start=start)
+
 
 @router.post("/analyze")
 async def analyze(body: AnalyzerRequest):
-    ticker = body.ticker.strip().upper()
-    current = body.current_tickers or ["SPY", "QQQ", "BTC-USD", "ETH-USD", "GLD"]
-    all_t = list(set(current + [ticker]))
-
-    try:
-        data = download_prices(all_t, start="2020-01-01")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Yahoo error: {e}")
-
-    if ticker not in data.columns:
-        raise HTTPException(status_code=404, detail=f"Ticker '{ticker}' no encontrado")
-
-    rets = data.pct_change().dropna()
-    cr = rets[ticker]
-
-    annual_ret = float(cr.mean() * 252)
-    annual_vol = float(cr.std() * np.sqrt(252))
-    sharpe = (annual_ret - 0.05) / annual_vol if annual_vol > 0 else 0
-
-    peak = data[ticker].cummax()
-    max_dd = float(((data[ticker] - peak) / peak).min())
-
-    corrs = {t: round(float(rets[ticker].corr(rets[t])), 3)
-             for t in current if t in rets.columns}
-    avg_corr = float(np.mean(list(corrs.values()))) if corrs else 0
-
-    port_before = rets[[t for t in current if t in rets.columns]].mean(axis=1)
-    port_after = port_before * 0.95 + cr * 0.05
-
-    def sharpe_s(s):
-        return float((s.mean()*252 - 0.05) / (s.std()*np.sqrt(252))) if s.std() > 0 else 0
-
-    sb = sharpe_s(port_before)
-    sa = sharpe_s(port_after)
-
-    score = 50
-    score += min(sharpe * 12, 20)
-    score -= avg_corr * 15
-    score += 5 if max_dd > -0.20 else 0 if max_dd > -0.40 else -5 if max_dd > -0.60 else -12
-    score += (sa - sb) * 100
-    score = max(0, min(100, int(score)))
-
-    verdict = "INCLUDE" if score >= 70 else "WATCH" if score >= 45 else "DISCARD"
-
-    sleeve = (
-        "crypto" if "USD" in ticker or any(c in ticker for c in ["BTC","ETH","SOL","BNB"])
-        else "commodity" if any(c in ticker for c in ["GLD","SLV","IAU"])
-        else "bonds" if any(c in ticker for c in ["TLT","IEF","BND"])
-        else "equity"
+    """
+    Evaluate whether a candidate ticker improves the portfolio.
+    Returns standalone metrics, correlations, and marginal Sharpe impact.
+    """
+    result = analyze_candidate(
+        ticker=body.ticker.strip().upper(),
+        current_tickers=body.current_tickers,
     )
-
-    return {
-        "ticker": ticker,
-        "verdict": verdict,
-        "score": score,
-        "metrics": {
-            "sharpe": round(sharpe, 2),
-            "max_dd": round(max_dd * 100, 2),
-            "annual_vol": round(annual_vol * 100, 2),
-            "annual_ret": round(annual_ret * 100, 2),
-            "avg_corr": round(avg_corr, 3),
-        },
-        "correlations": corrs,
-        "portfolio_impact": {
-            "sharpe_before": round(sb, 2),
-            "sharpe_after": round(sa, 2),
-            "vol_before": round(float(port_before.std()*np.sqrt(252)*100), 2),
-            "vol_after": round(float(port_after.std()*np.sqrt(252)*100), 2),
-            "delta_sharpe": round(sa - sb, 3),
-        },
-        "suggested_sleeve": sleeve,
-    }
+    if "error" in result:
+        raise HTTPException(status_code=400, detail=result["error"])
+    return result

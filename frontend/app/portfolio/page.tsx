@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Plus } from 'lucide-react';
+import { Plus, X } from 'lucide-react';
 
 /* =========================
    TYPES
@@ -110,6 +110,13 @@ export default function Portfolio() {
     persist(next);
   };
 
+  /* ===== delete ===== */
+  const deleteAsset = (i: number) => {
+    const next = assets.filter((_, idx) => idx !== i);
+    setAssets(next);
+    persist(next);
+  };
+
   /* ===== add ===== */
   const addAsset = () => {
     if (!newTicker.trim()) return;
@@ -173,20 +180,28 @@ export default function Portfolio() {
                         </div>
                       </div>
 
-                      <button
-                        onClick={() => toggle(globalIdx)}
-                        className={`w-8 h-4 rounded-full relative transition-all ${
-                          asset.enabled ? 'bg-cyan-400/30' : 'bg-zinc-700'
-                        }`}
-                      >
-                        <div
-                          className={`absolute top-0.5 w-3 h-3 rounded-full transition-all ${
-                            asset.enabled
-                              ? 'left-4 bg-cyan-400'
-                              : 'left-0.5 bg-zinc-500'
+                      <div className="flex items-center gap-2">
+                        <button
+                          onClick={() => toggle(globalIdx)}
+                          className={`w-8 h-4 rounded-full relative transition-all ${
+                            asset.enabled ? 'bg-cyan-400/30' : 'bg-zinc-700'
                           }`}
-                        />
-                      </button>
+                        >
+                          <div
+                            className={`absolute top-0.5 w-3 h-3 rounded-full transition-all ${
+                              asset.enabled
+                                ? 'left-4 bg-cyan-400'
+                                : 'left-0.5 bg-zinc-500'
+                            }`}
+                          />
+                        </button>
+                        <button
+                          onClick={() => deleteAsset(globalIdx)}
+                          className="text-zinc-600 hover:text-red-400 transition-colors"
+                        >
+                          <X size={12} />
+                        </button>
+                      </div>
                     </div>
                   );
                 })}

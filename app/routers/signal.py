@@ -7,8 +7,8 @@ import os
 from pathlib import Path
 from fastapi import APIRouter, HTTPException
 
-from core import compute_signal
-from services.portfolio import load_portfolio
+from services.core import compute_signal
+from services.portfolio import load_portfolio_tickers
 from services.telegram import send_signal_to_telegram, send_telegram
 from models.schemas import TelegramRequest, TelegramResponse
 
@@ -26,12 +26,7 @@ async def get_signal():
     Señal calculada usando la cartera del usuario.
     """
     try:
-        portfolio = load_portfolio()
-        tickers = [a["ticker"] for a in portfolio.get("assets", []) if a.get("enabled")]
-
-        if not tickers:
-            tickers = None  # usa DEFAULT_TICKERS
-
+        tickers = load_portfolio_tickers() or None
         return compute_signal(tickers)
 
     except Exception as e:

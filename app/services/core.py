@@ -44,11 +44,53 @@ SLEEVES: dict[str, list[str]] = {
 
 DEFAULT_TICKERS: list[str] = [t for assets in SLEEVES.values() for t in assets]
 
-# Reverse map: ticker → sleeve name
+# Reverse map: ticker → sleeve name (predefined only)
 SLEEVE_MAP: dict[str, str] = {t: s for s, assets in SLEEVES.items() for t in assets}
 
 # Fixed split within crypto sleeve (BTC dominant)
 CRYPTO_SPLIT: dict[str, float] = {"BTC-USD": 0.65, "ETH-USD": 0.35}
+
+
+def detect_sleeve(ticker: str) -> str:
+    """
+    Infer the sleeve for any ticker (predefined or custom).
+
+    Matches by ticker name patterns so that custom assets added by
+    the user (e.g. XLV, VNQ, BIL, GGAL.BA) are routed to the correct
+    sleeve instead of being silently ignored.
+    """
+    if ticker in SLEEVE_MAP:
+        return SLEEVE_MAP[ticker]
+
+    t = ticker.upper()
+    # Crypto: ends in -USD for most cases, or known coin prefixes
+    if t.endswith("-USD") or any(x in t for x in ["BTC", "ETH", "SOL", "BNB", "ADA", "XRP"]):
+        return "crypto"
+    # Bonds / cash-like: known bond ETFs + BIL (T-Bills)
+    if any(x in t for x in ["TLT", "IEF", "IEI", "BND", "AGG", "SHY", "BIL", "SHV", "GOVT", "VGSH"]):
+        return "bonds"
+    # Commodity / real assets / energy
+    if any(x in t for x in ["GLD", "SLV", "IAU", "PDBC", "GSG", "XLE", "XOM", "USO", "VNQ", "IYR", "REIT"]):
+        return "commodity"
+    # Default: equity (covers ETFs like XLV, VNQ, ARKK, individual stocks, foreign ADRs, .BA etc.)
+    return "equity"
+
+
+def build_dynamic_sleeves(tickers: list[str]) -> dict[str, list[str]]:
+    """
+    Build a full sleeve map for any ticker universe, including custom tickers.
+
+    Returns a dict {sleeve: [tickers]} covering all requested tickers,
+    assigning unknown ones to their closest sleeve via detect_sleeve().
+    """
+    result: dict[str, list[str]] = {"equity": [], "bonds": [], "commodity": [], "crypto": []}
+    for t in tickers:
+        sleeve = detect_sleeve(t)
+        if sleeve not in result:
+            result[sleeve] = []
+        if t not in result[sleeve]:
+            result[sleeve].append(t)
+    return result
 
 # ── Signal Parameters ─────────────────────────────────────────────────────────
 DONCHIAN_WINDOW  = 100    # Entry: price must break 100-day high (vs 50 prev)
@@ -383,6 +425,7 @@ def compute_sleeve_weights(
     regime_max: float,
     returns_df: Optional[pd.DataFrame] = None,
     tickers: Optional[list] = None,
+    dynamic_sleeves: Optional[dict] = None,
 ) -> tuple:
     """
     Institutional weight computation pipeline:
@@ -405,10 +448,12 @@ def compute_sleeve_weights(
         metadata: dict with vol / scale / regime info
     """
     tickers = tickers or DEFAULT_TICKERS
+    # Use dynamic sleeves if provided (handles custom tickers), else build from universe
+    sleeves_map = dynamic_sleeves if dynamic_sleeves is not None else build_dynamic_sleeves(tickers)
 
     # ── Identify active sleeves ────────────────────────────────────────────────
     sleeve_vols: dict[str, float] = {}
-    for sleeve, assets in SLEEVES.items():
+    for sleeve, assets in sleeves_map.items():
         active_vols = [
             vols.get(t, 0.20)
             for t in assets
@@ -444,7 +489,7 @@ def compute_sleeve_weights(
 
     for sleeve, sw in sleeve_w.items():
         sleeve_assets = [
-            t for t in SLEEVES.get(sleeve, [])
+            t for t in sleeves_map.get(sleeve, [])
             if t in tickers and active.get(t) and sizes.get(t, 0) > 0
         ]
         if not sleeve_assets:
@@ -512,6 +557,9 @@ def compute_signal(tickers: Optional[list] = None) -> dict:
     """
     tickers = tickers or DEFAULT_TICKERS
 
+    # Build sleeve map for this specific universe (handles custom tickers)
+    dyn_sleeves = build_dynamic_sleeves(tickers)
+
     data       = download_prices(tickers)
     vix_series = download_vix()
     data       = add_indicators(data, tickers)
@@ -567,6 +615,7 @@ def compute_signal(tickers: Optional[list] = None) -> dict:
         regime_max=regime_max,
         returns_df=returns_df,
         tickers=tickers,
+        dynamic_sleeves=dyn_sleeves,
     )
 
     # ── Quality score ─────────────────────────────────────────────────────────

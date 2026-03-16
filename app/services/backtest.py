@@ -21,7 +21,7 @@ from typing import Optional
 from .core import (
     download_prices, download_vix, add_indicators, compute_positions,
     trend_phase, annual_volatility, get_buffett_historical,
-    buffett_mult_at, compute_sleeve_weights,
+    buffett_mult_at, compute_sleeve_weights, build_dynamic_sleeves,
     SLEEVES, DEFAULT_TICKERS, SLEEVE_MAP, CRYPTO_SPLIT,
     DONCHIAN_WINDOW, MA_EXIT_WINDOW, VOL_TARGET, PHASE_SIZE,
 )
@@ -75,6 +75,7 @@ def run_backtest(
         drawdown_series, dates, regimes, turnover_series
     """
     tickers = tickers or DEFAULT_TICKERS
+    dyn_sleeves = build_dynamic_sleeves(tickers)
 
     # ── Download ───────────────────────────────────────────────────────────────
     data       = download_prices(tickers, start=start)
@@ -169,6 +170,7 @@ def run_backtest(
             regime_max=regime_max,
             returns_df=hist_rets,
             tickers=tickers,
+            dynamic_sleeves=dyn_sleeves,
         )
 
         # ── Friction costs ─────────────────────────────────────────────────────

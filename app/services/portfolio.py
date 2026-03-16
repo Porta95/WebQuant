@@ -5,6 +5,8 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
 PORTFOLIO_FILE = DATA_DIR / "portfolio.json"
 
+DEFAULT_TICKERS = ["BTC-USD", "ETH-USD", "QQQ", "SPY", "GLD"]
+
 DEFAULT_PORTFOLIO = {
     "assets": [
         {"ticker": "BTC-USD", "enabled": True},
@@ -17,20 +19,53 @@ DEFAULT_PORTFOLIO = {
 
 
 # =========================
-# LOAD
+# LOAD (legacy {assets} format)
 # =========================
 def load_portfolio():
     try:
         if PORTFOLIO_FILE.exists():
             data = json.loads(PORTFOLIO_FILE.read_text())
-
-            # validación mínima
             if "assets" in data and isinstance(data["assets"], list):
                 return data
     except Exception:
         pass
-
     return DEFAULT_PORTFOLIO
+
+
+# =========================
+# UNIFIED TICKER LOADER
+# Supports both storage formats:
+#   new:    {assets: [{ticker, enabled}]}
+#   legacy: {crypto: [...], equities: [...], commodities: [...]}
+# =========================
+def load_portfolio_tickers() -> list[str]:
+    """
+    Read enabled tickers from portfolio.json regardless of which format it uses.
+    Falls back to DEFAULT_TICKERS if the file is missing or cannot be parsed.
+    """
+    try:
+        if PORTFOLIO_FILE.exists():
+            p = json.loads(PORTFOLIO_FILE.read_text())
+
+            # New format: {assets: [{ticker, enabled}, ...]}
+            if "assets" in p and isinstance(p["assets"], list):
+                tickers = [a["ticker"] for a in p["assets"] if a.get("enabled", True)]
+                if tickers:
+                    return tickers
+
+            # Legacy format: {crypto: [...], equities: [...], commodities: [...]}
+            tickers = (
+                p.get("crypto", [])
+                + p.get("equities", [])
+                + p.get("commodities", [])
+            )
+            if tickers:
+                return tickers
+
+    except Exception:
+        pass
+
+    return DEFAULT_TICKERS
 
 
 # =========================
@@ -39,7 +74,6 @@ def load_portfolio():
 def save_portfolio(portfolio: dict):
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-    # normalizar estructura
     cleaned = {
         "assets": [
             {

@@ -53,11 +53,14 @@ def load_portfolio_tickers() -> list[str]:
                 if tickers:
                     return tickers
 
-            # Legacy format: {crypto: [...], equities: [...], commodities: [...]}
+            # Router format: all 6 sleeves (equities/reits/crypto/commodities/bonds/merval)
             tickers = (
-                p.get("crypto", [])
-                + p.get("equities", [])
+                p.get("equities", [])
+                + p.get("reits", [])
+                + p.get("crypto", [])
                 + p.get("commodities", [])
+                + p.get("bonds", [])
+                + p.get("merval", [])
             )
             if tickers:
                 return tickers

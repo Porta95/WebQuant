@@ -7,19 +7,15 @@ import { Plus, X } from 'lucide-react';
    TYPES
 ========================= */
 
-type Sleeve = 'CRYPTO' | 'EQUITIES' | 'COMMODITIES';
-
-type Asset = {
-  ticker: string;
-  name: string;
-  sleeve: Sleeve;
-  enabled: boolean;
-};
+type Sleeve = 'equities' | 'reits' | 'crypto' | 'commodities' | 'bonds' | 'merval';
 
 type PortfolioDTO = {
-  crypto: string[];
-  equities: string[];
+  equities:    string[];
+  reits:       string[];
+  crypto:      string[];
   commodities: string[];
+  bonds:       string[];
+  merval:      string[];
 };
 
 /* =========================
@@ -46,95 +42,76 @@ async function savePortfolio(data: PortfolioDTO) {
    UI CONFIG
 ========================= */
 
-const SLEEVE_COLORS: Record<Sleeve, string> = {
-  CRYPTO: '#f7931a',
-  EQUITIES: '#00d4ff',
-  COMMODITIES: '#ffd700',
+const SLEEVE_META: Record<Sleeve, { label: string; color: string }> = {
+  equities:    { label: 'EQUITIES',    color: '#00d4ff' },
+  reits:       { label: 'REITS',       color: '#7c3aed' },
+  crypto:      { label: 'CRYPTO',      color: '#f7931a' },
+  commodities: { label: 'COMMODITIES', color: '#ffd700' },
+  bonds:       { label: 'BONDS',       color: '#10b981' },
+  merval:      { label: 'MERVAL',      color: '#6366f1' },
 };
 
-const sleeves: Sleeve[] = ['CRYPTO', 'EQUITIES', 'COMMODITIES'];
+const SLEEVES: Sleeve[] = ['equities', 'reits', 'crypto', 'commodities', 'bonds', 'merval'];
 
 /* =========================
    COMPONENT
 ========================= */
 
 export default function Portfolio() {
-  const [assets, setAssets] = useState<Asset[]>([]);
-  const [newTicker, setNewTicker] = useState('');
+  const [portfolio, setPortfolio] = useState<PortfolioDTO>({
+    equities: [], reits: [], crypto: [], commodities: [], bonds: [], merval: [],
+  });
+  const [newTicker, setNewTicker]   = useState('');
+  const [newSleeve, setNewSleeve]   = useState<Sleeve>('equities');
+  const [loading, setLoading]       = useState(true);
 
   /* ===== load from backend ===== */
   useEffect(() => {
     fetchPortfolio()
       .then((p) => {
-        const a: Asset[] = [
-          ...p.crypto.map((t) => ({
-            ticker: t,
-            name: t,
-            sleeve: 'CRYPTO' as Sleeve,
-            enabled: true,
-          })),
-          ...p.equities.map((t) => ({
-            ticker: t,
-            name: t,
-            sleeve: 'EQUITIES' as Sleeve,
-            enabled: true,
-          })),
-          ...p.commodities.map((t) => ({
-            ticker: t,
-            name: t,
-            sleeve: 'COMMODITIES' as Sleeve,
-            enabled: true,
-          })),
-        ];
-        setAssets(a);
+        setPortfolio({
+          equities:    p.equities    ?? [],
+          reits:       p.reits       ?? [],
+          crypto:      p.crypto      ?? [],
+          commodities: p.commodities ?? [],
+          bonds:       p.bonds       ?? [],
+          merval:      p.merval      ?? [],
+        });
       })
-      .catch(() => {});
+      .catch(() => {})
+      .finally(() => setLoading(false));
   }, []);
 
-  /* ===== save to backend ===== */
-  const persist = (list: Asset[]) => {
-    const dto: PortfolioDTO = {
-      crypto: list.filter((a) => a.sleeve === 'CRYPTO' && a.enabled).map((a) => a.ticker),
-      equities: list.filter((a) => a.sleeve === 'EQUITIES' && a.enabled).map((a) => a.ticker),
-      commodities: list.filter((a) => a.sleeve === 'COMMODITIES' && a.enabled).map((a) => a.ticker),
+  /* ===== delete asset ===== */
+  const deleteAsset = (sleeve: Sleeve, ticker: string) => {
+    const next: PortfolioDTO = {
+      ...portfolio,
+      [sleeve]: portfolio[sleeve].filter((t) => t !== ticker),
     };
-    savePortfolio(dto);
+    setPortfolio(next);
+    savePortfolio(next);
   };
 
-  /* ===== toggle ===== */
-  const toggle = (i: number) => {
-    const next = assets.map((x, idx) =>
-      idx === i ? { ...x, enabled: !x.enabled } : x
-    );
-    setAssets(next);
-    persist(next);
-  };
-
-  /* ===== delete ===== */
-  const deleteAsset = (i: number) => {
-    const next = assets.filter((_, idx) => idx !== i);
-    setAssets(next);
-    persist(next);
-  };
-
-  /* ===== add ===== */
+  /* ===== add asset ===== */
   const addAsset = () => {
-    if (!newTicker.trim()) return;
-
-    const next: Asset[] = [
-      ...assets,
-      {
-        ticker: newTicker.toUpperCase(),
-        name: newTicker.toUpperCase(),
-        sleeve: 'EQUITIES',
-        enabled: true,
-      },
-    ];
-
-    setAssets(next);
-    persist(next);
+    const t = newTicker.trim().toUpperCase();
+    if (!t) return;
+    // Avoid duplicates across all sleeves
+    const allTickers = SLEEVES.flatMap((s) => portfolio[s]);
+    if (allTickers.includes(t)) {
+      setNewTicker('');
+      return;
+    }
+    const next: PortfolioDTO = {
+      ...portfolio,
+      [newSleeve]: [...portfolio[newSleeve], t],
+    };
+    setPortfolio(next);
+    savePortfolio(next);
     setNewTicker('');
   };
+
+  const totalAssets = SLEEVES.reduce((sum, s) => sum + portfolio[s].length, 0);
 
   /* =========================
      RENDER
@@ -145,74 +122,49 @@ export default function Portfolio() {
       <div>
         <h1 className="text-2xl font-bold text-zinc-100">Configuración de Cartera</h1>
         <p className="font-mono text-xs text-zinc-500 mt-1">
-          Sleeves, activos habilitados y reglas de sizing
+          {loading ? 'Cargando…' : `${totalAssets} activos en ${SLEEVES.filter(s => portfolio[s].length > 0).length} sleeves`}
         </p>
       </div>
 
-      {/* Sleeves */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-        {sleeves.map((sleeve) => (
-          <div key={sleeve} className="bg-zinc-900 border border-zinc-800 rounded-xl p-5">
-            <div className="flex items-center gap-2 mb-4">
-              <div
-                className="w-2 h-2 rounded-full"
-                style={{ background: SLEEVE_COLORS[sleeve] }}
-              />
-              <span className="font-bold text-sm text-zinc-200">{sleeve}</span>
-            </div>
+      {/* Sleeves grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {SLEEVES.map((sleeve) => {
+          const { label, color } = SLEEVE_META[sleeve];
+          const tickers = portfolio[sleeve];
+          return (
+            <div key={sleeve} className="bg-zinc-900 border border-zinc-800 rounded-xl p-5">
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full" style={{ background: color }} />
+                  <span className="font-bold text-sm text-zinc-200">{label}</span>
+                </div>
+                <span className="font-mono text-xs text-zinc-600">{tickers.length}</span>
+              </div>
 
-            <div className="space-y-2">
-              {assets
-                .filter((a) => a.sleeve === sleeve)
-                .map((asset, i) => {
-                  const globalIdx = assets.indexOf(asset);
-                  return (
-                    <div
-                      key={asset.ticker}
-                      className="flex items-center justify-between py-2 border-b border-zinc-800/50"
+              {/* Asset list */}
+              <div className="space-y-1">
+                {tickers.length === 0 && (
+                  <p className="font-mono text-xs text-zinc-700 py-2">Sin activos</p>
+                )}
+                {tickers.map((ticker) => (
+                  <div
+                    key={ticker}
+                    className="flex items-center justify-between py-1.5 border-b border-zinc-800/50 last:border-0"
+                  >
+                    <span className="font-mono text-xs font-bold text-zinc-200">{ticker}</span>
+                    <button
+                      onClick={() => deleteAsset(sleeve, ticker)}
+                      className="text-zinc-600 hover:text-red-400 transition-colors ml-2"
                     >
-                      <div>
-                        <div className="font-mono text-xs font-bold text-zinc-200">
-                          {asset.ticker}
-                        </div>
-                        <div className="font-mono text-xs text-zinc-600">
-                          {asset.name}
-                        </div>
-                      </div>
-
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => toggle(globalIdx)}
-                          className={`w-8 h-4 rounded-full relative transition-all ${
-                            asset.enabled ? 'bg-cyan-400/30' : 'bg-zinc-700'
-                          }`}
-                        >
-                          <div
-                            className={`absolute top-0.5 w-3 h-3 rounded-full transition-all ${
-                              asset.enabled
-                                ? 'left-4 bg-cyan-400'
-                                : 'left-0.5 bg-zinc-500'
-                            }`}
-                          />
-                        </button>
-                        <button
-                          onClick={() => deleteAsset(globalIdx)}
-                          className="text-zinc-600 hover:text-red-400 transition-colors"
-                        >
-                          <X size={12} />
-                        </button>
-                      </div>
-                    </div>
-                  );
-                })}
+                      <X size={12} />
+                    </button>
+                  </div>
+                ))}
+              </div>
             </div>
-
-            <div className="mt-3 flex items-center gap-2 py-2 border border-dashed border-zinc-700 rounded-lg px-3 text-zinc-600">
-              <Plus size={12} />
-              <span className="font-mono text-xs">Agregar activo</span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       {/* Add new asset */}
@@ -222,18 +174,33 @@ export default function Portfolio() {
         </div>
 
         <div className="flex gap-3">
+          {/* Sleeve selector */}
+          <select
+            value={newSleeve}
+            onChange={(e) => setNewSleeve(e.target.value as Sleeve)}
+            className="bg-zinc-800 border border-zinc-700 rounded-lg px-3 py-3 font-mono text-xs text-zinc-100 focus:outline-none focus:border-cyan-400/50"
+          >
+            {SLEEVES.map((s) => (
+              <option key={s} value={s}>
+                {SLEEVE_META[s].label}
+              </option>
+            ))}
+          </select>
+
+          {/* Ticker input */}
           <input
             value={newTicker}
             onChange={(e) => setNewTicker(e.target.value.toUpperCase())}
             onKeyDown={(e) => e.key === 'Enter' && addAsset()}
-            placeholder="Ej: SOL-USD, TLT, NVDA"
+            placeholder="Ej: SOL-USD, TLT, NVDA, GGAL.BA"
             className="flex-1 bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-3 font-mono text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-cyan-400/50"
           />
 
           <button
             onClick={addAsset}
-            className="px-5 py-3 bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 rounded-lg font-mono text-xs font-bold hover:bg-cyan-400/20"
+            className="px-5 py-3 bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 rounded-lg font-mono text-xs font-bold hover:bg-cyan-400/20 flex items-center gap-2"
           >
+            <Plus size={14} />
             Agregar
           </button>
         </div>

@@ -72,24 +72,42 @@ MOMENTUM_BLEND   = 0.40   # v4.1: 30%→40% momentum tilt (more momentum-driven)
 def detect_sleeve(ticker: str) -> str:
     """
     Infer the sleeve for any ticker (predefined or custom).
-    Matches by ticker name patterns so custom assets are routed correctly.
+    Supports 6 sleeves: equity, bonds, commodity, crypto, reits, merval.
     """
     if ticker in SLEEVE_MAP:
         return SLEEVE_MAP[ticker]
 
     t = ticker.upper()
-    if t.endswith("-USD") or any(x in t for x in ["BTC", "ETH", "SOL", "BNB", "ADA", "XRP"]):
+
+    # Merval (Argentine stocks): always end in .BA
+    if t.endswith(".BA"):
+        return "merval"
+
+    # Crypto: ends in -USD or contains known crypto symbols
+    if t.endswith("-USD") or any(x in t for x in ["BTC", "ETH", "SOL", "BNB", "ADA", "XRP", "DOT", "AVAX"]):
         return "crypto"
-    if any(x in t for x in ["TLT", "IEF", "IEI", "BND", "AGG", "SHY", "BIL", "SHV", "GOVT", "VGSH"]):
+
+    # Bonds: government and aggregate fixed income ETFs
+    if any(x in t for x in ["TLT", "IEF", "IEI", "BND", "AGG", "SHY", "BIL", "SHV", "GOVT", "VGSH", "VCSH", "LQD", "HYG"]):
         return "bonds"
-    if any(x in t for x in ["GLD", "SLV", "IAU", "PDBC", "GSG", "XLE", "XOM", "USO", "VNQ", "IYR", "REIT"]):
+
+    # REITs: real estate investment trusts
+    if any(x in t for x in ["VNQ", "IYR", "REM", "REIT", "XLRE", "SCHH", "RWR", "HST", "AMT", "PLD", "SPG"]):
+        return "reits"
+
+    # Commodity: hard assets, energy, metals ETFs
+    if any(x in t for x in ["GLD", "SLV", "IAU", "PDBC", "GSG", "XLE", "XOM", "USO", "URA", "CPER", "WEAT", "CORN"]):
         return "commodity"
+
     return "equity"
 
 
 def build_dynamic_sleeves(tickers: list[str]) -> dict[str, list[str]]:
-    """Build a full sleeve map for any ticker universe, including custom tickers."""
-    result: dict[str, list[str]] = {"equity": [], "bonds": [], "commodity": [], "crypto": []}
+    """Build a full 6-sleeve map for any ticker universe, including custom tickers."""
+    result: dict[str, list[str]] = {
+        "equity": [], "bonds": [], "commodity": [],
+        "crypto": [], "reits": [], "merval": [],
+    }
     for t in tickers:
         sleeve = detect_sleeve(t)
         if sleeve not in result:
@@ -598,6 +616,26 @@ def compute_sleeve_weights(
                 mom_w = (mom_avail[t] / mom_total) if mom_total > 0 else 1.0 / n
                 raw_weights[t] = sw * (
                     (1 - BOND_BLEND) * iv_w + BOND_BLEND * mom_w
+                )
+
+        elif sleeve == "reits":
+            # REITs: inverse-vol weighted (interest rate sensitive, vol matters)
+            inv_vols  = {t: 1.0 / max(vols.get(t, 0.20), 0.01) for t in sleeve_assets}
+            total_iv  = sum(inv_vols.values())
+            for t in sleeve_assets:
+                iv_w = (inv_vols[t] / total_iv) if total_iv > 0 else 1.0 / n
+                raw_weights[t] = sw * iv_w
+
+        elif sleeve == "merval":
+            # Merval: equal weight + momentum tilt (high vol, equal base)
+            mom_avail = {t: mom_ranks.get(t, 0.5) for t in sleeve_assets}
+            mom_total = sum(mom_avail.values())
+            MERVAL_BLEND = 0.50   # 50% momentum tilt for high-alpha local stocks
+            for t in sleeve_assets:
+                eq_w  = 1.0 / n
+                mom_w = (mom_avail[t] / mom_total) if mom_total > 0 else 1.0 / n
+                raw_weights[t] = sw * (
+                    (1 - MERVAL_BLEND) * eq_w + MERVAL_BLEND * mom_w
                 )
 
         else:

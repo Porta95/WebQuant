@@ -14,7 +14,8 @@
     "ETH-USD"
   ],
   "commodities": [
-    "GLD"
+    "GLD",
+    "URA"
   ],
   "bonds": [
     "IEF",

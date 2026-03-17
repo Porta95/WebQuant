@@ -80,7 +80,7 @@
   "dominant": "BTC-USD",
   "regime": "BEAR",
   "regime_max": 0.4,
-  "vix": 22.7,
+  "vix": 22.5,
   "buffett": {
     "value": 213.3,
     "phase": "MUY_CARO",
@@ -127,5 +127,5 @@
     "buffett_mult": 0.8,
     "invested_pct": 0.4
   },
-  "generated_at": "2026-03-17T13:09:47.856252"
+  "generated_at": "2026-03-17T13:25:28.765290"
 }

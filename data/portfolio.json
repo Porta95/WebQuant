@@ -1,18 +1,28 @@
 {
-  "assets": [
-    {"ticker": "SPY",     "enabled": true},
-    {"ticker": "QQQ",     "enabled": true},
-    {"ticker": "IWM",     "enabled": true},
-    {"ticker": "XLE",     "enabled": true},
-    {"ticker": "XLV",     "enabled": true},
-    {"ticker": "VNQ",     "enabled": true},
-    {"ticker": "TLT",     "enabled": true},
-    {"ticker": "IEF",     "enabled": true},
-    {"ticker": "BIL",     "enabled": true},
-    {"ticker": "GLD",     "enabled": true},
-    {"ticker": "BTC-USD", "enabled": true},
-    {"ticker": "ETH-USD", "enabled": true},
-    {"ticker": "GGAL.BA", "enabled": true},
-    {"ticker": "YPFD.BA", "enabled": true}
+  "equities": [
+    "SPY",
+    "QQQ",
+    "IWM",
+    "XLE",
+    "XLV"
+  ],
+  "reits": [
+    "VNQ"
+  ],
+  "crypto": [
+    "BTC-USD",
+    "ETH-USD"
+  ],
+  "commodities": [
+    "GLD"
+  ],
+  "bonds": [
+    "TLT",
+    "IEF",
+    "BIL"
+  ],
+  "merval": [
+    "GGAL.BA",
+    "YPFD.BA"
   ]
 }

@@ -51,10 +51,53 @@ def _repo() -> str:
     return repo
 
 
+def _normalize_to_sleeves(raw: dict) -> dict:
+    """
+    Convierte cualquier formato de portfolio al formato sleeve estándar.
+    Soporta: {assets:[{ticker,enabled}]} y {equities:[], reits:[], ...}
+    """
+    # Formato nuevo: {assets: [{ticker, enabled}]}
+    if "assets" in raw and isinstance(raw["assets"], list):
+        sleeve_map = {
+            "equities":    [],
+            "reits":       [],
+            "crypto":      [],
+            "commodities": [],
+            "bonds":       [],
+            "merval":      [],
+        }
+        CRYPTO_KEYWORDS = ["BTC", "ETH", "SOL", "BNB", "ADA", "XRP", "USDT"]
+        BOND_KEYWORDS   = ["TLT", "IEF", "IEI", "BND", "AGG", "SHY", "BIL", "SHV", "GOVT"]
+        REIT_KEYWORDS   = ["VNQ", "IYR", "REM", "REIT"]
+        CMDTY_KEYWORDS  = ["GLD", "SLV", "IAU", "USO", "GSG", "PDBC", "XLE", "XOM"]
+        MERVAL_SUFFIXES = [".BA"]
+
+        for a in raw["assets"]:
+            if not a.get("enabled", True):
+                continue
+            t = a["ticker"].upper()
+            if any(t.endswith(s) for s in MERVAL_SUFFIXES):
+                sleeve_map["merval"].append(t)
+            elif t.endswith("-USD") or any(k in t for k in CRYPTO_KEYWORDS):
+                sleeve_map["crypto"].append(t)
+            elif any(k in t for k in BOND_KEYWORDS):
+                sleeve_map["bonds"].append(t)
+            elif any(k in t for k in REIT_KEYWORDS):
+                sleeve_map["reits"].append(t)
+            elif any(k in t for k in CMDTY_KEYWORDS):
+                sleeve_map["commodities"].append(t)
+            else:
+                sleeve_map["equities"].append(t)
+        return sleeve_map
+
+    # Formato sleeve ya correcto
+    return raw
+
+
 def _get_file() -> tuple[dict, str]:
     """
     Obtiene el contenido actual de portfolio.json desde GitHub.
-    Retorna (contenido_parseado, sha_del_archivo).
+    Retorna (contenido_parseado_y_normalizado, sha_del_archivo).
     El sha es necesario para poder hacer el PUT (update).
     """
     url = f"{GITHUB_API}/repos/{_repo()}/contents/{FILE_PATH}"
@@ -72,7 +115,8 @@ def _get_file() -> tuple[dict, str]:
 
     data    = r.json()
     sha     = data["sha"]
-    content = json.loads(base64.b64decode(data["content"]).decode("utf-8"))
+    raw     = json.loads(base64.b64decode(data["content"]).decode("utf-8"))
+    content = _normalize_to_sleeves(raw)
     return content, sha
 
 

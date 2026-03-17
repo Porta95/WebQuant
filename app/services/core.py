@@ -104,11 +104,7 @@ def download_prices(
     retries: int = 3,
 ) -> pd.DataFrame:
     """Download adjusted close prices via yfinance with retry logic."""
-    end     = datetime.today().strftime("%Y-%m-%d")
-    session = requests.Session()
-    session.headers["User-Agent"] = (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-    )
+    end = datetime.today().strftime("%Y-%m-%d")
 
     for attempt in range(retries):
         try:
@@ -118,7 +114,6 @@ def download_prices(
                 end=end,
                 auto_adjust=True,
                 progress=False,
-                session=session,
             )
 
             if isinstance(raw.columns, pd.MultiIndex):
@@ -149,10 +144,8 @@ def download_prices(
 def download_vix(start: str = "2003-01-01") -> pd.Series:
     """Download VIX (^VIX) for regime detection. Returns empty Series on failure."""
     try:
-        session = requests.Session()
-        session.headers["User-Agent"] = "Mozilla/5.0"
         raw = yf.download("^VIX", start=start, auto_adjust=True,
-                          progress=False, session=session)
+                          progress=False)
         close = raw["Close"] if "Close" in raw.columns else raw.iloc[:, 0]
         if isinstance(close, pd.DataFrame):
             close = close.iloc[:, 0]
@@ -380,12 +373,9 @@ def trend_phase(price: float, ma: float) -> tuple:
 def get_buffett() -> dict:
     """Fetch live Buffett Indicator (Wilshire 5000 / GDP × 100)."""
     try:
-        session = requests.Session()
-        session.headers["User-Agent"] = "Mozilla/5.0"
-
         wil = yf.download(
             "^W5000", start="1990-01-01", auto_adjust=True,
-            progress=False, session=session
+            progress=False
         )["Close"]
         if isinstance(wil, pd.DataFrame):
             wil = wil.iloc[:, 0]
@@ -423,12 +413,9 @@ def get_buffett_historical() -> pd.Series:
     Returns a daily pd.Series of (Wilshire5000 / GDP) × 100.
     """
     try:
-        session = requests.Session()
-        session.headers["User-Agent"] = "Mozilla/5.0"
-
         wil = yf.download(
             "^W5000", start="1990-01-01", auto_adjust=True,
-            progress=False, session=session
+            progress=False
         )["Close"]
         if isinstance(wil, pd.DataFrame):
             wil = wil.iloc[:, 0]

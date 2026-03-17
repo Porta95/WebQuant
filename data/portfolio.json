@@ -1,47 +1,18 @@
 {
-<<<<<<< HEAD
-=======
-  "equities": [
-    "SPY",
-    "QQQ",
-    "XLE",
-    "XLK",
-    "XLV"
-  ],
-  "reits": [
-    "VNQ"
-  ],
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)
-  "crypto": [
-    "BTC-USD",
-    "ETH-USD"
-  ],
-<<<<<<< HEAD
-  "equities": [
-    "SPY",
-    "QQQ",
-    "TSM",
-    "MORI.BA"
-  ],
-  "commodities": [
-    "GLD"
+  "assets": [
+    {"ticker": "SPY",     "enabled": true},
+    {"ticker": "QQQ",     "enabled": true},
+    {"ticker": "IWM",     "enabled": true},
+    {"ticker": "XLE",     "enabled": true},
+    {"ticker": "XLV",     "enabled": true},
+    {"ticker": "VNQ",     "enabled": true},
+    {"ticker": "TLT",     "enabled": true},
+    {"ticker": "IEF",     "enabled": true},
+    {"ticker": "BIL",     "enabled": true},
+    {"ticker": "GLD",     "enabled": true},
+    {"ticker": "BTC-USD", "enabled": true},
+    {"ticker": "ETH-USD", "enabled": true},
+    {"ticker": "GGAL.BA", "enabled": true},
+    {"ticker": "YPFD.BA", "enabled": true}
   ]
 }
-=======
-  "commodities": [
-    "GLD",
-    "SLV"
-  ],
-  "bonds": [
-    "IEF",
-    "BIL"
-  ],
-  "merval": [
-    "GGAL.BA",
-    "BMA.BA",
-    "YPFD.BA",
-    "ALUA.BA",
-    "PAMP.BA"
-  ]
-}
->>>>>>> 83f8e2e (feat: estrategia rotacional v3.1)

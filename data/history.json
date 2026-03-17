@@ -1,25 +1,25 @@
 [
   {
     "date": "2026-03-16",
-    "dominant": "XLE",
+    "dominant": "BTC-USD",
     "regime": "BEAR",
     "vix": 22.7,
     "weights": {
-      "BTC-USD": 0.0,
-      "ETH-USD": 0.0,
+      "BTC-USD": 0.1605,
+      "ETH-USD": 0.079,
       "SPY": 0.0,
       "QQQ": 0.0,
-      "IWM": 0.0,
-      "XLE": 0.4,
+      "XLE": 0.1605,
       "XLV": 0.0,
-      "GLD": 0.0
+      "GLD": 0.0,
+      "URA": 0.0
     },
-    "quality": "BAJA",
+    "quality": "MEDIA",
     "cash_pct": 0.6,
     "buffett": {
       "value": 213.3,
-      "phase": "CARO",
-      "mult": 0.75,
+      "phase": "MUY_CARO",
+      "mult": 0.8,
       "yoy": 18.0
     }
   },

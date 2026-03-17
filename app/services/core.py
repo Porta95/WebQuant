@@ -51,17 +51,20 @@ SLEEVE_MAP: dict[str, str] = {t: s for s, assets in SLEEVES.items() for t in ass
 CRYPTO_SPLIT: dict[str, float] = {"BTC-USD": 0.60, "ETH-USD": 0.40}
 
 # ── Signal Parameters ─────────────────────────────────────────────────────────
-DONCHIAN_WINDOW  = 100    # Entry: price must break 100-day high
+DONCHIAN_WINDOW  = 50     # Entry: price must break 50-day high (v4.1: 100→50, faster signal)
 MA_EXIT_WINDOW   = 50     # Exit trigger 1: price crosses below MA50
 TRAILING_STOP    = TRAILING_STOP_PCT   # Exit trigger 2: 15% from high-water
 VOL_WINDOW       = 63     # 3-month window (used as fallback when EWMA insufficient)
 EWMA_SPAN        = 30     # EWMA volatility span (≈ 1.5 month half-life)
-VOL_TARGET       = 0.12   # Portfolio annual volatility target (12%)
+VOL_TARGET       = 0.15   # Portfolio annual volatility target (v4.1: 12%→15%, more return)
+
+# v4.1: minimum invested floor — even in bear markets keep at least this % deployed
+MIN_INVESTED_FLOOR = 0.35  # 35% always in top-momentum assets regardless of signal
 
 # Cross-sectional momentum parameters
 MOM_LONG         = 252    # 12-month lookback
 MOM_SHORT        = 21     # Skip last month (avoid reversal)
-MOMENTUM_BLEND   = 0.30   # 30% momentum tilt, 70% inv-vol in intra-sleeve weighting
+MOMENTUM_BLEND   = 0.40   # v4.1: 30%→40% momentum tilt (more momentum-driven)
 
 
 # ── Sleeve Detection ──────────────────────────────────────────────────────────
@@ -334,8 +337,8 @@ def compute_positions(
 
 PHASE_SIZE: dict[str, float] = {
     "EARLY":    1.00,
-    "OK":       0.85,
-    "EXTENDED": 0.60,
+    "OK":       0.95,   # v4.1: 0.85→0.95 (less penalty for established trend)
+    "EXTENDED": 0.80,   # v4.1: 0.60→0.80 (extended ≠ dangerous in bull markets)
     "BROKEN":   0.00,
     "NO_DATA":  0.00,
 }
@@ -392,8 +395,15 @@ def get_buffett() -> dict:
 
         val = float(buffett.iloc[-1])
         yoy = float(buffett.iloc[-1] - buffett.iloc[-252]) if len(buffett) > 252 else None
-        ph  = "BARATO" if val < 90 else "JUSTO" if val < 120 else "CARO"
-        mt  = 1.00     if val < 90 else 1.00    if val < 120 else 0.75
+        # v4.1: 4-tier Buffett scale — less aggressive reduction, gradual scaling
+        ph  = ("BARATO"   if val < 90 else
+               "JUSTO"    if val < 120 else
+               "CARO"     if val < 170 else
+               "MUY_CARO")
+        mt  = (1.00 if val < 90 else
+               1.00 if val < 120 else
+               0.90 if val < 170 else   # v4.1: 0.75→0.90 for CARO
+               0.80)                     # v4.1: new MUY_CARO tier at >170%
 
         return {
             "value": round(val, 1),
@@ -453,7 +463,12 @@ def buffett_mult_at(buffett_hist: pd.Series, date) -> float:
         val = float(buffett_hist.loc[idx[-1]])
         # When extremely overvalued (>140%), reduce to 75%
         # When fair or cheap, full allocation
-        return 0.75 if val >= 140 else 1.0
+        # v4.1: gradual Buffett scaling in backtest
+        if val >= 170:
+            return 0.80   # MUY_CARO
+        if val >= 120:
+            return 0.90   # CARO
+        return 1.0
     except Exception:
         return 1.0
 
@@ -623,6 +638,26 @@ def compute_sleeve_weights(
         weights  = {t: w * scale_regime for t, w in weights.items()}
         cash_pct = max(0.0, 1.0 - sum(weights.values()))
 
+    # ── 9. Minimum invested floor (v4.1) ──────────────────────────────────────
+    # If total invested < MIN_INVESTED_FLOOR, allocate the gap to top-momentum
+    # assets (even BROKEN ones) to prevent "all cash" trap in bear markets.
+    # This ensures the strategy stays partially invested for mean-reversion capture.
+    total_invested = sum(weights.values())
+    if total_invested < MIN_INVESTED_FLOOR and tickers:
+        gap = MIN_INVESTED_FLOOR - total_invested
+        # Rank all tickers by momentum score (best momentum gets the floor allocation)
+        mom_sorted = sorted(
+            [t for t in tickers if t in weights],
+            key=lambda t: (momentum_scores or {}).get(t, 0.0),
+            reverse=True,
+        )
+        top_n = min(3, len(mom_sorted))
+        if top_n > 0:
+            floor_per = gap / top_n
+            for t in mom_sorted[:top_n]:
+                weights[t] = weights.get(t, 0.0) + floor_per
+        cash_pct = max(0.0, 1.0 - sum(weights.values()))
+
     meta = {
         "portfolio_vol":   round(port_vol, 4),
         "vol_scale":       round(scale, 4),
@@ -683,7 +718,16 @@ def compute_signal(tickers: Optional[list] = None) -> dict:
             "momentum": round(momentum_scores.get(t, 0.0) * 100, 2),
         }
         sizes[t]  = PHASE_SIZE.get(ph, 0.0)
-        active[t] = bool(positions[t].iloc[-1])
+
+        # v4.1 FIX: Donchian is the entry trigger, NOT a permanent eligibility gate.
+        # An asset qualifies for allocation if:
+        #   (a) Donchian breakout position is long, OR
+        #   (b) Phase is positive (EARLY/OK/EXTENDED — price above MA50)
+        # BROKEN assets (below MA50) still get 0% via sizes[t]=0.
+        donchian_long = bool(positions.get(t, pd.Series([False], dtype=bool)).iloc[-1])
+        phase_positive = ph in ("EARLY", "OK", "EXTENDED")
+        active[t] = donchian_long or phase_positive
+
         # v4: use EWMA vol for live signal
         vols[t]   = round(ewma_volatility(data[t]), 4)
 

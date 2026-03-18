@@ -7,10 +7,10 @@ import os
 from pathlib import Path
 from fastapi import APIRouter, HTTPException
 
-from services.core import compute_signal
-from services.portfolio import load_portfolio_tickers
-from services.telegram import send_signal_to_telegram, send_telegram
-from models.schemas import TelegramRequest, TelegramResponse
+from ..services.core import compute_signal
+from ..services.portfolio import load_portfolio_tickers
+from ..services.telegram import send_signal_to_telegram, send_telegram
+from ..models.schemas import TelegramRequest, TelegramResponse
 
 router = APIRouter(prefix="/api/signal", tags=["signal"])
 

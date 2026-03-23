@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-03-22",
+    "dominant": "ETH-USD",
+    "regime": "BEAR",
+    "vix": 24.2,
+    "weights": {
+      "BTC-USD": 0.0,
+      "ETH-USD": 0.2,
+      "SPY": 0.0,
+      "QQQ": 0.0,
+      "XLE": 0.2,
+      "XLV": 0.0,
+      "GLD": 0.0,
+      "URA": 0.0
+    },
+    "quality": "MEDIA",
+    "cash_pct": 0.6,
+    "buffett": {
+      "value": 213.3,
+      "phase": "MUY_CARO",
+      "mult": 0.8,
+      "yoy": 18.0
+    }
+  },
+  {
     "date": "2026-03-19",
     "dominant": "ETH-USD",
     "regime": "BEAR",

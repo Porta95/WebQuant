@@ -1,7 +1,7 @@
 {
   "weights": {
     "BTC-USD": 0.16,
-    "ETH-USD": 0.0799,
+    "ETH-USD": 0.08,
     "SPY": 0.0,
     "QQQ": 0.0,
     "XLE": 0.16,
@@ -12,59 +12,59 @@
   "phases": {
     "BTC-USD": {
       "phase": "EARLY",
-      "dist": 2.49,
-      "risk": 2.43,
-      "price": 70914.86,
-      "momentum": -43.02
+      "dist": 2.15,
+      "risk": 2.11,
+      "price": 70517.86,
+      "momentum": -38.26
     },
     "ETH-USD": {
       "phase": "OK",
-      "dist": 5.12,
-      "risk": 4.87,
-      "price": 2152.15,
-      "momentum": -34.2
+      "dist": 5.49,
+      "risk": 5.21,
+      "price": 2155.7,
+      "momentum": -32.27
     },
     "SPY": {
       "phase": "BROKEN",
-      "dist": -3.2,
-      "risk": 3.3,
-      "price": 655.38,
-      "momentum": 9.51
+      "dist": -3.41,
+      "risk": 3.53,
+      "price": 653.18,
+      "momentum": 10.76
     },
     "QQQ": {
       "phase": "BROKEN",
-      "dist": -2.56,
-      "risk": 2.62,
-      "price": 588.0,
-      "momentum": 8.42
+      "dist": -2.97,
+      "risk": 3.06,
+      "price": 583.98,
+      "momentum": 9.97
     },
     "XLE": {
       "phase": "EXTENDED",
-      "dist": 7.11,
-      "risk": 6.64,
-      "price": 59.63,
-      "momentum": 30.43
+      "dist": 8.86,
+      "risk": 8.14,
+      "price": 60.84,
+      "momentum": 31.57
     },
     "XLV": {
       "phase": "BROKEN",
-      "dist": -6.27,
-      "risk": 6.69,
-      "price": 144.77,
-      "momentum": 17.11
+      "dist": -5.75,
+      "risk": 6.1,
+      "price": 144.79,
+      "momentum": 19.49
     },
     "GLD": {
       "phase": "BROKEN",
-      "dist": -12.17,
-      "risk": 13.85,
-      "price": 404.04,
-      "momentum": 51.99
+      "dist": -12.06,
+      "risk": 13.71,
+      "price": 404.13,
+      "momentum": 53.82
     },
     "URA": {
       "phase": "BROKEN",
-      "dist": -6.98,
-      "risk": 7.5,
-      "price": 48.15,
-      "momentum": 39.81
+      "dist": -6.72,
+      "risk": 7.2,
+      "price": 48.19,
+      "momentum": 41.12
     }
   },
   "active": {
@@ -77,10 +77,10 @@
     "GLD": false,
     "URA": false
   },
-  "dominant": "BTC-USD",
+  "dominant": "XLE",
   "regime": "BEAR",
   "regime_max": 0.4,
-  "vix": 25.9,
+  "vix": 25.6,
   "buffett": {
     "value": 213.3,
     "phase": "MUY_CARO",
@@ -88,26 +88,26 @@
     "yoy": 18.0
   },
   "volatilities": {
-    "BTC-USD": 0.4513,
-    "ETH-USD": 0.6027,
-    "SPY": 0.1194,
-    "QQQ": 0.1451,
-    "XLE": 0.1332,
-    "XLV": 0.1183,
-    "GLD": 0.2865,
-    "URA": 0.4162
+    "BTC-USD": 0.4373,
+    "ETH-USD": 0.5829,
+    "SPY": 0.1158,
+    "QQQ": 0.1439,
+    "XLE": 0.1457,
+    "XLV": 0.1155,
+    "GLD": 0.2787,
+    "URA": 0.4027
   },
   "momentum": {
-    "BTC-USD": -43.02,
-    "ETH-USD": -34.2,
-    "SPY": 9.51,
-    "QQQ": 8.42,
-    "XLE": 30.43,
-    "XLV": 17.11,
-    "GLD": 51.99,
-    "URA": 39.81
+    "BTC-USD": -38.26,
+    "ETH-USD": -32.27,
+    "SPY": 10.76,
+    "QQQ": 9.97,
+    "XLE": 31.57,
+    "XLV": 19.49,
+    "GLD": 53.82,
+    "URA": 41.12
   },
-  "signal_date": "2026-03-23",
+  "signal_date": "2026-03-24",
   "cash_pct": 0.6,
   "quality": "MEDIA",
   "tickers": [
@@ -121,11 +121,11 @@
     "URA"
   ],
   "risk": {
-    "portfolio_vol": 0.3725,
-    "vol_scale": 0.4026,
+    "portfolio_vol": 0.3665,
+    "vol_scale": 0.4093,
     "dd_derisking": 1.0,
     "buffett_mult": 0.8,
     "invested_pct": 0.4
   },
-  "generated_at": "2026-03-24T15:47:34.164385"
+  "generated_at": "2026-03-25T13:42:46.938365"
 }

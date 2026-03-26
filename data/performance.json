@@ -5,7 +5,7 @@
       "strategy": 9872.45,
       "benchmark": 9860.49,
       "bench_60_40": 9860.49,
-      "bench_ew": 9912.64,
+      "bench_ew": 9912.63,
       "bench_spy_ma": 9860.49,
       "regime": "BULL",
       "weights": {
@@ -19,7 +19,7 @@
       "strategy": 9853.55,
       "benchmark": 9791.73,
       "bench_60_40": 9791.73,
-      "bench_ew": 9800.04,
+      "bench_ew": 9800.03,
       "bench_spy_ma": 9791.73,
       "regime": "BULL",
       "weights": {
@@ -29,10 +29,10 @@
     {
       "date": "2014-10-05",
       "strategy": 9633.25,
-      "benchmark": 9493.78,
-      "bench_60_40": 9493.78,
+      "benchmark": 9493.77,
+      "bench_60_40": 9493.77,
       "bench_ew": 9661.45,
-      "bench_spy_ma": 9493.78,
+      "bench_spy_ma": 9493.77,
       "regime": "BULL",
       "weights": {
         "XLV": 1.0
@@ -51,9 +51,9 @@
     {
       "date": "2014-10-19",
       "strategy": 9618.8,
-      "benchmark": 9787.25,
-      "bench_60_40": 9787.25,
-      "bench_ew": 9927.53,
+      "benchmark": 9787.24,
+      "bench_60_40": 9787.24,
+      "bench_ew": 9927.52,
       "bench_spy_ma": 9390.63,
       "regime": "BEAR",
       "weights": {}
@@ -64,7 +64,7 @@
       "benchmark": 10047.84,
       "bench_60_40": 10047.84,
       "bench_ew": 9949.82,
-      "bench_spy_ma": 9640.66,
+      "bench_spy_ma": 9640.67,
       "regime": "BULL",
       "weights": {}
     },
@@ -73,7 +73,7 @@
       "strategy": 9626.24,
       "benchmark": 10131.54,
       "bench_60_40": 10131.54,
-      "bench_ew": 9993.12,
+      "bench_ew": 9993.11,
       "bench_spy_ma": 9720.98,
       "regime": "BULL",
       "weights": {
@@ -85,8 +85,8 @@
     {
       "date": "2014-11-09",
       "strategy": 9701.34,
-      "benchmark": 10176.39,
-      "bench_60_40": 10176.39,
+      "benchmark": 10176.38,
+      "bench_60_40": 10176.38,
       "bench_ew": 10105.2,
       "bench_spy_ma": 9764.01,
       "regime": "BULL",
@@ -101,7 +101,7 @@
       "strategy": 9811.05,
       "benchmark": 10297.96,
       "bench_60_40": 10297.96,
-      "bench_ew": 10193.73,
+      "bench_ew": 10193.72,
       "bench_spy_ma": 9880.65,
       "regime": "BULL",
       "weights": {
@@ -115,7 +115,7 @@
       "strategy": 9494.48,
       "benchmark": 10323.87,
       "bench_60_40": 10323.87,
-      "bench_ew": 10175.7,
+      "bench_ew": 10175.69,
       "bench_spy_ma": 9905.51,
       "regime": "BULL",
       "weights": {
@@ -127,10 +127,10 @@
     },
     {
       "date": "2014-11-30",
-      "strategy": 9527.74,
+      "strategy": 9527.73,
       "benchmark": 10363.73,
       "bench_60_40": 10363.73,
-      "bench_ew": 10238.83,
+      "bench_ew": 10238.82,
       "bench_spy_ma": 9943.76,
       "regime": "BULL",
       "weights": {
@@ -155,7 +155,7 @@
     },
     {
       "date": "2014-12-14",
-      "strategy": 9480.92,
+      "strategy": 9480.91,
       "benchmark": 10346.78,
       "bench_60_40": 10346.78,
       "bench_ew": 10228.12,
@@ -177,10 +177,10 @@
     },
     {
       "date": "2014-12-28",
-      "strategy": 9315.79,
+      "strategy": 9315.78,
       "benchmark": 10292.17,
       "bench_60_40": 10292.17,
-      "bench_ew": 10144.69,
+      "bench_ew": 10144.68,
       "bench_spy_ma": 9875.1,
       "regime": "BULL",
       "weights": {
@@ -193,7 +193,7 @@
       "benchmark": 10233.05,
       "bench_60_40": 10233.05,
       "bench_ew": 10209.01,
-      "bench_spy_ma": 9818.37,
+      "bench_spy_ma": 9818.38,
       "regime": "BULL",
       "weights": {
         "SPY": 1.0
@@ -217,7 +217,7 @@
       "benchmark": 10269.12,
       "bench_60_40": 10269.12,
       "bench_ew": 10479.36,
-      "bench_spy_ma": 9852.98,
+      "bench_spy_ma": 9852.99,
       "regime": "BULL",
       "weights": {
         "GLD": 1.0
@@ -225,7 +225,7 @@
     },
     {
       "date": "2015-01-25",
-      "strategy": 9203.47,
+      "strategy": 9203.46,
       "benchmark": 9992.57,
       "bench_60_40": 9992.57,
       "bench_ew": 10257.48,
@@ -261,9 +261,9 @@
     {
       "date": "2015-02-15",
       "strategy": 8795.76,
-      "benchmark": 10583.26,
-      "bench_60_40": 10583.26,
-      "bench_ew": 10468.23,
+      "benchmark": 10583.25,
+      "bench_60_40": 10583.25,
+      "bench_ew": 10468.22,
       "bench_spy_ma": 10154.39,
       "regime": "BULL",
       "weights": {
@@ -293,7 +293,7 @@
       "benchmark": 10395.88,
       "bench_60_40": 10395.88,
       "bench_ew": 10271.24,
-      "bench_spy_ma": 9974.61,
+      "bench_spy_ma": 9974.6,
       "regime": "BULL",
       "weights": {
         "SPY": 0.201,
@@ -305,14 +305,14 @@
     {
       "date": "2015-03-08",
       "strategy": 8584.59,
-      "benchmark": 10312.22,
-      "bench_60_40": 10312.22,
+      "benchmark": 10312.21,
+      "bench_60_40": 10312.21,
       "bench_ew": 10147.7,
       "bench_spy_ma": 9894.33,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.227,
-        "SPY": 0.259,
+        "SPY": 0.258,
         "QQQ": 0.267,
         "XLV": 0.247
       }
@@ -332,8 +332,8 @@
     {
       "date": "2015-03-22",
       "strategy": 7523.21,
-      "benchmark": 10353.72,
-      "bench_60_40": 10353.72,
+      "benchmark": 10353.71,
+      "bench_60_40": 10353.71,
       "bench_ew": 10302.93,
       "bench_spy_ma": 9934.15,
       "regime": "BULL",
@@ -344,10 +344,10 @@
     },
     {
       "date": "2015-03-29",
-      "strategy": 7403.78,
+      "strategy": 7403.77,
       "benchmark": 10388.94,
       "bench_60_40": 10388.94,
-      "bench_ew": 10308.17,
+      "bench_ew": 10308.16,
       "bench_spy_ma": 9967.95,
       "regime": "BULL",
       "weights": {
@@ -357,8 +357,8 @@
     {
       "date": "2015-04-05",
       "strategy": 7392.67,
-      "benchmark": 10570.11,
-      "bench_60_40": 10570.11,
+      "benchmark": 10570.1,
+      "bench_60_40": 10570.1,
       "bench_ew": 10474.62,
       "bench_spy_ma": 10141.77,
       "regime": "BULL",
@@ -370,7 +370,7 @@
       "benchmark": 10464.93,
       "bench_60_40": 10464.93,
       "bench_ew": 10372.35,
-      "bench_spy_ma": 10040.85,
+      "bench_spy_ma": 10040.86,
       "regime": "BULL",
       "weights": {}
     },
@@ -379,7 +379,7 @@
       "strategy": 7387.9,
       "benchmark": 10651.13,
       "bench_60_40": 10651.13,
-      "bench_ew": 10505.35,
+      "bench_ew": 10505.34,
       "bench_spy_ma": 10219.51,
       "regime": "BULL",
       "weights": {
@@ -403,7 +403,7 @@
     },
     {
       "date": "2015-05-03",
-      "strategy": 7288.51,
+      "strategy": 7288.5,
       "benchmark": 10649.62,
       "bench_60_40": 10649.62,
       "bench_ew": 10474.46,
@@ -422,7 +422,7 @@
       "benchmark": 10690.88,
       "bench_60_40": 10690.88,
       "bench_ew": 10625.64,
-      "bench_spy_ma": 10257.65,
+      "bench_spy_ma": 10257.66,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -432,10 +432,10 @@
     {
       "date": "2015-05-17",
       "strategy": 7160.88,
-      "benchmark": 10718.57,
-      "bench_60_40": 10718.57,
+      "benchmark": 10718.56,
+      "bench_60_40": 10718.56,
       "bench_ew": 10605.42,
-      "bench_spy_ma": 10284.21,
+      "bench_spy_ma": 10284.22,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -449,7 +449,7 @@
       "benchmark": 10625.46,
       "bench_60_40": 10625.46,
       "bench_ew": 10515.4,
-      "bench_spy_ma": 10194.88,
+      "bench_spy_ma": 10194.89,
       "regime": "BULL",
       "weights": {
         "SPY": 0.21,
@@ -474,9 +474,9 @@
     },
     {
       "date": "2015-06-07",
-      "strategy": 7030.95,
-      "benchmark": 10568.6,
-      "bench_60_40": 10568.6,
+      "strategy": 7030.96,
+      "benchmark": 10568.59,
+      "bench_60_40": 10568.59,
       "bench_ew": 10428.75,
       "bench_spy_ma": 10140.32,
       "regime": "BULL",
@@ -490,7 +490,7 @@
       "benchmark": 10660.46,
       "bench_60_40": 10660.46,
       "bench_ew": 10561.51,
-      "bench_spy_ma": 10228.46,
+      "bench_spy_ma": 10228.47,
       "regime": "BULL",
       "weights": {
         "XLV": 1.0
@@ -499,8 +499,8 @@
     {
       "date": "2015-06-21",
       "strategy": 7252.57,
-      "benchmark": 10610.4,
-      "bench_60_40": 10610.4,
+      "benchmark": 10610.39,
+      "bench_60_40": 10610.39,
       "bench_ew": 10446.82,
       "bench_spy_ma": 10180.43,
       "regime": "BULL",
@@ -511,7 +511,7 @@
     },
     {
       "date": "2015-06-28",
-      "strategy": 7531.21,
+      "strategy": 7531.2,
       "benchmark": 10483.47,
       "bench_60_40": 10483.47,
       "bench_ew": 10338.35,
@@ -525,9 +525,9 @@
     {
       "date": "2015-07-05",
       "strategy": 8598.82,
-      "benchmark": 10492.07,
-      "bench_60_40": 10492.07,
-      "bench_ew": 10323.28,
+      "benchmark": 10492.06,
+      "bench_60_40": 10492.06,
+      "bench_ew": 10323.27,
       "bench_spy_ma": 10066.89,
       "regime": "BULL",
       "weights": {
@@ -536,11 +536,11 @@
     },
     {
       "date": "2015-07-12",
-      "strategy": 7568.38,
+      "strategy": 7568.37,
       "benchmark": 10744.91,
       "bench_60_40": 10744.91,
       "bench_ew": 10508.42,
-      "bench_spy_ma": 10309.49,
+      "bench_spy_ma": 10309.5,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 1.0
@@ -564,10 +564,10 @@
     {
       "date": "2015-07-26",
       "strategy": 7471.56,
-      "benchmark": 10644.79,
-      "bench_60_40": 10644.79,
+      "benchmark": 10644.78,
+      "bench_60_40": 10644.78,
       "bench_ew": 10304.98,
-      "bench_spy_ma": 10213.42,
+      "bench_spy_ma": 10213.43,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -579,7 +579,7 @@
       "strategy": 7185.1,
       "benchmark": 10515.83,
       "bench_60_40": 10515.83,
-      "bench_ew": 10203.89,
+      "bench_ew": 10203.88,
       "bench_spy_ma": 10089.7,
       "regime": "BULL",
       "weights": {
@@ -602,9 +602,9 @@
     {
       "date": "2015-08-16",
       "strategy": 7176.57,
-      "benchmark": 10004.08,
-      "bench_60_40": 10004.08,
-      "bench_ew": 10000.99,
+      "benchmark": 10004.07,
+      "bench_60_40": 10004.07,
+      "bench_ew": 10000.98,
       "bench_spy_ma": 9598.68,
       "regime": "BULL",
       "weights": {}
@@ -632,8 +632,8 @@
     {
       "date": "2015-09-06",
       "strategy": 7176.57,
-      "benchmark": 9948.96,
-      "bench_60_40": 9948.96,
+      "benchmark": 9948.95,
+      "bench_60_40": 9948.95,
       "bench_ew": 9936.64,
       "bench_spy_ma": 9598.68,
       "regime": "BEAR",
@@ -642,8 +642,8 @@
     {
       "date": "2015-09-13",
       "strategy": 7176.57,
-      "benchmark": 9935.11,
-      "bench_60_40": 9935.11,
+      "benchmark": 9935.1,
+      "bench_60_40": 9935.1,
       "bench_ew": 10028.33,
       "bench_spy_ma": 9598.68,
       "regime": "BEAR",
@@ -654,7 +654,7 @@
       "strategy": 7176.57,
       "benchmark": 9802.94,
       "bench_60_40": 9802.94,
-      "bench_ew": 9925.13,
+      "bench_ew": 9925.12,
       "bench_spy_ma": 9598.68,
       "regime": "BEAR",
       "weights": {}
@@ -672,16 +672,16 @@
     {
       "date": "2015-10-04",
       "strategy": 7176.57,
-      "benchmark": 10234.0,
-      "bench_60_40": 10234.0,
-      "bench_ew": 10218.13,
+      "benchmark": 10233.99,
+      "bench_60_40": 10233.99,
+      "bench_ew": 10218.12,
       "bench_spy_ma": 9598.68,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2015-10-11",
-      "strategy": 7284.73,
+      "strategy": 7284.72,
       "benchmark": 10332.61,
       "bench_60_40": 10332.61,
       "bench_ew": 10351.55,
@@ -696,9 +696,9 @@
     {
       "date": "2015-10-18",
       "strategy": 7426.3,
-      "benchmark": 10548.14,
-      "bench_60_40": 10548.14,
-      "bench_ew": 10541.88,
+      "benchmark": 10548.13,
+      "bench_60_40": 10548.13,
+      "bench_ew": 10541.87,
       "bench_spy_ma": 9598.68,
       "regime": "NEUTRAL",
       "weights": {
@@ -713,10 +713,10 @@
     {
       "date": "2015-10-25",
       "strategy": 7580.7,
-      "benchmark": 10569.49,
-      "bench_60_40": 10569.49,
+      "benchmark": 10569.48,
+      "bench_60_40": 10569.48,
       "bench_ew": 10496.79,
-      "bench_spy_ma": 9618.11,
+      "bench_spy_ma": 9618.1,
       "regime": "NEUTRAL",
       "weights": {
         "BTC-USD": 0.167,
@@ -730,8 +730,8 @@
     {
       "date": "2015-11-01",
       "strategy": 7883.48,
-      "benchmark": 10676.75,
-      "bench_60_40": 10676.75,
+      "benchmark": 10676.74,
+      "bench_60_40": 10676.74,
       "bench_ew": 10410.91,
       "bench_spy_ma": 9715.71,
       "regime": "BULL",
@@ -748,7 +748,7 @@
       "benchmark": 10295.5,
       "bench_60_40": 10295.5,
       "bench_ew": 10119.34,
-      "bench_spy_ma": 9368.78,
+      "bench_spy_ma": 9368.79,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.107,
@@ -761,10 +761,10 @@
     {
       "date": "2015-11-15",
       "strategy": 7697.78,
-      "benchmark": 10639.64,
-      "bench_60_40": 10639.64,
-      "bench_ew": 10359.28,
-      "bench_spy_ma": 9368.78,
+      "benchmark": 10639.63,
+      "bench_60_40": 10639.63,
+      "bench_ew": 10359.27,
+      "bench_spy_ma": 9368.79,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -777,7 +777,7 @@
       "benchmark": 10652.34,
       "bench_60_40": 10652.34,
       "bench_ew": 10296.64,
-      "bench_spy_ma": 9379.97,
+      "bench_spy_ma": 9379.98,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -790,7 +790,7 @@
       "benchmark": 10655.39,
       "bench_60_40": 10655.39,
       "bench_ew": 10416.44,
-      "bench_spy_ma": 9382.65,
+      "bench_spy_ma": 9382.66,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -799,11 +799,11 @@
     },
     {
       "date": "2015-12-06",
-      "strategy": 7722.57,
-      "benchmark": 10261.96,
-      "bench_60_40": 10261.96,
+      "strategy": 7722.58,
+      "benchmark": 10261.95,
+      "bench_60_40": 10261.95,
       "bench_ew": 10126.68,
-      "bench_spy_ma": 9036.21,
+      "bench_spy_ma": 9036.22,
       "regime": "BULL",
       "weights": {}
     },
@@ -813,7 +813,7 @@
       "benchmark": 10227.92,
       "bench_60_40": 10227.92,
       "bench_ew": 10061.43,
-      "bench_spy_ma": 9036.21,
+      "bench_spy_ma": 9036.22,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 1.0
@@ -825,7 +825,7 @@
       "benchmark": 10517.34,
       "bench_60_40": 10517.34,
       "bench_ew": 10273.81,
-      "bench_spy_ma": 9036.21,
+      "bench_spy_ma": 9036.22,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 1.0
@@ -837,7 +837,7 @@
       "benchmark": 10424.78,
       "bench_60_40": 10424.78,
       "bench_ew": 10168.63,
-      "bench_spy_ma": 8956.69,
+      "bench_spy_ma": 8956.7,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -850,7 +850,7 @@
       "benchmark": 9813.73,
       "bench_60_40": 9813.73,
       "bench_ew": 9873.06,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -863,7 +863,7 @@
       "benchmark": 9603.56,
       "bench_60_40": 9603.56,
       "bench_ew": 9652.45,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.2,
@@ -875,8 +875,8 @@
       "strategy": 7262.91,
       "benchmark": 9742.14,
       "bench_60_40": 9742.14,
-      "bench_ew": 9820.81,
-      "bench_spy_ma": 8431.69,
+      "bench_ew": 9820.8,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -888,7 +888,7 @@
       "benchmark": 9905.77,
       "bench_60_40": 9905.77,
       "bench_ew": 9947.94,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -897,10 +897,10 @@
     {
       "date": "2016-01-31",
       "strategy": 7463.81,
-      "benchmark": 9610.73,
-      "bench_60_40": 9610.73,
-      "bench_ew": 9824.29,
-      "bench_spy_ma": 8431.69,
+      "benchmark": 9610.72,
+      "bench_60_40": 9610.72,
+      "bench_ew": 9824.28,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -909,10 +909,10 @@
     {
       "date": "2016-02-07",
       "strategy": 7624.36,
-      "benchmark": 9543.22,
-      "bench_60_40": 9543.22,
+      "benchmark": 9543.23,
+      "bench_60_40": 9543.23,
       "bench_ew": 9974.05,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -921,10 +921,10 @@
     {
       "date": "2016-02-14",
       "strategy": 7604.26,
-      "benchmark": 9817.82,
-      "bench_60_40": 9817.82,
+      "benchmark": 9817.81,
+      "bench_60_40": 9817.81,
       "bench_ew": 10170.25,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -933,10 +933,10 @@
     {
       "date": "2016-02-21",
       "strategy": 7592.1,
-      "benchmark": 9975.83,
-      "bench_60_40": 9975.83,
+      "benchmark": 9975.82,
+      "bench_60_40": 9975.82,
       "bench_ew": 10271.3,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -948,7 +948,7 @@
       "benchmark": 10248.88,
       "bench_60_40": 10248.88,
       "bench_ew": 10539.44,
-      "bench_spy_ma": 8431.69,
+      "bench_spy_ma": 8431.7,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -957,8 +957,8 @@
     {
       "date": "2016-03-06",
       "strategy": 7738.06,
-      "benchmark": 10368.03,
-      "bench_60_40": 10368.03,
+      "benchmark": 10368.02,
+      "bench_60_40": 10368.02,
       "bench_ew": 10574.61,
       "bench_spy_ma": 8529.71,
       "regime": "BULL",
@@ -973,8 +973,8 @@
     {
       "date": "2016-03-13",
       "strategy": 7849.91,
-      "benchmark": 10504.77,
-      "bench_60_40": 10504.77,
+      "benchmark": 10504.76,
+      "bench_60_40": 10504.76,
       "bench_ew": 10672.28,
       "bench_spy_ma": 8642.21,
       "regime": "BULL",
@@ -1006,8 +1006,8 @@
     {
       "date": "2016-03-27",
       "strategy": 7904.65,
-      "benchmark": 10635.31,
-      "bench_60_40": 10635.31,
+      "benchmark": 10635.32,
+      "bench_60_40": 10635.32,
       "bench_ew": 10729.12,
       "bench_spy_ma": 8749.61,
       "regime": "BULL",
@@ -1040,7 +1040,7 @@
       "benchmark": 10679.52,
       "bench_60_40": 10679.52,
       "bench_ew": 10784.51,
-      "bench_spy_ma": 8785.97,
+      "bench_spy_ma": 8785.98,
       "regime": "BULL",
       "weights": {
         "SPY": 0.281,
@@ -1052,7 +1052,7 @@
     },
     {
       "date": "2016-04-17",
-      "strategy": 8207.27,
+      "strategy": 8207.28,
       "benchmark": 10740.68,
       "bench_60_40": 10740.68,
       "bench_ew": 10750.25,
@@ -1088,7 +1088,7 @@
       "strategy": 7992.95,
       "benchmark": 10573.64,
       "bench_60_40": 10573.64,
-      "bench_ew": 10743.85,
+      "bench_ew": 10743.84,
       "bench_spy_ma": 8698.87,
       "regime": "BULL",
       "weights": {
@@ -1120,7 +1120,7 @@
       "benchmark": 10561.82,
       "bench_60_40": 10561.82,
       "bench_ew": 10668.6,
-      "bench_spy_ma": 8689.14,
+      "bench_spy_ma": 8689.15,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.4,
@@ -1142,9 +1142,9 @@
     },
     {
       "date": "2016-05-29",
-      "strategy": 7998.57,
-      "benchmark": 10808.02,
-      "bench_60_40": 10808.02,
+      "strategy": 7998.58,
+      "benchmark": 10808.01,
+      "bench_60_40": 10808.01,
       "bench_ew": 10851.01,
       "bench_spy_ma": 8891.69,
       "regime": "BULL",
@@ -1159,7 +1159,7 @@
       "strategy": 8150.53,
       "benchmark": 10797.22,
       "bench_60_40": 10797.22,
-      "bench_ew": 10897.61,
+      "bench_ew": 10897.6,
       "bench_spy_ma": 8882.81,
       "regime": "BULL",
       "weights": {
@@ -1190,7 +1190,7 @@
       "benchmark": 10500.49,
       "bench_60_40": 10500.49,
       "bench_ew": 10776.16,
-      "bench_spy_ma": 8638.69,
+      "bench_spy_ma": 8638.7,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.243,
@@ -1226,9 +1226,9 @@
     {
       "date": "2016-07-10",
       "strategy": 8141.25,
-      "benchmark": 11150.97,
-      "bench_60_40": 11150.97,
-      "bench_ew": 11279.63,
+      "benchmark": 11150.96,
+      "bench_60_40": 11150.96,
+      "bench_ew": 11279.62,
       "bench_spy_ma": 9173.83,
       "regime": "BULL",
       "weights": {
@@ -1240,11 +1240,11 @@
     },
     {
       "date": "2016-07-17",
-      "strategy": 8153.0,
+      "strategy": 8153.01,
       "benchmark": 11223.81,
       "bench_60_40": 11223.81,
       "bench_ew": 11351.88,
-      "bench_spy_ma": 9233.76,
+      "bench_spy_ma": 9233.77,
       "regime": "BULL",
       "weights": {
         "SPY": 0.242,
@@ -1260,7 +1260,7 @@
       "benchmark": 11217.61,
       "bench_60_40": 11217.61,
       "bench_ew": 11481.16,
-      "bench_spy_ma": 9228.66,
+      "bench_spy_ma": 9228.67,
       "regime": "BULL",
       "weights": {
         "SPY": 0.248,
@@ -1272,7 +1272,7 @@
     },
     {
       "date": "2016-07-31",
-      "strategy": 8210.34,
+      "strategy": 8210.33,
       "benchmark": 11272.38,
       "bench_60_40": 11272.38,
       "bench_ew": 11508.89,
@@ -1315,9 +1315,9 @@
     {
       "date": "2016-08-21",
       "strategy": 8104.07,
-      "benchmark": 11226.4,
-      "bench_60_40": 11226.4,
-      "bench_ew": 11448.17,
+      "benchmark": 11226.39,
+      "bench_60_40": 11226.39,
+      "bench_ew": 11448.16,
       "bench_spy_ma": 9235.89,
       "regime": "BULL",
       "weights": {
@@ -1331,8 +1331,8 @@
       "strategy": 8112.68,
       "benchmark": 11282.19,
       "bench_60_40": 11282.19,
-      "bench_ew": 11493.99,
-      "bench_spy_ma": 9281.79,
+      "bench_ew": 11493.98,
+      "bench_spy_ma": 9281.8,
       "regime": "BULL",
       "weights": {
         "SPY": 0.366,
@@ -1343,10 +1343,10 @@
     {
       "date": "2016-09-04",
       "strategy": 7898.79,
-      "benchmark": 11019.21,
-      "bench_60_40": 11019.21,
+      "benchmark": 11019.22,
+      "bench_60_40": 11019.22,
       "bench_ew": 11317.22,
-      "bench_spy_ma": 9065.44,
+      "bench_spy_ma": 9065.45,
       "regime": "BULL",
       "weights": {
         "QQQ": 1.0
@@ -1377,8 +1377,8 @@
     {
       "date": "2016-09-25",
       "strategy": 7668.56,
-      "benchmark": 11231.7,
-      "bench_60_40": 11231.7,
+      "benchmark": 11231.69,
+      "bench_60_40": 11231.69,
       "bench_ew": 11513.22,
       "bench_spy_ma": 9240.25,
       "regime": "BULL",
@@ -1391,7 +1391,7 @@
       "strategy": 7652.41,
       "benchmark": 11166.27,
       "bench_60_40": 11166.27,
-      "bench_ew": 11302.57,
+      "bench_ew": 11302.56,
       "bench_spy_ma": 9186.42,
       "regime": "BULL",
       "weights": {
@@ -1429,7 +1429,7 @@
       "benchmark": 11036.45,
       "bench_60_40": 11036.45,
       "bench_ew": 11272.56,
-      "bench_spy_ma": 9079.62,
+      "bench_spy_ma": 9079.63,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -1442,7 +1442,7 @@
       "benchmark": 10829.27,
       "bench_60_40": 10829.27,
       "bench_ew": 11178.16,
-      "bench_spy_ma": 8909.17,
+      "bench_spy_ma": 8909.18,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 1.0
@@ -1450,11 +1450,11 @@
     },
     {
       "date": "2016-11-06",
-      "strategy": 7862.43,
+      "strategy": 7862.44,
       "benchmark": 11237.93,
       "bench_60_40": 11237.93,
       "bench_ew": 11170.89,
-      "bench_spy_ma": 8909.17,
+      "bench_spy_ma": 8909.18,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 1.0
@@ -1462,11 +1462,11 @@
     },
     {
       "date": "2016-11-13",
-      "strategy": 8187.16,
-      "benchmark": 11345.93,
-      "bench_60_40": 11345.93,
+      "strategy": 8187.17,
+      "benchmark": 11345.94,
+      "bench_60_40": 11345.94,
       "bench_ew": 11193.55,
-      "bench_spy_ma": 8994.8,
+      "bench_spy_ma": 8994.81,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 1.0
@@ -1474,11 +1474,11 @@
     },
     {
       "date": "2016-11-20",
-      "strategy": 8287.42,
-      "benchmark": 11502.76,
-      "bench_60_40": 11502.76,
-      "bench_ew": 11209.89,
-      "bench_spy_ma": 9119.12,
+      "strategy": 8287.43,
+      "benchmark": 11502.75,
+      "bench_60_40": 11502.75,
+      "bench_ew": 11209.88,
+      "bench_spy_ma": 9119.13,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.206,
@@ -1489,10 +1489,10 @@
     {
       "date": "2016-11-27",
       "strategy": 8453.13,
-      "benchmark": 11407.21,
-      "bench_60_40": 11407.21,
-      "bench_ew": 11065.75,
-      "bench_spy_ma": 9043.37,
+      "benchmark": 11407.2,
+      "bench_60_40": 11407.2,
+      "bench_ew": 11065.74,
+      "bench_spy_ma": 9043.38,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.211,
@@ -1506,7 +1506,7 @@
       "benchmark": 11761.87,
       "bench_60_40": 11761.87,
       "bench_ew": 11244.34,
-      "bench_spy_ma": 9324.54,
+      "bench_spy_ma": 9324.55,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.257,
@@ -1533,10 +1533,10 @@
     {
       "date": "2016-12-18",
       "strategy": 9079.88,
-      "benchmark": 11789.41,
-      "bench_60_40": 11789.41,
-      "bench_ew": 11202.06,
-      "bench_spy_ma": 9346.37,
+      "benchmark": 11789.4,
+      "bench_60_40": 11789.4,
+      "bench_ew": 11202.05,
+      "bench_spy_ma": 9346.38,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.259,
@@ -1552,7 +1552,7 @@
       "benchmark": 11675.54,
       "bench_60_40": 11675.54,
       "bench_ew": 11170.68,
-      "bench_spy_ma": 9256.1,
+      "bench_spy_ma": 9256.11,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.142,
@@ -1567,8 +1567,8 @@
       "strategy": 9347.51,
       "benchmark": 11867.75,
       "bench_60_40": 11867.75,
-      "bench_ew": 11413.11,
-      "bench_spy_ma": 9408.48,
+      "bench_ew": 11413.1,
+      "bench_spy_ma": 9408.49,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.137,
@@ -1584,7 +1584,7 @@
       "benchmark": 11859.4,
       "bench_60_40": 11859.4,
       "bench_ew": 11532.55,
-      "bench_spy_ma": 9401.86,
+      "bench_spy_ma": 9401.87,
       "regime": "BULL",
       "weights": {
         "SPY": 0.232,
@@ -1597,10 +1597,10 @@
     {
       "date": "2017-01-15",
       "strategy": 9547.55,
-      "benchmark": 11843.21,
-      "bench_60_40": 11843.21,
-      "bench_ew": 11558.39,
-      "bench_spy_ma": 9389.02,
+      "benchmark": 11843.2,
+      "bench_60_40": 11843.2,
+      "bench_ew": 11558.38,
+      "bench_spy_ma": 9389.03,
       "regime": "BULL",
       "weights": {
         "SPY": 0.261,
@@ -1616,7 +1616,7 @@
       "benchmark": 11959.68,
       "bench_60_40": 11959.68,
       "bench_ew": 11623.75,
-      "bench_spy_ma": 9481.36,
+      "bench_spy_ma": 9481.37,
       "regime": "BULL",
       "weights": {
         "SPY": 0.273,
@@ -1631,8 +1631,8 @@
       "strategy": 9668.86,
       "benchmark": 11979.01,
       "bench_60_40": 11979.01,
-      "bench_ew": 11716.45,
-      "bench_spy_ma": 9496.68,
+      "bench_ew": 11716.44,
+      "bench_spy_ma": 9496.69,
       "regime": "BULL",
       "weights": {
         "SPY": 0.337,
@@ -1643,11 +1643,11 @@
     },
     {
       "date": "2017-02-05",
-      "strategy": 9881.95,
-      "benchmark": 12092.36,
-      "bench_60_40": 12092.36,
+      "strategy": 9881.96,
+      "benchmark": 12092.35,
+      "bench_60_40": 12092.35,
       "bench_ew": 11855.66,
-      "bench_spy_ma": 9586.54,
+      "bench_spy_ma": 9586.55,
       "regime": "BULL",
       "weights": {
         "SPY": 0.358,
@@ -1659,10 +1659,10 @@
     {
       "date": "2017-02-12",
       "strategy": 10023.62,
-      "benchmark": 12279.35,
-      "bench_60_40": 12279.35,
+      "benchmark": 12279.34,
+      "bench_60_40": 12279.34,
       "bench_ew": 11994.85,
-      "bench_spy_ma": 9734.78,
+      "bench_spy_ma": 9734.79,
       "regime": "BULL",
       "weights": {
         "SPY": 0.269,
@@ -1677,8 +1677,8 @@
       "strategy": 9996.06,
       "benchmark": 12365.53,
       "bench_60_40": 12365.53,
-      "bench_ew": 12105.41,
-      "bench_spy_ma": 9803.11,
+      "bench_ew": 12105.4,
+      "bench_spy_ma": 9803.12,
       "regime": "BULL",
       "weights": {
         "SPY": 0.262,
@@ -1693,7 +1693,7 @@
       "strategy": 10020.73,
       "benchmark": 12453.28,
       "bench_60_40": 12453.28,
-      "bench_ew": 12083.76,
+      "bench_ew": 12083.75,
       "bench_spy_ma": 9872.68,
       "regime": "BULL",
       "weights": {
@@ -1709,7 +1709,7 @@
       "strategy": 9892.14,
       "benchmark": 12415.15,
       "bench_60_40": 12415.15,
-      "bench_ew": 11987.17,
+      "bench_ew": 11987.16,
       "bench_spy_ma": 9842.45,
       "regime": "BULL",
       "weights": {
@@ -1726,7 +1726,7 @@
       "benchmark": 12434.54,
       "bench_60_40": 12434.54,
       "bench_ew": 12089.92,
-      "bench_spy_ma": 9857.82,
+      "bench_spy_ma": 9857.83,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.169,
@@ -1740,8 +1740,8 @@
       "strategy": 9523.48,
       "benchmark": 12268.24,
       "bench_60_40": 12268.24,
-      "bench_ew": 12068.01,
-      "bench_spy_ma": 9725.98,
+      "bench_ew": 12068.0,
+      "bench_spy_ma": 9725.99,
       "regime": "BULL",
       "weights": {
         "SPY": 0.373,
@@ -1754,8 +1754,8 @@
       "strategy": 9581.09,
       "benchmark": 12366.87,
       "bench_60_40": 12366.87,
-      "bench_ew": 12149.5,
-      "bench_spy_ma": 9804.17,
+      "bench_ew": 12149.49,
+      "bench_spy_ma": 9804.18,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -1764,11 +1764,11 @@
     },
     {
       "date": "2017-04-02",
-      "strategy": 9537.05,
+      "strategy": 9537.04,
       "benchmark": 12338.54,
       "bench_60_40": 12338.54,
       "bench_ew": 12152.92,
-      "bench_spy_ma": 9781.71,
+      "bench_spy_ma": 9781.72,
       "regime": "BULL",
       "weights": {
         "QQQ": 1.0
@@ -1776,11 +1776,11 @@
     },
     {
       "date": "2017-04-09",
-      "strategy": 9423.59,
+      "strategy": 9423.58,
       "benchmark": 12197.42,
       "bench_60_40": 12197.42,
       "bench_ew": 12164.87,
-      "bench_spy_ma": 9669.84,
+      "bench_spy_ma": 9669.85,
       "regime": "BULL",
       "weights": {
         "QQQ": 1.0
@@ -1791,8 +1791,8 @@
       "strategy": 9373.02,
       "benchmark": 12306.54,
       "bench_60_40": 12306.54,
-      "bench_ew": 12258.73,
-      "bench_spy_ma": 9756.34,
+      "bench_ew": 12258.72,
+      "bench_spy_ma": 9756.35,
       "regime": "BULL",
       "weights": {
         "GLD": 1.0
@@ -1804,7 +1804,7 @@
       "benchmark": 12489.62,
       "bench_60_40": 12489.62,
       "bench_ew": 12373.8,
-      "bench_spy_ma": 9901.49,
+      "bench_spy_ma": 9901.5,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -1817,7 +1817,7 @@
       "benchmark": 12574.61,
       "bench_60_40": 12574.61,
       "bench_ew": 12320.46,
-      "bench_spy_ma": 9968.86,
+      "bench_spy_ma": 9968.87,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.1,
@@ -1828,9 +1828,9 @@
     },
     {
       "date": "2017-05-07",
-      "strategy": 9802.04,
-      "benchmark": 12536.84,
-      "bench_60_40": 12536.84,
+      "strategy": 9802.03,
+      "benchmark": 12536.83,
+      "bench_60_40": 12536.83,
       "bench_ew": 12333.46,
       "bench_spy_ma": 9938.92,
       "regime": "BULL",
@@ -1846,7 +1846,7 @@
       "benchmark": 12501.69,
       "bench_60_40": 12501.69,
       "bench_ew": 12389.83,
-      "bench_spy_ma": 9911.05,
+      "bench_spy_ma": 9911.06,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.193,
@@ -1856,7 +1856,7 @@
     },
     {
       "date": "2017-05-21",
-      "strategy": 10403.29,
+      "strategy": 10403.28,
       "benchmark": 12680.05,
       "bench_60_40": 12680.05,
       "bench_ew": 12589.45,
@@ -1869,11 +1869,11 @@
     },
     {
       "date": "2017-05-28",
-      "strategy": 10540.61,
+      "strategy": 10540.6,
       "benchmark": 12809.1,
       "bench_60_40": 12809.1,
-      "bench_ew": 12735.98,
-      "bench_spy_ma": 10154.76,
+      "bench_ew": 12735.97,
+      "bench_spy_ma": 10154.77,
       "regime": "BULL",
       "weights": {
         "SPY": 0.355,
@@ -1883,10 +1883,10 @@
     },
     {
       "date": "2017-06-04",
-      "strategy": 10768.76,
+      "strategy": 10768.75,
       "benchmark": 12769.23,
       "bench_60_40": 12769.23,
-      "bench_ew": 12582.43,
+      "bench_ew": 12582.42,
       "bench_spy_ma": 10123.16,
       "regime": "BULL",
       "weights": {
@@ -1902,7 +1902,7 @@
       "benchmark": 12790.91,
       "bench_60_40": 12790.91,
       "bench_ew": 12504.24,
-      "bench_spy_ma": 10140.34,
+      "bench_spy_ma": 10140.35,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.074,
@@ -1914,11 +1914,11 @@
     },
     {
       "date": "2017-06-18",
-      "strategy": 10781.43,
+      "strategy": 10781.42,
       "benchmark": 12816.74,
       "bench_60_40": 12816.74,
       "bench_ew": 12609.03,
-      "bench_spy_ma": 10160.82,
+      "bench_spy_ma": 10160.83,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -1944,7 +1944,7 @@
       "benchmark": 12762.97,
       "bench_60_40": 12762.97,
       "bench_ew": 12342.02,
-      "bench_spy_ma": 10118.19,
+      "bench_spy_ma": 10118.2,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -1956,8 +1956,8 @@
       "strategy": 10781.64,
       "benchmark": 12944.84,
       "bench_60_40": 12944.84,
-      "bench_ew": 12584.03,
-      "bench_spy_ma": 10262.37,
+      "bench_ew": 12584.02,
+      "bench_spy_ma": 10262.38,
       "regime": "BULL",
       "weights": {
         "XLV": 1.0
@@ -1965,11 +1965,11 @@
     },
     {
       "date": "2017-07-16",
-      "strategy": 10963.57,
-      "benchmark": 13014.43,
-      "bench_60_40": 13014.43,
-      "bench_ew": 12754.76,
-      "bench_spy_ma": 10317.54,
+      "strategy": 10963.56,
+      "benchmark": 13014.42,
+      "bench_60_40": 13014.42,
+      "bench_ew": 12754.75,
+      "bench_spy_ma": 10317.55,
       "regime": "BULL",
       "weights": {
         "SPY": 0.296,
@@ -1998,7 +1998,7 @@
       "benchmark": 13042.37,
       "bench_60_40": 13042.37,
       "bench_ew": 12764.53,
-      "bench_spy_ma": 10339.69,
+      "bench_spy_ma": 10339.7,
       "regime": "BULL",
       "weights": {
         "SPY": 0.243,
@@ -2028,8 +2028,8 @@
       "strategy": 10816.64,
       "benchmark": 12794.6,
       "bench_60_40": 12794.6,
-      "bench_ew": 12706.05,
-      "bench_spy_ma": 10143.27,
+      "bench_ew": 12706.04,
+      "bench_spy_ma": 10143.28,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -2039,10 +2039,10 @@
     {
       "date": "2017-08-20",
       "strategy": 11226.7,
-      "benchmark": 12892.13,
-      "bench_60_40": 12892.13,
+      "benchmark": 12892.12,
+      "bench_60_40": 12892.12,
       "bench_ew": 12775.76,
-      "bench_spy_ma": 10220.58,
+      "bench_spy_ma": 10220.59,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -2055,7 +2055,7 @@
       "benchmark": 13065.03,
       "bench_60_40": 13065.03,
       "bench_ew": 13068.95,
-      "bench_spy_ma": 10357.66,
+      "bench_spy_ma": 10357.67,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -2064,11 +2064,11 @@
     },
     {
       "date": "2017-09-03",
-      "strategy": 11595.14,
+      "strategy": 11595.15,
       "benchmark": 12998.61,
       "bench_60_40": 12998.61,
       "bench_ew": 13059.4,
-      "bench_spy_ma": 10305.0,
+      "bench_spy_ma": 10305.01,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.089,
@@ -2083,7 +2083,7 @@
       "benchmark": 13201.39,
       "bench_60_40": 13201.39,
       "bench_ew": 13100.15,
-      "bench_spy_ma": 10465.76,
+      "bench_spy_ma": 10465.77,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.299,
@@ -2094,10 +2094,10 @@
     {
       "date": "2017-09-17",
       "strategy": 11512.48,
-      "benchmark": 13214.64,
-      "bench_60_40": 13214.64,
+      "benchmark": 13214.63,
+      "bench_60_40": 13214.63,
       "bench_ew": 12982.29,
-      "bench_spy_ma": 10476.26,
+      "bench_spy_ma": 10476.27,
       "regime": "BULL",
       "weights": {
         "SPY": 0.174,
@@ -2113,7 +2113,7 @@
       "benchmark": 13309.46,
       "bench_60_40": 13309.46,
       "bench_ew": 12988.94,
-      "bench_spy_ma": 10551.44,
+      "bench_spy_ma": 10551.45,
       "regime": "BULL",
       "weights": {
         "SPY": 0.205,
@@ -2157,7 +2157,7 @@
       "benchmark": 13620.97,
       "bench_60_40": 13620.97,
       "bench_ew": 13189.49,
-      "bench_spy_ma": 10798.39,
+      "bench_spy_ma": 10798.4,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.043,
@@ -2173,7 +2173,7 @@
       "benchmark": 13652.76,
       "bench_60_40": 13652.76,
       "bench_ew": 13248.88,
-      "bench_spy_ma": 10823.59,
+      "bench_spy_ma": 10823.6,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.049,
@@ -2188,8 +2188,8 @@
       "strategy": 12328.31,
       "benchmark": 13691.96,
       "bench_60_40": 13691.96,
-      "bench_ew": 13310.62,
-      "bench_spy_ma": 10854.67,
+      "bench_ew": 13310.61,
+      "bench_spy_ma": 10854.68,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.224,
@@ -2203,7 +2203,7 @@
       "benchmark": 13672.89,
       "bench_60_40": 13672.89,
       "bench_ew": 13335.06,
-      "bench_spy_ma": 10839.55,
+      "bench_spy_ma": 10839.56,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.074,
@@ -2214,11 +2214,11 @@
     },
     {
       "date": "2017-11-12",
-      "strategy": 12149.45,
-      "benchmark": 13660.71,
-      "bench_60_40": 13660.71,
-      "bench_ew": 13402.4,
-      "bench_spy_ma": 10829.89,
+      "strategy": 12149.44,
+      "benchmark": 13660.7,
+      "bench_60_40": 13660.7,
+      "bench_ew": 13402.39,
+      "bench_spy_ma": 10829.9,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -2230,10 +2230,10 @@
     {
       "date": "2017-11-19",
       "strategy": 12620.4,
-      "benchmark": 13793.15,
-      "bench_60_40": 13793.15,
-      "bench_ew": 13493.11,
-      "bench_spy_ma": 10934.89,
+      "benchmark": 13793.14,
+      "bench_60_40": 13793.14,
+      "bench_ew": 13493.1,
+      "bench_spy_ma": 10934.9,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.1,
@@ -2244,10 +2244,10 @@
     },
     {
       "date": "2017-11-26",
-      "strategy": 12794.96,
+      "strategy": 12794.95,
       "benchmark": 14010.35,
       "bench_60_40": 14010.35,
-      "bench_ew": 13486.15,
+      "bench_ew": 13486.14,
       "bench_spy_ma": 11107.09,
       "regime": "BULL",
       "weights": {
@@ -2259,11 +2259,11 @@
     },
     {
       "date": "2017-12-03",
-      "strategy": 13662.67,
+      "strategy": 13662.66,
       "benchmark": 14065.98,
       "bench_60_40": 14065.98,
       "bench_ew": 13395.12,
-      "bench_spy_ma": 11151.19,
+      "bench_spy_ma": 11151.2,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.126,
@@ -2274,11 +2274,11 @@
     },
     {
       "date": "2017-12-10",
-      "strategy": 13877.47,
-      "benchmark": 14191.13,
-      "bench_60_40": 14191.13,
+      "strategy": 13877.46,
+      "benchmark": 14191.12,
+      "bench_60_40": 14191.12,
       "bench_ew": 13546.37,
-      "bench_spy_ma": 11250.4,
+      "bench_spy_ma": 11250.41,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -2288,11 +2288,11 @@
     },
     {
       "date": "2017-12-17",
-      "strategy": 13547.2,
+      "strategy": 13547.19,
       "benchmark": 14244.37,
       "bench_60_40": 14244.37,
-      "bench_ew": 13631.41,
-      "bench_spy_ma": 11292.61,
+      "bench_ew": 13631.4,
+      "bench_spy_ma": 11292.62,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.047,
@@ -2305,7 +2305,7 @@
     },
     {
       "date": "2017-12-24",
-      "strategy": 13504.19,
+      "strategy": 13504.18,
       "benchmark": 14209.76,
       "bench_60_40": 14209.76,
       "bench_ew": 13675.69,
@@ -2338,11 +2338,11 @@
     },
     {
       "date": "2018-01-07",
-      "strategy": 14224.93,
+      "strategy": 14224.92,
       "benchmark": 14798.69,
       "bench_60_40": 14798.69,
       "bench_ew": 14241.99,
-      "bench_spy_ma": 11732.06,
+      "bench_spy_ma": 11732.07,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.053,
@@ -2356,11 +2356,11 @@
     },
     {
       "date": "2018-01-14",
-      "strategy": 14133.1,
+      "strategy": 14133.09,
       "benchmark": 14931.27,
       "bench_60_40": 14931.27,
       "bench_ew": 14317.73,
-      "bench_spy_ma": 11837.17,
+      "bench_spy_ma": 11837.18,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.036,
@@ -2373,11 +2373,11 @@
     },
     {
       "date": "2018-01-21",
-      "strategy": 14430.98,
+      "strategy": 14430.97,
       "benchmark": 15259.81,
       "bench_60_40": 15259.81,
-      "bench_ew": 14616.73,
-      "bench_spy_ma": 12097.63,
+      "bench_ew": 14616.72,
+      "bench_spy_ma": 12097.64,
       "regime": "BULL",
       "weights": {
         "SPY": 0.219,
@@ -2389,11 +2389,11 @@
     },
     {
       "date": "2018-01-28",
-      "strategy": 13848.89,
+      "strategy": 13848.88,
       "benchmark": 14667.16,
       "bench_60_40": 14667.16,
       "bench_ew": 14183.44,
-      "bench_spy_ma": 11627.79,
+      "bench_spy_ma": 11627.8,
       "regime": "BULL",
       "weights": {
         "SPY": 0.194,
@@ -2409,7 +2409,7 @@
       "benchmark": 13924.35,
       "bench_60_40": 13924.35,
       "bench_ew": 13638.99,
-      "bench_spy_ma": 11038.91,
+      "bench_spy_ma": 11038.92,
       "regime": "BULL",
       "weights": {
         "SPY": 0.213,
@@ -2424,7 +2424,7 @@
       "benchmark": 14542.56,
       "bench_60_40": 14542.56,
       "bench_ew": 14215.11,
-      "bench_spy_ma": 11529.01,
+      "bench_spy_ma": 11529.02,
       "regime": "BULL",
       "weights": {}
     },
@@ -2434,17 +2434,17 @@
       "benchmark": 14627.76,
       "bench_60_40": 14627.76,
       "bench_ew": 14267.68,
-      "bench_spy_ma": 11596.55,
+      "bench_spy_ma": 11596.56,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2018-02-25",
       "strategy": 13313.69,
-      "benchmark": 14327.97,
-      "bench_60_40": 14327.97,
+      "benchmark": 14327.98,
+      "bench_60_40": 14327.98,
       "bench_ew": 14080.28,
-      "bench_spy_ma": 11358.89,
+      "bench_spy_ma": 11358.9,
       "regime": "BULL",
       "weights": {}
     },
@@ -2453,8 +2453,8 @@
       "strategy": 13313.69,
       "benchmark": 14849.27,
       "bench_60_40": 14849.27,
-      "bench_ew": 14459.4,
-      "bench_spy_ma": 11772.16,
+      "bench_ew": 14459.39,
+      "bench_spy_ma": 11772.17,
       "regime": "BULL",
       "weights": {}
     },
@@ -2464,7 +2464,7 @@
       "benchmark": 14659.08,
       "bench_60_40": 14659.08,
       "bench_ew": 14302.01,
-      "bench_spy_ma": 11621.38,
+      "bench_spy_ma": 11621.39,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.808
@@ -2475,8 +2475,8 @@
       "strategy": 12409.11,
       "benchmark": 13795.68,
       "bench_60_40": 13795.68,
-      "bench_ew": 13794.83,
-      "bench_spy_ma": 10936.9,
+      "bench_ew": 13794.82,
+      "bench_spy_ma": 10936.91,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.801
@@ -2488,7 +2488,7 @@
       "benchmark": 14068.33,
       "bench_60_40": 14068.33,
       "bench_ew": 13867.12,
-      "bench_spy_ma": 10936.9,
+      "bench_spy_ma": 10936.91,
       "regime": "BULL",
       "weights": {}
     },
@@ -2498,17 +2498,17 @@
       "benchmark": 13884.96,
       "bench_60_40": 13884.96,
       "bench_ew": 13727.88,
-      "bench_spy_ma": 10794.34,
+      "bench_spy_ma": 10794.35,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2018-04-08",
       "strategy": 12394.2,
-      "benchmark": 14175.26,
-      "bench_60_40": 14175.26,
+      "benchmark": 14175.25,
+      "bench_60_40": 14175.25,
       "bench_ew": 14000.41,
-      "bench_spy_ma": 10794.34,
+      "bench_spy_ma": 10794.35,
       "regime": "BULL",
       "weights": {}
     },
@@ -2518,7 +2518,7 @@
       "benchmark": 14253.31,
       "bench_60_40": 14253.31,
       "bench_ew": 14022.98,
-      "bench_spy_ma": 10853.78,
+      "bench_spy_ma": 10853.79,
       "regime": "BULL",
       "weights": {
         "XLE": 0.815
@@ -2527,8 +2527,8 @@
     {
       "date": "2018-04-22",
       "strategy": 12496.34,
-      "benchmark": 14250.64,
-      "bench_60_40": 14250.64,
+      "benchmark": 14250.63,
+      "bench_60_40": 14250.63,
       "bench_ew": 13974.34,
       "bench_spy_ma": 10851.75,
       "regime": "BULL",
@@ -2540,10 +2540,10 @@
     {
       "date": "2018-04-29",
       "strategy": 12702.92,
-      "benchmark": 14221.77,
-      "bench_60_40": 14221.77,
+      "benchmark": 14221.76,
+      "bench_60_40": 14221.76,
       "bench_ew": 14009.16,
-      "bench_spy_ma": 10829.76,
+      "bench_spy_ma": 10829.77,
       "regime": "BULL",
       "weights": {
         "XLE": 0.395,
@@ -2556,7 +2556,7 @@
       "benchmark": 14586.91,
       "bench_60_40": 14586.91,
       "bench_ew": 14276.31,
-      "bench_spy_ma": 11107.81,
+      "bench_spy_ma": 11107.82,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.117,
@@ -2568,10 +2568,10 @@
     {
       "date": "2018-05-13",
       "strategy": 12570.51,
-      "benchmark": 14505.65,
-      "bench_60_40": 14505.65,
-      "bench_ew": 14095.04,
-      "bench_spy_ma": 11045.93,
+      "benchmark": 14505.64,
+      "bench_60_40": 14505.64,
+      "bench_ew": 14095.03,
+      "bench_spy_ma": 11045.94,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.117,
@@ -2599,11 +2599,11 @@
     },
     {
       "date": "2018-05-27",
-      "strategy": 12524.77,
+      "strategy": 12524.78,
       "benchmark": 14627.0,
       "bench_60_40": 14627.0,
       "bench_ew": 14285.15,
-      "bench_spy_ma": 11138.34,
+      "bench_spy_ma": 11138.35,
       "regime": "BULL",
       "weights": {
         "SPY": 0.239,
@@ -2618,7 +2618,7 @@
       "benchmark": 14872.39,
       "bench_60_40": 14872.39,
       "bench_ew": 14432.11,
-      "bench_spy_ma": 11325.2,
+      "bench_spy_ma": 11325.21,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -2628,10 +2628,10 @@
     {
       "date": "2018-06-10",
       "strategy": 12541.16,
-      "benchmark": 14882.25,
-      "bench_60_40": 14882.25,
-      "bench_ew": 14440.04,
-      "bench_spy_ma": 11332.71,
+      "benchmark": 14882.24,
+      "bench_60_40": 14882.24,
+      "bench_ew": 14440.03,
+      "bench_spy_ma": 11332.72,
       "regime": "BULL",
       "weights": {
         "SPY": 0.248,
@@ -2643,9 +2643,9 @@
     {
       "date": "2018-06-17",
       "strategy": 12434.28,
-      "benchmark": 14753.91,
-      "bench_60_40": 14753.91,
-      "bench_ew": 14323.92,
+      "benchmark": 14753.89,
+      "bench_60_40": 14753.89,
+      "bench_ew": 14323.91,
       "bench_spy_ma": 11234.98,
       "regime": "BULL",
       "weights": {
@@ -2656,11 +2656,11 @@
     },
     {
       "date": "2018-06-24",
-      "strategy": 12220.45,
+      "strategy": 12220.46,
       "benchmark": 14568.1,
       "bench_60_40": 14568.1,
       "bench_ew": 14096.78,
-      "bench_spy_ma": 11093.49,
+      "bench_spy_ma": 11093.5,
       "regime": "BULL",
       "weights": {
         "SPY": 0.347,
@@ -2670,11 +2670,11 @@
     },
     {
       "date": "2018-07-01",
-      "strategy": 12202.12,
+      "strategy": 12202.13,
       "benchmark": 14790.42,
       "bench_60_40": 14790.42,
       "bench_ew": 14285.22,
-      "bench_spy_ma": 11262.79,
+      "bench_spy_ma": 11262.8,
       "regime": "BULL",
       "weights": {}
     },
@@ -2683,8 +2683,8 @@
       "strategy": 12381.02,
       "benchmark": 15014.35,
       "bench_60_40": 15014.35,
-      "bench_ew": 14415.7,
-      "bench_spy_ma": 11433.31,
+      "bench_ew": 14415.69,
+      "bench_spy_ma": 11433.32,
       "regime": "BULL",
       "weights": {
         "XLV": 1.0
@@ -2692,11 +2692,11 @@
     },
     {
       "date": "2018-07-15",
-      "strategy": 12314.32,
-      "benchmark": 15019.19,
-      "bench_60_40": 15019.19,
-      "bench_ew": 14357.76,
-      "bench_spy_ma": 11436.99,
+      "strategy": 12314.33,
+      "benchmark": 15019.18,
+      "bench_60_40": 15019.18,
+      "bench_ew": 14357.75,
+      "bench_spy_ma": 11437.0,
       "regime": "BULL",
       "weights": {
         "SPY": 0.351,
@@ -2706,10 +2706,10 @@
     },
     {
       "date": "2018-07-22",
-      "strategy": 12351.49,
+      "strategy": 12351.5,
       "benchmark": 15112.63,
       "bench_60_40": 15112.63,
-      "bench_ew": 14320.93,
+      "bench_ew": 14320.92,
       "bench_spy_ma": 11508.15,
       "regime": "BULL",
       "weights": {
@@ -2723,8 +2723,8 @@
       "strategy": 12075.62,
       "benchmark": 15229.69,
       "bench_60_40": 15229.69,
-      "bench_ew": 14386.52,
-      "bench_spy_ma": 11597.29,
+      "bench_ew": 14386.51,
+      "bench_spy_ma": 11597.3,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.23,
@@ -2736,9 +2736,9 @@
     {
       "date": "2018-08-05",
       "strategy": 12037.19,
-      "benchmark": 15206.07,
-      "bench_60_40": 15206.07,
-      "bench_ew": 14381.2,
+      "benchmark": 15206.06,
+      "bench_60_40": 15206.06,
+      "bench_ew": 14381.19,
       "bench_spy_ma": 11579.3,
       "regime": "BULL",
       "weights": {
@@ -2765,7 +2765,7 @@
       "benchmark": 15439.66,
       "bench_60_40": 15439.66,
       "bench_ew": 14485.38,
-      "bench_spy_ma": 11757.18,
+      "bench_spy_ma": 11757.19,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -2778,7 +2778,7 @@
       "benchmark": 15590.03,
       "bench_60_40": 15590.03,
       "bench_ew": 14615.25,
-      "bench_spy_ma": 11871.68,
+      "bench_spy_ma": 11871.69,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -2790,7 +2790,7 @@
       "strategy": 12230.39,
       "benchmark": 15444.5,
       "bench_60_40": 15444.5,
-      "bench_ew": 14413.16,
+      "bench_ew": 14413.15,
       "bench_spy_ma": 11760.87,
       "regime": "BULL",
       "weights": {
@@ -2802,9 +2802,9 @@
     {
       "date": "2018-09-09",
       "strategy": 12353.88,
-      "benchmark": 15620.65,
-      "bench_60_40": 15620.65,
-      "bench_ew": 14535.44,
+      "benchmark": 15620.64,
+      "bench_60_40": 15620.64,
+      "bench_ew": 14535.43,
       "bench_spy_ma": 11895.0,
       "regime": "BULL",
       "weights": {
@@ -2818,7 +2818,7 @@
       "benchmark": 15751.23,
       "bench_60_40": 15751.23,
       "bench_ew": 14588.72,
-      "bench_spy_ma": 11994.43,
+      "bench_spy_ma": 11994.45,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -2830,7 +2830,7 @@
       "strategy": 12509.77,
       "benchmark": 15682.72,
       "bench_60_40": 15682.72,
-      "bench_ew": 14600.2,
+      "bench_ew": 14600.19,
       "bench_spy_ma": 11942.27,
       "regime": "BULL",
       "weights": {
@@ -2841,10 +2841,10 @@
     {
       "date": "2018-09-30",
       "strategy": 12493.17,
-      "benchmark": 15526.29,
-      "bench_60_40": 15526.29,
-      "bench_ew": 14448.8,
-      "bench_spy_ma": 11823.14,
+      "benchmark": 15526.28,
+      "bench_60_40": 15526.28,
+      "bench_ew": 14448.79,
+      "bench_spy_ma": 11823.15,
       "regime": "BULL",
       "weights": {
         "SPY": 0.328,
@@ -2856,10 +2856,10 @@
     {
       "date": "2018-10-07",
       "strategy": 11911.05,
-      "benchmark": 14885.97,
-      "bench_60_40": 14885.97,
-      "bench_ew": 14154.83,
-      "bench_spy_ma": 11335.54,
+      "benchmark": 14885.96,
+      "bench_60_40": 14885.96,
+      "bench_ew": 14154.82,
+      "bench_spy_ma": 11335.55,
       "regime": "BULL",
       "weights": {
         "XLE": 0.3,
@@ -2870,10 +2870,10 @@
     {
       "date": "2018-10-14",
       "strategy": 11955.94,
-      "benchmark": 14902.15,
-      "bench_60_40": 14902.15,
+      "benchmark": 14902.14,
+      "bench_60_40": 14902.14,
       "bench_ew": 14156.71,
-      "bench_spy_ma": 11347.86,
+      "bench_spy_ma": 11347.87,
       "regime": "BULL",
       "weights": {
         "GLD": 1.0
@@ -2881,11 +2881,11 @@
     },
     {
       "date": "2018-10-21",
-      "strategy": 12034.26,
-      "benchmark": 14313.08,
-      "bench_60_40": 14313.08,
-      "bench_ew": 13827.63,
-      "bench_spy_ma": 10899.29,
+      "strategy": 12034.27,
+      "benchmark": 14313.07,
+      "bench_60_40": 14313.07,
+      "bench_ew": 13827.62,
+      "bench_spy_ma": 10899.3,
       "regime": "BULL",
       "weights": {
         "GLD": 1.0
@@ -2897,7 +2897,7 @@
       "benchmark": 14666.95,
       "bench_60_40": 14666.95,
       "bench_ew": 14012.07,
-      "bench_spy_ma": 10899.29,
+      "bench_spy_ma": 10899.3,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -2909,7 +2909,7 @@
       "benchmark": 14983.6,
       "bench_60_40": 14983.6,
       "bench_ew": 14085.03,
-      "bench_spy_ma": 10899.29,
+      "bench_spy_ma": 10899.3,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -2918,8 +2918,8 @@
     {
       "date": "2018-11-11",
       "strategy": 11921.9,
-      "benchmark": 14766.21,
-      "bench_60_40": 14766.21,
+      "benchmark": 14766.2,
+      "bench_60_40": 14766.2,
       "bench_ew": 13953.63,
       "bench_spy_ma": 10741.16,
       "regime": "BULL",
@@ -2940,14 +2940,14 @@
       "strategy": 11921.9,
       "benchmark": 14869.78,
       "bench_60_40": 14869.78,
-      "bench_ew": 14043.45,
+      "bench_ew": 14043.44,
       "bench_spy_ma": 10741.16,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2018-12-02",
-      "strategy": 11447.15,
+      "strategy": 11447.16,
       "benchmark": 14218.13,
       "bench_60_40": 14218.13,
       "bench_ew": 13720.78,
@@ -2971,10 +2971,10 @@
     },
     {
       "date": "2018-12-16",
-      "strategy": 11452.92,
+      "strategy": 11452.93,
       "benchmark": 13060.25,
       "bench_60_40": 13060.25,
-      "bench_ew": 12982.18,
+      "bench_ew": 12982.17,
       "bench_spy_ma": 10741.16,
       "regime": "BEAR",
       "weights": {
@@ -2983,7 +2983,7 @@
     },
     {
       "date": "2018-12-23",
-      "strategy": 11543.22,
+      "strategy": 11543.23,
       "benchmark": 13442.78,
       "bench_60_40": 13442.78,
       "bench_ew": 13365.4,
@@ -2995,7 +2995,7 @@
     },
     {
       "date": "2018-12-30",
-      "strategy": 11557.71,
+      "strategy": 11557.72,
       "benchmark": 13694.54,
       "bench_60_40": 13694.54,
       "bench_ew": 13557.77,
@@ -3031,10 +3031,10 @@
     },
     {
       "date": "2019-01-20",
-      "strategy": 11636.88,
-      "benchmark": 14421.08,
-      "bench_60_40": 14421.08,
-      "bench_ew": 14108.86,
+      "strategy": 11636.89,
+      "benchmark": 14421.07,
+      "bench_60_40": 14421.07,
+      "bench_ew": 14108.85,
       "bench_spy_ma": 10741.16,
       "regime": "NEUTRAL",
       "weights": {
@@ -3046,7 +3046,7 @@
       "strategy": 11662.95,
       "benchmark": 14653.3,
       "bench_60_40": 14653.3,
-      "bench_ew": 14312.87,
+      "bench_ew": 14312.86,
       "bench_spy_ma": 10741.16,
       "regime": "NEUTRAL",
       "weights": {
@@ -3056,9 +3056,9 @@
     },
     {
       "date": "2019-02-03",
-      "strategy": 11632.32,
-      "benchmark": 14675.55,
-      "bench_60_40": 14675.55,
+      "strategy": 11632.33,
+      "benchmark": 14675.54,
+      "bench_60_40": 14675.54,
       "bench_ew": 14340.62,
       "bench_spy_ma": 10741.16,
       "regime": "NEUTRAL",
@@ -3089,7 +3089,7 @@
     },
     {
       "date": "2019-02-17",
-      "strategy": 11814.02,
+      "strategy": 11814.03,
       "benchmark": 15145.98,
       "bench_60_40": 15145.98,
       "bench_ew": 14666.26,
@@ -3106,7 +3106,7 @@
     },
     {
       "date": "2019-02-24",
-      "strategy": 11746.47,
+      "strategy": 11746.48,
       "benchmark": 15215.43,
       "bench_60_40": 15215.43,
       "bench_ew": 14590.08,
@@ -3125,7 +3125,7 @@
     },
     {
       "date": "2019-03-03",
-      "strategy": 11451.24,
+      "strategy": 11451.25,
       "benchmark": 14892.04,
       "bench_60_40": 14892.04,
       "bench_ew": 14435.22,
@@ -3141,10 +3141,10 @@
     },
     {
       "date": "2019-03-10",
-      "strategy": 11780.84,
-      "benchmark": 15330.96,
-      "bench_60_40": 15330.96,
-      "bench_ew": 14783.97,
+      "strategy": 11780.85,
+      "benchmark": 15330.95,
+      "bench_60_40": 15330.95,
+      "bench_ew": 14783.96,
       "bench_spy_ma": 10941.72,
       "regime": "BULL",
       "weights": {
@@ -3155,10 +3155,10 @@
     },
     {
       "date": "2019-03-17",
-      "strategy": 11753.67,
-      "benchmark": 15218.69,
-      "bench_60_40": 15218.69,
-      "bench_ew": 14802.74,
+      "strategy": 11753.68,
+      "benchmark": 15218.68,
+      "bench_60_40": 15218.68,
+      "bench_ew": 14802.73,
       "bench_spy_ma": 10861.59,
       "regime": "BULL",
       "weights": {
@@ -3169,7 +3169,7 @@
     },
     {
       "date": "2019-03-24",
-      "strategy": 11882.54,
+      "strategy": 11882.55,
       "benchmark": 15394.72,
       "bench_60_40": 15394.72,
       "bench_ew": 14812.19,
@@ -3184,10 +3184,10 @@
     },
     {
       "date": "2019-03-31",
-      "strategy": 12798.47,
-      "benchmark": 15726.62,
-      "bench_60_40": 15726.62,
-      "bench_ew": 15054.84,
+      "strategy": 12798.49,
+      "benchmark": 15726.61,
+      "bench_60_40": 15726.61,
+      "bench_ew": 15054.83,
       "bench_spy_ma": 11224.1,
       "regime": "BULL",
       "weights": {
@@ -3199,11 +3199,11 @@
     },
     {
       "date": "2019-04-07",
-      "strategy": 12774.15,
+      "strategy": 12774.16,
       "benchmark": 15813.27,
       "bench_60_40": 15813.27,
       "bench_ew": 15108.11,
-      "bench_spy_ma": 11285.94,
+      "bench_spy_ma": 11285.95,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.053,
@@ -3216,7 +3216,7 @@
     },
     {
       "date": "2019-04-14",
-      "strategy": 12748.27,
+      "strategy": 12748.28,
       "benchmark": 15805.63,
       "bench_60_40": 15805.63,
       "bench_ew": 15087.6,
@@ -3233,11 +3233,11 @@
     },
     {
       "date": "2019-04-21",
-      "strategy": 12735.45,
-      "benchmark": 15990.38,
-      "bench_60_40": 15990.38,
+      "strategy": 12735.46,
+      "benchmark": 15990.39,
+      "bench_60_40": 15990.39,
       "bench_ew": 15275.66,
-      "bench_spy_ma": 11412.35,
+      "bench_spy_ma": 11412.36,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.053,
@@ -3249,7 +3249,7 @@
     },
     {
       "date": "2019-04-28",
-      "strategy": 12937.76,
+      "strategy": 12937.77,
       "benchmark": 16024.17,
       "bench_60_40": 16024.17,
       "bench_ew": 15268.5,
@@ -3265,8 +3265,8 @@
     {
       "date": "2019-05-05",
       "strategy": 13242.84,
-      "benchmark": 15701.0,
-      "bench_60_40": 15701.0,
+      "benchmark": 15700.99,
+      "bench_60_40": 15700.99,
       "bench_ew": 15036.04,
       "bench_spy_ma": 11205.82,
       "regime": "BULL",
@@ -3279,9 +3279,9 @@
     },
     {
       "date": "2019-05-12",
-      "strategy": 14339.78,
-      "benchmark": 15577.84,
-      "bench_60_40": 15577.84,
+      "strategy": 14339.79,
+      "benchmark": 15577.83,
+      "bench_60_40": 15577.83,
       "bench_ew": 14911.43,
       "bench_spy_ma": 11117.92,
       "regime": "BULL",
@@ -3299,7 +3299,7 @@
       "benchmark": 15411.07,
       "bench_60_40": 15411.07,
       "bench_ew": 14752.48,
-      "bench_spy_ma": 10998.89,
+      "bench_spy_ma": 10998.9,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.127,
@@ -3331,7 +3331,7 @@
       "benchmark": 15676.47,
       "bench_60_40": 15676.47,
       "bench_ew": 15133.4,
-      "bench_spy_ma": 11188.31,
+      "bench_spy_ma": 11188.32,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.142,
@@ -3341,10 +3341,10 @@
     },
     {
       "date": "2019-06-09",
-      "strategy": 14509.32,
+      "strategy": 14509.33,
       "benchmark": 15764.22,
       "bench_60_40": 15764.22,
-      "bench_ew": 15205.03,
+      "bench_ew": 15205.02,
       "bench_spy_ma": 11250.94,
       "regime": "BULL",
       "weights": {
@@ -3356,10 +3356,10 @@
     },
     {
       "date": "2019-06-16",
-      "strategy": 15399.49,
-      "benchmark": 16100.47,
-      "bench_60_40": 16100.47,
-      "bench_ew": 15694.75,
+      "strategy": 15399.5,
+      "benchmark": 16100.46,
+      "bench_60_40": 16100.46,
+      "bench_ew": 15694.74,
       "bench_spy_ma": 11490.92,
       "regime": "BULL",
       "weights": {
@@ -3372,9 +3372,9 @@
     {
       "date": "2019-06-23",
       "strategy": 15336.59,
-      "benchmark": 16045.71,
-      "bench_60_40": 16045.71,
-      "bench_ew": 15686.0,
+      "benchmark": 16045.7,
+      "bench_60_40": 16045.7,
+      "bench_ew": 15685.99,
       "bench_spy_ma": 11451.84,
       "regime": "BULL",
       "weights": {
@@ -3388,7 +3388,7 @@
     },
     {
       "date": "2019-06-30",
-      "strategy": 15442.95,
+      "strategy": 15442.96,
       "benchmark": 16344.71,
       "bench_60_40": 16344.71,
       "bench_ew": 15862.5,
@@ -3404,10 +3404,10 @@
     },
     {
       "date": "2019-07-07",
-      "strategy": 15464.99,
-      "benchmark": 16464.65,
-      "bench_60_40": 16464.65,
-      "bench_ew": 16025.56,
+      "strategy": 15465.0,
+      "benchmark": 16464.64,
+      "bench_60_40": 16464.64,
+      "bench_ew": 16025.55,
       "bench_spy_ma": 11750.83,
       "regime": "BULL",
       "weights": {
@@ -3420,7 +3420,7 @@
     },
     {
       "date": "2019-07-14",
-      "strategy": 15259.77,
+      "strategy": 15259.78,
       "benchmark": 16274.07,
       "bench_60_40": 16274.07,
       "bench_ew": 15931.77,
@@ -3437,9 +3437,9 @@
     },
     {
       "date": "2019-07-21",
-      "strategy": 15374.32,
-      "benchmark": 16539.13,
-      "bench_60_40": 16539.13,
+      "strategy": 15374.33,
+      "benchmark": 16539.12,
+      "bench_60_40": 16539.12,
       "bench_ew": 16104.48,
       "bench_spy_ma": 11803.99,
       "regime": "BULL",
@@ -3452,11 +3452,11 @@
     },
     {
       "date": "2019-07-28",
-      "strategy": 15137.23,
+      "strategy": 15137.24,
       "benchmark": 16024.89,
       "bench_60_40": 16024.89,
       "bench_ew": 15809.7,
-      "bench_spy_ma": 11436.98,
+      "bench_spy_ma": 11436.99,
       "regime": "BULL",
       "weights": {
         "SPY": 0.302,
@@ -3466,7 +3466,7 @@
     },
     {
       "date": "2019-08-04",
-      "strategy": 15708.16,
+      "strategy": 15708.18,
       "benchmark": 15970.13,
       "bench_60_40": 15970.13,
       "bench_ew": 15975.75,
@@ -3478,11 +3478,11 @@
     },
     {
       "date": "2019-08-11",
-      "strategy": 15877.19,
+      "strategy": 15877.2,
       "benchmark": 15818.44,
       "bench_60_40": 15818.44,
       "bench_ew": 15953.63,
-      "bench_spy_ma": 11289.63,
+      "bench_spy_ma": 11289.64,
       "regime": "BULL",
       "weights": {
         "GLD": 1.0
@@ -3490,9 +3490,9 @@
     },
     {
       "date": "2019-08-18",
-      "strategy": 16031.76,
-      "benchmark": 15599.39,
-      "bench_60_40": 15599.39,
+      "strategy": 16031.77,
+      "benchmark": 15599.38,
+      "bench_60_40": 15599.38,
       "bench_ew": 15833.99,
       "bench_spy_ma": 11133.3,
       "regime": "BULL",
@@ -3502,10 +3502,10 @@
     },
     {
       "date": "2019-08-25",
-      "strategy": 15985.05,
-      "benchmark": 16015.59,
-      "bench_60_40": 16015.59,
-      "bench_ew": 16115.98,
+      "strategy": 15985.07,
+      "benchmark": 16015.58,
+      "bench_60_40": 16015.58,
+      "bench_ew": 16115.97,
       "bench_spy_ma": 11133.3,
       "regime": "BULL",
       "weights": {
@@ -3514,7 +3514,7 @@
     },
     {
       "date": "2019-09-01",
-      "strategy": 15781.56,
+      "strategy": 15781.57,
       "benchmark": 16322.26,
       "bench_60_40": 16322.26,
       "bench_ew": 16268.51,
@@ -3526,7 +3526,7 @@
     },
     {
       "date": "2019-09-08",
-      "strategy": 15584.73,
+      "strategy": 15584.74,
       "benchmark": 16488.74,
       "bench_60_40": 16488.74,
       "bench_ew": 16283.08,
@@ -3538,11 +3538,11 @@
     },
     {
       "date": "2019-09-15",
-      "strategy": 15553.16,
+      "strategy": 15553.17,
       "benchmark": 16410.29,
       "bench_60_40": 16410.29,
       "bench_ew": 16316.64,
-      "bench_spy_ma": 11407.67,
+      "bench_spy_ma": 11407.68,
       "regime": "BULL",
       "weights": {
         "URA": 0.866
@@ -3550,9 +3550,9 @@
     },
     {
       "date": "2019-09-22",
-      "strategy": 15113.39,
-      "benchmark": 16251.85,
-      "bench_60_40": 16251.85,
+      "strategy": 15113.4,
+      "benchmark": 16251.84,
+      "bench_60_40": 16251.84,
       "bench_ew": 16095.5,
       "bench_spy_ma": 11297.53,
       "regime": "BULL",
@@ -3564,11 +3564,11 @@
     },
     {
       "date": "2019-09-29",
-      "strategy": 14836.28,
-      "benchmark": 16194.08,
-      "bench_60_40": 16194.08,
+      "strategy": 14836.29,
+      "benchmark": 16194.07,
+      "bench_60_40": 16194.07,
       "bench_ew": 16159.44,
-      "bench_spy_ma": 11257.37,
+      "bench_spy_ma": 11257.38,
       "regime": "BULL",
       "weights": {
         "XLE": 0.438,
@@ -3577,10 +3577,10 @@
     },
     {
       "date": "2019-10-06",
-      "strategy": 15031.46,
+      "strategy": 15031.47,
       "benchmark": 16300.26,
       "bench_60_40": 16300.26,
-      "bench_ew": 16189.4,
+      "bench_ew": 16189.39,
       "bench_spy_ma": 11331.19,
       "regime": "BULL",
       "weights": {
@@ -3589,19 +3589,19 @@
     },
     {
       "date": "2019-10-13",
-      "strategy": 15010.33,
+      "strategy": 15010.34,
       "benchmark": 16393.24,
       "bench_60_40": 16393.24,
-      "bench_ew": 16253.13,
+      "bench_ew": 16253.12,
       "bench_spy_ma": 11395.82,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2019-10-20",
-      "strategy": 15167.0,
-      "benchmark": 16592.95,
-      "bench_60_40": 16592.95,
+      "strategy": 15167.01,
+      "benchmark": 16592.94,
+      "bench_60_40": 16592.94,
       "bench_ew": 16484.76,
       "bench_spy_ma": 11534.65,
       "regime": "BULL",
@@ -3612,11 +3612,11 @@
     },
     {
       "date": "2019-10-27",
-      "strategy": 15454.75,
+      "strategy": 15454.76,
       "benchmark": 16842.72,
       "bench_60_40": 16842.72,
       "bench_ew": 16685.31,
-      "bench_spy_ma": 11708.28,
+      "bench_spy_ma": 11708.29,
       "regime": "BULL",
       "weights": {
         "SPY": 0.359,
@@ -3626,11 +3626,11 @@
     },
     {
       "date": "2019-11-03",
-      "strategy": 15582.75,
-      "benchmark": 16996.76,
-      "bench_60_40": 16996.76,
+      "strategy": 15582.76,
+      "benchmark": 16996.77,
+      "bench_60_40": 16996.77,
       "bench_ew": 16600.48,
-      "bench_spy_ma": 11815.36,
+      "bench_spy_ma": 11815.37,
       "regime": "BULL",
       "weights": {
         "SPY": 0.366,
@@ -3640,11 +3640,11 @@
     },
     {
       "date": "2019-11-10",
-      "strategy": 15669.23,
+      "strategy": 15669.24,
       "benchmark": 17153.56,
       "bench_60_40": 17153.56,
-      "bench_ew": 16730.76,
-      "bench_spy_ma": 11924.36,
+      "bench_ew": 16730.75,
+      "bench_spy_ma": 11924.37,
       "regime": "BULL",
       "weights": {
         "SPY": 0.224,
@@ -3670,10 +3670,10 @@
     },
     {
       "date": "2019-11-24",
-      "strategy": 15730.48,
-      "benchmark": 17292.21,
-      "bench_60_40": 17292.21,
-      "bench_ew": 16821.97,
+      "strategy": 15730.49,
+      "benchmark": 17292.2,
+      "bench_60_40": 17292.2,
+      "bench_ew": 16821.96,
       "bench_spy_ma": 12020.74,
       "regime": "BULL",
       "weights": {
@@ -3684,7 +3684,7 @@
     },
     {
       "date": "2019-12-01",
-      "strategy": 15772.19,
+      "strategy": 15772.2,
       "benchmark": 17323.01,
       "bench_60_40": 17323.01,
       "bench_ew": 16819.46,
@@ -3698,7 +3698,7 @@
     },
     {
       "date": "2019-12-08",
-      "strategy": 15894.9,
+      "strategy": 15894.92,
       "benchmark": 17457.8,
       "bench_60_40": 17457.8,
       "bench_ew": 16981.23,
@@ -3712,7 +3712,7 @@
     },
     {
       "date": "2019-12-15",
-      "strategy": 16208.96,
+      "strategy": 16208.97,
       "benchmark": 17732.16,
       "bench_60_40": 17732.16,
       "bench_ew": 17212.81,
@@ -3726,11 +3726,11 @@
     },
     {
       "date": "2019-12-22",
-      "strategy": 16287.3,
+      "strategy": 16287.32,
       "benchmark": 17849.92,
       "bench_60_40": 17849.92,
       "bench_ew": 17430.51,
-      "bench_spy_ma": 12408.44,
+      "bench_spy_ma": 12408.45,
       "regime": "BULL",
       "weights": {
         "SPY": 0.198,
@@ -3741,9 +3741,9 @@
     },
     {
       "date": "2019-12-29",
-      "strategy": 16368.79,
-      "benchmark": 17825.05,
-      "bench_60_40": 17825.05,
+      "strategy": 16368.8,
+      "benchmark": 17825.04,
+      "bench_60_40": 17825.04,
       "bench_ew": 17582.02,
       "bench_spy_ma": 12391.15,
       "regime": "BULL",
@@ -3757,7 +3757,7 @@
     },
     {
       "date": "2020-01-05",
-      "strategy": 16477.62,
+      "strategy": 16477.63,
       "benchmark": 18007.49,
       "bench_60_40": 18007.49,
       "bench_ew": 17800.49,
@@ -3773,7 +3773,7 @@
     },
     {
       "date": "2020-01-12",
-      "strategy": 16672.95,
+      "strategy": 16672.96,
       "benchmark": 18352.48,
       "bench_60_40": 18352.48,
       "bench_ew": 18035.3,
@@ -3790,7 +3790,7 @@
     },
     {
       "date": "2020-01-19",
-      "strategy": 16448.85,
+      "strategy": 16448.86,
       "benchmark": 18176.67,
       "bench_60_40": 18176.67,
       "bench_ew": 18016.83,
@@ -3808,11 +3808,11 @@
     },
     {
       "date": "2020-01-26",
-      "strategy": 16445.44,
+      "strategy": 16445.46,
       "benchmark": 17787.45,
       "bench_60_40": 17787.45,
       "bench_ew": 17845.13,
-      "bench_spy_ma": 12365.01,
+      "bench_spy_ma": 12365.02,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.06,
@@ -3825,9 +3825,9 @@
     },
     {
       "date": "2020-02-02",
-      "strategy": 17049.42,
-      "benchmark": 18366.31,
-      "bench_60_40": 18366.31,
+      "strategy": 17049.43,
+      "benchmark": 18366.3,
+      "bench_60_40": 18366.3,
       "bench_ew": 18252.42,
       "bench_spy_ma": 12767.41,
       "regime": "BULL",
@@ -3840,11 +3840,11 @@
     },
     {
       "date": "2020-02-09",
-      "strategy": 17324.0,
+      "strategy": 17324.02,
       "benchmark": 18664.85,
       "bench_60_40": 18664.85,
-      "bench_ew": 18545.54,
-      "bench_spy_ma": 12974.94,
+      "bench_ew": 18545.53,
+      "bench_spy_ma": 12974.95,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.1,
@@ -3856,7 +3856,7 @@
     },
     {
       "date": "2020-02-16",
-      "strategy": 17479.42,
+      "strategy": 17479.43,
       "benchmark": 18437.07,
       "bench_60_40": 18437.07,
       "bench_ew": 18591.45,
@@ -3872,10 +3872,10 @@
     },
     {
       "date": "2020-02-23",
-      "strategy": 15960.43,
+      "strategy": 15960.44,
       "benchmark": 16379.29,
       "bench_60_40": 16379.29,
-      "bench_ew": 16988.06,
+      "bench_ew": 16988.05,
       "bench_spy_ma": 11386.13,
       "regime": "BULL",
       "weights": {
@@ -3888,20 +3888,20 @@
     },
     {
       "date": "2020-03-01",
-      "strategy": 15936.49,
-      "benchmark": 16445.64,
-      "bench_60_40": 16445.64,
-      "bench_ew": 17422.04,
+      "strategy": 15936.5,
+      "benchmark": 16445.63,
+      "bench_60_40": 16445.63,
+      "bench_ew": 17422.03,
       "bench_spy_ma": 11386.13,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2020-03-08",
-      "strategy": 14469.15,
-      "benchmark": 14889.87,
-      "bench_60_40": 14889.87,
-      "bench_ew": 15908.92,
+      "strategy": 14469.16,
+      "benchmark": 14889.86,
+      "bench_60_40": 14889.86,
+      "bench_ew": 15908.91,
       "bench_spy_ma": 11386.13,
       "regime": "BULL",
       "weights": {
@@ -3910,7 +3910,7 @@
     },
     {
       "date": "2020-03-15",
-      "strategy": 14447.44,
+      "strategy": 14447.45,
       "benchmark": 12724.02,
       "bench_60_40": 12724.02,
       "bench_ew": 14423.6,
@@ -3920,7 +3920,7 @@
     },
     {
       "date": "2020-03-22",
-      "strategy": 14447.44,
+      "strategy": 14447.45,
       "benchmark": 14093.19,
       "bench_60_40": 14093.19,
       "bench_ew": 15779.87,
@@ -3930,27 +3930,27 @@
     },
     {
       "date": "2020-03-29",
-      "strategy": 14447.44,
+      "strategy": 14447.45,
       "benchmark": 13802.34,
       "bench_60_40": 13802.34,
-      "bench_ew": 15630.36,
+      "bench_ew": 15630.35,
       "bench_spy_ma": 11386.13,
       "regime": "CRISIS",
       "weights": {}
     },
     {
       "date": "2020-04-05",
-      "strategy": 14447.44,
-      "benchmark": 15471.26,
-      "bench_60_40": 15471.26,
-      "bench_ew": 16963.44,
+      "strategy": 14447.45,
+      "benchmark": 15471.25,
+      "bench_60_40": 15471.25,
+      "bench_ew": 16963.43,
       "bench_spy_ma": 11386.13,
       "regime": "CRISIS",
       "weights": {}
     },
     {
       "date": "2020-04-12",
-      "strategy": 14567.12,
+      "strategy": 14567.13,
       "benchmark": 15940.62,
       "bench_60_40": 15940.62,
       "bench_ew": 17536.93,
@@ -3964,7 +3964,7 @@
     },
     {
       "date": "2020-04-19",
-      "strategy": 14600.23,
+      "strategy": 14600.25,
       "benchmark": 15736.53,
       "bench_60_40": 15736.53,
       "bench_ew": 17572.75,
@@ -3978,7 +3978,7 @@
     },
     {
       "date": "2020-04-26",
-      "strategy": 14515.54,
+      "strategy": 14515.55,
       "benchmark": 15726.51,
       "bench_60_40": 15726.51,
       "bench_ew": 17435.89,
@@ -3993,9 +3993,9 @@
     },
     {
       "date": "2020-05-03",
-      "strategy": 14624.68,
-      "benchmark": 16263.17,
-      "bench_60_40": 16263.17,
+      "strategy": 14624.7,
+      "benchmark": 16263.16,
+      "bench_60_40": 16263.16,
       "bench_ew": 17988.61,
       "bench_spy_ma": 11386.13,
       "regime": "BEAR",
@@ -4012,10 +4012,10 @@
     },
     {
       "date": "2020-05-10",
-      "strategy": 14648.63,
+      "strategy": 14648.64,
       "benchmark": 15920.6,
       "bench_60_40": 15920.6,
-      "bench_ew": 17951.11,
+      "bench_ew": 17951.1,
       "bench_spy_ma": 11386.13,
       "regime": "BEAR",
       "weights": {
@@ -4031,10 +4031,10 @@
     },
     {
       "date": "2020-05-17",
-      "strategy": 14684.93,
+      "strategy": 14684.94,
       "benchmark": 16430.01,
       "bench_60_40": 16430.01,
-      "bench_ew": 18287.54,
+      "bench_ew": 18287.53,
       "bench_spy_ma": 11386.13,
       "regime": "BEAR",
       "weights": {
@@ -4050,7 +4050,7 @@
     },
     {
       "date": "2020-05-24",
-      "strategy": 14904.98,
+      "strategy": 14904.99,
       "benchmark": 16923.84,
       "bench_60_40": 16923.84,
       "bench_ew": 18557.76,
@@ -4069,9 +4069,9 @@
     },
     {
       "date": "2020-05-31",
-      "strategy": 15280.29,
-      "benchmark": 17759.14,
-      "bench_60_40": 17759.14,
+      "strategy": 15280.3,
+      "benchmark": 17759.13,
+      "bench_60_40": 17759.13,
       "bench_ew": 18844.81,
       "bench_spy_ma": 11948.1,
       "regime": "BULL",
@@ -4087,9 +4087,9 @@
     },
     {
       "date": "2020-06-07",
-      "strategy": 14826.43,
-      "benchmark": 16917.73,
-      "bench_60_40": 16917.73,
+      "strategy": 14826.44,
+      "benchmark": 16917.72,
+      "bench_60_40": 16917.72,
       "bench_ew": 18630.61,
       "bench_spy_ma": 11382.01,
       "regime": "BULL",
@@ -4105,11 +4105,11 @@
     },
     {
       "date": "2020-06-14",
-      "strategy": 14906.88,
+      "strategy": 14906.9,
       "benchmark": 17239.61,
       "bench_60_40": 17239.61,
       "bench_ew": 19022.72,
-      "bench_spy_ma": 11598.57,
+      "bench_spy_ma": 11598.58,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.13,
@@ -4120,11 +4120,11 @@
     },
     {
       "date": "2020-06-21",
-      "strategy": 14758.16,
+      "strategy": 14758.18,
       "benchmark": 16759.81,
       "bench_60_40": 16759.81,
       "bench_ew": 18849.75,
-      "bench_spy_ma": 11275.76,
+      "bench_spy_ma": 11275.77,
       "regime": "NEUTRAL",
       "weights": {
         "ETH-USD": 0.208,
@@ -4134,11 +4134,11 @@
     },
     {
       "date": "2020-06-28",
-      "strategy": 15010.82,
-      "benchmark": 17440.14,
-      "bench_60_40": 17440.14,
-      "bench_ew": 19434.5,
-      "bench_spy_ma": 11733.48,
+      "strategy": 15010.83,
+      "benchmark": 17440.13,
+      "bench_60_40": 17440.13,
+      "bench_ew": 19434.49,
+      "bench_spy_ma": 11733.49,
       "regime": "NEUTRAL",
       "weights": {
         "QQQ": 0.35,
@@ -4147,11 +4147,11 @@
     },
     {
       "date": "2020-07-05",
-      "strategy": 15453.98,
-      "benchmark": 17739.54,
-      "bench_60_40": 17739.54,
-      "bench_ew": 19934.05,
-      "bench_spy_ma": 11934.91,
+      "strategy": 15453.99,
+      "benchmark": 17739.53,
+      "bench_60_40": 17739.53,
+      "bench_ew": 19934.04,
+      "bench_spy_ma": 11934.92,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -4160,11 +4160,11 @@
     },
     {
       "date": "2020-07-12",
-      "strategy": 15363.27,
+      "strategy": 15363.28,
       "benchmark": 17970.22,
       "bench_60_40": 17970.22,
-      "bench_ew": 19942.45,
-      "bench_spy_ma": 12090.12,
+      "bench_ew": 19942.44,
+      "bench_spy_ma": 12090.13,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -4173,11 +4173,11 @@
     },
     {
       "date": "2020-07-19",
-      "strategy": 15622.32,
+      "strategy": 15622.33,
       "benchmark": 17923.3,
       "bench_60_40": 17923.3,
-      "bench_ew": 20161.45,
-      "bench_spy_ma": 12058.55,
+      "bench_ew": 20161.44,
+      "bench_spy_ma": 12058.56,
       "regime": "BULL",
       "weights": {
         "SPY": 0.116,
@@ -4189,11 +4189,11 @@
     },
     {
       "date": "2020-07-26",
-      "strategy": 16067.42,
+      "strategy": 16067.43,
       "benchmark": 18238.33,
       "bench_60_40": 18238.33,
       "bench_ew": 20801.69,
-      "bench_spy_ma": 12270.5,
+      "bench_spy_ma": 12270.51,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.138,
@@ -4207,9 +4207,9 @@
     },
     {
       "date": "2020-08-02",
-      "strategy": 16460.4,
-      "benchmark": 18687.99,
-      "bench_60_40": 18687.99,
+      "strategy": 16460.41,
+      "benchmark": 18687.98,
+      "bench_60_40": 18687.98,
       "bench_ew": 21321.99,
       "bench_spy_ma": 12573.02,
       "regime": "BULL",
@@ -4225,11 +4225,11 @@
     },
     {
       "date": "2020-08-09",
-      "strategy": 16475.97,
+      "strategy": 16475.98,
       "benchmark": 18814.77,
       "bench_60_40": 18814.77,
       "bench_ew": 21080.23,
-      "bench_spy_ma": 12658.32,
+      "bench_spy_ma": 12658.33,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.085,
@@ -4243,11 +4243,11 @@
     },
     {
       "date": "2020-08-16",
-      "strategy": 16487.39,
-      "benchmark": 18962.24,
-      "bench_60_40": 18962.24,
+      "strategy": 16487.4,
+      "benchmark": 18962.23,
+      "bench_60_40": 18962.23,
       "bench_ew": 21366.37,
-      "bench_spy_ma": 12757.53,
+      "bench_spy_ma": 12757.54,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.101,
@@ -4261,10 +4261,10 @@
     },
     {
       "date": "2020-08-23",
-      "strategy": 16973.98,
-      "benchmark": 19582.25,
-      "bench_60_40": 19582.25,
-      "bench_ew": 21960.94,
+      "strategy": 16974.0,
+      "benchmark": 19582.24,
+      "bench_60_40": 19582.24,
+      "bench_ew": 21960.93,
       "bench_spy_ma": 13174.67,
       "regime": "BULL",
       "weights": {
@@ -4279,11 +4279,11 @@
     },
     {
       "date": "2020-08-30",
-      "strategy": 16283.5,
-      "benchmark": 19134.84,
-      "bench_60_40": 19134.84,
+      "strategy": 16283.52,
+      "benchmark": 19134.83,
+      "bench_60_40": 19134.83,
       "bench_ew": 21460.54,
-      "bench_spy_ma": 12873.65,
+      "bench_spy_ma": 12873.66,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.1,
@@ -4297,7 +4297,7 @@
     },
     {
       "date": "2020-09-06",
-      "strategy": 15792.48,
+      "strategy": 15792.49,
       "benchmark": 18659.49,
       "bench_60_40": 18659.49,
       "bench_ew": 20983.52,
@@ -4311,61 +4311,61 @@
     },
     {
       "date": "2020-09-13",
-      "strategy": 15768.79,
-      "benchmark": 18542.96,
-      "bench_60_40": 18542.96,
+      "strategy": 15768.8,
+      "benchmark": 18542.95,
+      "bench_60_40": 18542.95,
       "bench_ew": 20876.0,
-      "bench_spy_ma": 12475.44,
+      "bench_spy_ma": 12475.45,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2020-09-20",
-      "strategy": 15768.79,
+      "strategy": 15768.8,
       "benchmark": 18435.28,
       "bench_60_40": 18435.28,
       "bench_ew": 20644.14,
-      "bench_spy_ma": 12403.0,
+      "bench_spy_ma": 12403.01,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2020-09-27",
-      "strategy": 15768.79,
+      "strategy": 15768.8,
       "benchmark": 18721.85,
       "bench_60_40": 18721.85,
       "bench_ew": 20962.4,
-      "bench_spy_ma": 12595.8,
+      "bench_spy_ma": 12595.81,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2020-10-04",
-      "strategy": 15768.79,
-      "benchmark": 19451.46,
-      "bench_60_40": 19451.46,
-      "bench_ew": 21624.51,
-      "bench_spy_ma": 13086.67,
+      "strategy": 15768.8,
+      "benchmark": 19451.45,
+      "bench_60_40": 19451.45,
+      "bench_ew": 21624.5,
+      "bench_spy_ma": 13086.68,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2020-10-11",
-      "strategy": 15768.79,
+      "strategy": 15768.8,
       "benchmark": 19476.13,
       "bench_60_40": 19476.13,
       "bench_ew": 21593.63,
-      "bench_spy_ma": 13103.27,
+      "bench_spy_ma": 13103.28,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2020-10-18",
-      "strategy": 15730.52,
+      "strategy": 15730.53,
       "benchmark": 19391.45,
       "bench_60_40": 19391.45,
       "bench_ew": 21482.0,
-      "bench_spy_ma": 13046.3,
+      "bench_spy_ma": 13046.31,
       "regime": "BULL",
       "weights": {
         "XLV": 1.0
@@ -4374,10 +4374,10 @@
     {
       "date": "2020-10-25",
       "strategy": 15690.88,
-      "benchmark": 18312.47,
-      "bench_60_40": 18312.47,
-      "bench_ew": 20599.49,
-      "bench_spy_ma": 12320.37,
+      "benchmark": 18312.46,
+      "bench_60_40": 18312.46,
+      "bench_ew": 20599.48,
+      "bench_spy_ma": 12320.38,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.345,
@@ -4386,7 +4386,7 @@
     },
     {
       "date": "2020-11-01",
-      "strategy": 16458.65,
+      "strategy": 16458.66,
       "benchmark": 19637.08,
       "bench_60_40": 19637.08,
       "bench_ew": 22011.68,
@@ -4398,11 +4398,11 @@
     },
     {
       "date": "2020-11-08",
-      "strategy": 16511.26,
+      "strategy": 16511.27,
       "benchmark": 20082.36,
       "bench_60_40": 20082.36,
-      "bench_ew": 21844.89,
-      "bench_spy_ma": 13511.13,
+      "bench_ew": 21844.88,
+      "bench_spy_ma": 13511.14,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.159,
@@ -4413,11 +4413,11 @@
     },
     {
       "date": "2020-11-15",
-      "strategy": 17079.37,
-      "benchmark": 19927.02,
-      "bench_60_40": 19927.02,
-      "bench_ew": 21714.38,
-      "bench_spy_ma": 13406.62,
+      "strategy": 17079.38,
+      "benchmark": 19927.01,
+      "bench_60_40": 19927.01,
+      "bench_ew": 21714.37,
+      "bench_spy_ma": 13406.63,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.115,
@@ -4431,11 +4431,11 @@
     },
     {
       "date": "2020-11-22",
-      "strategy": 17501.35,
+      "strategy": 17501.36,
       "benchmark": 20394.72,
       "bench_60_40": 20394.72,
       "bench_ew": 21773.91,
-      "bench_spy_ma": 13721.29,
+      "bench_spy_ma": 13721.3,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.106,
@@ -4449,11 +4449,11 @@
     },
     {
       "date": "2020-11-29",
-      "strategy": 18185.06,
+      "strategy": 18185.07,
       "benchmark": 20741.3,
       "bench_60_40": 20741.3,
       "bench_ew": 22251.22,
-      "bench_spy_ma": 13954.46,
+      "bench_spy_ma": 13954.47,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.098,
@@ -4467,11 +4467,11 @@
     },
     {
       "date": "2020-12-06",
-      "strategy": 18266.55,
+      "strategy": 18266.56,
       "benchmark": 20542.21,
       "bench_60_40": 20542.21,
-      "bench_ew": 22098.25,
-      "bench_spy_ma": 13820.52,
+      "bench_ew": 22098.24,
+      "bench_spy_ma": 13820.53,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.099,
@@ -4485,11 +4485,11 @@
     },
     {
       "date": "2020-12-13",
-      "strategy": 18960.52,
+      "strategy": 18960.53,
       "benchmark": 20791.98,
       "bench_60_40": 20791.98,
       "bench_ew": 22556.84,
-      "bench_spy_ma": 13988.55,
+      "bench_spy_ma": 13988.56,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.107,
@@ -4503,11 +4503,11 @@
     },
     {
       "date": "2020-12-20",
-      "strategy": 19205.39,
+      "strategy": 19205.4,
       "benchmark": 20781.84,
       "bench_60_40": 20781.84,
       "bench_ew": 22550.82,
-      "bench_spy_ma": 13981.74,
+      "bench_spy_ma": 13981.75,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.094,
@@ -4521,11 +4521,11 @@
     },
     {
       "date": "2020-12-27",
-      "strategy": 20178.34,
+      "strategy": 20178.35,
       "benchmark": 21056.68,
       "bench_60_40": 21056.68,
       "bench_ew": 22837.41,
-      "bench_spy_ma": 14166.64,
+      "bench_spy_ma": 14166.66,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.084,
@@ -4539,11 +4539,11 @@
     },
     {
       "date": "2021-01-03",
-      "strategy": 20997.1,
+      "strategy": 20997.11,
       "benchmark": 21472.32,
       "bench_60_40": 21472.32,
       "bench_ew": 22901.77,
-      "bench_spy_ma": 14446.28,
+      "bench_spy_ma": 14446.29,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.064,
@@ -4561,7 +4561,7 @@
       "benchmark": 21159.18,
       "bench_60_40": 21159.18,
       "bench_ew": 22521.55,
-      "bench_spy_ma": 14235.6,
+      "bench_spy_ma": 14235.61,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.087,
@@ -4575,11 +4575,11 @@
     },
     {
       "date": "2021-01-17",
-      "strategy": 20750.35,
+      "strategy": 20750.36,
       "benchmark": 21563.56,
       "bench_60_40": 21563.56,
       "bench_ew": 23112.95,
-      "bench_spy_ma": 14507.66,
+      "bench_spy_ma": 14507.67,
       "regime": "BULL",
       "weights": {
         "SPY": 0.234,
@@ -4591,11 +4591,11 @@
     },
     {
       "date": "2021-01-24",
-      "strategy": 19900.63,
+      "strategy": 19900.64,
       "benchmark": 20842.1,
       "bench_60_40": 20842.1,
-      "bench_ew": 22540.93,
-      "bench_spy_ma": 14022.28,
+      "bench_ew": 22540.92,
+      "bench_spy_ma": 14022.29,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.074,
@@ -4607,11 +4607,11 @@
     },
     {
       "date": "2021-01-31",
-      "strategy": 20759.72,
-      "benchmark": 21835.57,
-      "bench_60_40": 21835.57,
+      "strategy": 20759.73,
+      "benchmark": 21835.58,
+      "bench_60_40": 21835.58,
       "bench_ew": 23178.48,
-      "bench_spy_ma": 14690.67,
+      "bench_spy_ma": 14690.68,
       "regime": "NEUTRAL",
       "weights": {
         "ETH-USD": 0.134,
@@ -4621,9 +4621,9 @@
     },
     {
       "date": "2021-02-07",
-      "strategy": 21198.62,
-      "benchmark": 22113.24,
-      "bench_60_40": 22113.24,
+      "strategy": 21198.63,
+      "benchmark": 22113.23,
+      "bench_60_40": 22113.23,
       "bench_ew": 23435.45,
       "bench_spy_ma": 14877.48,
       "regime": "BULL",
@@ -4636,11 +4636,11 @@
     },
     {
       "date": "2021-02-14",
-      "strategy": 21507.56,
-      "benchmark": 21966.24,
-      "bench_60_40": 21966.24,
-      "bench_ew": 23089.03,
-      "bench_spy_ma": 14778.58,
+      "strategy": 21507.57,
+      "benchmark": 21966.23,
+      "bench_60_40": 21966.23,
+      "bench_ew": 23089.02,
+      "bench_spy_ma": 14778.59,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.058,
@@ -4671,11 +4671,11 @@
     },
     {
       "date": "2021-02-28",
-      "strategy": 21173.36,
-      "benchmark": 21605.8,
-      "bench_60_40": 21605.8,
+      "strategy": 21173.37,
+      "benchmark": 21605.79,
+      "bench_60_40": 21605.79,
       "bench_ew": 22078.45,
-      "bench_spy_ma": 14536.08,
+      "bench_spy_ma": 14536.09,
       "regime": "BULL",
       "weights": {
         "XLE": 0.25,
@@ -4684,11 +4684,11 @@
     },
     {
       "date": "2021-03-07",
-      "strategy": 21535.93,
+      "strategy": 21535.94,
       "benchmark": 22193.21,
       "bench_60_40": 22193.21,
       "bench_ew": 22548.86,
-      "bench_spy_ma": 14931.28,
+      "bench_spy_ma": 14931.29,
       "regime": "BULL",
       "weights": {
         "XLE": 0.241,
@@ -4697,11 +4697,11 @@
     },
     {
       "date": "2021-03-14",
-      "strategy": 21289.46,
-      "benchmark": 22007.11,
-      "bench_60_40": 22007.11,
-      "bench_ew": 22512.01,
-      "bench_spy_ma": 14806.08,
+      "strategy": 21289.47,
+      "benchmark": 22007.1,
+      "bench_60_40": 22007.1,
+      "bench_ew": 22512.0,
+      "bench_spy_ma": 14806.09,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.111,
@@ -4712,11 +4712,11 @@
     },
     {
       "date": "2021-03-21",
-      "strategy": 21307.37,
+      "strategy": 21307.38,
       "benchmark": 22374.38,
       "bench_60_40": 22374.38,
       "bench_ew": 22669.37,
-      "bench_spy_ma": 15053.17,
+      "bench_spy_ma": 15053.18,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.121,
@@ -4731,7 +4731,7 @@
       "benchmark": 22635.99,
       "bench_60_40": 22635.99,
       "bench_ew": 22950.55,
-      "bench_spy_ma": 15229.18,
+      "bench_spy_ma": 15229.19,
       "regime": "BULL",
       "weights": {
         "SPY": 0.318,
@@ -4742,11 +4742,11 @@
     },
     {
       "date": "2021-04-04",
-      "strategy": 21688.7,
-      "benchmark": 23250.76,
-      "bench_60_40": 23250.76,
+      "strategy": 21688.71,
+      "benchmark": 23250.75,
+      "bench_60_40": 23250.75,
       "bench_ew": 23514.81,
-      "bench_spy_ma": 15642.79,
+      "bench_spy_ma": 15642.8,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.103,
@@ -4758,11 +4758,11 @@
     },
     {
       "date": "2021-04-11",
-      "strategy": 21741.41,
+      "strategy": 21741.42,
       "benchmark": 23576.78,
       "bench_60_40": 23576.78,
       "bench_ew": 23886.52,
-      "bench_spy_ma": 15862.13,
+      "bench_spy_ma": 15862.14,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.103,
@@ -4774,11 +4774,11 @@
     },
     {
       "date": "2021-04-18",
-      "strategy": 21779.84,
+      "strategy": 21779.85,
       "benchmark": 23547.4,
       "bench_60_40": 23547.4,
       "bench_ew": 23818.69,
-      "bench_spy_ma": 15842.36,
+      "bench_spy_ma": 15842.37,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.102,
@@ -4795,7 +4795,7 @@
       "benchmark": 23579.04,
       "bench_60_40": 23579.04,
       "bench_ew": 23760.6,
-      "bench_spy_ma": 15863.65,
+      "bench_spy_ma": 15863.66,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.103,
@@ -4807,11 +4807,11 @@
     },
     {
       "date": "2021-05-02",
-      "strategy": 23373.47,
+      "strategy": 23373.48,
       "benchmark": 23851.39,
       "bench_60_40": 23851.39,
       "bench_ew": 24046.79,
-      "bench_spy_ma": 16046.88,
+      "bench_spy_ma": 16046.9,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.093,
@@ -4823,11 +4823,11 @@
     },
     {
       "date": "2021-05-09",
-      "strategy": 22935.99,
+      "strategy": 22936.0,
       "benchmark": 23538.36,
       "bench_60_40": 23538.36,
-      "bench_ew": 23805.66,
-      "bench_spy_ma": 15836.28,
+      "bench_ew": 23805.65,
+      "bench_spy_ma": 15836.29,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.082,
@@ -4844,7 +4844,7 @@
       "benchmark": 23445.69,
       "bench_60_40": 23445.69,
       "bench_ew": 23943.42,
-      "bench_spy_ma": 15773.93,
+      "bench_spy_ma": 15773.95,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.101,
@@ -4856,11 +4856,11 @@
     },
     {
       "date": "2021-05-23",
-      "strategy": 22133.4,
-      "benchmark": 23733.87,
-      "bench_60_40": 23733.87,
+      "strategy": 22133.41,
+      "benchmark": 23733.86,
+      "bench_60_40": 23733.86,
       "bench_ew": 24316.5,
-      "bench_spy_ma": 15967.82,
+      "bench_spy_ma": 15967.83,
       "regime": "BULL",
       "weights": {
         "XLE": 0.2,
@@ -4872,10 +4872,10 @@
     {
       "date": "2021-05-30",
       "strategy": 22582.36,
-      "benchmark": 23878.52,
-      "bench_60_40": 23878.52,
+      "benchmark": 23878.51,
+      "bench_60_40": 23878.51,
       "bench_ew": 24351.0,
-      "bench_spy_ma": 16065.13,
+      "bench_spy_ma": 16065.14,
       "regime": "BULL",
       "weights": {
         "XLE": 0.2,
@@ -4886,11 +4886,11 @@
     },
     {
       "date": "2021-06-06",
-      "strategy": 22558.58,
-      "benchmark": 23975.14,
-      "bench_60_40": 23975.14,
-      "bench_ew": 24455.2,
-      "bench_spy_ma": 16130.14,
+      "strategy": 22558.59,
+      "benchmark": 23975.13,
+      "bench_60_40": 23975.13,
+      "bench_ew": 24455.19,
+      "bench_spy_ma": 16130.15,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -4901,11 +4901,11 @@
     },
     {
       "date": "2021-06-13",
-      "strategy": 21625.48,
-      "benchmark": 23521.27,
-      "bench_60_40": 23521.27,
+      "strategy": 21625.49,
+      "benchmark": 23521.26,
+      "bench_60_40": 23521.26,
       "bench_ew": 23832.66,
-      "bench_spy_ma": 15824.78,
+      "bench_spy_ma": 15824.79,
       "regime": "BULL",
       "weights": {
         "SPY": 0.371,
@@ -4917,11 +4917,11 @@
     },
     {
       "date": "2021-06-20",
-      "strategy": 22015.88,
-      "benchmark": 24183.96,
-      "bench_60_40": 24183.96,
-      "bench_ew": 24304.2,
-      "bench_spy_ma": 16270.63,
+      "strategy": 22015.89,
+      "benchmark": 24183.95,
+      "bench_60_40": 24183.95,
+      "bench_ew": 24304.19,
+      "bench_spy_ma": 16270.64,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.5,
@@ -4930,11 +4930,11 @@
     },
     {
       "date": "2021-06-27",
-      "strategy": 22449.14,
+      "strategy": 22449.15,
       "benchmark": 24587.01,
       "bench_60_40": 24587.01,
-      "bench_ew": 24686.08,
-      "bench_spy_ma": 16541.8,
+      "bench_ew": 24686.07,
+      "bench_spy_ma": 16541.81,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -4944,11 +4944,11 @@
     },
     {
       "date": "2021-07-04",
-      "strategy": 22554.54,
+      "strategy": 22554.55,
       "benchmark": 24689.05,
       "bench_60_40": 24689.05,
-      "bench_ew": 24869.05,
-      "bench_spy_ma": 16610.45,
+      "bench_ew": 24869.04,
+      "bench_spy_ma": 16610.46,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -4958,11 +4958,11 @@
     },
     {
       "date": "2021-07-11",
-      "strategy": 22394.82,
-      "benchmark": 24452.1,
-      "bench_60_40": 24452.1,
+      "strategy": 22394.83,
+      "benchmark": 24452.09,
+      "bench_60_40": 24452.09,
       "bench_ew": 24720.98,
-      "bench_spy_ma": 16451.03,
+      "bench_spy_ma": 16451.04,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -4972,11 +4972,11 @@
     },
     {
       "date": "2021-07-18",
-      "strategy": 22922.61,
-      "benchmark": 24939.62,
-      "bench_60_40": 24939.62,
+      "strategy": 22922.62,
+      "benchmark": 24939.61,
+      "bench_60_40": 24939.61,
       "bench_ew": 25088.19,
-      "bench_spy_ma": 16779.03,
+      "bench_spy_ma": 16779.04,
       "regime": "BULL",
       "weights": {
         "SPY": 0.395,
@@ -4986,11 +4986,11 @@
     },
     {
       "date": "2021-07-25",
-      "strategy": 22835.71,
+      "strategy": 22835.73,
       "benchmark": 24858.55,
       "bench_60_40": 24858.55,
       "bench_ew": 25041.07,
-      "bench_spy_ma": 16724.49,
+      "bench_spy_ma": 16724.5,
       "regime": "BULL",
       "weights": {
         "SPY": 0.318,
@@ -5000,11 +5000,11 @@
     },
     {
       "date": "2021-08-01",
-      "strategy": 23414.79,
+      "strategy": 23414.8,
       "benchmark": 25084.17,
       "bench_60_40": 25084.17,
       "bench_ew": 24941.9,
-      "bench_spy_ma": 16876.28,
+      "bench_spy_ma": 16876.29,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.212,
@@ -5015,11 +5015,11 @@
     },
     {
       "date": "2021-08-08",
-      "strategy": 23898.18,
-      "benchmark": 25278.62,
-      "bench_60_40": 25278.62,
+      "strategy": 23898.19,
+      "benchmark": 25278.61,
+      "bench_60_40": 25278.61,
       "bench_ew": 25112.11,
-      "bench_spy_ma": 17007.1,
+      "bench_spy_ma": 17007.11,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.136,
@@ -5031,11 +5031,11 @@
     },
     {
       "date": "2021-08-15",
-      "strategy": 24026.2,
-      "benchmark": 25133.49,
-      "bench_60_40": 25133.49,
+      "strategy": 24026.21,
+      "benchmark": 25133.48,
+      "bench_60_40": 25133.48,
       "bench_ew": 25054.91,
-      "bench_spy_ma": 16909.46,
+      "bench_spy_ma": 16909.47,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.123,
@@ -5047,11 +5047,11 @@
     },
     {
       "date": "2021-08-22",
-      "strategy": 24014.84,
-      "benchmark": 25524.08,
-      "bench_60_40": 25524.08,
+      "strategy": 24014.85,
+      "benchmark": 25524.07,
+      "bench_60_40": 25524.07,
       "bench_ew": 25548.28,
-      "bench_spy_ma": 17172.24,
+      "bench_spy_ma": 17172.25,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.153,
@@ -5066,7 +5066,7 @@
       "benchmark": 25684.5,
       "bench_60_40": 25684.5,
       "bench_ew": 25770.57,
-      "bench_spy_ma": 17280.17,
+      "bench_spy_ma": 17280.19,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.149,
@@ -5078,11 +5078,11 @@
     },
     {
       "date": "2021-09-05",
-      "strategy": 24656.15,
+      "strategy": 24656.16,
       "benchmark": 25251.4,
       "bench_60_40": 25251.4,
-      "bench_ew": 25318.77,
-      "bench_spy_ma": 16988.79,
+      "bench_ew": 25318.76,
+      "bench_spy_ma": 16988.81,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.102,
@@ -5095,11 +5095,11 @@
     },
     {
       "date": "2021-09-12",
-      "strategy": 24318.11,
-      "benchmark": 25102.55,
-      "bench_60_40": 25102.55,
+      "strategy": 24318.12,
+      "benchmark": 25102.54,
+      "bench_60_40": 25102.54,
       "bench_ew": 25035.02,
-      "bench_spy_ma": 16888.64,
+      "bench_spy_ma": 16888.65,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -5113,7 +5113,7 @@
       "benchmark": 25245.28,
       "bench_60_40": 25245.28,
       "bench_ew": 25056.6,
-      "bench_spy_ma": 16984.68,
+      "bench_spy_ma": 16984.69,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.304,
@@ -5123,11 +5123,11 @@
     },
     {
       "date": "2021-09-26",
-      "strategy": 24832.52,
+      "strategy": 24832.53,
       "benchmark": 24695.35,
       "bench_60_40": 24695.35,
-      "bench_ew": 24646.45,
-      "bench_spy_ma": 16614.69,
+      "bench_ew": 24646.44,
+      "bench_spy_ma": 16614.7,
       "regime": "BULL",
       "weights": {
         "XLE": 0.621
@@ -5135,11 +5135,11 @@
     },
     {
       "date": "2021-10-03",
-      "strategy": 25577.67,
+      "strategy": 25577.68,
       "benchmark": 24901.22,
       "bench_60_40": 24901.22,
-      "bench_ew": 24719.32,
-      "bench_spy_ma": 16753.2,
+      "bench_ew": 24719.31,
+      "bench_spy_ma": 16753.21,
       "regime": "BULL",
       "weights": {
         "XLE": 0.593
@@ -5147,11 +5147,11 @@
     },
     {
       "date": "2021-10-10",
-      "strategy": 26321.94,
-      "benchmark": 25356.76,
-      "bench_60_40": 25356.76,
-      "bench_ew": 25102.74,
-      "bench_spy_ma": 17059.67,
+      "strategy": 26321.95,
+      "benchmark": 25356.75,
+      "bench_60_40": 25356.75,
+      "bench_ew": 25102.73,
+      "bench_spy_ma": 17059.68,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.218,
@@ -5160,11 +5160,11 @@
     },
     {
       "date": "2021-10-17",
-      "strategy": 26407.41,
+      "strategy": 26407.42,
       "benchmark": 25769.06,
       "bench_60_40": 25769.06,
       "bench_ew": 25479.32,
-      "bench_spy_ma": 17337.07,
+      "bench_spy_ma": 17337.08,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.183,
@@ -5174,11 +5174,11 @@
     },
     {
       "date": "2021-10-24",
-      "strategy": 26380.07,
+      "strategy": 26380.08,
       "benchmark": 26117.68,
       "bench_60_40": 26117.68,
       "bench_ew": 25810.18,
-      "bench_spy_ma": 17571.61,
+      "bench_spy_ma": 17571.62,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.093,
@@ -5190,11 +5190,11 @@
     },
     {
       "date": "2021-10-31",
-      "strategy": 27138.98,
+      "strategy": 27138.99,
       "benchmark": 26645.43,
       "bench_60_40": 26645.43,
       "bench_ew": 26427.02,
-      "bench_spy_ma": 17926.68,
+      "bench_spy_ma": 17926.69,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.084,
@@ -5207,11 +5207,11 @@
     },
     {
       "date": "2021-11-07",
-      "strategy": 27302.46,
-      "benchmark": 26573.78,
-      "bench_60_40": 26573.78,
+      "strategy": 27302.47,
+      "benchmark": 26573.77,
+      "bench_60_40": 26573.77,
       "bench_ew": 26556.24,
-      "bench_spy_ma": 17878.47,
+      "bench_spy_ma": 17878.48,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.093,
@@ -5226,11 +5226,11 @@
     },
     {
       "date": "2021-11-14",
-      "strategy": 26639.1,
-      "benchmark": 26665.91,
-      "bench_60_40": 26665.91,
-      "bench_ew": 26701.92,
-      "bench_spy_ma": 17940.45,
+      "strategy": 26639.11,
+      "benchmark": 26665.9,
+      "bench_60_40": 26665.9,
+      "bench_ew": 26701.91,
+      "bench_spy_ma": 17940.46,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.091,
@@ -5245,11 +5245,11 @@
     },
     {
       "date": "2021-11-21",
-      "strategy": 25933.2,
-      "benchmark": 26101.75,
-      "bench_60_40": 26101.75,
+      "strategy": 25933.22,
+      "benchmark": 26101.76,
+      "bench_60_40": 26101.76,
       "bench_ew": 25934.81,
-      "bench_spy_ma": 17560.9,
+      "bench_spy_ma": 17560.91,
       "regime": "BULL",
       "weights": {
         "SPY": 0.208,
@@ -5260,11 +5260,11 @@
     },
     {
       "date": "2021-11-28",
-      "strategy": 25505.53,
-      "benchmark": 25786.13,
-      "bench_60_40": 25786.13,
+      "strategy": 25505.54,
+      "benchmark": 25786.12,
+      "bench_60_40": 25786.12,
       "bench_ew": 25640.54,
-      "bench_spy_ma": 17348.55,
+      "bench_spy_ma": 17348.56,
       "regime": "BULL",
       "weights": {
         "SPY": 0.311,
@@ -5274,21 +5274,21 @@
     },
     {
       "date": "2021-12-05",
-      "strategy": 25467.27,
-      "benchmark": 26771.12,
-      "bench_60_40": 26771.12,
+      "strategy": 25467.28,
+      "benchmark": 26771.11,
+      "bench_60_40": 26771.11,
       "bench_ew": 26296.39,
-      "bench_spy_ma": 18011.24,
+      "bench_spy_ma": 18011.25,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2021-12-12",
-      "strategy": 24928.41,
-      "benchmark": 26244.82,
-      "bench_60_40": 26244.82,
+      "strategy": 24928.42,
+      "benchmark": 26244.81,
+      "bench_60_40": 26244.81,
       "bench_ew": 25899.76,
-      "bench_spy_ma": 17657.15,
+      "bench_spy_ma": 17657.16,
       "regime": "BULL",
       "weights": {
         "SPY": 1.0
@@ -5296,11 +5296,11 @@
     },
     {
       "date": "2021-12-19",
-      "strategy": 25199.81,
-      "benchmark": 26857.18,
-      "bench_60_40": 26857.18,
+      "strategy": 25199.83,
+      "benchmark": 26857.17,
+      "bench_60_40": 26857.17,
       "bench_ew": 26442.14,
-      "bench_spy_ma": 18069.14,
+      "bench_spy_ma": 18069.15,
       "regime": "BULL",
       "weights": {
         "XLV": 1.0
@@ -5308,11 +5308,11 @@
     },
     {
       "date": "2021-12-26",
-      "strategy": 25422.56,
-      "benchmark": 27106.01,
-      "bench_60_40": 27106.01,
+      "strategy": 25422.58,
+      "benchmark": 27106.0,
+      "bench_60_40": 27106.0,
       "bench_ew": 26648.26,
-      "bench_spy_ma": 18236.54,
+      "bench_spy_ma": 18236.55,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -5321,11 +5321,11 @@
     },
     {
       "date": "2022-01-02",
-      "strategy": 24458.75,
-      "benchmark": 26599.8,
-      "bench_60_40": 26599.8,
-      "bench_ew": 25913.93,
-      "bench_spy_ma": 17895.97,
+      "strategy": 24458.77,
+      "benchmark": 26599.79,
+      "bench_60_40": 26599.79,
+      "bench_ew": 25913.92,
+      "bench_spy_ma": 17895.98,
       "regime": "BULL",
       "weights": {
         "SPY": 0.328,
@@ -5335,11 +5335,11 @@
     },
     {
       "date": "2022-01-09",
-      "strategy": 24951.87,
+      "strategy": 24951.88,
       "benchmark": 26521.61,
       "bench_60_40": 26521.61,
       "bench_ew": 25990.81,
-      "bench_spy_ma": 17843.37,
+      "bench_spy_ma": 17843.38,
       "regime": "BULL",
       "weights": {
         "SPY": 0.452,
@@ -5348,11 +5348,11 @@
     },
     {
       "date": "2022-01-16",
-      "strategy": 24435.79,
-      "benchmark": 24995.56,
-      "bench_60_40": 24995.56,
-      "bench_ew": 24919.17,
-      "bench_spy_ma": 16816.66,
+      "strategy": 24435.8,
+      "benchmark": 24995.55,
+      "bench_60_40": 24995.55,
+      "bench_ew": 24919.16,
+      "bench_spy_ma": 16816.67,
       "regime": "BULL",
       "weights": {
         "XLE": 0.619
@@ -5360,11 +5360,11 @@
     },
     {
       "date": "2022-01-23",
-      "strategy": 24750.33,
-      "benchmark": 25222.13,
-      "bench_60_40": 25222.13,
+      "strategy": 24750.34,
+      "benchmark": 25222.12,
+      "bench_60_40": 25222.12,
       "bench_ew": 24803.34,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -5373,11 +5373,11 @@
     },
     {
       "date": "2022-01-30",
-      "strategy": 25221.32,
-      "benchmark": 25607.35,
-      "bench_60_40": 25607.35,
-      "bench_ew": 25162.65,
-      "bench_spy_ma": 16816.66,
+      "strategy": 25221.33,
+      "benchmark": 25607.34,
+      "bench_60_40": 25607.34,
+      "bench_ew": 25162.64,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5385,11 +5385,11 @@
     },
     {
       "date": "2022-02-06",
-      "strategy": 25442.42,
-      "benchmark": 25137.09,
-      "bench_60_40": 25137.09,
+      "strategy": 25442.43,
+      "benchmark": 25137.08,
+      "bench_60_40": 25137.08,
       "bench_ew": 24997.95,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5401,7 +5401,7 @@
       "benchmark": 24781.54,
       "bench_60_40": 24781.54,
       "bench_ew": 24905.52,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.2,
@@ -5414,7 +5414,7 @@
       "benchmark": 24982.43,
       "bench_60_40": 24982.43,
       "bench_ew": 25049.66,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.2,
@@ -5423,11 +5423,11 @@
     },
     {
       "date": "2022-02-27",
-      "strategy": 26072.49,
-      "benchmark": 24663.98,
-      "bench_60_40": 24663.98,
-      "bench_ew": 25075.9,
-      "bench_spy_ma": 16816.66,
+      "strategy": 26072.5,
+      "benchmark": 24663.97,
+      "bench_60_40": 24663.97,
+      "bench_ew": 25075.89,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.2,
@@ -5436,11 +5436,11 @@
     },
     {
       "date": "2022-03-06",
-      "strategy": 26517.66,
+      "strategy": 26517.67,
       "benchmark": 23973.43,
       "bench_60_40": 23973.43,
       "bench_ew": 24586.36,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.133,
@@ -5450,11 +5450,11 @@
     },
     {
       "date": "2022-03-13",
-      "strategy": 26271.79,
+      "strategy": 26271.8,
       "benchmark": 25447.6,
       "bench_60_40": 25447.6,
       "bench_ew": 25518.33,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.133,
@@ -5464,11 +5464,11 @@
     },
     {
       "date": "2022-03-20",
-      "strategy": 26495.36,
-      "benchmark": 25915.32,
-      "bench_60_40": 25915.32,
+      "strategy": 26495.37,
+      "benchmark": 25915.31,
+      "bench_60_40": 25915.31,
       "bench_ew": 26021.75,
-      "bench_spy_ma": 16816.66,
+      "bench_spy_ma": 16816.67,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.08,
@@ -5479,11 +5479,11 @@
     },
     {
       "date": "2022-03-27",
-      "strategy": 26536.37,
+      "strategy": 26536.38,
       "benchmark": 25928.48,
       "bench_60_40": 25928.48,
       "bench_ew": 25949.53,
-      "bench_spy_ma": 16825.21,
+      "bench_spy_ma": 16825.22,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.051,
@@ -5497,10 +5497,10 @@
     {
       "date": "2022-04-03",
       "strategy": 26510.05,
-      "benchmark": 25622.21,
-      "bench_60_40": 25622.21,
-      "bench_ew": 25638.7,
-      "bench_spy_ma": 16626.46,
+      "benchmark": 25622.2,
+      "bench_60_40": 25622.2,
+      "bench_ew": 25638.69,
+      "bench_spy_ma": 16626.48,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.09,
@@ -5514,11 +5514,11 @@
     },
     {
       "date": "2022-04-10",
-      "strategy": 26273.44,
-      "benchmark": 25062.33,
-      "bench_60_40": 25062.33,
-      "bench_ew": 25310.59,
-      "bench_spy_ma": 16626.46,
+      "strategy": 26273.45,
+      "benchmark": 25062.32,
+      "bench_60_40": 25062.32,
+      "bench_ew": 25310.58,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.053,
@@ -5532,11 +5532,11 @@
     },
     {
       "date": "2022-04-17",
-      "strategy": 25560.84,
+      "strategy": 25560.85,
       "benchmark": 24389.67,
       "bench_60_40": 24389.67,
       "bench_ew": 24587.41,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.12,
@@ -5546,31 +5546,31 @@
     },
     {
       "date": "2022-04-24",
-      "strategy": 25545.5,
+      "strategy": 25545.51,
       "benchmark": 23585.92,
       "bench_60_40": 23585.92,
       "bench_ew": 23857.65,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-05-01",
-      "strategy": 25545.5,
+      "strategy": 25545.51,
       "benchmark": 23548.14,
       "bench_60_40": 23548.14,
       "bench_ew": 23676.38,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-05-08",
-      "strategy": 25266.46,
-      "benchmark": 22997.42,
-      "bench_60_40": 22997.42,
+      "strategy": 25266.47,
+      "benchmark": 22997.41,
+      "bench_60_40": 22997.41,
       "bench_ew": 23006.97,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5578,21 +5578,21 @@
     },
     {
       "date": "2022-05-15",
-      "strategy": 25251.3,
-      "benchmark": 22305.3,
-      "bench_60_40": 22305.3,
-      "bench_ew": 22586.59,
-      "bench_spy_ma": 16626.46,
+      "strategy": 25251.31,
+      "benchmark": 22305.29,
+      "bench_60_40": 22305.29,
+      "bench_ew": 22586.58,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-05-22",
-      "strategy": 26071.17,
-      "benchmark": 23772.55,
-      "bench_60_40": 23772.55,
+      "strategy": 26071.18,
+      "benchmark": 23772.54,
+      "bench_60_40": 23772.54,
       "bench_ew": 23650.28,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5600,11 +5600,11 @@
     },
     {
       "date": "2022-05-29",
-      "strategy": 26186.61,
+      "strategy": 26186.62,
       "benchmark": 23502.34,
       "bench_60_40": 23502.34,
       "bench_ew": 23474.4,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5612,11 +5612,11 @@
     },
     {
       "date": "2022-06-05",
-      "strategy": 26092.99,
-      "benchmark": 22315.03,
-      "bench_60_40": 22315.03,
+      "strategy": 26093.0,
+      "benchmark": 22315.02,
+      "bench_60_40": 22315.02,
       "bench_ew": 22724.34,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5624,11 +5624,11 @@
     },
     {
       "date": "2022-06-12",
-      "strategy": 24302.28,
+      "strategy": 24302.29,
       "benchmark": 21035.0,
       "bench_60_40": 21035.0,
       "bench_ew": 21776.84,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5636,61 +5636,61 @@
     },
     {
       "date": "2022-06-19",
-      "strategy": 24287.7,
-      "benchmark": 22427.52,
-      "bench_60_40": 22427.52,
-      "bench_ew": 22748.75,
-      "bench_spy_ma": 16626.46,
+      "strategy": 24287.71,
+      "benchmark": 22427.51,
+      "bench_60_40": 22427.51,
+      "bench_ew": 22748.74,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-06-26",
-      "strategy": 24287.7,
+      "strategy": 24287.71,
       "benchmark": 21919.27,
       "bench_60_40": 21919.27,
       "bench_ew": 22176.77,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-07-03",
-      "strategy": 24287.7,
+      "strategy": 24287.71,
       "benchmark": 22346.45,
       "bench_60_40": 22346.45,
       "bench_ew": 22402.84,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-07-10",
-      "strategy": 24287.7,
+      "strategy": 24287.71,
       "benchmark": 22142.92,
       "bench_60_40": 22142.92,
       "bench_ew": 22095.46,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-07-17",
-      "strategy": 24287.7,
+      "strategy": 24287.71,
       "benchmark": 22715.57,
       "bench_60_40": 22715.57,
       "bench_ew": 22618.19,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-07-24",
-      "strategy": 24287.7,
-      "benchmark": 23687.23,
-      "bench_60_40": 23687.23,
+      "strategy": 24287.71,
+      "benchmark": 23687.22,
+      "bench_60_40": 23687.22,
       "bench_ew": 23437.93,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {}
     },
@@ -5700,7 +5700,7 @@
       "benchmark": 23772.32,
       "bench_60_40": 23772.32,
       "bench_ew": 23678.43,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "SPY": 0.147,
@@ -5710,11 +5710,11 @@
     },
     {
       "date": "2022-08-07",
-      "strategy": 24815.98,
-      "benchmark": 24555.98,
-      "bench_60_40": 24555.98,
+      "strategy": 24815.99,
+      "benchmark": 24555.97,
+      "bench_60_40": 24555.97,
       "bench_ew": 24273.76,
-      "bench_spy_ma": 16626.46,
+      "bench_spy_ma": 16626.48,
       "regime": "BEAR",
       "weights": {
         "ETH-USD": 0.102,
@@ -5725,11 +5725,11 @@
     },
     {
       "date": "2022-08-14",
-      "strategy": 24245.84,
+      "strategy": 24245.85,
       "benchmark": 24270.8,
       "bench_60_40": 24270.8,
-      "bench_ew": 23747.16,
-      "bench_spy_ma": 16433.38,
+      "bench_ew": 23747.15,
+      "bench_spy_ma": 16433.39,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.068,
@@ -5743,11 +5743,11 @@
     },
     {
       "date": "2022-08-21",
-      "strategy": 24031.3,
+      "strategy": 24031.31,
       "benchmark": 23303.16,
       "bench_60_40": 23303.16,
       "bench_ew": 23006.81,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BULL",
       "weights": {
         "SPY": 0.17,
@@ -5758,11 +5758,11 @@
     },
     {
       "date": "2022-08-28",
-      "strategy": 23901.74,
+      "strategy": 23901.75,
       "benchmark": 22551.71,
       "bench_60_40": 22551.71,
       "bench_ew": 22334.92,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BULL",
       "weights": {
         "XLE": 0.246,
@@ -5771,11 +5771,11 @@
     },
     {
       "date": "2022-09-04",
-      "strategy": 24298.78,
+      "strategy": 24298.79,
       "benchmark": 23377.33,
       "bench_60_40": 23377.33,
       "bench_ew": 22934.31,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.2,
@@ -5784,11 +5784,11 @@
     },
     {
       "date": "2022-09-11",
-      "strategy": 23757.11,
-      "benchmark": 22258.71,
-      "bench_60_40": 22258.71,
+      "strategy": 23757.12,
+      "benchmark": 22258.7,
+      "bench_60_40": 22258.7,
       "bench_ew": 21935.76,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.2,
@@ -5797,51 +5797,51 @@
     },
     {
       "date": "2022-09-18",
-      "strategy": 23742.86,
-      "benchmark": 21242.07,
-      "bench_60_40": 21242.07,
+      "strategy": 23742.87,
+      "benchmark": 21242.06,
+      "bench_60_40": 21242.06,
       "bench_ew": 21132.51,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-09-25",
-      "strategy": 23742.86,
-      "benchmark": 20620.31,
-      "bench_60_40": 20620.31,
+      "strategy": 23742.87,
+      "benchmark": 20620.3,
+      "bench_60_40": 20620.3,
       "bench_ew": 20791.81,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-10-02",
-      "strategy": 23742.86,
-      "benchmark": 20944.18,
-      "bench_60_40": 20944.18,
+      "strategy": 23742.87,
+      "benchmark": 20944.17,
+      "bench_60_40": 20944.17,
       "bench_ew": 21092.22,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-10-09",
-      "strategy": 23742.86,
+      "strategy": 23742.87,
       "benchmark": 20646.28,
       "bench_60_40": 20646.28,
       "bench_ew": 20555.59,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {}
     },
     {
       "date": "2022-10-16",
-      "strategy": 24515.31,
+      "strategy": 24515.32,
       "benchmark": 21608.08,
       "bench_60_40": 21608.08,
       "bench_ew": 21312.95,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5849,11 +5849,11 @@
     },
     {
       "date": "2022-10-23",
-      "strategy": 24777.02,
-      "benchmark": 22458.46,
-      "bench_60_40": 22458.46,
+      "strategy": 24777.03,
+      "benchmark": 22458.45,
+      "bench_60_40": 22458.45,
       "bench_ew": 21696.52,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.4
@@ -5861,11 +5861,11 @@
     },
     {
       "date": "2022-10-30",
-      "strategy": 24806.17,
-      "benchmark": 21727.01,
-      "bench_60_40": 21727.01,
+      "strategy": 24806.18,
+      "benchmark": 21727.0,
+      "bench_60_40": 21727.0,
       "bench_ew": 21191.91,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {
         "XLE": 0.2,
@@ -5874,11 +5874,11 @@
     },
     {
       "date": "2022-11-06",
-      "strategy": 24466.95,
+      "strategy": 24466.96,
       "benchmark": 23006.32,
       "bench_60_40": 23006.32,
       "bench_ew": 22594.39,
-      "bench_spy_ma": 15778.2,
+      "bench_spy_ma": 15778.22,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.063,
@@ -5890,10 +5890,10 @@
     {
       "date": "2022-11-13",
       "strategy": 24316.8,
-      "benchmark": 22863.15,
-      "bench_60_40": 22863.15,
+      "benchmark": 22863.14,
+      "bench_60_40": 22863.14,
       "bench_ew": 22384.39,
-      "bench_spy_ma": 15680.01,
+      "bench_spy_ma": 15680.02,
       "regime": "BEAR",
       "weights": {
         "SPY": 0.066,
@@ -5906,11 +5906,11 @@
     },
     {
       "date": "2022-11-20",
-      "strategy": 24502.51,
+      "strategy": 24502.52,
       "benchmark": 23226.85,
       "bench_60_40": 23226.85,
       "bench_ew": 22577.81,
-      "bench_spy_ma": 15929.45,
+      "bench_spy_ma": 15929.46,
       "regime": "BULL",
       "weights": {
         "SPY": 0.111,
@@ -5923,11 +5923,11 @@
     },
     {
       "date": "2022-11-27",
-      "strategy": 24693.28,
+      "strategy": 24693.29,
       "benchmark": 23491.26,
       "bench_60_40": 23491.26,
       "bench_ew": 22997.44,
-      "bench_spy_ma": 16110.79,
+      "bench_spy_ma": 16110.8,
       "regime": "BULL",
       "weights": {
         "SPY": 0.124,
@@ -5939,11 +5939,11 @@
     },
     {
       "date": "2022-12-04",
-      "strategy": 23958.78,
-      "benchmark": 22704.39,
-      "bench_60_40": 22704.39,
-      "bench_ew": 22456.1,
-      "bench_spy_ma": 15571.13,
+      "strategy": 23958.79,
+      "benchmark": 22704.38,
+      "bench_60_40": 22704.38,
+      "bench_ew": 22456.09,
+      "bench_spy_ma": 15571.14,
       "regime": "BULL",
       "weights": {
         "SPY": 0.123,
@@ -5955,11 +5955,11 @@
     },
     {
       "date": "2022-12-11",
-      "strategy": 23641.21,
-      "benchmark": 22228.11,
-      "bench_60_40": 22228.11,
-      "bench_ew": 22080.23,
-      "bench_spy_ma": 15244.49,
+      "strategy": 23641.22,
+      "benchmark": 22228.1,
+      "bench_60_40": 22228.1,
+      "bench_ew": 22080.22,
+      "bench_spy_ma": 15244.5,
       "regime": "BULL",
       "weights": {
         "SPY": 0.249,
@@ -5969,11 +5969,11 @@
     },
     {
       "date": "2022-12-18",
-      "strategy": 23755.5,
+      "strategy": 23755.51,
       "benchmark": 22207.23,
       "bench_60_40": 22207.23,
       "bench_ew": 21926.32,
-      "bench_spy_ma": 15244.49,
+      "bench_spy_ma": 15244.5,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -5982,11 +5982,11 @@
     },
     {
       "date": "2022-12-25",
-      "strategy": 23869.33,
+      "strategy": 23869.34,
       "benchmark": 22179.39,
       "bench_60_40": 22179.39,
       "bench_ew": 21991.64,
-      "bench_spy_ma": 15244.49,
+      "bench_spy_ma": 15244.5,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -5994,11 +5994,11 @@
     },
     {
       "date": "2023-01-01",
-      "strategy": 24098.4,
+      "strategy": 24098.41,
       "benchmark": 22507.07,
       "bench_60_40": 22507.07,
       "bench_ew": 22345.19,
-      "bench_spy_ma": 15244.49,
+      "bench_spy_ma": 15244.5,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -6006,9 +6006,9 @@
     },
     {
       "date": "2023-01-08",
-      "strategy": 24378.63,
-      "benchmark": 23111.39,
-      "bench_60_40": 23111.39,
+      "strategy": 24378.64,
+      "benchmark": 23111.38,
+      "bench_60_40": 23111.38,
       "bench_ew": 23098.94,
       "bench_spy_ma": 15653.81,
       "regime": "BEAR",
@@ -6018,11 +6018,11 @@
     },
     {
       "date": "2023-01-15",
-      "strategy": 24897.98,
-      "benchmark": 22959.44,
-      "bench_60_40": 22959.44,
-      "bench_ew": 23118.01,
-      "bench_spy_ma": 15550.89,
+      "strategy": 24897.99,
+      "benchmark": 22959.43,
+      "bench_60_40": 22959.43,
+      "bench_ew": 23118.0,
+      "bench_spy_ma": 15550.9,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.169,
@@ -6034,10 +6034,10 @@
     {
       "date": "2023-01-22",
       "strategy": 25273.7,
-      "benchmark": 23527.8,
-      "bench_60_40": 23527.8,
+      "benchmark": 23527.79,
+      "bench_60_40": 23527.79,
       "bench_ew": 23675.96,
-      "bench_spy_ma": 15935.85,
+      "bench_spy_ma": 15935.86,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.159,
@@ -6049,11 +6049,11 @@
     },
     {
       "date": "2023-01-29",
-      "strategy": 24964.8,
+      "strategy": 24964.81,
       "benchmark": 23914.63,
       "bench_60_40": 23914.63,
       "bench_ew": 23816.33,
-      "bench_spy_ma": 16197.86,
+      "bench_spy_ma": 16197.87,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.102,
@@ -6067,11 +6067,11 @@
     },
     {
       "date": "2023-02-05",
-      "strategy": 24718.45,
-      "benchmark": 23664.67,
-      "bench_60_40": 23664.67,
+      "strategy": 24718.46,
+      "benchmark": 23664.66,
+      "bench_60_40": 23664.66,
       "bench_ew": 23560.76,
-      "bench_spy_ma": 16028.55,
+      "bench_spy_ma": 16028.56,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.113,
@@ -6087,7 +6087,7 @@
       "benchmark": 23619.43,
       "bench_60_40": 23619.43,
       "bench_ew": 23488.87,
-      "bench_spy_ma": 15997.92,
+      "bench_spy_ma": 15997.93,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.114,
@@ -6099,11 +6099,11 @@
     },
     {
       "date": "2023-02-19",
-      "strategy": 24247.99,
+      "strategy": 24248.0,
       "benchmark": 22988.43,
       "bench_60_40": 22988.43,
       "bench_ew": 22904.62,
-      "bench_spy_ma": 15570.53,
+      "bench_spy_ma": 15570.54,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.089,
@@ -6115,11 +6115,11 @@
     },
     {
       "date": "2023-02-26",
-      "strategy": 23774.53,
+      "strategy": 23774.54,
       "benchmark": 23441.38,
       "bench_60_40": 23441.38,
       "bench_ew": 23447.64,
-      "bench_spy_ma": 15877.32,
+      "bench_spy_ma": 15877.33,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.192,
@@ -6132,7 +6132,7 @@
       "benchmark": 22381.22,
       "bench_60_40": 22381.22,
       "bench_ew": 22866.41,
-      "bench_spy_ma": 15159.25,
+      "bench_spy_ma": 15159.26,
       "regime": "BULL",
       "weights": {}
     },
@@ -6142,17 +6142,17 @@
       "benchmark": 22704.16,
       "bench_60_40": 22704.16,
       "bench_ew": 23854.43,
-      "bench_spy_ma": 15159.25,
+      "bench_spy_ma": 15159.26,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2023-03-19",
-      "strategy": 23717.23,
+      "strategy": 23717.24,
       "benchmark": 23039.49,
       "bench_60_40": 23039.49,
       "bench_ew": 24123.21,
-      "bench_spy_ma": 15383.14,
+      "bench_spy_ma": 15383.16,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.166,
@@ -6162,11 +6162,11 @@
     },
     {
       "date": "2023-03-26",
-      "strategy": 23768.55,
-      "benchmark": 23833.58,
-      "bench_60_40": 23833.58,
+      "strategy": 23768.56,
+      "benchmark": 23833.57,
+      "bench_60_40": 23833.57,
       "bench_ew": 24641.21,
-      "bench_spy_ma": 15913.34,
+      "bench_spy_ma": 15913.35,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.174,
@@ -6176,11 +6176,11 @@
     },
     {
       "date": "2023-04-02",
-      "strategy": 23902.24,
-      "benchmark": 23821.94,
-      "bench_60_40": 23821.94,
+      "strategy": 23902.25,
+      "benchmark": 23821.93,
+      "bench_60_40": 23821.93,
       "bench_ew": 24710.08,
-      "bench_spy_ma": 15905.57,
+      "bench_spy_ma": 15905.58,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.109,
@@ -6194,8 +6194,8 @@
       "strategy": 24295.08,
       "benchmark": 24012.3,
       "bench_60_40": 24012.3,
-      "bench_ew": 24783.63,
-      "bench_spy_ma": 16032.68,
+      "bench_ew": 24783.62,
+      "bench_spy_ma": 16032.69,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.094,
@@ -6211,7 +6211,7 @@
       "benchmark": 23997.17,
       "bench_60_40": 23997.17,
       "bench_ew": 24634.06,
-      "bench_spy_ma": 16022.57,
+      "bench_spy_ma": 16022.58,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.104,
@@ -6225,11 +6225,11 @@
     },
     {
       "date": "2023-04-23",
-      "strategy": 23885.4,
-      "benchmark": 24214.32,
-      "bench_60_40": 24214.32,
-      "bench_ew": 24887.19,
-      "bench_spy_ma": 16167.56,
+      "strategy": 23885.41,
+      "benchmark": 24214.31,
+      "bench_60_40": 24214.31,
+      "bench_ew": 24887.18,
+      "bench_spy_ma": 16167.57,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.079,
@@ -6243,11 +6243,11 @@
     },
     {
       "date": "2023-04-30",
-      "strategy": 23578.49,
+      "strategy": 23578.5,
       "benchmark": 24022.2,
       "bench_60_40": 24022.2,
-      "bench_ew": 24949.27,
-      "bench_spy_ma": 16039.28,
+      "bench_ew": 24949.26,
+      "bench_spy_ma": 16039.3,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.097,
@@ -6261,11 +6261,11 @@
     },
     {
       "date": "2023-05-07",
-      "strategy": 23529.54,
-      "benchmark": 23961.66,
-      "bench_60_40": 23961.66,
-      "bench_ew": 24954.59,
-      "bench_spy_ma": 15998.86,
+      "strategy": 23529.55,
+      "benchmark": 23961.65,
+      "bench_60_40": 23961.65,
+      "bench_ew": 24954.58,
+      "bench_spy_ma": 15998.87,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.215,
@@ -6276,11 +6276,11 @@
     },
     {
       "date": "2023-05-14",
-      "strategy": 23646.2,
+      "strategy": 23646.21,
       "benchmark": 24370.92,
       "bench_60_40": 24370.92,
-      "bench_ew": 25249.31,
-      "bench_spy_ma": 16272.12,
+      "bench_ew": 25249.3,
+      "bench_spy_ma": 16272.13,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.4,
@@ -6290,11 +6290,11 @@
     },
     {
       "date": "2023-05-21",
-      "strategy": 23767.14,
-      "benchmark": 24452.43,
-      "bench_60_40": 24452.43,
+      "strategy": 23767.15,
+      "benchmark": 24452.42,
+      "bench_60_40": 24452.42,
       "bench_ew": 25450.17,
-      "bench_spy_ma": 16326.54,
+      "bench_spy_ma": 16326.55,
       "regime": "BULL",
       "weights": {
         "SPY": 0.246,
@@ -6304,11 +6304,11 @@
     },
     {
       "date": "2023-05-28",
-      "strategy": 24175.32,
-      "benchmark": 24912.35,
-      "bench_60_40": 24912.35,
+      "strategy": 24175.33,
+      "benchmark": 24912.34,
+      "bench_60_40": 24912.34,
       "bench_ew": 25768.01,
-      "bench_spy_ma": 16633.62,
+      "bench_spy_ma": 16633.63,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -6318,8 +6318,8 @@
     {
       "date": "2023-06-04",
       "strategy": 24424.39,
-      "benchmark": 25027.62,
-      "bench_60_40": 25027.62,
+      "benchmark": 25027.61,
+      "bench_60_40": 25027.61,
       "bench_ew": 25851.09,
       "bench_spy_ma": 16710.59,
       "regime": "BULL",
@@ -6331,11 +6331,11 @@
     },
     {
       "date": "2023-06-11",
-      "strategy": 25179.35,
+      "strategy": 25179.36,
       "benchmark": 25679.2,
       "bench_60_40": 25679.2,
       "bench_ew": 26382.48,
-      "bench_spy_ma": 17145.64,
+      "bench_spy_ma": 17145.65,
       "regime": "BULL",
       "weights": {
         "SPY": 0.319,
@@ -6345,11 +6345,11 @@
     },
     {
       "date": "2023-06-18",
-      "strategy": 24427.22,
+      "strategy": 24427.23,
       "benchmark": 25313.99,
       "bench_60_40": 25313.99,
       "bench_ew": 25974.39,
-      "bench_spy_ma": 16901.8,
+      "bench_spy_ma": 16901.81,
       "regime": "BULL",
       "weights": {
         "SPY": 0.327,
@@ -6359,11 +6359,11 @@
     },
     {
       "date": "2023-06-25",
-      "strategy": 24842.46,
+      "strategy": 24842.47,
       "benchmark": 25902.42,
       "bench_60_40": 25902.42,
       "bench_ew": 26343.36,
-      "bench_spy_ma": 17294.68,
+      "bench_spy_ma": 17294.69,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.172,
@@ -6374,11 +6374,11 @@
     },
     {
       "date": "2023-07-02",
-      "strategy": 24237.57,
+      "strategy": 24237.58,
       "benchmark": 25626.03,
       "bench_60_40": 25626.03,
-      "bench_ew": 26192.3,
-      "bench_spy_ma": 17110.14,
+      "bench_ew": 26192.29,
+      "bench_spy_ma": 17110.15,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.106,
@@ -6391,11 +6391,11 @@
     },
     {
       "date": "2023-07-09",
-      "strategy": 24798.17,
+      "strategy": 24798.19,
       "benchmark": 26253.02,
       "bench_60_40": 26253.02,
       "bench_ew": 26848.12,
-      "bench_spy_ma": 17528.77,
+      "bench_spy_ma": 17528.79,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.205,
@@ -6406,11 +6406,11 @@
     },
     {
       "date": "2023-07-16",
-      "strategy": 24987.75,
+      "strategy": 24987.76,
       "benchmark": 26422.48,
       "bench_60_40": 26422.48,
       "bench_ew": 26861.67,
-      "bench_spy_ma": 17641.92,
+      "bench_spy_ma": 17641.93,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.109,
@@ -6422,11 +6422,11 @@
     },
     {
       "date": "2023-07-23",
-      "strategy": 25127.25,
-      "benchmark": 26699.46,
-      "bench_60_40": 26699.46,
+      "strategy": 25127.26,
+      "benchmark": 26699.45,
+      "bench_60_40": 26699.45,
       "bench_ew": 27126.92,
-      "bench_spy_ma": 17826.85,
+      "bench_spy_ma": 17826.86,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.127,
@@ -6439,11 +6439,11 @@
     },
     {
       "date": "2023-07-30",
-      "strategy": 24870.01,
+      "strategy": 24870.02,
       "benchmark": 26108.69,
       "bench_60_40": 26108.69,
       "bench_ew": 26574.06,
-      "bench_spy_ma": 17432.41,
+      "bench_spy_ma": 17432.42,
       "regime": "BULL",
       "weights": {
         "SPY": 0.248,
@@ -6454,11 +6454,11 @@
     },
     {
       "date": "2023-08-06",
-      "strategy": 25256.95,
+      "strategy": 25256.96,
       "benchmark": 26040.91,
       "bench_60_40": 26040.91,
       "bench_ew": 26285.65,
-      "bench_spy_ma": 17387.15,
+      "bench_spy_ma": 17387.16,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -6468,11 +6468,11 @@
     },
     {
       "date": "2023-08-13",
-      "strategy": 24855.73,
+      "strategy": 24855.75,
       "benchmark": 25506.24,
       "bench_60_40": 25506.24,
       "bench_ew": 25799.74,
-      "bench_spy_ma": 17030.16,
+      "bench_spy_ma": 17030.17,
       "regime": "BULL",
       "weights": {
         "XLE": 0.443,
@@ -6481,11 +6481,11 @@
     },
     {
       "date": "2023-08-20",
-      "strategy": 24495.18,
+      "strategy": 24495.19,
       "benchmark": 25709.01,
       "bench_60_40": 25709.01,
       "bench_ew": 26121.87,
-      "bench_spy_ma": 17165.54,
+      "bench_spy_ma": 17165.55,
       "regime": "BULL",
       "weights": {
         "XLE": 0.952
@@ -6493,11 +6493,11 @@
     },
     {
       "date": "2023-08-27",
-      "strategy": 25203.3,
+      "strategy": 25203.31,
       "benchmark": 26364.63,
       "bench_60_40": 26364.63,
       "bench_ew": 26790.57,
-      "bench_spy_ma": 17603.29,
+      "bench_spy_ma": 17603.31,
       "regime": "BULL",
       "weights": {
         "XLE": 0.436,
@@ -6506,11 +6506,11 @@
     },
     {
       "date": "2023-09-03",
-      "strategy": 25445.87,
+      "strategy": 25445.88,
       "benchmark": 26033.31,
       "bench_60_40": 26033.31,
       "bench_ew": 26459.21,
-      "bench_spy_ma": 17382.07,
+      "bench_spy_ma": 17382.09,
       "regime": "BULL",
       "weights": {
         "XLE": 0.433,
@@ -6519,11 +6519,11 @@
     },
     {
       "date": "2023-09-10",
-      "strategy": 26552.07,
-      "benchmark": 25999.07,
-      "bench_60_40": 25999.07,
-      "bench_ew": 26418.59,
-      "bench_spy_ma": 17359.21,
+      "strategy": 26552.08,
+      "benchmark": 25999.06,
+      "bench_60_40": 25999.06,
+      "bench_ew": 26418.58,
+      "bench_spy_ma": 17359.22,
       "regime": "BULL",
       "weights": {
         "XLE": 0.488,
@@ -6536,7 +6536,7 @@
       "benchmark": 25239.68,
       "bench_60_40": 25239.68,
       "bench_ew": 25881.15,
-      "bench_spy_ma": 16852.18,
+      "bench_spy_ma": 16852.19,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -6545,11 +6545,11 @@
     },
     {
       "date": "2023-09-24",
-      "strategy": 26582.07,
+      "strategy": 26582.08,
       "benchmark": 25067.28,
       "bench_60_40": 25067.28,
-      "bench_ew": 25484.6,
-      "bench_spy_ma": 16737.07,
+      "bench_ew": 25484.59,
+      "bench_spy_ma": 16737.08,
       "regime": "BULL",
       "weights": {
         "XLE": 0.498,
@@ -6558,11 +6558,11 @@
     },
     {
       "date": "2023-10-01",
-      "strategy": 25596.86,
+      "strategy": 25596.87,
       "benchmark": 25188.08,
       "bench_60_40": 25188.08,
       "bench_ew": 25591.29,
-      "bench_spy_ma": 16817.73,
+      "bench_spy_ma": 16817.74,
       "regime": "BULL",
       "weights": {
         "XLE": 0.439,
@@ -6571,11 +6571,11 @@
     },
     {
       "date": "2023-10-08",
-      "strategy": 25086.52,
-      "benchmark": 25303.02,
-      "bench_60_40": 25303.02,
+      "strategy": 25086.53,
+      "benchmark": 25303.01,
+      "bench_60_40": 25303.01,
       "bench_ew": 26102.72,
-      "bench_spy_ma": 16894.47,
+      "bench_spy_ma": 16894.48,
       "regime": "BULL",
       "weights": {
         "URA": 0.58
@@ -6583,21 +6583,21 @@
     },
     {
       "date": "2023-10-15",
-      "strategy": 25064.7,
-      "benchmark": 24698.44,
-      "bench_60_40": 24698.44,
+      "strategy": 25064.71,
+      "benchmark": 24698.43,
+      "bench_60_40": 24698.43,
       "bench_ew": 25872.03,
-      "bench_spy_ma": 16490.8,
+      "bench_spy_ma": 16490.81,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2023-10-22",
-      "strategy": 27100.71,
-      "benchmark": 24082.14,
-      "bench_60_40": 24082.14,
+      "strategy": 27100.73,
+      "benchmark": 24082.13,
+      "bench_60_40": 24082.13,
       "bench_ew": 25551.15,
-      "bench_spy_ma": 16490.8,
+      "bench_spy_ma": 16490.81,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.5,
@@ -6606,11 +6606,11 @@
     },
     {
       "date": "2023-10-29",
-      "strategy": 27254.12,
-      "benchmark": 25490.08,
-      "bench_60_40": 25490.08,
+      "strategy": 27254.13,
+      "benchmark": 25490.07,
+      "bench_60_40": 25490.07,
       "bench_ew": 26539.36,
-      "bench_spy_ma": 16490.8,
+      "bench_spy_ma": 16490.81,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.127,
@@ -6620,7 +6620,7 @@
     },
     {
       "date": "2023-11-05",
-      "strategy": 27569.69,
+      "strategy": 27569.71,
       "benchmark": 25837.22,
       "bench_60_40": 25837.22,
       "bench_ew": 26664.01,
@@ -6634,11 +6634,11 @@
     },
     {
       "date": "2023-11-12",
-      "strategy": 28058.74,
+      "strategy": 28058.76,
       "benchmark": 26434.17,
       "bench_60_40": 26434.17,
-      "bench_ew": 27255.03,
-      "bench_spy_ma": 17101.58,
+      "bench_ew": 27255.02,
+      "bench_spy_ma": 17101.59,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.124,
@@ -6650,11 +6650,11 @@
     },
     {
       "date": "2023-11-19",
-      "strategy": 28339.47,
-      "benchmark": 26698.64,
-      "bench_60_40": 26698.64,
+      "strategy": 28339.48,
+      "benchmark": 26698.63,
+      "bench_60_40": 26698.63,
       "bench_ew": 27519.09,
-      "bench_spy_ma": 17272.68,
+      "bench_spy_ma": 17272.69,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.1,
@@ -6667,11 +6667,11 @@
     },
     {
       "date": "2023-11-26",
-      "strategy": 28819.21,
-      "benchmark": 26921.47,
-      "bench_60_40": 26921.47,
+      "strategy": 28819.22,
+      "benchmark": 26921.46,
+      "bench_60_40": 26921.46,
       "bench_ew": 27926.67,
-      "bench_spy_ma": 17416.84,
+      "bench_spy_ma": 17416.85,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.088,
@@ -6684,11 +6684,11 @@
     },
     {
       "date": "2023-12-03",
-      "strategy": 29068.06,
+      "strategy": 29068.08,
       "benchmark": 26985.97,
       "bench_60_40": 26985.97,
       "bench_ew": 27693.39,
-      "bench_spy_ma": 17458.57,
+      "bench_spy_ma": 17458.58,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.098,
@@ -6702,11 +6702,11 @@
     },
     {
       "date": "2023-12-10",
-      "strategy": 29292.51,
-      "benchmark": 27632.94,
-      "bench_60_40": 27632.94,
-      "bench_ew": 28292.33,
-      "bench_spy_ma": 17877.12,
+      "strategy": 29292.52,
+      "benchmark": 27632.93,
+      "bench_60_40": 27632.93,
+      "bench_ew": 28292.32,
+      "bench_spy_ma": 17877.13,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.091,
@@ -6720,9 +6720,9 @@
     },
     {
       "date": "2023-12-17",
-      "strategy": 29746.82,
-      "benchmark": 27887.29,
-      "bench_60_40": 27887.29,
+      "strategy": 29746.84,
+      "benchmark": 27887.28,
+      "bench_60_40": 27887.28,
       "bench_ew": 28633.75,
       "bench_spy_ma": 18041.68,
       "regime": "BULL",
@@ -6737,7 +6737,7 @@
     },
     {
       "date": "2023-12-24",
-      "strategy": 29750.65,
+      "strategy": 29750.66,
       "benchmark": 27985.02,
       "bench_60_40": 27985.02,
       "bench_ew": 28744.03,
@@ -6753,9 +6753,9 @@
     },
     {
       "date": "2023-12-31",
-      "strategy": 29523.17,
-      "benchmark": 27549.92,
-      "bench_60_40": 27549.92,
+      "strategy": 29523.18,
+      "benchmark": 27549.91,
+      "bench_60_40": 27549.91,
       "bench_ew": 28205.07,
       "bench_spy_ma": 17823.42,
       "regime": "BULL",
@@ -6772,11 +6772,11 @@
     },
     {
       "date": "2024-01-07",
-      "strategy": 29630.37,
-      "benchmark": 28065.69,
-      "bench_60_40": 28065.69,
+      "strategy": 29630.38,
+      "benchmark": 28065.68,
+      "bench_60_40": 28065.68,
       "bench_ew": 28702.51,
-      "bench_spy_ma": 18157.09,
+      "bench_spy_ma": 18157.1,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.072,
@@ -6789,11 +6789,11 @@
     },
     {
       "date": "2024-01-14",
-      "strategy": 29429.23,
-      "benchmark": 28404.23,
-      "bench_60_40": 28404.23,
-      "bench_ew": 28999.6,
-      "bench_spy_ma": 18376.11,
+      "strategy": 29429.24,
+      "benchmark": 28404.22,
+      "bench_60_40": 28404.22,
+      "bench_ew": 28999.59,
+      "bench_spy_ma": 18376.12,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.137,
@@ -6804,11 +6804,11 @@
     },
     {
       "date": "2024-01-21",
-      "strategy": 28937.83,
-      "benchmark": 28697.44,
-      "bench_60_40": 28697.44,
+      "strategy": 28937.85,
+      "benchmark": 28697.43,
+      "bench_60_40": 28697.43,
       "bench_ew": 29112.42,
-      "bench_spy_ma": 18565.8,
+      "bench_spy_ma": 18565.81,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.153,
@@ -6820,11 +6820,11 @@
     },
     {
       "date": "2024-01-28",
-      "strategy": 29846.11,
-      "benchmark": 29106.05,
-      "bench_60_40": 29106.05,
-      "bench_ew": 29452.69,
-      "bench_spy_ma": 18830.15,
+      "strategy": 29846.13,
+      "benchmark": 29106.04,
+      "bench_60_40": 29106.04,
+      "bench_ew": 29452.68,
+      "bench_spy_ma": 18830.16,
       "regime": "BULL",
       "weights": {
         "SPY": 0.238,
@@ -6835,9 +6835,9 @@
     },
     {
       "date": "2024-02-04",
-      "strategy": 29563.87,
-      "benchmark": 29509.36,
-      "bench_60_40": 29509.36,
+      "strategy": 29563.89,
+      "benchmark": 29509.35,
+      "bench_60_40": 29509.35,
       "bench_ew": 29720.14,
       "bench_spy_ma": 19091.08,
       "regime": "BULL",
@@ -6850,11 +6850,11 @@
     },
     {
       "date": "2024-02-11",
-      "strategy": 29845.29,
-      "benchmark": 29409.86,
-      "bench_60_40": 29409.86,
-      "bench_ew": 29473.32,
-      "bench_spy_ma": 19026.7,
+      "strategy": 29845.3,
+      "benchmark": 29409.85,
+      "bench_60_40": 29409.85,
+      "bench_ew": 29473.31,
+      "bench_spy_ma": 19026.71,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.222,
@@ -6866,11 +6866,11 @@
     },
     {
       "date": "2024-02-18",
-      "strategy": 30371.9,
+      "strategy": 30371.91,
       "benchmark": 29900.89,
       "bench_60_40": 29900.89,
       "bench_ew": 29899.25,
-      "bench_spy_ma": 19344.38,
+      "bench_spy_ma": 19344.39,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.214,
@@ -6882,11 +6882,11 @@
     },
     {
       "date": "2024-02-25",
-      "strategy": 31622.19,
-      "benchmark": 30195.28,
-      "bench_60_40": 30195.28,
+      "strategy": 31622.21,
+      "benchmark": 30195.27,
+      "bench_60_40": 30195.27,
       "bench_ew": 30424.48,
-      "bench_spy_ma": 19534.83,
+      "bench_spy_ma": 19534.84,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.121,
@@ -6899,11 +6899,11 @@
     },
     {
       "date": "2024-03-03",
-      "strategy": 32372.22,
-      "benchmark": 30128.75,
-      "bench_60_40": 30128.75,
-      "bench_ew": 30711.68,
-      "bench_spy_ma": 19491.79,
+      "strategy": 32372.23,
+      "benchmark": 30128.74,
+      "bench_60_40": 30128.74,
+      "bench_ew": 30711.67,
+      "bench_spy_ma": 19491.8,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.069,
@@ -6917,11 +6917,11 @@
     },
     {
       "date": "2024-03-10",
-      "strategy": 32397.28,
-      "benchmark": 30110.74,
-      "bench_60_40": 30110.74,
+      "strategy": 32397.3,
+      "benchmark": 30110.73,
+      "bench_60_40": 30110.73,
       "bench_ew": 30489.15,
-      "bench_spy_ma": 19480.14,
+      "bench_spy_ma": 19480.15,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.061,
@@ -6935,7 +6935,7 @@
     },
     {
       "date": "2024-03-17",
-      "strategy": 32634.49,
+      "strategy": 32634.51,
       "benchmark": 30782.84,
       "bench_60_40": 30782.84,
       "bench_ew": 31054.22,
@@ -6952,10 +6952,10 @@
     },
     {
       "date": "2024-03-24",
-      "strategy": 33115.92,
-      "benchmark": 30892.7,
-      "bench_60_40": 30892.7,
-      "bench_ew": 31313.66,
+      "strategy": 33115.94,
+      "benchmark": 30892.69,
+      "bench_60_40": 30892.69,
+      "bench_ew": 31313.65,
       "bench_spy_ma": 19986.03,
       "regime": "BULL",
       "weights": {
@@ -6968,11 +6968,11 @@
     },
     {
       "date": "2024-03-31",
-      "strategy": 33612.07,
+      "strategy": 33612.08,
       "benchmark": 30618.65,
       "bench_60_40": 30618.65,
       "bench_ew": 31615.8,
-      "bench_spy_ma": 19808.73,
+      "bench_spy_ma": 19808.74,
       "regime": "BULL",
       "weights": {
         "SPY": 0.175,
@@ -6984,11 +6984,11 @@
     },
     {
       "date": "2024-04-07",
-      "strategy": 33223.25,
-      "benchmark": 30170.98,
-      "bench_60_40": 30170.98,
+      "strategy": 33223.27,
+      "benchmark": 30170.97,
+      "bench_60_40": 30170.97,
       "bench_ew": 31494.8,
-      "bench_spy_ma": 19519.11,
+      "bench_spy_ma": 19519.12,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -6999,11 +6999,11 @@
     },
     {
       "date": "2024-04-14",
-      "strategy": 32751.75,
+      "strategy": 32751.77,
       "benchmark": 29244.32,
       "bench_60_40": 29244.32,
       "bench_ew": 30806.96,
-      "bench_spy_ma": 18919.61,
+      "bench_spy_ma": 18919.62,
       "regime": "BULL",
       "weights": {
         "XLE": 0.333,
@@ -7013,11 +7013,11 @@
     },
     {
       "date": "2024-04-21",
-      "strategy": 32525.04,
+      "strategy": 32525.06,
       "benchmark": 30018.01,
       "bench_60_40": 30018.01,
-      "bench_ew": 31278.67,
-      "bench_spy_ma": 19420.15,
+      "bench_ew": 31278.66,
+      "bench_spy_ma": 19420.16,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -7026,11 +7026,11 @@
     },
     {
       "date": "2024-04-28",
-      "strategy": 31711.81,
-      "benchmark": 30196.97,
-      "bench_60_40": 30196.97,
-      "bench_ew": 31273.04,
-      "bench_spy_ma": 19535.92,
+      "strategy": 31711.83,
+      "benchmark": 30196.96,
+      "bench_60_40": 30196.96,
+      "bench_ew": 31273.03,
+      "bench_spy_ma": 19535.93,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -7039,11 +7039,11 @@
     },
     {
       "date": "2024-05-05",
-      "strategy": 32520.47,
+      "strategy": 32520.49,
       "benchmark": 30760.99,
       "bench_60_40": 30760.99,
-      "bench_ew": 31906.72,
-      "bench_spy_ma": 19900.82,
+      "bench_ew": 31906.71,
+      "bench_spy_ma": 19900.83,
       "regime": "BULL",
       "weights": {
         "GLD": 1.0
@@ -7051,11 +7051,11 @@
     },
     {
       "date": "2024-05-12",
-      "strategy": 33458.85,
+      "strategy": 33458.87,
       "benchmark": 31269.5,
       "bench_60_40": 31269.5,
       "bench_ew": 32556.62,
-      "bench_spy_ma": 20229.8,
+      "bench_spy_ma": 20229.81,
       "regime": "BULL",
       "weights": {
         "GLD": 0.444,
@@ -7064,11 +7064,11 @@
     },
     {
       "date": "2024-05-19",
-      "strategy": 33140.93,
-      "benchmark": 31268.91,
-      "bench_60_40": 31268.91,
-      "bench_ew": 32329.56,
-      "bench_spy_ma": 20229.42,
+      "strategy": 33140.95,
+      "benchmark": 31268.9,
+      "bench_60_40": 31268.9,
+      "bench_ew": 32329.55,
+      "bench_spy_ma": 20229.43,
       "regime": "BULL",
       "weights": {
         "SPY": 0.286,
@@ -7079,10 +7079,10 @@
     },
     {
       "date": "2024-05-26",
-      "strategy": 32971.16,
-      "benchmark": 31146.66,
-      "bench_60_40": 31146.66,
-      "bench_ew": 32086.11,
+      "strategy": 32971.17,
+      "benchmark": 31146.65,
+      "bench_60_40": 31146.65,
+      "bench_ew": 32086.1,
       "bench_spy_ma": 20150.33,
       "regime": "BULL",
       "weights": {
@@ -7095,9 +7095,9 @@
     },
     {
       "date": "2024-06-02",
-      "strategy": 32550.71,
-      "benchmark": 31538.82,
-      "bench_60_40": 31538.82,
+      "strategy": 32550.72,
+      "benchmark": 31538.81,
+      "bench_60_40": 31538.81,
       "bench_ew": 32327.66,
       "bench_spy_ma": 20404.04,
       "regime": "BULL",
@@ -7110,11 +7110,11 @@
     },
     {
       "date": "2024-06-09",
-      "strategy": 32861.21,
-      "benchmark": 32056.78,
-      "bench_60_40": 32056.78,
+      "strategy": 32861.23,
+      "benchmark": 32056.77,
+      "bench_60_40": 32056.77,
       "bench_ew": 33092.72,
-      "bench_spy_ma": 20739.13,
+      "bench_spy_ma": 20739.14,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.2,
@@ -7124,11 +7124,11 @@
     },
     {
       "date": "2024-06-16",
-      "strategy": 32540.16,
+      "strategy": 32540.18,
       "benchmark": 32262.69,
       "bench_60_40": 32262.69,
       "bench_ew": 33137.79,
-      "bench_spy_ma": 20872.34,
+      "bench_spy_ma": 20872.35,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.229,
@@ -7139,11 +7139,11 @@
     },
     {
       "date": "2024-06-23",
-      "strategy": 32470.53,
+      "strategy": 32470.55,
       "benchmark": 32245.51,
       "bench_60_40": 32245.51,
       "bench_ew": 33136.64,
-      "bench_spy_ma": 20861.23,
+      "bench_spy_ma": 20861.24,
       "regime": "BULL",
       "weights": {
         "SPY": 0.371,
@@ -7153,11 +7153,11 @@
     },
     {
       "date": "2024-06-30",
-      "strategy": 33013.94,
+      "strategy": 33013.96,
       "benchmark": 32862.91,
       "bench_60_40": 32862.91,
       "bench_ew": 34045.33,
-      "bench_spy_ma": 21260.65,
+      "bench_spy_ma": 21260.67,
       "regime": "BULL",
       "weights": {
         "SPY": 0.393,
@@ -7167,11 +7167,11 @@
     },
     {
       "date": "2024-07-07",
-      "strategy": 33101.32,
+      "strategy": 33101.33,
       "benchmark": 33179.9,
       "bench_60_40": 33179.9,
-      "bench_ew": 34236.13,
-      "bench_spy_ma": 21465.73,
+      "bench_ew": 34236.12,
+      "bench_spy_ma": 21465.74,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -7180,11 +7180,11 @@
     },
     {
       "date": "2024-07-14",
-      "strategy": 32563.14,
+      "strategy": 32563.16,
       "benchmark": 32528.14,
       "bench_60_40": 32528.14,
-      "bench_ew": 33489.8,
-      "bench_spy_ma": 21044.07,
+      "bench_ew": 33489.79,
+      "bench_spy_ma": 21044.09,
       "regime": "BULL",
       "weights": {
         "SPY": 0.223,
@@ -7195,11 +7195,11 @@
     },
     {
       "date": "2024-07-21",
-      "strategy": 32482.32,
+      "strategy": 32482.34,
       "benchmark": 32258.55,
       "bench_60_40": 32258.55,
-      "bench_ew": 33053.68,
-      "bench_spy_ma": 20869.66,
+      "bench_ew": 33053.67,
+      "bench_spy_ma": 20869.68,
       "regime": "BULL",
       "weights": {
         "SPY": 0.305,
@@ -7210,11 +7210,11 @@
     },
     {
       "date": "2024-07-28",
-      "strategy": 32337.97,
-      "benchmark": 31574.8,
-      "bench_60_40": 31574.8,
+      "strategy": 32337.99,
+      "benchmark": 31574.79,
+      "bench_60_40": 31574.79,
       "bench_ew": 32716.94,
-      "bench_spy_ma": 20427.31,
+      "bench_spy_ma": 20427.32,
       "regime": "BULL",
       "weights": {
         "XLE": 0.3,
@@ -7224,7 +7224,7 @@
     },
     {
       "date": "2024-08-04",
-      "strategy": 32158.58,
+      "strategy": 32158.6,
       "benchmark": 31580.12,
       "bench_60_40": 31580.12,
       "bench_ew": 32721.37,
@@ -7237,10 +7237,10 @@
     },
     {
       "date": "2024-08-11",
-      "strategy": 33174.38,
-      "benchmark": 32843.36,
-      "bench_60_40": 32843.36,
-      "bench_ew": 34114.75,
+      "strategy": 33174.39,
+      "benchmark": 32843.35,
+      "bench_60_40": 32843.35,
+      "bench_ew": 34114.74,
       "bench_spy_ma": 21248.01,
       "regime": "BULL",
       "weights": {
@@ -7249,11 +7249,11 @@
     },
     {
       "date": "2024-08-18",
-      "strategy": 33406.71,
-      "benchmark": 33306.7,
-      "bench_60_40": 33306.7,
-      "bench_ew": 34395.62,
-      "bench_spy_ma": 21547.76,
+      "strategy": 33406.72,
+      "benchmark": 33306.69,
+      "bench_60_40": 33306.69,
+      "bench_ew": 34395.61,
+      "bench_spy_ma": 21547.77,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -7262,11 +7262,11 @@
     },
     {
       "date": "2024-08-25",
-      "strategy": 33542.19,
-      "benchmark": 33398.54,
-      "bench_60_40": 33398.54,
-      "bench_ew": 34302.07,
-      "bench_spy_ma": 21607.18,
+      "strategy": 33542.2,
+      "benchmark": 33398.53,
+      "bench_60_40": 33398.53,
+      "bench_ew": 34302.06,
+      "bench_spy_ma": 21607.19,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -7275,11 +7275,11 @@
     },
     {
       "date": "2024-09-01",
-      "strategy": 33147.61,
-      "benchmark": 32016.81,
-      "bench_60_40": 32016.81,
-      "bench_ew": 33134.28,
-      "bench_spy_ma": 20713.27,
+      "strategy": 33147.62,
+      "benchmark": 32016.8,
+      "bench_60_40": 32016.8,
+      "bench_ew": 33134.27,
+      "bench_spy_ma": 20713.28,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -7288,11 +7288,11 @@
     },
     {
       "date": "2024-09-08",
-      "strategy": 33964.03,
-      "benchmark": 33299.58,
-      "bench_60_40": 33299.58,
+      "strategy": 33964.04,
+      "benchmark": 33299.59,
+      "bench_60_40": 33299.59,
       "bench_ew": 34618.31,
-      "bench_spy_ma": 21543.16,
+      "bench_spy_ma": 21543.18,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -7301,11 +7301,11 @@
     },
     {
       "date": "2024-09-15",
-      "strategy": 34119.49,
+      "strategy": 34119.5,
       "benchmark": 33772.58,
       "bench_60_40": 33772.58,
       "bench_ew": 35125.24,
-      "bench_spy_ma": 21849.17,
+      "bench_spy_ma": 21849.18,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -7314,11 +7314,11 @@
     },
     {
       "date": "2024-09-22",
-      "strategy": 34654.81,
-      "benchmark": 33963.96,
-      "bench_60_40": 33963.96,
-      "bench_ew": 35448.63,
-      "bench_spy_ma": 21972.98,
+      "strategy": 34654.83,
+      "benchmark": 33963.95,
+      "bench_60_40": 33963.95,
+      "bench_ew": 35448.62,
+      "bench_spy_ma": 21972.99,
       "regime": "BULL",
       "weights": {
         "SPY": 0.19,
@@ -7330,11 +7330,11 @@
     },
     {
       "date": "2024-09-29",
-      "strategy": 34594.3,
-      "benchmark": 34053.7,
-      "bench_60_40": 34053.7,
+      "strategy": 34594.31,
+      "benchmark": 34053.69,
+      "bench_60_40": 34053.69,
       "bench_ew": 35492.72,
-      "bench_spy_ma": 22031.04,
+      "bench_spy_ma": 22031.05,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.153,
@@ -7346,11 +7346,11 @@
     },
     {
       "date": "2024-10-06",
-      "strategy": 34702.24,
-      "benchmark": 34445.96,
-      "bench_60_40": 34445.96,
+      "strategy": 34702.26,
+      "benchmark": 34445.95,
+      "bench_60_40": 34445.95,
       "bench_ew": 35798.33,
-      "bench_spy_ma": 22284.81,
+      "bench_spy_ma": 22284.82,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.161,
@@ -7363,11 +7363,11 @@
     },
     {
       "date": "2024-10-13",
-      "strategy": 35392.74,
-      "benchmark": 34743.72,
-      "bench_60_40": 34743.72,
-      "bench_ew": 36210.28,
-      "bench_spy_ma": 22477.44,
+      "strategy": 35392.75,
+      "benchmark": 34743.71,
+      "bench_60_40": 34743.71,
+      "bench_ew": 36210.27,
+      "bench_spy_ma": 22477.45,
       "regime": "BULL",
       "weights": {
         "SPY": 0.322,
@@ -7379,11 +7379,11 @@
     },
     {
       "date": "2024-10-20",
-      "strategy": 34817.49,
-      "benchmark": 34413.86,
-      "bench_60_40": 34413.86,
-      "bench_ew": 36214.91,
-      "bench_spy_ma": 22264.04,
+      "strategy": 34817.5,
+      "benchmark": 34413.85,
+      "bench_60_40": 34413.85,
+      "bench_ew": 36214.9,
+      "bench_spy_ma": 22264.05,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.118,
@@ -7397,11 +7397,11 @@
     },
     {
       "date": "2024-10-27",
-      "strategy": 34439.74,
+      "strategy": 34439.75,
       "benchmark": 33938.4,
       "bench_60_40": 33938.4,
       "bench_ew": 35815.33,
-      "bench_spy_ma": 21956.44,
+      "bench_spy_ma": 21956.45,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.194,
@@ -7414,11 +7414,11 @@
     },
     {
       "date": "2024-11-03",
-      "strategy": 36078.81,
-      "benchmark": 35552.0,
-      "bench_60_40": 35552.0,
-      "bench_ew": 36823.88,
-      "bench_spy_ma": 23000.36,
+      "strategy": 36078.82,
+      "benchmark": 35551.99,
+      "bench_60_40": 35551.99,
+      "bench_ew": 36823.87,
+      "bench_spy_ma": 23000.37,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.291,
@@ -7428,11 +7428,11 @@
     },
     {
       "date": "2024-11-10",
-      "strategy": 36111.21,
+      "strategy": 36111.22,
       "benchmark": 34812.66,
       "bench_60_40": 34812.66,
       "bench_ew": 35586.3,
-      "bench_spy_ma": 22522.05,
+      "bench_spy_ma": 22522.06,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.108,
@@ -7444,11 +7444,11 @@
     },
     {
       "date": "2024-11-17",
-      "strategy": 37260.58,
-      "benchmark": 35392.72,
-      "bench_60_40": 35392.72,
-      "bench_ew": 36668.53,
-      "bench_spy_ma": 22897.31,
+      "strategy": 37260.59,
+      "benchmark": 35392.71,
+      "bench_60_40": 35392.71,
+      "bench_ew": 36668.52,
+      "bench_spy_ma": 22897.32,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.09,
@@ -7460,11 +7460,11 @@
     },
     {
       "date": "2024-11-24",
-      "strategy": 37304.74,
-      "benchmark": 35811.13,
-      "bench_60_40": 35811.13,
-      "bench_ew": 36700.56,
-      "bench_spy_ma": 23168.0,
+      "strategy": 37304.75,
+      "benchmark": 35811.12,
+      "bench_60_40": 35811.12,
+      "bench_ew": 36700.55,
+      "bench_spy_ma": 23168.01,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.085,
@@ -7476,11 +7476,11 @@
     },
     {
       "date": "2024-12-01",
-      "strategy": 37170.61,
-      "benchmark": 36123.75,
-      "bench_60_40": 36123.75,
-      "bench_ew": 37077.6,
-      "bench_spy_ma": 23370.25,
+      "strategy": 37170.62,
+      "benchmark": 36123.74,
+      "bench_60_40": 36123.74,
+      "bench_ew": 37077.59,
+      "bench_spy_ma": 23370.26,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.078,
@@ -7492,11 +7492,11 @@
     },
     {
       "date": "2024-12-08",
-      "strategy": 37284.82,
+      "strategy": 37284.84,
       "benchmark": 35909.78,
       "bench_60_40": 35909.78,
-      "bench_ew": 37167.64,
-      "bench_spy_ma": 23231.83,
+      "bench_ew": 37167.63,
+      "bench_spy_ma": 23231.84,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.169,
@@ -7507,11 +7507,11 @@
     },
     {
       "date": "2024-12-15",
-      "strategy": 35802.8,
-      "benchmark": 35251.85,
-      "bench_60_40": 35251.85,
+      "strategy": 35802.81,
+      "benchmark": 35251.84,
+      "bench_60_40": 35251.84,
       "bench_ew": 36552.38,
-      "bench_spy_ma": 22806.18,
+      "bench_spy_ma": 22806.19,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.165,
@@ -7522,11 +7522,11 @@
     },
     {
       "date": "2024-12-22",
-      "strategy": 35698.89,
-      "benchmark": 35482.03,
-      "bench_60_40": 35482.03,
+      "strategy": 35698.9,
+      "benchmark": 35482.02,
+      "bench_60_40": 35482.02,
       "bench_ew": 36708.12,
-      "bench_spy_ma": 22955.09,
+      "bench_spy_ma": 22955.1,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.281,
@@ -7535,11 +7535,11 @@
     },
     {
       "date": "2024-12-29",
-      "strategy": 35380.71,
-      "benchmark": 35299.55,
-      "bench_60_40": 35299.55,
-      "bench_ew": 36657.94,
-      "bench_spy_ma": 22837.04,
+      "strategy": 35380.72,
+      "benchmark": 35299.54,
+      "bench_60_40": 35299.54,
+      "bench_ew": 36657.93,
+      "bench_spy_ma": 22837.05,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.978
@@ -7547,40 +7547,40 @@
     },
     {
       "date": "2025-01-05",
-      "strategy": 35328.82,
-      "benchmark": 34616.16,
-      "bench_60_40": 34616.16,
-      "bench_ew": 36389.86,
+      "strategy": 35328.84,
+      "benchmark": 34616.15,
+      "bench_60_40": 34616.15,
+      "bench_ew": 36389.85,
       "bench_spy_ma": 22394.92,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2025-01-12",
-      "strategy": 35328.82,
+      "strategy": 35328.84,
       "benchmark": 35635.28,
       "bench_60_40": 35635.28,
-      "bench_ew": 37146.76,
-      "bench_spy_ma": 23054.24,
+      "bench_ew": 37146.75,
+      "bench_spy_ma": 23054.25,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2025-01-19",
-      "strategy": 35328.82,
+      "strategy": 35328.84,
       "benchmark": 36254.86,
       "bench_60_40": 36254.86,
       "bench_ew": 37866.21,
-      "bench_spy_ma": 23455.08,
+      "bench_spy_ma": 23455.09,
       "regime": "BULL",
       "weights": {}
     },
     {
       "date": "2025-01-26",
-      "strategy": 34967.04,
-      "benchmark": 35888.12,
-      "bench_60_40": 35888.12,
-      "bench_ew": 37707.28,
+      "strategy": 34967.05,
+      "benchmark": 35888.11,
+      "bench_60_40": 35888.11,
+      "bench_ew": 37707.27,
       "bench_spy_ma": 23217.82,
       "regime": "BULL",
       "weights": {
@@ -7591,11 +7591,11 @@
     },
     {
       "date": "2025-02-02",
-      "strategy": 35182.66,
+      "strategy": 35182.67,
       "benchmark": 35825.51,
       "bench_60_40": 35825.51,
       "bench_ew": 37960.1,
-      "bench_spy_ma": 23177.31,
+      "bench_spy_ma": 23177.32,
       "regime": "BULL",
       "weights": {
         "SPY": 0.353,
@@ -7605,11 +7605,11 @@
     },
     {
       "date": "2025-02-09",
-      "strategy": 35397.59,
-      "benchmark": 36358.03,
-      "bench_60_40": 36358.03,
-      "bench_ew": 38631.31,
-      "bench_spy_ma": 23521.82,
+      "strategy": 35397.6,
+      "benchmark": 36358.02,
+      "bench_60_40": 36358.02,
+      "bench_ew": 38631.3,
+      "bench_spy_ma": 23521.83,
       "regime": "BULL",
       "weights": {
         "SPY": 0.353,
@@ -7619,9 +7619,9 @@
     },
     {
       "date": "2025-02-16",
-      "strategy": 35396.29,
-      "benchmark": 35776.01,
-      "bench_60_40": 35776.01,
+      "strategy": 35396.3,
+      "benchmark": 35776.0,
+      "bench_60_40": 35776.0,
       "bench_ew": 38351.54,
       "bench_spy_ma": 23145.29,
       "regime": "BULL",
@@ -7634,11 +7634,11 @@
     },
     {
       "date": "2025-02-23",
-      "strategy": 34779.67,
-      "benchmark": 35432.53,
-      "bench_60_40": 35432.53,
+      "strategy": 34779.68,
+      "benchmark": 35432.52,
+      "bench_60_40": 35432.52,
       "bench_ew": 37440.87,
-      "bench_spy_ma": 22923.07,
+      "bench_spy_ma": 22923.08,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.311,
@@ -7648,11 +7648,11 @@
     },
     {
       "date": "2025-03-02",
-      "strategy": 35126.32,
-      "benchmark": 34343.64,
-      "bench_60_40": 34343.64,
-      "bench_ew": 36897.77,
-      "bench_spy_ma": 22218.61,
+      "strategy": 35126.33,
+      "benchmark": 34343.63,
+      "bench_60_40": 34343.63,
+      "bench_ew": 36897.76,
+      "bench_spy_ma": 22218.62,
       "regime": "BULL",
       "weights": {
         "XLV": 0.5,
@@ -7661,11 +7661,11 @@
     },
     {
       "date": "2025-03-09",
-      "strategy": 35069.3,
-      "benchmark": 33561.85,
-      "bench_60_40": 33561.85,
-      "bench_ew": 36628.34,
-      "bench_spy_ma": 22218.61,
+      "strategy": 35069.31,
+      "benchmark": 33561.84,
+      "bench_60_40": 33561.84,
+      "bench_ew": 36628.33,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "XLV": 0.2,
@@ -7674,11 +7674,11 @@
     },
     {
       "date": "2025-03-16",
-      "strategy": 35213.89,
-      "benchmark": 33732.79,
-      "bench_60_40": 33732.79,
-      "bench_ew": 36864.73,
-      "bench_spy_ma": 22218.61,
+      "strategy": 35213.9,
+      "benchmark": 33732.78,
+      "bench_60_40": 33732.78,
+      "bench_ew": 36864.72,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -7686,11 +7686,11 @@
     },
     {
       "date": "2025-03-23",
-      "strategy": 35523.31,
-      "benchmark": 33235.16,
-      "bench_60_40": 33235.16,
+      "strategy": 35523.32,
+      "benchmark": 33235.15,
+      "bench_60_40": 33235.15,
       "bench_ew": 36642.98,
-      "bench_spy_ma": 22218.61,
+      "bench_spy_ma": 22218.62,
       "regime": "NEUTRAL",
       "weights": {
         "XLE": 0.35,
@@ -7699,11 +7699,11 @@
     },
     {
       "date": "2025-03-30",
-      "strategy": 33494.54,
-      "benchmark": 30221.83,
-      "bench_60_40": 30221.83,
-      "bench_ew": 34143.75,
-      "bench_spy_ma": 22218.61,
+      "strategy": 33494.55,
+      "benchmark": 30221.82,
+      "bench_60_40": 30221.82,
+      "bench_ew": 34143.74,
+      "bench_spy_ma": 22218.62,
       "regime": "NEUTRAL",
       "weights": {
         "XLE": 0.35,
@@ -7712,11 +7712,11 @@
     },
     {
       "date": "2025-04-06",
-      "strategy": 34346.65,
-      "benchmark": 31936.04,
-      "bench_60_40": 31936.04,
-      "bench_ew": 36384.63,
-      "bench_spy_ma": 22218.61,
+      "strategy": 34346.67,
+      "benchmark": 31936.03,
+      "bench_60_40": 31936.03,
+      "bench_ew": 36384.62,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -7724,11 +7724,11 @@
     },
     {
       "date": "2025-04-13",
-      "strategy": 34523.76,
+      "strategy": 34523.77,
       "benchmark": 31485.65,
       "bench_60_40": 31485.65,
       "bench_ew": 36272.07,
-      "bench_spy_ma": 22218.61,
+      "bench_spy_ma": 22218.62,
       "regime": "CRISIS",
       "weights": {
         "BTC-USD": 0.067,
@@ -7738,11 +7738,11 @@
     },
     {
       "date": "2025-04-20",
-      "strategy": 34444.66,
-      "benchmark": 32934.9,
-      "bench_60_40": 32934.9,
+      "strategy": 34444.67,
+      "benchmark": 32934.89,
+      "bench_60_40": 32934.89,
       "bench_ew": 37548.52,
-      "bench_spy_ma": 22218.61,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "GLD": 0.4
@@ -7750,11 +7750,11 @@
     },
     {
       "date": "2025-04-27",
-      "strategy": 34312.63,
-      "benchmark": 33899.07,
-      "bench_60_40": 33899.07,
-      "bench_ew": 38068.62,
-      "bench_spy_ma": 22218.61,
+      "strategy": 34312.64,
+      "benchmark": 33899.06,
+      "bench_60_40": 33899.06,
+      "bench_ew": 38068.61,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.2,
@@ -7763,11 +7763,11 @@
     },
     {
       "date": "2025-05-04",
-      "strategy": 35202.93,
-      "benchmark": 33754.33,
-      "bench_60_40": 33754.33,
+      "strategy": 35202.94,
+      "benchmark": 33754.32,
+      "bench_60_40": 33754.32,
       "bench_ew": 38369.41,
-      "bench_spy_ma": 22218.61,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.16,
@@ -7777,11 +7777,11 @@
     },
     {
       "date": "2025-05-11",
-      "strategy": 35180.17,
+      "strategy": 35180.18,
       "benchmark": 35540.31,
       "bench_60_40": 35540.31,
       "bench_ew": 39400.03,
-      "bench_spy_ma": 22218.61,
+      "bench_spy_ma": 22218.62,
       "regime": "BEAR",
       "weights": {
         "BTC-USD": 0.107,
@@ -7792,11 +7792,11 @@
     },
     {
       "date": "2025-05-18",
-      "strategy": 36071.87,
-      "benchmark": 34637.75,
-      "bench_60_40": 34637.75,
-      "bench_ew": 39449.79,
-      "bench_spy_ma": 21654.36,
+      "strategy": 36071.88,
+      "benchmark": 34637.74,
+      "bench_60_40": 34637.74,
+      "bench_ew": 39449.78,
+      "bench_spy_ma": 21654.37,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.076,
@@ -7808,11 +7808,11 @@
     },
     {
       "date": "2025-05-25",
-      "strategy": 36149.73,
-      "benchmark": 35252.62,
-      "bench_60_40": 35252.62,
+      "strategy": 36149.74,
+      "benchmark": 35252.61,
+      "bench_60_40": 35252.61,
       "bench_ew": 39677.0,
-      "bench_spy_ma": 21654.36,
+      "bench_spy_ma": 21654.37,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.087,
@@ -7824,11 +7824,11 @@
     },
     {
       "date": "2025-06-01",
-      "strategy": 36554.14,
+      "strategy": 36554.15,
       "benchmark": 35835.78,
       "bench_60_40": 35835.78,
-      "bench_ew": 40240.03,
-      "bench_spy_ma": 22012.57,
+      "bench_ew": 40240.02,
+      "bench_spy_ma": 22012.58,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.09,
@@ -7840,11 +7840,11 @@
     },
     {
       "date": "2025-06-08",
-      "strategy": 36931.57,
-      "benchmark": 35707.79,
-      "bench_60_40": 35707.79,
+      "strategy": 36931.58,
+      "benchmark": 35707.78,
+      "bench_60_40": 35707.78,
       "bench_ew": 40605.51,
-      "bench_spy_ma": 21933.95,
+      "bench_spy_ma": 21933.96,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.089,
@@ -7856,11 +7856,11 @@
     },
     {
       "date": "2025-06-15",
-      "strategy": 36498.96,
+      "strategy": 36498.98,
       "benchmark": 35650.18,
       "bench_60_40": 35650.18,
       "bench_ew": 40316.72,
-      "bench_spy_ma": 21898.57,
+      "bench_spy_ma": 21898.58,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.136,
@@ -7874,11 +7874,11 @@
     },
     {
       "date": "2025-06-22",
-      "strategy": 37117.77,
-      "benchmark": 36887.75,
-      "bench_60_40": 36887.75,
+      "strategy": 37117.79,
+      "benchmark": 36887.74,
+      "bench_60_40": 36887.74,
       "bench_ew": 40955.17,
-      "bench_spy_ma": 22658.75,
+      "bench_spy_ma": 22658.77,
       "regime": "BULL",
       "weights": {
         "SPY": 0.256,
@@ -7890,11 +7890,11 @@
     },
     {
       "date": "2025-06-29",
-      "strategy": 37570.35,
-      "benchmark": 37513.44,
-      "bench_60_40": 37513.44,
+      "strategy": 37570.36,
+      "benchmark": 37513.43,
+      "bench_60_40": 37513.43,
       "bench_ew": 41657.53,
-      "bench_spy_ma": 23043.09,
+      "bench_spy_ma": 23043.11,
       "regime": "BULL",
       "weights": {
         "SPY": 0.295,
@@ -7905,11 +7905,11 @@
     },
     {
       "date": "2025-07-06",
-      "strategy": 37596.27,
-      "benchmark": 37410.26,
-      "bench_60_40": 37410.26,
-      "bench_ew": 41659.33,
-      "bench_spy_ma": 22979.71,
+      "strategy": 37596.28,
+      "benchmark": 37410.25,
+      "bench_60_40": 37410.25,
+      "bench_ew": 41659.32,
+      "bench_spy_ma": 22979.72,
       "regime": "BULL",
       "weights": {
         "SPY": 0.239,
@@ -7921,11 +7921,11 @@
     },
     {
       "date": "2025-07-13",
-      "strategy": 38303.77,
-      "benchmark": 37647.81,
-      "bench_60_40": 37647.81,
+      "strategy": 38303.79,
+      "benchmark": 37647.8,
+      "bench_60_40": 37647.8,
       "bench_ew": 41890.72,
-      "bench_spy_ma": 23125.63,
+      "bench_spy_ma": 23125.64,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.124,
@@ -7939,11 +7939,11 @@
     },
     {
       "date": "2025-07-20",
-      "strategy": 38897.7,
-      "benchmark": 38218.9,
-      "bench_60_40": 38218.9,
+      "strategy": 38897.71,
+      "benchmark": 38218.89,
+      "bench_60_40": 38218.89,
       "bench_ew": 42184.84,
-      "bench_spy_ma": 23476.43,
+      "bench_spy_ma": 23476.44,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.135,
@@ -7955,11 +7955,11 @@
     },
     {
       "date": "2025-07-27",
-      "strategy": 37180.96,
+      "strategy": 37180.97,
       "benchmark": 37296.27,
       "bench_60_40": 37296.27,
       "bench_ew": 41613.51,
-      "bench_spy_ma": 22909.69,
+      "bench_spy_ma": 22909.71,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.138,
@@ -7971,11 +7971,11 @@
     },
     {
       "date": "2025-08-03",
-      "strategy": 38922.1,
+      "strategy": 38922.12,
       "benchmark": 38223.7,
       "bench_60_40": 38223.7,
-      "bench_ew": 42652.9,
-      "bench_spy_ma": 23479.38,
+      "bench_ew": 42652.89,
+      "bench_spy_ma": 23479.39,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.25,
@@ -7986,11 +7986,11 @@
     },
     {
       "date": "2025-08-10",
-      "strategy": 39076.69,
+      "strategy": 39076.7,
       "benchmark": 38599.23,
       "bench_60_40": 38599.23,
-      "bench_ew": 42606.38,
-      "bench_spy_ma": 23710.05,
+      "bench_ew": 42606.37,
+      "bench_spy_ma": 23710.07,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.269,
@@ -8001,11 +8001,11 @@
     },
     {
       "date": "2025-08-17",
-      "strategy": 38862.08,
-      "benchmark": 38711.41,
-      "bench_60_40": 38711.41,
-      "bench_ew": 42661.08,
-      "bench_spy_ma": 23778.96,
+      "strategy": 38862.09,
+      "benchmark": 38711.4,
+      "bench_60_40": 38711.4,
+      "bench_ew": 42661.07,
+      "bench_spy_ma": 23778.98,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.227,
@@ -8016,11 +8016,11 @@
     },
     {
       "date": "2025-08-24",
-      "strategy": 38087.72,
+      "strategy": 38087.73,
       "benchmark": 38695.81,
       "bench_60_40": 38695.81,
       "bench_ew": 42959.25,
-      "bench_spy_ma": 23769.38,
+      "bench_spy_ma": 23769.39,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.207,
@@ -8030,11 +8030,11 @@
     },
     {
       "date": "2025-08-31",
-      "strategy": 38114.46,
-      "benchmark": 38827.19,
-      "bench_60_40": 38827.19,
-      "bench_ew": 43734.33,
-      "bench_spy_ma": 23850.08,
+      "strategy": 38114.47,
+      "benchmark": 38827.18,
+      "bench_60_40": 38827.18,
+      "bench_ew": 43734.32,
+      "bench_spy_ma": 23850.09,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.071,
@@ -8046,11 +8046,11 @@
     },
     {
       "date": "2025-09-07",
-      "strategy": 38786.35,
+      "strategy": 38786.37,
       "benchmark": 39437.27,
       "bench_60_40": 39437.27,
       "bench_ew": 44424.08,
-      "bench_spy_ma": 24224.83,
+      "bench_spy_ma": 24224.84,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.09,
@@ -8062,11 +8062,11 @@
     },
     {
       "date": "2025-09-14",
-      "strategy": 39766.7,
-      "benchmark": 39924.99,
-      "bench_60_40": 39924.99,
-      "bench_ew": 45093.52,
-      "bench_spy_ma": 24524.42,
+      "strategy": 39766.71,
+      "benchmark": 39924.98,
+      "bench_60_40": 39924.98,
+      "bench_ew": 45093.51,
+      "bench_spy_ma": 24524.43,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.113,
@@ -8080,11 +8080,11 @@
     },
     {
       "date": "2025-09-21",
-      "strategy": 39426.08,
-      "benchmark": 39811.9,
-      "bench_60_40": 39811.9,
+      "strategy": 39426.1,
+      "benchmark": 39811.89,
+      "bench_60_40": 39811.89,
       "bench_ew": 45318.53,
-      "bench_spy_ma": 24454.95,
+      "bench_spy_ma": 24454.97,
       "regime": "BULL",
       "weights": {
         "ETH-USD": 0.151,
@@ -8098,11 +8098,11 @@
     },
     {
       "date": "2025-09-28",
-      "strategy": 39799.84,
-      "benchmark": 40256.45,
-      "bench_60_40": 40256.45,
-      "bench_ew": 46144.84,
-      "bench_spy_ma": 24728.02,
+      "strategy": 39799.85,
+      "benchmark": 40256.44,
+      "bench_60_40": 40256.44,
+      "bench_ew": 46144.83,
+      "bench_spy_ma": 24728.03,
       "regime": "BULL",
       "weights": {
         "SPY": 0.299,
@@ -8114,11 +8114,11 @@
     },
     {
       "date": "2025-10-05",
-      "strategy": 38837.47,
-      "benchmark": 39282.53,
-      "bench_60_40": 39282.53,
-      "bench_ew": 45917.6,
-      "bench_spy_ma": 24129.78,
+      "strategy": 38837.48,
+      "benchmark": 39282.52,
+      "bench_60_40": 39282.52,
+      "bench_ew": 45917.59,
+      "bench_spy_ma": 24129.79,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.228,
@@ -8132,11 +8132,11 @@
     },
     {
       "date": "2025-10-12",
-      "strategy": 39922.88,
-      "benchmark": 39966.5,
-      "bench_60_40": 39966.5,
+      "strategy": 39922.89,
+      "benchmark": 39966.49,
+      "bench_60_40": 39966.49,
       "bench_ew": 47382.68,
-      "bench_spy_ma": 24549.91,
+      "bench_spy_ma": 24549.93,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.365,
@@ -8147,11 +8147,11 @@
     },
     {
       "date": "2025-10-19",
-      "strategy": 39891.85,
-      "benchmark": 40740.09,
-      "bench_60_40": 40740.09,
-      "bench_ew": 47567.11,
-      "bench_spy_ma": 25025.1,
+      "strategy": 39891.86,
+      "benchmark": 40740.08,
+      "bench_60_40": 40740.08,
+      "bench_ew": 47567.1,
+      "bench_spy_ma": 25025.12,
       "regime": "BULL",
       "weights": {
         "QQQ": 0.395,
@@ -8162,11 +8162,11 @@
     },
     {
       "date": "2025-10-26",
-      "strategy": 39650.53,
-      "benchmark": 41029.44,
-      "bench_60_40": 41029.44,
-      "bench_ew": 47592.48,
-      "bench_spy_ma": 25202.84,
+      "strategy": 39650.54,
+      "benchmark": 41029.43,
+      "bench_60_40": 41029.43,
+      "bench_ew": 47592.47,
+      "bench_spy_ma": 25202.85,
       "regime": "BULL",
       "weights": {
         "SPY": 0.231,
@@ -8177,11 +8177,11 @@
     },
     {
       "date": "2025-11-02",
-      "strategy": 39351.83,
+      "strategy": 39351.84,
       "benchmark": 40362.31,
       "bench_60_40": 40362.31,
-      "bench_ew": 46855.25,
-      "bench_spy_ma": 24793.05,
+      "bench_ew": 46855.24,
+      "bench_spy_ma": 24793.06,
       "regime": "BULL",
       "weights": {
         "SPY": 0.208,
@@ -8192,11 +8192,11 @@
     },
     {
       "date": "2025-11-09",
-      "strategy": 39798.37,
-      "benchmark": 40420.07,
-      "bench_60_40": 40420.07,
-      "bench_ew": 47179.46,
-      "bench_spy_ma": 24828.53,
+      "strategy": 39798.38,
+      "benchmark": 40420.06,
+      "bench_60_40": 40420.06,
+      "bench_ew": 47179.45,
+      "bench_spy_ma": 24828.54,
       "regime": "BULL",
       "weights": {
         "SPY": 0.316,
@@ -8206,11 +8206,11 @@
     },
     {
       "date": "2025-11-16",
-      "strategy": 39122.59,
-      "benchmark": 39644.07,
-      "bench_60_40": 39644.07,
-      "bench_ew": 46321.51,
-      "bench_spy_ma": 24351.86,
+      "strategy": 39122.6,
+      "benchmark": 39644.06,
+      "bench_60_40": 39644.06,
+      "bench_ew": 46321.5,
+      "bench_spy_ma": 24351.87,
       "regime": "BULL",
       "weights": {
         "SPY": 0.402,
@@ -8220,11 +8220,11 @@
     },
     {
       "date": "2025-11-23",
-      "strategy": 39685.31,
+      "strategy": 39685.32,
       "benchmark": 41109.44,
       "bench_60_40": 41109.44,
       "bench_ew": 48217.28,
-      "bench_spy_ma": 25251.98,
+      "bench_spy_ma": 25252.0,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -8233,11 +8233,11 @@
     },
     {
       "date": "2025-11-30",
-      "strategy": 39437.69,
-      "benchmark": 41247.8,
-      "bench_60_40": 41247.8,
+      "strategy": 39437.71,
+      "benchmark": 41247.79,
+      "bench_60_40": 41247.79,
       "bench_ew": 48373.4,
-      "bench_spy_ma": 25336.97,
+      "bench_spy_ma": 25336.99,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -8246,11 +8246,11 @@
     },
     {
       "date": "2025-12-07",
-      "strategy": 39364.57,
-      "benchmark": 41011.39,
-      "bench_60_40": 41011.39,
+      "strategy": 39364.58,
+      "benchmark": 41011.38,
+      "bench_60_40": 41011.38,
       "bench_ew": 48350.77,
-      "bench_spy_ma": 25191.75,
+      "bench_spy_ma": 25191.77,
       "regime": "BULL",
       "weights": {
         "XLE": 0.5,
@@ -8259,11 +8259,11 @@
     },
     {
       "date": "2025-12-14",
-      "strategy": 39050.15,
-      "benchmark": 41061.99,
-      "bench_60_40": 41061.99,
-      "bench_ew": 48606.66,
-      "bench_spy_ma": 25222.83,
+      "strategy": 39050.16,
+      "benchmark": 41061.98,
+      "bench_60_40": 41061.98,
+      "bench_ew": 48606.65,
+      "bench_spy_ma": 25222.85,
       "regime": "BULL",
       "weights": {
         "SPY": 0.4,
@@ -8273,11 +8273,11 @@
     },
     {
       "date": "2025-12-21",
-      "strategy": 40297.35,
-      "benchmark": 41648.42,
-      "bench_60_40": 41648.42,
+      "strategy": 40297.37,
+      "benchmark": 41648.41,
+      "bench_60_40": 41648.41,
       "bench_ew": 49758.28,
-      "bench_spy_ma": 25583.06,
+      "bench_spy_ma": 25583.07,
       "regime": "BULL",
       "weights": {
         "GLD": 0.758
@@ -8285,11 +8285,11 @@
     },
     {
       "date": "2025-12-28",
-      "strategy": 39150.6,
-      "benchmark": 41217.65,
-      "bench_60_40": 41217.65,
-      "bench_ew": 48565.71,
-      "bench_spy_ma": 25318.45,
+      "strategy": 39150.62,
+      "benchmark": 41217.64,
+      "bench_60_40": 41217.64,
+      "bench_ew": 48565.7,
+      "bench_spy_ma": 25318.46,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -8298,11 +8298,11 @@
     },
     {
       "date": "2026-01-04",
-      "strategy": 40258.66,
+      "strategy": 40258.67,
       "benchmark": 41875.27,
       "bench_60_40": 41875.27,
-      "bench_ew": 49839.3,
-      "bench_spy_ma": 25722.4,
+      "bench_ew": 49839.29,
+      "bench_spy_ma": 25722.42,
       "regime": "BULL",
       "weights": {
         "SPY": 0.5,
@@ -8311,11 +8311,11 @@
     },
     {
       "date": "2026-01-11",
-      "strategy": 40642.5,
-      "benchmark": 41729.87,
-      "bench_60_40": 41729.87,
+      "strategy": 40642.51,
+      "benchmark": 41729.86,
+      "bench_60_40": 41729.86,
       "bench_ew": 49912.08,
-      "bench_spy_ma": 25633.09,
+      "bench_spy_ma": 25633.1,
       "regime": "BULL",
       "weights": {
         "SPY": 0.385,
@@ -8327,11 +8327,11 @@
     },
     {
       "date": "2026-01-18",
-      "strategy": 40478.56,
-      "benchmark": 41583.26,
-      "bench_60_40": 41583.26,
+      "strategy": 40478.58,
+      "benchmark": 41583.25,
+      "bench_60_40": 41583.25,
       "bench_ew": 51342.46,
-      "bench_spy_ma": 25543.03,
+      "bench_spy_ma": 25543.05,
       "regime": "BULL",
       "weights": {
         "BTC-USD": 0.137,
@@ -8346,11 +8346,11 @@
     },
     {
       "date": "2026-01-25",
-      "strategy": 39914.28,
+      "strategy": 39914.3,
       "benchmark": 41748.57,
       "bench_60_40": 41748.57,
-      "bench_ew": 50899.5,
-      "bench_spy_ma": 25644.58,
+      "bench_ew": 50899.49,
+      "bench_spy_ma": 25644.59,
       "regime": "BULL",
       "weights": {
         "XLE": 0.2,
@@ -8361,11 +8361,11 @@
     },
     {
       "date": "2026-02-01",
-      "strategy": 39584.75,
+      "strategy": 39584.76,
       "benchmark": 41667.12,
       "bench_60_40": 41667.12,
-      "bench_ew": 50933.76,
-      "bench_spy_ma": 25594.55,
+      "bench_ew": 50933.75,
+      "bench_spy_ma": 25594.56,
       "regime": "BULL",
       "weights": {
         "SPY": 0.317,
@@ -8377,11 +8377,11 @@
     },
     {
       "date": "2026-02-08",
-      "strategy": 40017.65,
-      "benchmark": 41131.97,
-      "bench_60_40": 41131.97,
-      "bench_ew": 50767.33,
-      "bench_spy_ma": 25265.82,
+      "strategy": 40017.67,
+      "benchmark": 41131.96,
+      "bench_60_40": 41131.96,
+      "bench_ew": 50767.32,
+      "bench_spy_ma": 25265.84,
       "regime": "BULL",
       "weights": {
         "XLE": 0.354,
@@ -8390,11 +8390,11 @@
     },
     {
       "date": "2026-02-15",
-      "strategy": 40318.27,
-      "benchmark": 41595.33,
-      "bench_60_40": 41595.33,
-      "bench_ew": 51371.15,
-      "bench_spy_ma": 25550.45,
+      "strategy": 40318.29,
+      "benchmark": 41595.32,
+      "bench_60_40": 41595.32,
+      "bench_ew": 51371.14,
+      "bench_spy_ma": 25550.46,
       "regime": "BULL",
       "weights": {
         "XLE": 0.333,
@@ -8403,11 +8403,11 @@
     },
     {
       "date": "2026-02-22",
-      "strategy": 40998.83,
+      "strategy": 40998.85,
       "benchmark": 41387.78,
       "bench_60_40": 41387.78,
-      "bench_ew": 51795.82,
-      "bench_spy_ma": 25422.96,
+      "bench_ew": 51795.81,
+      "bench_spy_ma": 25422.97,
       "regime": "BULL",
       "weights": {
         "XLE": 0.33,
@@ -8416,11 +8416,11 @@
     },
     {
       "date": "2026-03-01",
-      "strategy": 40085.38,
+      "strategy": 40085.39,
       "benchmark": 40566.65,
       "bench_60_40": 40566.65,
       "bench_ew": 50873.44,
-      "bench_spy_ma": 24918.57,
+      "bench_spy_ma": 24918.58,
       "regime": "BULL",
       "weights": {
         "XLE": 0.3,
@@ -8430,11 +8430,11 @@
     },
     {
       "date": "2026-03-08",
-      "strategy": 39971.67,
+      "strategy": 39971.68,
       "benchmark": 39957.89,
       "bench_60_40": 39957.89,
-      "bench_ew": 49994.72,
-      "bench_spy_ma": 24544.63,
+      "bench_ew": 49994.71,
+      "bench_spy_ma": 24544.64,
       "regime": "BULL",
       "weights": {
         "XLE": 0.321,
@@ -8443,11 +8443,11 @@
     },
     {
       "date": "2026-03-15",
-      "strategy": 40911.01,
-      "benchmark": 39236.99,
-      "bench_60_40": 39236.99,
-      "bench_ew": 47650.53,
-      "bench_spy_ma": 24544.63,
+      "strategy": 40911.02,
+      "benchmark": 39236.98,
+      "bench_60_40": 39236.98,
+      "bench_ew": 47650.52,
+      "bench_spy_ma": 24544.64,
       "regime": "BULL",
       "weights": {
         "XLE": 0.89
@@ -8459,7 +8459,7 @@
       "cagr": 12.99,
       "total_return": 309.11,
       "volatility": 15.39,
-      "final_capital": 40911.01,
+      "final_capital": 40911.02,
       "years": 11.5,
       "cagr_bench": 12.58
     },
@@ -8518,7 +8518,7 @@
     "volatility": 15.39,
     "win_rate": 52.0,
     "total_return": 309.11,
-    "final_capital": 40911.01,
+    "final_capital": 40911.02,
     "years": 11.5,
     "ulcer_index": 11.598,
     "pain_index": 8.357,
@@ -8640,7 +8640,7 @@
     -1.334,
     4.13,
     1.225,
-    1.999,
+    2.0,
     3.165,
     0.928,
     3.162,
@@ -8667,11 +8667,11 @@
     2.138,
     3.912,
     1.32,
-    2.164,
+    2.165,
     -1.559,
     1.703,
     -1.038,
-    0.052,
+    0.051,
     0.999,
     1.687,
     -0.058,
@@ -8837,7 +8837,7 @@
     0.069,
     2.951,
     -4.068,
-    -3.015,
+    -3.016,
     -0.15,
     -0.0,
     -0.0,
@@ -9241,7 +9241,7 @@
     -19.28,
     -20.36,
     -17.07,
-    -16.06,
+    -16.05,
     -14.38,
     -11.67,
     -10.85,
@@ -10515,7 +10515,7 @@
     0.0,
     0.808,
     0.0072,
-    0.8009,
+    0.8008,
     0.0,
     0.0,
     0.8151,
@@ -10694,7 +10694,7 @@
     0.2383,
     0.0739,
     0.5641,
-    0.2895,
+    0.2896,
     0.4277,
     0.7866,
     0.6965,
@@ -10706,7 +10706,7 @@
     0.2696,
     0.3657,
     0.0783,
-    0.7245,
+    0.7244,
     0.8,
     1.0,
     1.0,
@@ -10940,7 +10940,7 @@
       "pct": 1.0
     },
     "BEAR": {
-      "count": 718,
+      "count": 719,
       "pct": 13.3
     },
     "NEUTRAL": {
@@ -10970,5 +10970,5 @@
     ],
     "start": "2010-01-01"
   },
-  "generated_at": "2026-03-25T13:42:54.159483"
+  "generated_at": "2026-03-26T13:48:51.057306"
 }

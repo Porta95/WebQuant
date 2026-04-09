@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-04-08",
+    "dominant": "QQQ",
+    "regime": "BULL",
+    "vix": 20.9,
+    "weights": {
+      "BTC-USD": 0.1023,
+      "ETH-USD": 0.0496,
+      "SPY": 0.1407,
+      "QQQ": 0.1473,
+      "XLE": 0.0965,
+      "XLV": 0.0,
+      "GLD": 0.0,
+      "URA": 0.0965
+    },
+    "quality": "ALTA",
+    "cash_pct": 0.367,
+    "buffett": {
+      "value": 213.4,
+      "phase": "MUY_CARO",
+      "mult": 0.8,
+      "yoy": 18.1
+    }
+  },
+  {
     "date": "2026-04-07",
     "dominant": "BTC-USD",
     "regime": "BEAR",

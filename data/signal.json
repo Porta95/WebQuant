@@ -1,115 +1,115 @@
 {
   "weights": {
-    "BTC-USD": 0.1603,
-    "ETH-USD": 0.0795,
-    "SPY": 0.0,
-    "QQQ": 0.0,
-    "XLE": 0.1603,
+    "BTC-USD": 0.1023,
+    "ETH-USD": 0.0496,
+    "SPY": 0.1407,
+    "QQQ": 0.1473,
+    "XLE": 0.0965,
     "XLV": 0.0,
     "GLD": 0.0,
-    "URA": 0.0
+    "URA": 0.0965
   },
   "phases": {
     "BTC-USD": {
       "phase": "OK",
-      "dist": 4.74,
-      "risk": 4.52,
-      "price": 71940.7,
-      "momentum": -39.58
+      "dist": 3.44,
+      "risk": 3.32,
+      "price": 71123.36,
+      "momentum": -40.67
     },
     "ETH-USD": {
-      "phase": "EXTENDED",
-      "dist": 9.12,
-      "risk": 8.36,
-      "price": 2241.81,
-      "momentum": -41.91
+      "phase": "OK",
+      "dist": 6.41,
+      "risk": 6.02,
+      "price": 2190.34,
+      "momentum": -43.87
     },
     "SPY": {
-      "phase": "BROKEN",
-      "dist": -1.04,
-      "risk": 1.05,
-      "price": 659.22,
-      "momentum": 4.72
+      "phase": "EARLY",
+      "dist": 1.49,
+      "risk": 1.47,
+      "price": 676.01,
+      "momentum": 4.59
     },
     "QQQ": {
-      "phase": "BROKEN",
-      "dist": -0.89,
-      "risk": 0.9,
-      "price": 588.59,
-      "momentum": 5.13
+      "phase": "EARLY",
+      "dist": 2.04,
+      "risk": 1.99,
+      "price": 606.09,
+      "momentum": 4.66
     },
     "XLE": {
-      "phase": "OK",
-      "dist": 4.42,
-      "risk": 4.23,
-      "price": 60.16,
-      "momentum": 33.63
+      "phase": "EARLY",
+      "dist": 0.6,
+      "risk": 0.59,
+      "price": 58.05,
+      "momentum": 37.72
     },
     "XLV": {
       "phase": "BROKEN",
-      "dist": -2.78,
-      "risk": 2.85,
-      "price": 146.57,
-      "momentum": 10.42
+      "dist": -0.63,
+      "risk": 0.63,
+      "price": 149.67,
+      "momentum": 10.22
     },
     "GLD": {
       "phase": "BROKEN",
-      "dist": -3.97,
-      "risk": 4.13,
-      "price": 431.81,
-      "momentum": 45.22
+      "dist": -3.3,
+      "risk": 3.42,
+      "price": 434.53,
+      "momentum": 41.68
     },
     "URA": {
-      "phase": "BROKEN",
-      "dist": -4.78,
-      "risk": 5.02,
-      "price": 47.95,
-      "momentum": 27.73
+      "phase": "EARLY",
+      "dist": 2.06,
+      "risk": 2.02,
+      "price": 51.4,
+      "momentum": 26.15
     }
   },
   "active": {
     "BTC-USD": true,
     "ETH-USD": true,
-    "SPY": false,
-    "QQQ": false,
+    "SPY": true,
+    "QQQ": true,
     "XLE": true,
     "XLV": false,
     "GLD": false,
-    "URA": false
+    "URA": true
   },
-  "dominant": "BTC-USD",
-  "regime": "BEAR",
-  "regime_max": 0.4,
-  "vix": 20.1,
+  "dominant": "QQQ",
+  "regime": "BULL",
+  "regime_max": 1.0,
+  "vix": 20.9,
   "buffett": {
-    "value": 213.3,
+    "value": 213.4,
     "phase": "MUY_CARO",
     "mult": 0.8,
-    "yoy": 18.0
+    "yoy": 18.1
   },
   "volatilities": {
-    "BTC-USD": 0.3841,
-    "ETH-USD": 0.5218,
-    "SPY": 0.143,
-    "QQQ": 0.176,
-    "XLE": 0.1867,
-    "XLV": 0.1204,
-    "GLD": 0.2951,
-    "URA": 0.385
+    "BTC-USD": 0.3759,
+    "ETH-USD": 0.5169,
+    "SPY": 0.1706,
+    "QQQ": 0.2063,
+    "XLE": 0.2315,
+    "XLV": 0.1445,
+    "GLD": 0.2865,
+    "URA": 0.4714
   },
   "momentum": {
-    "BTC-USD": -39.58,
-    "ETH-USD": -41.91,
-    "SPY": 4.72,
-    "QQQ": 5.13,
-    "XLE": 33.63,
-    "XLV": 10.42,
-    "GLD": 45.22,
-    "URA": 27.73
+    "BTC-USD": -40.67,
+    "ETH-USD": -43.87,
+    "SPY": 4.59,
+    "QQQ": 4.66,
+    "XLE": 37.72,
+    "XLV": 10.22,
+    "GLD": 41.68,
+    "URA": 26.15
   },
-  "signal_date": "2026-04-07",
-  "cash_pct": 0.6,
-  "quality": "MEDIA",
+  "signal_date": "2026-04-08",
+  "cash_pct": 0.367,
+  "quality": "ALTA",
   "tickers": [
     "BTC-USD",
     "ETH-USD",
@@ -121,11 +121,11 @@
     "URA"
   ],
   "risk": {
-    "portfolio_vol": 0.3526,
-    "vol_scale": 0.4254,
+    "portfolio_vol": 0.237,
+    "vol_scale": 0.633,
     "dd_derisking": 1.0,
     "buffett_mult": 0.8,
-    "invested_pct": 0.4
+    "invested_pct": 0.633
   },
-  "generated_at": "2026-04-08T13:53:48.446617"
+  "generated_at": "2026-04-09T14:03:30.147613"
 }
